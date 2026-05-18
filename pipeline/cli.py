@@ -77,7 +77,8 @@ def cmd_pdf(args):
     _run(
         "pdf_text",
         lambda: pdf_text.ingest(
-            limit_per_company=args.per_company, since=args.since
+            limit_per_company=args.per_company, since=args.since,
+            workers=args.workers,
         ),
     )
 
@@ -97,8 +98,8 @@ def cmd_derive(_args):
     _run("derive", metrics.ingest)
 
 
-def cmd_rhp(_args):
-    _run("sebi_rhp_pdfs", sebi_rhp.ingest)
+def cmd_rhp(args):
+    _run("sebi_rhp_pdfs", lambda: sebi_rhp.ingest(workers=args.rhp_workers))
 
 
 def cmd_scorecard(_args):
@@ -123,7 +124,8 @@ def cmd_fetch_all(args):
     cmd_market(args)
     cmd_ingest_manual(args)
     cmd_pdf(args)
-    cmd_rhp(args)
+    if not getattr(args, "skip_rhp", False):
+        cmd_rhp(args)
     cmd_heuristics(args)
     cmd_llm(args)
     cmd_derive(args)
@@ -161,13 +163,16 @@ def main(argv=None):
     sub.add_parser("ingest-manual").set_defaults(func=cmd_ingest_manual)
 
     pp = sub.add_parser("pdf")
-    pp.add_argument("--per-company", type=int, default=12)
+    pp.add_argument("--per-company", type=int, default=8)
     pp.add_argument("--since", default="2024-01-01")
+    pp.add_argument("--workers", type=int, default=8)
     pp.set_defaults(func=cmd_pdf)
 
     sub.add_parser("heuristics").set_defaults(func=cmd_heuristics)
     sub.add_parser("derive").set_defaults(func=cmd_derive)
-    sub.add_parser("rhp").set_defaults(func=cmd_rhp)
+    rp = sub.add_parser("rhp")
+    rp.add_argument("--rhp-workers", type=int, default=4)
+    rp.set_defaults(func=cmd_rhp)
     sub.add_parser("scorecard").set_defaults(func=cmd_scorecard)
     sub.add_parser("market").set_defaults(func=cmd_market)
     sub.add_parser("export").set_defaults(func=cmd_export)
@@ -178,8 +183,12 @@ def main(argv=None):
 
     ap = sub.add_parser("fetch-all")
     ap.add_argument("--days", type=int, default=365)
-    ap.add_argument("--per-company", type=int, default=12)
+    ap.add_argument("--per-company", type=int, default=8)
     ap.add_argument("--since", default="2024-01-01")
+    ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--rhp-workers", type=int, default=4)
+    ap.add_argument("--skip-rhp", action="store_true",
+                    help="skip the 20 SEBI RHP/DRHP heavy downloads")
     ap.set_defaults(func=cmd_fetch_all)
 
     sub.add_parser("status").set_defaults(func=cmd_status)

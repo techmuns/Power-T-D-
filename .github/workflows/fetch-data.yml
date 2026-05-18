@@ -8,10 +8,17 @@ on:
         default: "365"
       per_company:
         description: "Max new PDFs / LLM extractions per company per run"
-        default: "12"
+        default: "8"
       since:
         description: "Oldest announcement date (YYYY-MM-DD) to download PDFs for"
         default: "2024-01-01"
+      workers:
+        description: "Parallel PDF download workers"
+        default: "8"
+      skip_rhp:
+        description: "Skip the 20 SEBI RHP/DRHP heavy downloads (faster)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -48,14 +55,15 @@ jobs:
       - name: Run pipeline
         env:
           DAYS: ${{ github.event.inputs.days || '365' }}
-          PER_COMPANY: ${{ github.event.inputs.per_company || '12' }}
+          PER_COMPANY: ${{ github.event.inputs.per_company || '8' }}
           SINCE: ${{ github.event.inputs.since || '2024-01-01' }}
+          WORKERS: ${{ github.event.inputs.workers || '8' }}
+          SKIP_RHP: ${{ github.event.inputs.skip_rhp || 'false' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          python -m pipeline.cli fetch-all \
-            --days "$DAYS" \
-            --per-company "$PER_COMPANY" \
-            --since "$SINCE"
+          ARGS="--days $DAYS --per-company $PER_COMPANY --since $SINCE --workers $WORKERS"
+          if [ "$SKIP_RHP" = "true" ]; then ARGS="$ARGS --skip-rhp"; fi
+          python -m pipeline.cli fetch-all $ARGS
           python -m pipeline.cli status
 
       - name: Commit fetched data
