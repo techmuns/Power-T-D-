@@ -1805,7 +1805,20 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "fy26_audit_completed": [
+      {
+        "value_text": "yes",
+        "value_num": 1.0,
+        "unit": "bool",
+        "evidence": "Audited Financial Results, Segment-wise Financial Report and Statement approved by Board of Directors",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 56
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
