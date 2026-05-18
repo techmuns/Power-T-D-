@@ -2,92 +2,92 @@
   {
     "period_end": "2023-03-31",
     "period_label": "Mar 2023",
-    "revenue": null,
+    "revenue": 4882.0,
     "op_profit": 332.0,
-    "net_profit": null
+    "net_profit": 140.0
   },
   {
     "period_end": "2023-06-30",
     "period_label": "Jun 2023",
-    "revenue": null,
+    "revenue": 4241.0,
     "op_profit": 382.0,
-    "net_profit": null
+    "net_profit": 113.0
   },
   {
     "period_end": "2023-09-30",
     "period_label": "Sep 2023",
-    "revenue": null,
+    "revenue": 4518.0,
     "op_profit": 371.0,
-    "net_profit": null
+    "net_profit": 90.0
   },
   {
     "period_end": "2023-12-31",
     "period_label": "Dec 2023",
-    "revenue": null,
+    "revenue": 4896.0,
     "op_profit": 424.0,
-    "net_profit": null
+    "net_profit": 144.0
   },
   {
     "period_end": "2024-03-31",
     "period_label": "Mar 2024",
-    "revenue": null,
+    "revenue": 5971.0,
     "op_profit": 452.0,
-    "net_profit": null
+    "net_profit": 169.0
   },
   {
     "period_end": "2024-06-30",
     "period_label": "Jun 2024",
-    "revenue": null,
+    "revenue": 4587.0,
     "op_profit": 379.0,
-    "net_profit": null
+    "net_profit": 84.0
   },
   {
     "period_end": "2024-09-30",
     "period_label": "Sep 2024",
-    "revenue": null,
+    "revenue": 4930.0,
     "op_profit": 438.0,
-    "net_profit": null
+    "net_profit": 126.0
   },
   {
     "period_end": "2024-12-31",
     "period_label": "Dec 2024",
-    "revenue": null,
+    "revenue": 5732.0,
     "op_profit": 479.0,
-    "net_profit": null
+    "net_profit": 140.0
   },
   {
     "period_end": "2025-03-31",
     "period_label": "Mar 2025",
-    "revenue": null,
+    "revenue": 7067.0,
     "op_profit": 538.0,
-    "net_profit": null
+    "net_profit": 218.0
   },
   {
     "period_end": "2025-06-30",
     "period_label": "Jun 2025",
-    "revenue": null,
+    "revenue": 6171.0,
     "op_profit": 525.0,
-    "net_profit": null
+    "net_profit": 214.0
   },
   {
     "period_end": "2025-09-30",
     "period_label": "Sep 2025",
-    "revenue": null,
+    "revenue": 6529.0,
     "op_profit": 561.0,
-    "net_profit": null
+    "net_profit": 237.0
   },
   {
     "period_end": "2025-12-31",
     "period_label": "Dec 2025",
-    "revenue": null,
+    "revenue": 6665.0,
     "op_profit": 513.0,
-    "net_profit": null
+    "net_profit": 149.0
   },
   {
     "period_end": "2026-03-31",
     "period_label": "Mar 2026",
-    "revenue": null,
+    "revenue": 7778.0,
     "op_profit": 640.0,
-    "net_profit": null
+    "net_profit": 431.0
   }
 ]
