@@ -1,0 +1,195 @@
+# Power T&D investment universe.
+# Source: investment framework doc, sections 1 and 15-20.
+# Each company is mapped to one primary bucket (the diligence template
+# in the framework differs by bucket). A company can have a secondary
+# bucket where its second line of business is material.
+#
+# BSE scrip codes and NSE symbols verified against public exchange listings.
+# Where a code is uncertain (recent IPOs), it is marked `verify: true` so
+# the fetch step will log a warning rather than fail silently.
+
+companies:
+
+  # ---------- Transmission asset owners ----------
+  - name: Power Grid Corporation of India
+    short: PGCIL
+    bse: "532898"
+    nse: POWERGRID
+    bucket: transmission_asset_owner
+
+  - name: Adani Energy Solutions
+    short: Adani Energy
+    bse: "539254"
+    nse: ADANIENSOL
+    bucket: transmission_asset_owner
+
+  - name: IndiGrid InvIT
+    short: IndiGrid
+    bse: "540565"
+    nse: INDIGRID
+    bucket: transmission_asset_owner
+
+  # ---------- Transformer manufacturers ----------
+  - name: Hitachi Energy India
+    short: Hitachi Energy
+    bse: "543187"
+    nse: POWERINDIA
+    bucket: transformer_manufacturer
+    secondary: hvdc_facts_oem
+
+  - name: GE Vernova T&D India
+    short: GE Vernova T&D
+    bse: "522275"
+    nse: GVT&D
+    bucket: transformer_manufacturer
+    secondary: hvdc_facts_oem
+
+  - name: CG Power and Industrial Solutions
+    short: CG Power
+    bse: "500093"
+    nse: CGPOWER
+    bucket: transformer_manufacturer
+
+  - name: Transformers and Rectifiers India
+    short: TARIL
+    bse: "532928"
+    nse: TARIL
+    bucket: transformer_manufacturer
+
+  - name: Voltamp Transformers
+    short: Voltamp
+    bse: "532757"
+    nse: VOLTAMP
+    bucket: transformer_manufacturer
+
+  - name: Atlanta Electricals
+    short: Atlanta
+    bse: "544378"
+    nse: ATLANTA
+    bucket: transformer_manufacturer
+    verify: true
+
+  # ---------- HVDC / FACTS / grid-stability OEMs ----------
+  - name: Siemens Energy India
+    short: Siemens Energy
+    bse: "544464"
+    nse: SIEMENSEN
+    bucket: hvdc_facts_oem
+    verify: true
+
+  - name: Bharat Heavy Electricals
+    short: BHEL
+    bse: "500103"
+    nse: BHEL
+    bucket: hvdc_facts_oem
+
+  - name: Quality Power Electrical Equipments
+    short: Quality Power
+    bse: "544322"
+    nse: QPOWER
+    bucket: hvdc_facts_oem
+    verify: true
+
+  # ---------- Transmission EPC ----------
+  - name: KEC International
+    short: KEC
+    bse: "532714"
+    nse: KEC
+    bucket: transmission_epc
+    secondary: towers_conductors_cables
+
+  - name: Kalpataru Projects International
+    short: KPIL
+    bse: "522287"
+    nse: KPIL
+    bucket: transmission_epc
+
+  - name: Transrail Lighting
+    short: Transrail
+    bse: "544285"
+    nse: TRANSRAILL
+    bucket: transmission_epc
+    verify: true
+
+  - name: Skipper
+    short: Skipper
+    bse: "538562"
+    nse: SKIPPER
+    bucket: towers_conductors_cables
+    secondary: transmission_epc
+
+  - name: Bajel Projects
+    short: Bajel
+    bse: "544079"
+    nse: BAJEL
+    bucket: transmission_epc
+
+  - name: Techno Electric & Engineering
+    short: Techno Electric
+    bse: "542141"
+    nse: TECHNOE
+    bucket: transmission_epc
+    secondary: smart_meters_automation
+
+  # ---------- Towers / conductors / cables ----------
+  - name: Apar Industries
+    short: Apar
+    bse: "532259"
+    nse: APARINDS
+    bucket: towers_conductors_cables
+
+  - name: Polycab India
+    short: Polycab
+    bse: "542652"
+    nse: POLYCAB
+    bucket: towers_conductors_cables
+
+  - name: KEI Industries
+    short: KEI
+    bse: "517569"
+    nse: KEI
+    bucket: towers_conductors_cables
+
+  - name: Diamond Power Infrastructure
+    short: Diamond Power
+    bse: "522163"
+    nse: DIACABS
+    bucket: towers_conductors_cables
+
+  # ---------- Distribution / DISCOM ----------
+  - name: Tata Power Company
+    short: Tata Power
+    bse: "500400"
+    nse: TATAPOWER
+    bucket: distribution_discom
+
+  - name: CESC
+    short: CESC
+    bse: "500084"
+    nse: CESC
+    bucket: distribution_discom
+
+  - name: Torrent Power
+    short: Torrent Power
+    bse: "532779"
+    nse: TORNTPOWER
+    bucket: distribution_discom
+
+  # ---------- Smart meters / grid automation ----------
+  - name: HPL Electric & Power
+    short: HPL
+    bse: "540136"
+    nse: HPL
+    bucket: smart_meters_automation
+
+  - name: Genus Power Infrastructures
+    short: Genus
+    bse: "530343"
+    nse: GENUSPOWER
+    bucket: smart_meters_automation
+
+  - name: Schneider Electric Infrastructure
+    short: Schneider Infra
+    bse: "534139"
+    nse: SCHNEIDER
+    bucket: smart_meters_automation

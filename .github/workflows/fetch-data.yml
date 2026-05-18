@@ -1,0 +1,66 @@
+name: Fetch Power T&D data
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Days of announcement history to pull"
+        default: "365"
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/**"
+      - "seeds/**"
+      - "requirements.txt"
+      - ".github/workflows/fetch-data.yml"
+  schedule:
+    # 02:30 UTC daily ~ 08:00 IST, after most evening filings
+    - cron: "30 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          DAYS: ${{ github.event.inputs.days || '365' }}
+        run: |
+          python -m pipeline.cli fetch-all --days "$DAYS"
+          python -m pipeline.cli status
+
+      - name: Commit fetched data
+        run: |
+          git config user.name  "power-td-bot"
+          git config user.email "power-td-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "no data changes"
+            exit 0
+          fi
+          ts=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "data: refresh ${ts}"
+          # retry push with backoff
+          for delay in 0 2 4 8 16; do
+            sleep "$delay"
+            git pull --rebase origin main || true
+            git push origin HEAD:main && exit 0
+          done
+          exit 1

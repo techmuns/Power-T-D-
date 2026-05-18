@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+
+# WAL/SHM sidecars from SQLite. The .db file itself IS committed.
+data/power_td.db-wal
+data/power_td.db-shm
