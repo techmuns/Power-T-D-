@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Power T&D Dashboard</title>
+<style>
+  :root {
+    --bg:#0b0f17; --panel:#111826; --panel2:#0f1521; --border:#1f2a3a;
+    --txt:#dbe4f0; --muted:#8b9bb4; --accent:#5fb3ff; --good:#3ed598;
+    --warn:#ffc857; --bad:#ff6b6b; --buckethue: 210;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin:0; padding:0; background:var(--bg); color:var(--txt);
+    font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  header {
+    padding:18px 26px; border-bottom:1px solid var(--border);
+    display:flex; align-items:center; gap:16px;
+  }
+  header h1 { font-size:18px; margin:0; font-weight:600; }
+  header .sub { color:var(--muted); font-size:12px; }
+  header .grow { flex:1; }
+  header .pill {
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:999px; padding:4px 10px; font-size:11px; color:var(--muted);
+  }
+
+  main { padding:20px 26px 60px; }
+  section.panel {
+    background:var(--panel); border:1px solid var(--border); border-radius:8px;
+    padding:14px 18px; margin-bottom:18px;
+  }
+  section.panel h2 {
+    font-size:13px; font-weight:600; margin:0 0 10px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:.04em;
+  }
+
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td {
+    text-align:left; padding:7px 10px; border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  th {
+    font-weight:600; font-size:11px; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.03em;
+    cursor:pointer; user-select:none;
+  }
+  th.sortable:hover { color:var(--txt); }
+  tr.row { cursor:pointer; }
+  tr.row:hover td { background:var(--panel2); }
+  td.num { text-align:right; font-variant-numeric: tabular-nums; }
+  td.pct { text-align:right; font-variant-numeric: tabular-nums; }
+
+  .bucket {
+    display:inline-block; padding:2px 7px; border-radius:4px;
+    font-size:11px; font-weight:500; background:var(--panel2);
+    color:var(--accent); border:1px solid var(--border);
+  }
+  .cov-bar {
+    width:80px; height:6px; background:var(--panel2); border-radius:3px;
+    display:inline-block; vertical-align:middle; margin-right:6px; overflow:hidden;
+  }
+  .cov-fill { height:100%; background:var(--good); }
+  .cov-fill.warn { background:var(--warn); }
+  .cov-fill.bad { background:var(--bad); }
+
+  .scorecard {
+    display:grid; grid-template-columns: repeat(2, 1fr); gap:8px;
+  }
+  .score-cell {
+    background:var(--panel2); border:1px solid var(--border);
+    border-radius:6px; padding:10px 12px;
+  }
+  .score-cell .factor { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .score-cell .score { font-size:22px; font-weight:600; margin:2px 0; }
+  .score-cell .score.s5 { color:var(--good); }
+  .score-cell .score.s4 { color:var(--good); }
+  .score-cell .score.s3 { color:var(--warn); }
+  .score-cell .score.s2 { color:var(--bad); }
+  .score-cell .score.s1 { color:var(--bad); }
+  .score-cell .score.sNA { color:var(--muted); font-size:14px; }
+  .score-cell .evid { font-size:11px; color:var(--muted); line-height:1.4; }
+
+  .kpis { display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; }
+  .kpi {
+    background:var(--panel2); border:1px solid var(--border);
+    border-radius:6px; padding:10px 12px;
+  }
+  .kpi .lbl { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .kpi .val { font-size:18px; font-weight:600; font-variant-numeric: tabular-nums; }
+  .kpi .sub { font-size:11px; color:var(--muted); }
+
+  .feature-list { display:grid; grid-template-columns: 1fr 1fr; gap:6px; }
+  .feature {
+    background:var(--panel2); border:1px solid var(--border);
+    border-radius:5px; padding:7px 10px; font-size:12px;
+  }
+  .feature .nm { color:var(--accent); font-weight:500; }
+  .feature .ev { color:var(--muted); font-size:11px; margin-top:2px; }
+
+  .doc-link { color:var(--accent); text-decoration:none; }
+  .doc-link:hover { text-decoration:underline; }
+
+  .breadcrumb {
+    display:flex; gap:8px; align-items:center; color:var(--muted);
+    font-size:12px; margin-bottom:10px;
+  }
+  .breadcrumb a { color:var(--accent); text-decoration:none; }
+  .breadcrumb a:hover { text-decoration:underline; }
+
+  .loading { color:var(--muted); padding:20px; }
+
+  .tag {
+    display:inline-block; font-size:10px; padding:1px 5px; border-radius:3px;
+    background:var(--panel2); color:var(--muted); margin-left:4px;
+  }
+
+  @media (max-width:760px) {
+    .scorecard, .kpis, .feature-list { grid-template-columns: 1fr; }
+    header { flex-wrap:wrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Power T&D Dashboard</h1>
+  <div class="sub">India listed transmission &amp; distribution universe</div>
+  <div class="grow"></div>
+  <div class="pill" id="meta-pill">loading…</div>
+</header>
+
+<main id="app">
+  <div class="loading">Loading data…</div>
+</main>
+
+<script>
+// ---------- routing ----------
+function getSlug() {
+  const h = window.location.hash || '';
+  const m = h.match(/^#\/c\/([a-z0-9_-]+)/i);
+  return m ? decodeURIComponent(m[1]) : null;
+}
+function nav(slug) { window.location.hash = slug ? '#/c/' + slug : ''; }
+window.addEventListener('hashchange', render);
+
+// ---------- helpers ----------
+const fmt = {
+  num(v, dp=0) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    return Number(v).toLocaleString('en-IN', {maximumFractionDigits: dp});
+  },
+  pct(v, dp=1) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    return Number(v).toFixed(dp) + '%';
+  },
+  crore(v) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    if (Math.abs(v) >= 100000) return '₹' + (v/100000).toFixed(2) + ' L cr';
+    if (Math.abs(v) >= 1000) return '₹' + (v/1000).toFixed(2) + ' K cr';
+    return '₹' + Number(v).toLocaleString('en-IN', {maximumFractionDigits: 0}) + ' cr';
+  },
+  bucketLabel(b) {
+    return ({
+      transmission_asset_owner: 'Transmission asset owner',
+      transformer_manufacturer: 'Transformer manufacturer',
+      hvdc_facts_oem: 'HVDC / FACTS / grid OEM',
+      transmission_epc: 'Transmission EPC',
+      towers_conductors_cables: 'Towers / conductors / cables',
+      distribution_discom: 'Distribution / DISCOM',
+      smart_meters_automation: 'Smart meters / automation',
+      component_supplier: 'Component supplier',
+    })[b] || b;
+  },
+};
+
+function covClass(p) { return p>=80 ? '' : p>=50 ? 'warn' : 'bad'; }
+
+async function fetchJSON(path) {
+  const r = await fetch(path, {cache:'no-store'});
+  if (!r.ok) throw new Error(path + ' ' + r.status);
+  return r.json();
+}
+
+// ---------- UNIVERSE PAGE ----------
+async function renderUniverse() {
+  const app = document.getElementById('app');
+  app.innerHTML = '<div class="loading">Loading index…</div>';
+  const idx = await fetchJSON('data/export/index.json');
+  document.getElementById('meta-pill').textContent =
+    `${idx.totals.companies} companies · ${idx.totals.avg_coverage}% avg coverage · refreshed ${(idx.generated_at||'').slice(0,10)}`;
+
+  let sortKey = 'coverage_pct', sortDir = -1;
+  let bucketFilter = 'all';
+
+  function buckets() {
+    const set = new Set(idx.companies.map(c => c.bucket));
+    return ['all', ...[...set].sort()];
+  }
+
+  function rowsFor() {
+    const rows = idx.companies.filter(c => bucketFilter === 'all' || c.bucket === bucketFilter);
+    rows.sort((a,b) => {
+      const x = a[sortKey] ?? 0, y = b[sortKey] ?? 0;
+      return (x === y ? a.short.localeCompare(b.short) : (x<y ? 1 : -1)) * sortDir;
+    });
+    return rows;
+  }
+
+  function repaint() {
+    const rows = rowsFor();
+    const totalScored = rows.reduce((s,r)=>s+r.score_total,0);
+    const avgCov = rows.length ? Math.round(rows.reduce((s,r)=>s+r.coverage_pct,0)/rows.length) : 0;
+
+    app.innerHTML = `
+      <section class="panel">
+        <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:14px;">
+          <div>
+            <label style="color:var(--muted); font-size:11px; text-transform:uppercase;">Bucket</label><br>
+            <select id="bucket" style="background:var(--panel2); color:var(--txt); border:1px solid var(--border); padding:6px 8px; border-radius:4px;">
+              ${buckets().map(b => `<option value="${b}" ${b===bucketFilter?'selected':''}>${b==='all'?'All buckets':fmt.bucketLabel(b)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="kpi" style="margin-left:auto; min-width:140px;">
+            <div class="lbl">Companies shown</div>
+            <div class="val">${rows.length}</div>
+          </div>
+          <div class="kpi" style="min-width:140px;">
+            <div class="lbl">Avg coverage</div>
+            <div class="val">${avgCov}%</div>
+          </div>
+          <div class="kpi" style="min-width:140px;">
+            <div class="lbl">Total framework score</div>
+            <div class="val">${totalScored}</div>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable" data-k="short">Company</th>
+              <th class="sortable" data-k="bucket">Bucket</th>
+              <th class="sortable" data-k="coverage_pct" style="text-align:right;">Coverage</th>
+              <th class="sortable" data-k="score_total" style="text-align:right;">Score</th>
+              <th class="sortable" data-k="scored_factors" style="text-align:right;">Scored factors</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(r => `
+              <tr class="row" data-slug="${r.slug}">
+                <td><strong>${r.short}</strong></td>
+                <td><span class="bucket">${fmt.bucketLabel(r.bucket)}</span></td>
+                <td class="pct">
+                  <span class="cov-bar"><span class="cov-fill ${covClass(r.coverage_pct)}" style="width:${r.coverage_pct}%"></span></span>
+                  ${r.coverage_pct}%
+                </td>
+                <td class="num">${r.score_total}</td>
+                <td class="num">${r.scored_factors}/10</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Bucket summary</h2>
+        ${(() => {
+          const groups = {};
+          for (const c of idx.companies) {
+            (groups[c.bucket] ||= []).push(c);
+          }
+          return `<table>
+            <thead><tr><th>Bucket</th><th style="text-align:right;">Cos</th><th style="text-align:right;">Avg coverage</th><th style="text-align:right;">Avg score</th><th>Top scorer</th></tr></thead>
+            <tbody>
+            ${Object.entries(groups).map(([b, cs]) => {
+              const avg = Math.round(cs.reduce((s,c)=>s+c.coverage_pct,0)/cs.length);
+              const sc  = (cs.reduce((s,c)=>s+c.score_total,0)/cs.length).toFixed(1);
+              const top = [...cs].sort((a,b)=>b.score_total-a.score_total)[0];
+              return `<tr><td><span class="bucket">${fmt.bucketLabel(b)}</span></td>
+                <td class="num">${cs.length}</td>
+                <td class="pct">${avg}%</td>
+                <td class="num">${sc}</td>
+                <td><a class="doc-link" href="#/c/${top.slug}">${top.short}</a> (${top.score_total})</td></tr>`;
+            }).join('')}
+            </tbody></table>`;
+        })()}
+      </section>
+    `;
+
+    document.getElementById('bucket').addEventListener('change', e => {
+      bucketFilter = e.target.value; repaint();
+    });
+    app.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const k = th.dataset.k;
+        if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = -1; }
+        repaint();
+      });
+    });
+    app.querySelectorAll('tr.row').forEach(tr => {
+      tr.addEventListener('click', () => nav(tr.dataset.slug));
+    });
+  }
+  repaint();
+}
+
+// ---------- COMPANY PAGE ----------
+async function renderCompany(slug) {
+  const app = document.getElementById('app');
+  app.innerHTML = '<div class="loading">Loading ' + slug + '…</div>';
+  let co;
+  try { co = await fetchJSON('data/export/' + slug + '.json'); }
+  catch (e) { app.innerHTML = '<div class="loading">Company "'+slug+'" not found.</div>'; return; }
+
+  document.getElementById('meta-pill').textContent =
+    `${co.company.short} · ${fmt.bucketLabel(co.company.bucket)} · ${co.coverage_pct}% coverage`;
+
+  const m = co.market || {};
+  const latestQ = (co.financials.quarterly || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
+  const latestBS = (co.balance_sheet || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
+  const latestRatio = (co.ratios || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
+
+  function metric(key) {
+    const r = (co.derived||[]).filter(d => d.metric === key)
+                              .sort((a,b)=>b.period_end.localeCompare(a.period_end))[0];
+    return r || null;
+  }
+  const ebitdaMargin = metric('ebitda_margin_pct');
+  const revGrowth    = metric('revenue_growth_yoy_pct');
+  const debtEq       = metric('debt_to_equity');
+  const fcfProxy     = metric('fcf_proxy_inr_cr');
+
+  app.innerHTML = `
+    <div class="breadcrumb">
+      <a href="#">← Universe</a>
+      <span>·</span>
+      <span class="bucket">${fmt.bucketLabel(co.company.bucket)}</span>
+    </div>
+
+    <section class="panel">
+      <div style="display:flex; gap:14px; align-items:start; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin:0; font-size:20px; color:var(--txt);">${co.company.name}</h2>
+          <div style="color:var(--muted); font-size:12px; margin-top:4px;">
+            BSE ${co.company.bse || '—'} · NSE ${co.company.nse || '—'}
+            ${co.company.secondary ? ` · secondary: <span class="tag">${fmt.bucketLabel(co.company.secondary)}</span>` : ''}
+          </div>
+        </div>
+        <div style="margin-left:auto;">
+          <div class="cov-bar" style="width:160px; height:8px;"><span class="cov-fill ${covClass(co.coverage_pct)}" style="width:${co.coverage_pct}%"></span></div>
+          <div style="font-size:11px; color:var(--muted); margin-top:4px; text-align:right;">${co.coverage_pct}% framework coverage</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Market &amp; latest financials</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="lbl">Market cap</div><div class="val">${fmt.crore(m.market_cap_cr)}</div><div class="sub">Price ₹${fmt.num(m.price,2)}</div></div>
+        <div class="kpi"><div class="lbl">P/E</div><div class="val">${fmt.num(m.pe_ratio,1)}</div><div class="sub">P/B ${fmt.num(m.pb_ratio,1)}</div></div>
+        <div class="kpi"><div class="lbl">Q revenue</div><div class="val">${fmt.crore(latestQ.revenue)}</div><div class="sub">${latestQ.period_end || ''}</div></div>
+        <div class="kpi"><div class="lbl">Q PAT</div><div class="val">${fmt.crore(latestQ.pat)}</div><div class="sub">${latestQ.period_end || ''}</div></div>
+        <div class="kpi"><div class="lbl">EBITDA margin</div><div class="val">${ebitdaMargin ? fmt.pct(ebitdaMargin.value,1) : '—'}</div><div class="sub">peer rank ${ebitdaMargin?.bucket_rank ?? '—'}/${ebitdaMargin?.bucket_n ?? '—'}</div></div>
+        <div class="kpi"><div class="lbl">Revenue growth YoY</div><div class="val">${revGrowth ? fmt.pct(revGrowth.value,1) : '—'}</div></div>
+        <div class="kpi"><div class="lbl">Debt / Equity</div><div class="val">${debtEq ? fmt.num(debtEq.value,2) : '—'}</div></div>
+        <div class="kpi"><div class="lbl">FCF proxy</div><div class="val">${fcfProxy ? fmt.crore(fcfProxy.value) : '—'}</div></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Framework scorecard (10 factors)</h2>
+      <div class="scorecard">
+        ${(co.scorecard||[]).map(s => `
+          <div class="score-cell">
+            <div class="factor">${s.factor.replace(/_/g,' ')}</div>
+            <div class="score ${s.score===null?'sNA':'s'+s.score}">${s.score===null ? 'insufficient data' : s.score + ' / 5'}</div>
+            <div class="evid">${(s.evidence||'').replace(/</g,'&lt;')}</div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Balance sheet trend (annual, consolidated)</h2>
+      ${(() => {
+        const bs = (co.balance_sheet||[]).filter(r=>r.consolidated===1).sort((a,b)=>a.period_end.localeCompare(b.period_end));
+        if (!bs.length) return '<div class="loading">No balance sheet data.</div>';
+        return `<table>
+          <thead><tr><th>Period</th><th class="num">Total assets</th><th class="num">Borrowings</th><th class="num">Fixed assets</th><th class="num">CWIP</th><th class="num">Net worth (E+R)</th></tr></thead>
+          <tbody>${bs.map(r=>`<tr>
+            <td>${r.period_end}</td>
+            <td class="num">${fmt.crore(r.total_assets)}</td>
+            <td class="num">${fmt.crore(r.borrowings)}</td>
+            <td class="num">${fmt.crore(r.fixed_assets)}</td>
+            <td class="num">${fmt.crore(r.cwip)}</td>
+            <td class="num">${fmt.crore((r.equity_capital||0)+(r.reserves||0))}</td>
+          </tr>`).join('')}</tbody>
+        </table>`;
+      })()}
+    </section>
+
+    <section class="panel">
+      <h2>Ratios (consolidated)</h2>
+      ${(() => {
+        const rt = (co.ratios||[]).filter(r=>r.consolidated===1).sort((a,b)=>a.period_end.localeCompare(b.period_end));
+        if (!rt.length) return '<div class="loading">No ratios data.</div>';
+        return `<table>
+          <thead><tr><th>Period</th><th class="num">ROCE</th><th class="num">ROE</th><th class="num">Debtor days</th><th class="num">Inventory days</th><th class="num">Working cap days</th></tr></thead>
+          <tbody>${rt.map(r=>`<tr>
+            <td>${r.period_end}</td>
+            <td class="num">${fmt.pct(r.roce_pct,1)}</td>
+            <td class="num">${fmt.pct(r.roe_pct,1)}</td>
+            <td class="num">${fmt.num(r.debtor_days)}</td>
+            <td class="num">${fmt.num(r.inventory_days)}</td>
+            <td class="num">${fmt.num(r.working_cap_days)}</td>
+          </tr>`).join('')}</tbody>
+        </table>`;
+      })()}
+    </section>
+
+    <section class="panel">
+      <h2>Framework features (${Object.keys(co.features||{}).length} types)</h2>
+      <div class="feature-list">
+        ${Object.entries(co.features||{}).slice(0, 60).map(([name, vs]) => `
+          <div class="feature">
+            <div class="nm">${name}</div>
+            ${vs.slice(0,3).map(v => `
+              <div class="ev">${v.value_text || (v.value_num ? fmt.num(v.value_num,2)+' '+(v.unit||'') : '')} — ${(v.evidence||'').slice(0,180).replace(/</g,'&lt;')}</div>
+            `).join('')}
+          </div>
+        `).join('')}
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Source documents (${(co.documents||[]).length})</h2>
+      <table>
+        <thead><tr><th>Type</th><th>Pages</th><th>Status</th><th>Source</th></tr></thead>
+        <tbody>
+          ${(co.documents||[]).slice(0, 30).map(d => `
+            <tr>
+              <td><span class="bucket">${(d.doc_kind||'').replace(/_/g,' ')}</span></td>
+              <td class="num">${d.page_count ?? '—'}</td>
+              <td>${d.extract_status || '—'}</td>
+              <td>${d.pdf_url ? '<a class="doc-link" target="_blank" rel="noreferrer" href="'+d.pdf_url+'">open PDF</a>' : '—'}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Coverage breakdown</h2>
+      <div class="feature-list">
+        ${Object.entries(co.coverage_checks||{}).map(([k,v]) => `
+          <div class="feature">
+            <div class="nm">${k.replace(/_/g,' ')}</div>
+            <div class="ev" style="color:${v ? 'var(--good)' : 'var(--bad)'};">${v ? '✓ present' : '✗ missing'}</div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `;
+}
+
+// ---------- entry ----------
+async function render() {
+  try {
+    const s = getSlug();
+    if (s) await renderCompany(s);
+    else await renderUniverse();
+  } catch (e) {
+    console.error(e);
+    document.getElementById('app').innerHTML =
+      '<div class="loading">Error: ' + e.message + '</div>';
+  }
+}
+render();
+</script>
+</body>
+</html>

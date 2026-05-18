@@ -1,36 +1,27 @@
 """Export a single tidy JSON per company.
 
 This is the contract the dashboard reads from. One file per company at
-`data/export/<short>.json` plus a top-level `data/export/index.json`
-with the universe summary.
-
-Schema (per company):
-{
-  "company": { name, short, bse, nse, bucket, secondary },
-  "financials": {
-      "quarterly": [{ period_end, consolidated, revenue, ebitda, pat, ... }],
-      "annual":    { ... }
-  },
-  "balance_sheet": [...],
-  "cash_flow":     [...],
-  "ratios":        [...],
-  "derived":       [...],
-  "market":        { ... or null },
-  "documents":     [{ doc_kind, page_count, has_text, pdf_url, ts }],
-  "features":      { feature_name: [{ value, unit, evidence, extractor, ... }] },
-  "scorecard":     [{ factor, score, evidence }],
-  "coverage_pct":  <0-100>
-}
+`data/export/<slug>.json` plus a top-level `data/export/index.json`
+with the universe summary. Filenames are URL-safe slugs (no spaces or
+ampersands).
 """
 
 from __future__ import annotations
 import json
-import math
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 from ..config import DATA_DIR
 from ..db import connect
+
+
+def _slug(name: str) -> str:
+    """URL-safe filename from a company short name."""
+    s = name.lower().replace("&", "and")
+    s = re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+    return s or "company"
+
 
 EXPORT_DIR = DATA_DIR / "export"
 
@@ -204,10 +195,12 @@ def ingest() -> int:
         for c in [dict(r) for r in conn.execute(
                 "SELECT * FROM companies ORDER BY short").fetchall()]:
             p = _company_payload(conn, c)
-            out = EXPORT_DIR / f"{c['short'].lower().replace(' ', '_')}.json"
+            slug = _slug(c["short"])
+            out = EXPORT_DIR / f"{slug}.json"
             out.write_text(json.dumps(p, default=str, indent=2))
             summary.append({
                 "short": c["short"],
+                "slug":  slug,
                 "bucket": c["bucket"],
                 "coverage_pct": p["coverage_pct"],
                 "score_total": sum(s["score"] for s in p["scorecard"]

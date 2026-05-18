@@ -1,0 +1,15 @@
+# Files NOT deployed to the public Cloudflare Pages site.
+# (The data pipeline and raw scrape archives live in the repo for
+# auditability + GitHub Actions, but they don't need to be on the site.)
+pipeline/
+seeds/
+.github/
+data/raw/
+data/manual/
+data/power_td.db
+data/power_td.db-*
+*.py
+*.yml
+*.yaml
+*.toml
+requirements.txt
