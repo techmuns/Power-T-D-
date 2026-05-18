@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-05-18T10:39:41+00:00",
+  "generated_at": "2026-05-18T10:55:16+00:00",
   "companies": [
     {
       "short": "Tata Power",
+      "slug": "tata_power",
       "bucket": "distribution_discom",
       "coverage_pct": 100,
       "score_total": 26,
@@ -10,6 +11,7 @@
     },
     {
       "short": "CESC",
+      "slug": "cesc",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
       "score_total": 23,
@@ -17,6 +19,7 @@
     },
     {
       "short": "Torrent Power",
+      "slug": "torrent_power",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
       "score_total": 25,
@@ -24,6 +27,7 @@
     },
     {
       "short": "Quality Power",
+      "slug": "quality_power",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 100,
       "score_total": 19,
@@ -31,6 +35,7 @@
     },
     {
       "short": "BHEL",
+      "slug": "bhel",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 94,
       "score_total": 26,
@@ -38,6 +43,7 @@
     },
     {
       "short": "Siemens Energy",
+      "slug": "siemens_energy",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 38,
       "score_total": 2,
@@ -45,6 +51,7 @@
     },
     {
       "short": "Genus",
+      "slug": "genus",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
       "score_total": 17,
@@ -52,6 +59,7 @@
     },
     {
       "short": "HPL",
+      "slug": "hpl",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
       "score_total": 14,
@@ -59,6 +67,7 @@
     },
     {
       "short": "Schneider Infra",
+      "slug": "schneider_infra",
       "bucket": "smart_meters_automation",
       "coverage_pct": 88,
       "score_total": 2,
@@ -66,6 +75,7 @@
     },
     {
       "short": "Polycab",
+      "slug": "polycab",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
       "score_total": 31,
@@ -73,6 +83,7 @@
     },
     {
       "short": "Skipper",
+      "slug": "skipper",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
       "score_total": 25,
@@ -80,6 +91,7 @@
     },
     {
       "short": "Apar",
+      "slug": "apar",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
       "score_total": 18,
@@ -87,6 +99,7 @@
     },
     {
       "short": "Diamond Power",
+      "slug": "diamond_power",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
       "score_total": 24,
@@ -94,6 +107,7 @@
     },
     {
       "short": "KEI",
+      "slug": "kei",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
       "score_total": 27,
@@ -101,6 +115,7 @@
     },
     {
       "short": "CG Power",
+      "slug": "cg_power",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 94,
       "score_total": 18,
@@ -108,6 +123,7 @@
     },
     {
       "short": "GE Vernova T&D",
+      "slug": "ge_vernova_tandd",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 94,
       "score_total": 7,
@@ -115,6 +131,7 @@
     },
     {
       "short": "TARIL",
+      "slug": "taril",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 94,
       "score_total": 20,
@@ -122,6 +139,7 @@
     },
     {
       "short": "Hitachi Energy",
+      "slug": "hitachi_energy",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 88,
       "score_total": 2,
@@ -129,6 +147,7 @@
     },
     {
       "short": "Voltamp",
+      "slug": "voltamp",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 88,
       "score_total": 5,
@@ -136,6 +155,7 @@
     },
     {
       "short": "Atlanta",
+      "slug": "atlanta",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 38,
       "score_total": 2,
@@ -143,6 +163,7 @@
     },
     {
       "short": "Adani Energy",
+      "slug": "adani_energy",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 100,
       "score_total": 20,
@@ -150,6 +171,7 @@
     },
     {
       "short": "PGCIL",
+      "slug": "pgcil",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 100,
       "score_total": 27,
@@ -157,6 +179,7 @@
     },
     {
       "short": "IndiGrid",
+      "slug": "indigrid",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 94,
       "score_total": 17,
@@ -164,6 +187,7 @@
     },
     {
       "short": "KEC",
+      "slug": "kec",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
       "score_total": 16,
@@ -171,6 +195,7 @@
     },
     {
       "short": "KPIL",
+      "slug": "kpil",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
       "score_total": 25,
@@ -178,6 +203,7 @@
     },
     {
       "short": "Bajel",
+      "slug": "bajel",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
       "score_total": 16,
@@ -185,6 +211,7 @@
     },
     {
       "short": "Transrail",
+      "slug": "transrail",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
       "score_total": 23,
@@ -192,6 +219,7 @@
     },
     {
       "short": "Techno Electric",
+      "slug": "techno_electric",
       "bucket": "transmission_epc",
       "coverage_pct": 88,
       "score_total": 25,
