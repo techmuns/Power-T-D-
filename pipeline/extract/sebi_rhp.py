@@ -52,6 +52,19 @@ def _download(session: requests.Session, url: str, dest: Path) -> int:
         return written
 
 
+def _match_company(conn, title: str) -> int | None:
+    """Best-effort: scan our company seed for a short/name that appears in
+    the RHP title. Returns company_id or None."""
+    if not title:
+        return None
+    t = title.lower()
+    for r in conn.execute("SELECT id, name, short FROM companies").fetchall():
+        for candidate in (r["short"], r["name"]):
+            if candidate and candidate.lower() in t:
+                return r["id"]
+    return None
+
+
 def _process_one(session, r, tmp_dir: Path) -> dict:
     url = r["pdf_url"]
     dest = tmp_dir / hashlib.sha1(url.encode()).hexdigest()[:16]
@@ -104,6 +117,7 @@ def ingest(workers: int = DEFAULT_WORKERS) -> int:
                            "drhp" if "DRHP" in (res.get("filing_type") or "") else \
                            "rhp_drhp"
                     with db_lock:
+                        cid = _match_company(conn, res.get("title"))
                         if res["status"] == "ok":
                             conn.execute(
                                 """
@@ -114,7 +128,7 @@ def ingest(workers: int = DEFAULT_WORKERS) -> int:
                                     source, source_url
                                 ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)
                                 """,
-                                (None, None, kind, res["pdf_url"],
+                                (cid, None, kind, res["pdf_url"],
                                  res["sha"], res["nbytes"], res["pages"], res["text"],
                                  now, "ok", None, "sebi", res["pdf_url"]),
                             )

@@ -329,13 +329,16 @@ def ingest() -> int:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     written = 0
     with connect() as conn:
-        # Find docs that are extracted but not yet feature-extracted
+        # Skip RHP/regulator docs that aren't yet tied to a company - their
+        # features would violate features.company_id NOT NULL until we add
+        # the title-to-company matcher (sebi_rhp updates below).
         rows = conn.execute(
             """
             SELECT d.id AS doc_id, d.company_id, d.doc_kind, d.full_text,
                    d.pdf_url
             FROM documents d
             WHERE d.extract_status = 'ok'
+              AND d.company_id IS NOT NULL
               AND d.id NOT IN (
                   SELECT DISTINCT document_id FROM features
                   WHERE extractor='heuristic' AND document_id IS NOT NULL
