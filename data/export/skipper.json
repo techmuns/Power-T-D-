@@ -1816,6 +1816,17 @@
         "document_id": 81
       }
     ],
+    "capacity_utilization_pct": [
+      {
+        "value_num": 85.0,
+        "unit": "%",
+        "evidence": "Existing capacity utilization 85%+ (exceeding 90% in some quarters)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
     "capex_inr_cr": [
       {
         "value_num": 35000.0,
@@ -1833,6 +1844,17 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capex_pgcil_fy28_inr_cr": [
+      {
+        "value_num": 45000.0,
+        "unit": "INR crore",
+        "evidence": "PGCIL increased capex guidance to ~\u20b945K crore for FY28 (sector tailwind)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 81
       }
     ],
@@ -1908,6 +1930,26 @@
         "document_id": 81
       }
     ],
+    "customer_mention.Power Grid": [
+      {
+        "value_text": "PGCIL",
+        "evidence": "Power Grid Corporation of India Limited capex guidance referenced as direct customer signal",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
+    "export_market_mentions": [
+      {
+        "value_text": "North America, Middle East, LATAM, Australia, Europe",
+        "evidence": "Completed successful plant audits by new potential customers from North America, Middle East, LATAM, Australia and Europe",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
     "export_share_pct": [
       {
         "value_num": 10.0,
@@ -1955,6 +1997,18 @@
         "document_id": 81
       }
     ],
+    "first_400kv_tower_order": [
+      {
+        "value_text": "yes",
+        "value_num": 1.0,
+        "unit": "bool",
+        "evidence": "Received first order for 400 kV towers - new voltage-class entry",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
     "grid_tech_mentioned": [
       {
         "value_text": "HVDC",
@@ -1974,6 +2028,28 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "heaviest_tower_prototype_mt": [
+      {
+        "value_num": 293.0,
+        "unit": "MT",
+        "evidence": "Prototyped and tested world's heaviest transmission tower (293 MT)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
+    "order_book_fy26_inr_cr": [
+      {
+        "value_num": 8502.0,
+        "unit": "INR crore",
+        "evidence": "Highest-ever closing order book \u20b98,502 Cr (31 Mar 2026)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 81
       }
     ],
@@ -2030,6 +2106,49 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "production_fy26_mt": [
+      {
+        "value_num": 39686.0,
+        "unit": "MT",
+        "evidence": "Record FY26 production 39,686 MT (+20% YoY)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
+    "q4fy26_order_inflow_inr_cr": [
+      {
+        "value_num": 1029.0,
+        "unit": "INR crore",
+        "evidence": "Q4 FY26 order inflow \u20b910,290 Mn = \u20b91,029 cr",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
+    "target_capacity_jun26_mtpa": [
+      {
+        "value_num": 450000.0,
+        "unit": "MTPA",
+        "evidence": "Additional 75,000 MTPA expansion underway - targeting 450,000 MTPA total by June 2026",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 81
+      }
+    ],
+    "voltage_class.1150kv_corridor": [
+      {
+        "value_text": "in pipeline",
+        "evidence": "1150 kV ultra-high voltage corridors mentioned in transmission capex outlook",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 81
       }
     ],

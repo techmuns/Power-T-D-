@@ -1637,7 +1637,68 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_smart_meter_grid": [
+      {
+        "value_text": "grid automation + smart meter integration capability",
+        "evidence": "Schneider provides grid automation + SCADA + smart meter integration",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ],
+    "capex_text": [
+      {
+        "value_text": "capacity expansion at Indian plants",
+        "evidence": "Schneider expanding Indian manufacturing for grid automation products",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL grid automation",
+        "evidence": "Schneider supplies grid automation, SCADA to PGCIL and state utilities",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ],
+    "order_book_grid_automation": [
+      {
+        "value_text": "grid automation + SCADA order book",
+        "evidence": "Schneider order book in grid automation, SCADA, DMS platforms",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ],
+    "smart_meter_grid_automation_capability": [
+      {
+        "value_text": "SCADA + grid automation",
+        "evidence": "Schneider Electric Infrastructure - SCADA, DMS, grid automation, MV/HV equipment",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ],
+    "voltage_class.schneider_mvhv": [
+      {
+        "value_text": "MV/HV switchgear + SCADA + smart grid",
+        "evidence": "Schneider Electric Infrastructure - MV/HV switchgear, SCADA, smart grid automation",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 23
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1703,7 +1764,7 @@
       "inputs": {}
     }
   ],
-  "coverage_pct": 56,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1711,11 +1772,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

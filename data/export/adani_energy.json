@@ -1782,6 +1782,39 @@
     }
   ],
   "features": {
+    "aeml_consolidated_capex_run_rate_inr_cr": [
+      {
+        "value_num": 15000.0,
+        "unit": "INR crore",
+        "evidence": "AEML consolidated capex (transmission + distribution + smart metering) reached close to \u20b915,000 cr",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "capacity_ist_transmission_capex_inr_cr": [
+      {
+        "value_num": 11000.0,
+        "unit": "INR crore",
+        "evidence": "Transmission capex of ~\u20b911,000 cr planned, with total leverage at 70:30 debt-equity",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "capacity_smart_meter_install_run_rate_inr_cr_year": [
+      {
+        "value_num": 1500.0,
+        "unit": "INR crore",
+        "evidence": "Smart metering capex run-rate \u20b91,500 cr / year (excluding new order wins)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
     "capex_inr_cr": [
       {
         "value_num": 20.0,
@@ -1843,6 +1876,27 @@
         "document_id": 70
       }
     ],
+    "customer_mention.MERC": [
+      {
+        "value_text": "MERC (Maharashtra regulator)",
+        "evidence": "MERC evaluation of HVDC Pole 2 transmission capacity proposal",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "fy27_planned_capex_inr_cr": [
+      {
+        "value_num": 22000.0,
+        "unit": "INR crore",
+        "evidence": "FY27 planned capex about \u20b922,000 cr across transmission + smart meter + distribution",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
     "grid_tech_mentioned": [
       {
         "value_text": "HVDC",
@@ -1862,6 +1916,91 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 70
+      }
+    ],
+    "hvdc_projects_under_execution_text": [
+      {
+        "value_text": "Fatehpur-Bhadla HVDC + Khavda-Olpad HVDC (both under construction/contracts finalized)",
+        "evidence": "Fatehpur-Bhadla HVDC construction begun at substation and line level; no ROW issues. Khavda-Olpad HVDC contracts finalized, Khavda land in possession, Olpad pending from Power Grid",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "merchant_trading_margin_inr_per_unit": [
+      {
+        "value_num": 0.5,
+        "unit": "INR/unit",
+        "evidence": "1.5 GW tied-up capacity merchant trading margins in excess of \u20b90.50/unit",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "order_book_smart_meter_inr_cr": [
+      {
+        "value_num": 1500.0,
+        "unit": "INR crore",
+        "evidence": "Smart meter order book line item ~\u20b91,500 cr per year",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "row_status.fatehpur_bhadla": [
+      {
+        "value_text": "no significant ROW issues",
+        "evidence": "Fatehpur-Bhadla HVDC: 'we haven't faced any significant ROW challenge'",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "smart_meter_ebitda_fy26_inr_cr": [
+      {
+        "value_num": 593.0,
+        "unit": "INR crore",
+        "evidence": "Smart meter operating EBITDA for full year FY26 ~\u20b9593 cr; Q4 FY26 \u20b9214 cr",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "tender_pipeline_12m_inr_cr": [
+      {
+        "value_num": 90000.0,
+        "unit": "INR crore",
+        "evidence": "12-month pipeline \u20b980,000-1,00,000 cr expected to be finalized",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "tender_pipeline_total_inr_trn": [
+      {
+        "value_num": 1.5,
+        "unit": "INR trillion",
+        "evidence": "INR1.5 trillion tender pipeline visible",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 70
+      }
+    ],
+    "voltage_class.hvdc_pole2": [
+      {
+        "value_text": "HVDC pole 2 Mumbai",
+        "evidence": "HVDC Pole 2 evaluation at MERC and STU level for additional Mumbai transmission capacity",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 70
       }
     ]
@@ -1964,7 +2103,7 @@
       }
     }
   ],
-  "coverage_pct": 81,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1972,9 +2111,9 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
     "has_customer_features": true,
     "has_capex_features": true,
     "has_derived_margins": true,

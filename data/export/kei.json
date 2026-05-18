@@ -1805,6 +1805,27 @@
     }
   ],
   "features": {
+    "brugg_jv_ehv_voltage_kv": [
+      {
+        "value_num": 400.0,
+        "unit": "kV",
+        "evidence": "KEI-BRUGG joint venture to manufacture EHV cables up to 400 kV",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 65
+      }
+    ],
+    "brugg_jv_partner": [
+      {
+        "value_text": "BRUGG (Switzerland)",
+        "evidence": "Joint venture with BRUGG (Switzerland) for EHV cable manufacturing",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 65
+      }
+    ],
     "capex_inr_cr": [
       {
         "value_num": 600.0,
@@ -1823,6 +1844,27 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 28
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "indirectly via cable supply",
+        "evidence": "EHV cables supplied to PGCIL projects and other utility/EPC clients",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 65
+      }
+    ],
+    "ehv_capability_kv": [
+      {
+        "value_num": 400.0,
+        "unit": "kV",
+        "evidence": "EHV cable manufacturing capability up to 400 kV",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 65
       }
     ],
     "export_share_pct": [
@@ -2072,7 +2114,7 @@
       }
     }
   ],
-  "coverage_pct": 88,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -2083,7 +2125,7 @@
     "has_voltage_features": true,
     "has_capacity_features": false,
     "has_order_features": true,
-    "has_customer_features": false,
+    "has_customer_features": true,
     "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,

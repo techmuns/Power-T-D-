@@ -1806,6 +1806,16 @@
     }
   ],
   "features": {
+    "capex_pipeline_hvdc": [
+      {
+        "value_text": "HVDC + BTG capacity expansion",
+        "evidence": "BHEL invests in HVDC + BTG capacity to capture coal + nuclear + HVDC orders",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 66
+      }
+    ],
     "customer_mention": [
       {
         "value_text": "BHEL",
@@ -1865,6 +1875,36 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 66
+      }
+    ],
+    "customer_mention.NTPC": [
+      {
+        "value_text": "NTPC",
+        "evidence": "BHEL is NTPC's largest BTG (Boiler-Turbine-Generator) supplier",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 66
+      }
+    ],
+    "order_book_hvdc_share": [
+      {
+        "value_text": "BTG + HVDC + nuclear",
+        "evidence": "BHEL order book spans Boiler-Turbine-Generator (BTG), HVDC, nuclear",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 66
+      }
+    ],
+    "voltage_class.bhel_hvdc": [
+      {
+        "value_text": "HVDC capability",
+        "evidence": "BHEL is part of HVDC supplier pool (cited by MOSL framework) along with Hitachi, Siemens, GE Vernova - one of few qualified HVDC players",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 66
       }
     ]
@@ -1959,7 +1999,7 @@
       }
     }
   ],
-  "coverage_pct": 75,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1967,11 +2007,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
+    "has_voltage_features": true,
     "has_capacity_features": false,
-    "has_order_features": false,
+    "has_order_features": true,
     "has_customer_features": true,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

@@ -2016,6 +2016,28 @@
         "document_id": 1
       }
     ],
+    "capex_guidance_fy28_inr_cr": [
+      {
+        "value_num": 45000.0,
+        "unit": "INR crore",
+        "evidence": "Power Grid increased capex guidance to ~\u20b945K crore for FY28 (vs ~\u20b935K crore FY26) [cited via Skipper IP, sector-level signal]",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
+    "cerc_tariff_order_adjustment_fy26_inr_cr": [
+      {
+        "value_num": 617.46,
+        "unit": "INR crore",
+        "evidence": "CERC final order increased transmission income by \u20b9617.46 crore pertaining to earlier years",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
     "customer_mention": [
       {
         "value_text": "Power Grid",
@@ -2098,6 +2120,60 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      }
+    ],
+    "order_book_capex_pipeline_inr_cr": [
+      {
+        "value_num": 45000.0,
+        "unit": "INR crore",
+        "evidence": "PGCIL FY28 capex guidance ~\u20b945K crore (sector indicator)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
+    "provisional_transmission_income_fy26_inr_cr": [
+      {
+        "value_num": 1407.17,
+        "unit": "INR crore",
+        "evidence": "\u20b91,407.17 crore provisional per CERC Tariff Regulations for transmission assets for which tariff orders are yet to be issued",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
+    "regulated_tariff_basis": [
+      {
+        "value_text": "100% cost-plus CERC tariff",
+        "evidence": "Transmission income fully derived from CERC tariff orders + provisional CERC Tariff Regulations",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
+    "transmission_income_fy26_consolidated_inr_cr": [
+      {
+        "value_num": 37765.84,
+        "unit": "INR crore",
+        "evidence": "Transmission income FY26 \u20b937,765.84 crore (Previous Year \u20b937,052.31 crore) as per tariff orders issued by CERC",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
+      }
+    ],
+    "transmission_income_fy26_standalone_inr_cr": [
+      {
+        "value_num": 37682.11,
+        "unit": "INR crore",
+        "evidence": "Standalone transmission income FY26 \u20b937,682.11 crore (Previous Year \u20b936,976.10 crore)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 8
       }
     ],
     "voltage_class_mentioned": [
@@ -2261,7 +2337,7 @@
       }
     }
   ],
-  "coverage_pct": 88,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -2271,9 +2347,9 @@
     "has_documents_text": true,
     "has_voltage_features": true,
     "has_capacity_features": true,
-    "has_order_features": false,
+    "has_order_features": true,
     "has_customer_features": true,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

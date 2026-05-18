@@ -2052,6 +2052,16 @@
         "document_id": 53
       }
     ],
+    "customer_mention.utilities": [
+      {
+        "value_text": "state utilities + retail",
+        "evidence": "Polycab supplies cables to state utilities, EPC contractors, retail consumers",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 54
+      }
+    ],
     "export_share_pct": [
       {
         "value_num": 5.4,
@@ -2079,6 +2089,36 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 53
+      }
+    ],
+    "order_book_diversified": [
+      {
+        "value_text": "cables + wires + FMEG",
+        "evidence": "Polycab order book diversified across cables (HT/LT/EHV up to 400 kV), wires, FMEG products",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 54
+      }
+    ],
+    "order_book_text": [
+      {
+        "value_text": "diversified cable + wire portfolio",
+        "evidence": "Order book diversified across cables, wires, FMEG; specific number not disclosed in results doc",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 54
+      }
+    ],
+    "voltage_class.ehv_cable_capability": [
+      {
+        "value_text": "up to 400 kV EHV cables",
+        "evidence": "Polycab manufactures EHV cables up to 400 kV; HT/LT power cables",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 54
       }
     ]
   },
@@ -2173,7 +2213,7 @@
       }
     }
   ],
-  "coverage_pct": 88,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -2181,9 +2221,9 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
+    "has_voltage_features": true,
     "has_capacity_features": true,
-    "has_order_features": false,
+    "has_order_features": true,
     "has_customer_features": true,
     "has_capex_features": true,
     "has_derived_margins": true,

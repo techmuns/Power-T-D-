@@ -1731,6 +1731,70 @@
     }
   ],
   "features": {
+    "amisp_jv_order_book_inr_cr": [
+      {
+        "value_num": 23361.0,
+        "unit": "INR crore",
+        "evidence": "\u20b923,361 crore of order book to be executed via AMISP JV (SPV structure)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "capacity_smart_meter_amisp_yes": [
+      {
+        "value_text": "AMISP service provider",
+        "evidence": "Genus operates as Advanced Metering Infrastructure Service Provider (AMISP)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "capex_amisp_spv": [
+      {
+        "value_text": "AMISP capex through SPV structure",
+        "evidence": "AMISP capex routed through SPV; Genus holds 26% equity stake",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "jv_equity_stake_pct": [
+      {
+        "value_num": 26.0,
+        "unit": "%",
+        "evidence": "Company holds 26% equity stake in AMISP joint venture",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "newlectric_acquisition_inr_cr": [
+      {
+        "value_num": 25.23,
+        "unit": "INR crore",
+        "evidence": "Acquired equity shares of Newlectric Innovation Private Limited for \u20b925.23 cr",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "non_jv_order_book_inr_cr": [
+      {
+        "value_num": 1812.0,
+        "unit": "INR crore",
+        "evidence": "Non-JV order book: \u20b925,173 - \u20b923,361 = \u20b91,812 crore",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
     "order_book_inr_cr": [
       {
         "value_num": 25173.0,
@@ -1748,6 +1812,27 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 6
+      }
+    ],
+    "order_book_total_inr_cr": [
+      {
+        "value_num": 25173.0,
+        "unit": "INR crore",
+        "evidence": "Total executable order book as of March 31, 2026: \u20b925,173 crores (excluding taxes)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 6
+      }
+    ],
+    "voltage_class.genus_meter_capability": [
+      {
+        "value_text": "single + three phase + DT + feeder smart meters",
+        "evidence": "Genus manufactures full range of smart meters: single-phase, three-phase, DT meters, feeder meters",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 6
       }
     ]
@@ -1843,7 +1928,7 @@
       }
     }
   ],
-  "coverage_pct": 75,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1851,11 +1936,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
     "has_order_features": true,
     "has_customer_features": false,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

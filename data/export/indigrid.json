@@ -1478,7 +1478,63 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_ckm_owned": [
+      {
+        "value_text": "ckm of transmission line + MVA of substation assets (regulated)",
+        "evidence": "IndiGrid is largest power-sector InvIT with regulated transmission asset compounding model",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_acquisition_ongoing": [
+      {
+        "value_text": "acquisition-driven capital deployment",
+        "evidence": "IndiGrid deploys capital via asset acquisitions rather than greenfield capex",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL-acquired assets",
+        "evidence": "Several IndiGrid assets originally awarded to PGCIL / private developers; acquired post-COD",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_acquisition_pipeline": [
+      {
+        "value_text": "acquisition pipeline of TBCB + regulated assets",
+        "evidence": "IndiGrid grows by acquiring operational transmission assets at regulated/TBCB yields",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "regulated_invIT_yes": [
+      {
+        "value_text": "InvIT structure",
+        "evidence": "IndiGrid is regulated power-sector InvIT; transmission asset compounding model",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 71
+      }
+    ],
+    "voltage_class.indigrid_assets": [
+      {
+        "value_text": "765 kV / 400 kV / 220 kV transmission assets",
+        "evidence": "IndiGrid InvIT owns 765 kV / 400 kV / 220 kV transmission lines + substations across India",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1564,7 +1620,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1572,11 +1628,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

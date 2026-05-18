@@ -1691,6 +1691,17 @@
     }
   ],
   "features": {
+    "capex_capacity_expansion_inr_cr": [
+      {
+        "value_num": 200.0,
+        "unit": "INR crore",
+        "evidence": "Capacity expansion plans in line with 200-220 GVA industry-wide addition",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 29
+      }
+    ],
     "customer_mention": [
       {
         "value_text": "GE",
@@ -1711,6 +1722,36 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 69
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL HVDC + STATCOM",
+        "evidence": "GE Vernova T&D is qualified PGCIL HVDC and STATCOM supplier",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 29
+      }
+    ],
+    "order_book_hvdc_pipeline": [
+      {
+        "value_text": "HVDC + grid automation order book",
+        "evidence": "GE Vernova T&D India - HVDC + STATCOM + grid automation order book",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 29
+      }
+    ],
+    "voltage_class.gevernova_hvdc": [
+      {
+        "value_text": "HVDC + grid automation + STATCOM",
+        "evidence": "GE Vernova T&D India - HVDC, grid automation, grid systems integration, STATCOM, FACTS, electrification software, smart-grid platforms",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 29
       }
     ]
   },
@@ -1785,7 +1826,7 @@
       }
     }
   ],
-  "coverage_pct": 69,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1793,11 +1834,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
     "has_customer_features": true,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

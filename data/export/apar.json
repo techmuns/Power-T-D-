@@ -1839,7 +1839,53 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_conductor_mt": [
+      {
+        "value_text": "conductor manufacturing capacity in MT",
+        "evidence": "Apar is leading conductor/OPGW manufacturer; capacity in MT (per their IP)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_conductor_capacity": [
+      {
+        "value_text": "conductor capacity expansion in progress",
+        "evidence": "Apar in capacity expansion mode for HTLS conductor manufacturing",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL + global utilities",
+        "evidence": "Apar supplies conductors/OPGW to PGCIL and global utilities (US/Europe/Middle East exports)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_conductor": [
+      {
+        "value_text": "conductor + OPGW order book",
+        "evidence": "Apar order book includes HTLS conductors, OPGW, export contracts",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.apar_capability": [
+      {
+        "value_text": "HTLS conductors + OPGW + transformer oil + speciality cables",
+        "evidence": "Apar Industries - HTLS conductors, OPGW, transformer oil, speciality cables (framework cites)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1925,7 +1971,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1933,11 +1979,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

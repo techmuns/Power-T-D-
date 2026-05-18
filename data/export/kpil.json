@@ -1830,6 +1830,137 @@
     }
   ],
   "features": {
+    "capacity_lmg_sweden_inr_cr": [
+      {
+        "value_num": 3023.0,
+        "unit": "INR crore",
+        "evidence": "LMG (Sweden) reported revenue \u20b93,023 cr in FY26, growth 64% YoY",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "capex_fy26_inr_cr": [
+      {
+        "value_num": 1000.0,
+        "unit": "INR crore",
+        "evidence": "Capex run-rate ~\u20b91,000 cr for capacity expansion mentioned in earnings call",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "core_ebitda_margin_q4fy26_pct": [
+      {
+        "value_num": 8.2,
+        "unit": "%",
+        "evidence": "Q4 FY26 Core EBITDA margin 8.2% (+60 bps YoY)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "customer_mention.International": [
+      {
+        "value_text": "Saudi Arabia, UAE, Africa",
+        "evidence": "Oil & Gas revenue growth driven by strong execution in Saudi project; T&D order wins in India, Africa, Middle East, South America",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "geography.international_pct": [
+      {
+        "value_num": 32.0,
+        "unit": "%",
+        "evidence": "Geography mix: Domestic 68% / International 32%",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "geography.middle_east_pct": [
+      {
+        "value_num": 9.0,
+        "unit": "%",
+        "evidence": "Middle East 9% of order book",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "large_order_share_pct": [
+      {
+        "value_num": 50.0,
+        "unit": "%",
+        "evidence": "Nearly 50% of orders booked in FY26 above \u20b91,000 cr value",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "net_debt_inr_cr": [
+      {
+        "value_num": 915.0,
+        "unit": "INR crore",
+        "evidence": "Consolidated Net Debt \u20b9915 cr (down from \u20b92,240 cr Q3 FY26)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "net_working_capital_days": [
+      {
+        "value_num": 75.0,
+        "unit": "days",
+        "evidence": "Consolidated Net Working Capital Days 75 (Q4FY26) vs 79 (Q3FY26)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "order_book.bnf_pct": [
+      {
+        "value_num": 28.0,
+        "unit": "%",
+        "evidence": "B&F = \u20b918,295 cr / \u20b965,457 cr = 28% of order book",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "order_book.td_pct": [
+      {
+        "value_num": 44.0,
+        "unit": "%",
+        "evidence": "T&D = \u20b928,572 cr / \u20b965,457 cr = 44% of consolidated order book",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "order_book.water_pct": [
+      {
+        "value_num": 11.0,
+        "unit": "%",
+        "evidence": "Water = \u20b97,486 cr / 65,457 cr = 11% of order book",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
     "order_book_inr_cr": [
       {
         "value_num": 26400.0,
@@ -1875,6 +2006,48 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 16
+      }
+    ],
+    "order_book_total_inr_cr": [
+      {
+        "value_num": 65457.0,
+        "unit": "INR crore",
+        "evidence": "Consolidated order book \u20b965,457 cr as on 31 March 2026",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "order_inflow_fy26_inr_cr": [
+      {
+        "value_num": 26400.0,
+        "unit": "INR crore",
+        "evidence": "Order inflow FY26 \u20b926,400 cr; FY27 inflow \u20b91,833 cr till date + L1 ~\u20b93,200 cr",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "voltage_class.kpil_td_capability": [
+      {
+        "value_text": "transmission line + substation EPC up to 765 kV",
+        "evidence": "KPIL T&D = 44% of order book \u20b928,572 cr; capability up to 765 kV",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
+      }
+    ],
+    "voltage_class.t&d_capability": [
+      {
+        "value_text": "transmission EPC capability",
+        "evidence": "T&D segment is the largest contributor (44% order book \u20b928,572 cr); LMG (Sweden) subsidiary order book \u20b93,258 cr (high-voltage international)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 15
       }
     ]
   },
@@ -1969,7 +2142,7 @@
       }
     }
   ],
-  "coverage_pct": 75,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1977,11 +2150,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
     "has_order_features": true,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

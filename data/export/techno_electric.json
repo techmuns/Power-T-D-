@@ -1607,7 +1607,53 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_smart_meter_amisp": [
+      {
+        "value_text": "AMISP service provider for smart meter rollout",
+        "evidence": "Techno Electric operates as smart-meter AMISP alongside transmission EPC business",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_text": [
+      {
+        "value_text": "asset-light EPC model",
+        "evidence": "Techno Electric runs an asset-light EPC business; capex moderate; AMISP requires upfront capex recovered over 10 years",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL EPC + state utilities",
+        "evidence": "Techno Electric serves PGCIL and state TRANSCOs for transmission line + substation EPC",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_split_text": [
+      {
+        "value_text": "transmission EPC + smart meter AMISP",
+        "evidence": "Order book split: transmission EPC backlog plus smart-meter AMISP annuity business",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.techno_capability": [
+      {
+        "value_text": "transmission EPC up to 765 kV + smart meters",
+        "evidence": "Framework doc bucket: transmission EPC with secondary smart meter / grid automation exposure",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1693,7 +1739,7 @@
       }
     }
   ],
-  "coverage_pct": 56,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1701,11 +1747,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": false,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

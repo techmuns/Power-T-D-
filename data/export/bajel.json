@@ -744,7 +744,71 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_text": [
+      {
+        "value_text": "transmission EPC capability includes towers + substations",
+        "evidence": "Bajel is part of framework's transmission EPC peer set alongside KEC, KPIL, Transrail",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_post_demerger": [
+      {
+        "value_text": "post-demerger growth capex",
+        "evidence": "Bajel post-demerger growth capex for capacity expansion",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL + state utilities",
+        "evidence": "Bajel serves PGCIL and state TRANSCOs for transmission EPC",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_inr_cr_disclosed_separately": [
+      {
+        "value_text": "order book disclosed in quarterly results",
+        "evidence": "Bajel order book disclosed in earnings; specific number tracked via results filings",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_text_detailed": [
+      {
+        "value_text": "transmission EPC order book",
+        "evidence": "Bajel transmission line + substation EPC order book disclosed in earnings",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 26
+      }
+    ],
+    "voltage_class.bajel_capability": [
+      {
+        "value_text": "transmission EPC + towers",
+        "evidence": "Bajel Projects - transmission line + substation EPC; recently demerged from Bajaj Electricals",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 26
+      },
+      {
+        "value_text": "transmission EPC (132/220/400 kV)",
+        "evidence": "Bajel Projects (demerged from Bajaj Electricals) - transmission line + substation EPC up to 400 kV",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -830,7 +894,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -838,11 +902,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

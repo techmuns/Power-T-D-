@@ -1126,7 +1126,53 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_tower_mt": [
+      {
+        "value_text": "tower MT capacity (specific MT not disclosed in available docs)",
+        "evidence": "Framework doc: Transrail is mid-tier tower manufacturer; specific MT in their RHP",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_growth_mode": [
+      {
+        "value_text": "growth-mode capex for capacity expansion",
+        "evidence": "Transrail is in growth-mode post-listing with active capex on capacity expansion",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL + state TRANSCOs + exports",
+        "evidence": "Transrail's customer mix: PGCIL, state TRANSCOs, export utilities",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_inr_cr_recent_listing": [
+      {
+        "value_text": "order book disclosure in RHP",
+        "evidence": "Transrail recently listed; framework references their RHP for order book + voltage capability data",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.transrail_capability": [
+      {
+        "value_text": "transmission line EPC + tower manufacturing (up to 765 kV)",
+        "evidence": "Framework doc: Transrail is transmission line + tower player; framework bucket transmission_epc",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1212,7 +1258,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1220,11 +1266,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

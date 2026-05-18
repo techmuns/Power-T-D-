@@ -1839,7 +1839,72 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_smart_meter_capability": [
+      {
+        "value_text": "smart meter installed base + AMI services",
+        "evidence": "HPL is one of the listed smart meter manufacturers (framework bucket smart_meters_automation)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_smart_meter_capacity": [
+      {
+        "value_text": "smart meter manufacturing capacity expansion",
+        "evidence": "HPL expanding smart-meter manufacturing capacity to meet RDSS demand",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.DISCOM": [
+      {
+        "value_text": "state DISCOMs",
+        "evidence": "HPL supplies smart meters to multiple state DISCOMs under RDSS",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_smart_meter_text": [
+      {
+        "value_text": "smart meter order book",
+        "evidence": "HPL has smart meter orders from state DISCOMs under RDSS scheme",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "smart_meter_capability": [
+      {
+        "value_text": "metering + AMI",
+        "evidence": "HPL Electric operates in smart-meter manufacturing + AMI services (framework bucket)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 68
+      }
+    ],
+    "voltage_class.hpl_smart_meter": [
+      {
+        "value_text": "smart meters + switchgear + lighting",
+        "evidence": "HPL Electric & Power - smart meter manufacturer + LV/MV switchgear + lighting products",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class_amisp": [
+      {
+        "value_text": "AMI / smart meter / switchgear",
+        "evidence": "HPL has smart meter manufacturing + AMISP service capability",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1925,7 +1990,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1933,11 +1998,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

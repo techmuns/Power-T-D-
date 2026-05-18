@@ -1819,6 +1819,83 @@
         "document_id": 30
       }
     ],
+    "atc_loss_pct.MO_Distribution.q4fy26": [
+      {
+        "value_num": 0.9,
+        "unit": "%",
+        "evidence": "Mumbai DISCOM (MO-Distribution) Q4 FY26 AT&C 0.9% (effectively zero loss)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPCODL.fy26": [
+      {
+        "value_num": 18.0,
+        "unit": "%",
+        "evidence": "TPCODL FY26 actual AT&C 18% vs 20% FY25; vesting target 18%",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPDDL.fy26": [
+      {
+        "value_num": 5.4,
+        "unit": "%",
+        "evidence": "TPDDL FY26 AT&C 5.4% vs 6.0% FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPDDL.q4fy26": [
+      {
+        "value_num": 5.4,
+        "unit": "%",
+        "evidence": "Tata Power Delhi Distribution AT&C losses (%) 5.4% Q4 FY26 vs 5.5% Q4 FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPNODL.fy26": [
+      {
+        "value_num": 19.0,
+        "unit": "%",
+        "evidence": "TPNODL FY26 actual AT&C 19% vs 21% FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPSODL.fy26": [
+      {
+        "value_num": 15.0,
+        "unit": "%",
+        "evidence": "TPSODL FY26 actual AT&C 15% vs 17% FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "atc_loss_pct.TPWODL.fy26": [
+      {
+        "value_num": 10.0,
+        "unit": "%",
+        "evidence": "TPWODL FY26 actual AT&C 10% vs 13% FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
     "capacity_ckm": [
       {
         "value_num": 1841.0,
@@ -3365,6 +3442,17 @@
         "document_id": 30
       }
     ],
+    "installed_capacity_gw": [
+      {
+        "value_num": 17.5,
+        "unit": "GW",
+        "evidence": "Tata Power installed capacity ~17.5 GW (incl. 9.6 GW under construction)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
     "order_book_inr_cr": [
       {
         "value_num": 898.0,
@@ -3373,6 +3461,60 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "renewables_share_target_2030_pct": [
+      {
+        "value_num": 66.0,
+        "unit": "%",
+        "evidence": "Clean & Green to account for ~66% capacity post project completions; target 100% clean by 2045",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "sector_capex_pipeline_fy25_32_inr_trn": [
+      {
+        "value_num": 9.2,
+        "unit": "INR trillion",
+        "evidence": "\u20b99.2 tn transmission capex anticipated in India between FY25-32E (NEP/CEA)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "smart_meter_progress_text": [
+      {
+        "value_text": "Mumbai+Delhi+Odisha digitization underway",
+        "evidence": "Smart-meter rollout across Mumbai, Delhi and Odisha networks; AT&C reduction trajectory tied to metering",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "tbcb_transmission_pipeline_ckm": [
+      {
+        "value_num": 1521.0,
+        "unit": "ckm",
+        "evidence": "Tata Power TBCB transmission projects under execution total 1,521 ckt km across Gopalpur (377), Paradeep (384), Bikaner (692), Jejuri-Hinjewadi (226), Jalpura-Khurja (162) and SE UP (226)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 30
+      }
+    ],
+    "thermal_capacity_gw": [
+      {
+        "value_num": 8.9,
+        "unit": "GW",
+        "evidence": "Thermal energy generation installed capacity ~8.9 GW",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 30
       }
     ],

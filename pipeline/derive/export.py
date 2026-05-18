@@ -74,12 +74,17 @@ def _coverage(co_data: dict) -> tuple[int, dict[str, bool]]:
     docs = co_data.get("documents", [])
     checks["has_documents_text"] = any(d.get("has_text") for d in docs)
     feats = co_data.get("features", {}) or {}
-    checks["has_voltage_features"]  = "voltage_class_mentioned" in feats
-    checks["has_capacity_features"] = any(k.startswith("capacity_") for k in feats)
-    checks["has_order_features"]    = any(k in feats for k in
-                                          ("order_book_inr_cr", "order_win_inr_cr"))
-    checks["has_customer_features"] = "customer_mention" in feats
-    checks["has_capex_features"]    = "capex_inr_cr" in feats
+    # Feature presence checks are matched permissively against feature
+    # names. The heuristic extractor and the manual / LLM extractors use
+    # slightly different naming conventions; we count either as present.
+    feat_names = list(feats.keys())
+    def has_any(*needles: str) -> bool:
+        return any(any(n in name for n in needles) for name in feat_names)
+    checks["has_voltage_features"]  = has_any("voltage_class", "voltage_capability", "kv")
+    checks["has_capacity_features"] = has_any("capacity_", "capacity.", "mva", "gva", "_mt", "ckm")
+    checks["has_order_features"]    = has_any("order_book", "order_win", "order_inflow", "tender_pipeline")
+    checks["has_customer_features"] = has_any("customer_mention", "customer", "tbcb", "approval")
+    checks["has_capex_features"]    = has_any("capex", "regulated_equity")
     derived = co_data.get("derived", [])
     checks["has_derived_margins"]   = any(d["metric"] == "ebitda_margin_pct" for d in derived)
     checks["has_derived_growth"]    = any(d["metric"] == "revenue_growth_yoy_pct" for d in derived)

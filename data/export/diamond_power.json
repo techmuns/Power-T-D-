@@ -1766,7 +1766,53 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_conductor_text": [
+      {
+        "value_text": "conductor manufacturing capacity",
+        "evidence": "Diamond Power is mid-tier conductor + cable manufacturer in framework peer set",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_text": [
+      {
+        "value_text": "growth-mode after restructuring",
+        "evidence": "Diamond Power in growth phase after corporate restructuring",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.utilities": [
+      {
+        "value_text": "state utilities + EPC contractors",
+        "evidence": "Diamond Power serves state TRANSCOs and EPC contractors",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_text": [
+      {
+        "value_text": "order book disclosed in quarterly results",
+        "evidence": "Diamond Power order book tracked via earnings releases",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.diamond_capability": [
+      {
+        "value_text": "transmission line conductors + cables",
+        "evidence": "Diamond Power Infrastructure - transmission line conductors and cables (framework cites)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1852,7 +1898,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 94,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1860,11 +1906,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

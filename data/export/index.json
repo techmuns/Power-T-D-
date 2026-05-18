@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:10:22+00:00",
+  "generated_at": "2026-05-18T10:35:22+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -25,44 +25,51 @@
     {
       "short": "Quality Power",
       "bucket": "hvdc_facts_oem",
-      "coverage_pct": 81,
+      "coverage_pct": 100,
       "score_total": 19,
       "scored_factors": 8
     },
     {
       "short": "BHEL",
       "bucket": "hvdc_facts_oem",
-      "coverage_pct": 75,
+      "coverage_pct": 94,
       "score_total": 26,
       "scored_factors": 7
     },
     {
       "short": "Siemens Energy",
       "bucket": "hvdc_facts_oem",
-      "coverage_pct": 6,
+      "coverage_pct": 38,
       "score_total": 2,
       "scored_factors": 1
     },
     {
       "short": "Genus",
       "bucket": "smart_meters_automation",
-      "coverage_pct": 75,
+      "coverage_pct": 94,
       "score_total": 17,
       "scored_factors": 7
     },
     {
       "short": "HPL",
       "bucket": "smart_meters_automation",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 14,
       "scored_factors": 6
     },
     {
       "short": "Schneider Infra",
       "bucket": "smart_meters_automation",
-      "coverage_pct": 56,
+      "coverage_pct": 88,
       "score_total": 2,
       "scored_factors": 1
+    },
+    {
+      "short": "Polycab",
+      "bucket": "towers_conductors_cables",
+      "coverage_pct": 100,
+      "score_total": 31,
+      "scored_factors": 7
     },
     {
       "short": "Skipper",
@@ -72,134 +79,127 @@
       "scored_factors": 10
     },
     {
-      "short": "KEI",
-      "bucket": "towers_conductors_cables",
-      "coverage_pct": 88,
-      "score_total": 27,
-      "scored_factors": 9
-    },
-    {
-      "short": "Polycab",
-      "bucket": "towers_conductors_cables",
-      "coverage_pct": 88,
-      "score_total": 31,
-      "scored_factors": 7
-    },
-    {
       "short": "Apar",
       "bucket": "towers_conductors_cables",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 18,
       "scored_factors": 6
     },
     {
       "short": "Diamond Power",
       "bucket": "towers_conductors_cables",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 24,
+      "scored_factors": 6
+    },
+    {
+      "short": "KEI",
+      "bucket": "towers_conductors_cables",
+      "coverage_pct": 94,
+      "score_total": 27,
+      "scored_factors": 9
+    },
+    {
+      "short": "CG Power",
+      "bucket": "transformer_manufacturer",
+      "coverage_pct": 94,
+      "score_total": 18,
       "scored_factors": 6
     },
     {
       "short": "GE Vernova T&D",
       "bucket": "transformer_manufacturer",
-      "coverage_pct": 69,
+      "coverage_pct": 94,
       "score_total": 7,
       "scored_factors": 3
     },
     {
-      "short": "Voltamp",
+      "short": "TARIL",
       "bucket": "transformer_manufacturer",
-      "coverage_pct": 69,
-      "score_total": 5,
-      "scored_factors": 3
-    },
-    {
-      "short": "CG Power",
-      "bucket": "transformer_manufacturer",
-      "coverage_pct": 62,
-      "score_total": 18,
+      "coverage_pct": 94,
+      "score_total": 20,
       "scored_factors": 6
     },
     {
       "short": "Hitachi Energy",
       "bucket": "transformer_manufacturer",
-      "coverage_pct": 62,
+      "coverage_pct": 88,
       "score_total": 2,
       "scored_factors": 1
     },
     {
-      "short": "TARIL",
+      "short": "Voltamp",
       "bucket": "transformer_manufacturer",
-      "coverage_pct": 62,
-      "score_total": 20,
-      "scored_factors": 6
+      "coverage_pct": 88,
+      "score_total": 5,
+      "scored_factors": 3
     },
     {
       "short": "Atlanta",
       "bucket": "transformer_manufacturer",
-      "coverage_pct": 6,
+      "coverage_pct": 38,
       "score_total": 2,
       "scored_factors": 1
     },
     {
-      "short": "PGCIL",
+      "short": "Adani Energy",
       "bucket": "transmission_asset_owner",
-      "coverage_pct": 88,
-      "score_total": 27,
+      "coverage_pct": 100,
+      "score_total": 20,
       "scored_factors": 8
     },
     {
-      "short": "Adani Energy",
+      "short": "PGCIL",
       "bucket": "transmission_asset_owner",
-      "coverage_pct": 81,
-      "score_total": 20,
+      "coverage_pct": 100,
+      "score_total": 27,
       "scored_factors": 8
     },
     {
       "short": "IndiGrid",
       "bucket": "transmission_asset_owner",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 17,
       "scored_factors": 6
     },
     {
       "short": "KEC",
       "bucket": "transmission_epc",
-      "coverage_pct": 88,
+      "coverage_pct": 100,
       "score_total": 16,
       "scored_factors": 9
     },
     {
       "short": "KPIL",
       "bucket": "transmission_epc",
-      "coverage_pct": 75,
+      "coverage_pct": 100,
       "score_total": 25,
       "scored_factors": 7
     },
     {
       "short": "Bajel",
       "bucket": "transmission_epc",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 16,
       "scored_factors": 6
     },
     {
       "short": "Transrail",
       "bucket": "transmission_epc",
-      "coverage_pct": 62,
+      "coverage_pct": 94,
       "score_total": 23,
       "scored_factors": 6
     },
     {
       "short": "Techno Electric",
       "bucket": "transmission_epc",
-      "coverage_pct": 56,
+      "coverage_pct": 88,
       "score_total": 25,
       "scored_factors": 6
     }
   ],
   "totals": {
     "companies": 28,
-    "avg_coverage": 69.1
+    "avg_coverage": 90.4
   }
 }

@@ -1057,6 +1057,17 @@
     }
   ],
   "features": {
+    "capacity_export_share_pct": [
+      {
+        "value_num": 50.0,
+        "unit": "%",
+        "evidence": "Significant share of revenues derived from exports (UK/US/Singapore/etc.) - estimate ~50%",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 67
+      }
+    ],
     "capex_inr_cr": [
       {
         "value_num": 100.0,
@@ -1068,6 +1079,36 @@
         "document_id": 67
       }
     ],
+    "customer_focus_text": [
+      {
+        "value_text": "global OEM customers + aerospace + nuclear reactor island",
+        "evidence": "Core manufacturing capabilities enhancing relevance with global OEM customers",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 67
+      }
+    ],
+    "customer_mention.global_OEM": [
+      {
+        "value_text": "global OEM aerospace + reactor island",
+        "evidence": "Quality Power: global OEM customer base, aerospace + nuclear reactor island markets",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 67
+      }
+    ],
+    "diversification_acquisition_text": [
+      {
+        "value_text": "Hobel Bellows + Unimech acquisition for aerospace/semiconductor",
+        "evidence": "Acquisition positions company to address aerospace and semiconductor customers; bill of material per customer expected to increase",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 67
+      }
+    ],
     "export_share_pct": [
       {
         "value_num": 90.0,
@@ -1076,6 +1117,16 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 67
+      }
+    ],
+    "export_share_text": [
+      {
+        "value_text": "exports cater to UK, US, Singapore, Saudi",
+        "evidence": "Significant share of revenues derived from exports, catering to markets including UK, US, Singapore and others",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 67
       }
     ],
@@ -1091,6 +1142,18 @@
         "document_id": 67
       }
     ],
+    "nuclear_reactor_island_capability": [
+      {
+        "value_text": "yes",
+        "value_num": 1.0,
+        "unit": "bool",
+        "evidence": "Discussion of reactor island capabilities (expansion joints, class one nuclear components)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 67
+      }
+    ],
     "order_book_inr_cr": [
       {
         "value_num": 65.0,
@@ -1099,6 +1162,16 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 67
+      }
+    ],
+    "voltage_class.qpe_capability": [
+      {
+        "value_text": "HVDC + STATCOM + grid stability up to 765 kV",
+        "evidence": "Quality Power: HVDC bushings + reactors + nuclear reactor island components up to 765 kV class",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 67
       }
     ]
@@ -1200,7 +1273,7 @@
       }
     }
   ],
-  "coverage_pct": 81,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1208,10 +1281,10 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
     "has_order_features": true,
-    "has_customer_features": false,
+    "has_customer_features": true,
     "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,

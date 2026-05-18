@@ -70,7 +70,63 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_industry_pipeline_gw": [
+      {
+        "value_num": 32.3,
+        "unit": "GW",
+        "evidence": "MOSL: 32.3 GW HVDC pipeline in India, of which 14.5 GW had already been tendered/awarded; expected 1-2 HVDC awards annually going forward - Siemens Energy is a qualified bidder",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_parent_tech_dependence": [
+      {
+        "value_text": "depends on parent (Siemens Energy AG) for HVDC tech",
+        "evidence": "Parent technology dependence: MNC subsidiary - economics split between Indian listed entity and parent for HVDC product manufacturing",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL HVDC",
+        "evidence": "Siemens Energy is qualified supplier for PGCIL HVDC tenders",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_inr_cr_industry": [
+      {
+        "value_text": "HVDC tendered pool ~14.5 GW (industry-wide)",
+        "evidence": "Industry: 14.5 GW of HVDC capacity tendered/awarded; Siemens Energy competes for share",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.facts_capability": [
+      {
+        "value_text": "STATCOM + FACTS + reactive compensation",
+        "evidence": "InVed framework: Siemens Energy supplies STATCOM, SVC, shunt reactors, capacitor banks across grid stability portfolio",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.hvdc_capability": [
+      {
+        "value_text": "HVDC converter transformers + reactors (limited supplier pool)",
+        "evidence": "MOSL: HVDC projects require specialized high-value converter transformers and reactors, with a limited supplier pool including Hitachi Energy India, Siemens Energy India, GE Vernova T&D India and BHEL",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -136,7 +192,7 @@
       "inputs": {}
     }
   ],
-  "coverage_pct": 6,
+  "coverage_pct": 38,
   "coverage_checks": {
     "has_quarterly_financials": false,
     "has_balance_sheet": false,
@@ -144,11 +200,11 @@
     "has_ratios": false,
     "has_market_data": true,
     "has_documents_text": false,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": false,
     "has_derived_growth": false,
     "has_derived_balance_sheet": false,

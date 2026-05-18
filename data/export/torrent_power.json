@@ -1792,6 +1792,28 @@
     }
   ],
   "features": {
+    "atc_loss_agra_franchisee_fy26_pct": [
+      {
+        "value_num": 5.4,
+        "unit": "%",
+        "evidence": "Agra franchisee - AT&C reduced to ~5.4% in FY26 from 58.77% at takeover",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "atc_loss_bhiwandi_franchisee_fy26_pct": [
+      {
+        "value_num": 9.1,
+        "unit": "%",
+        "evidence": "Bhiwandi franchisee - AT&C reduced to ~9.1% in FY26 from 58% at takeover",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
     "atc_loss_pct": [
       {
         "value_num": 48.0,
@@ -1800,6 +1822,17 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "atc_loss_smk_franchisee_fy26_pct": [
+      {
+        "value_num": 23.1,
+        "unit": "%",
+        "evidence": "Shil, Mumbra, Kalwa (SMK) franchisee - AT&C reduced to ~23.1% in FY26 from 48% at takeover",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 27
       }
     ],
@@ -2375,6 +2408,39 @@
         "document_id": 27
       }
     ],
+    "distribution_loss_ahmedabad_fy26_pct": [
+      {
+        "value_num": 3.35,
+        "unit": "%",
+        "evidence": "Ahmedabad / Gandhinagar distribution loss 3.35% (FY26) - amongst the lowest in the country",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "distribution_loss_dnh_fy26_pct": [
+      {
+        "value_num": 2.0,
+        "unit": "%",
+        "evidence": "Dadra & Nagar Haveli & Daman & Diu distribution loss <2% during FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "distribution_loss_surat_fy26_pct": [
+      {
+        "value_num": 2.77,
+        "unit": "%",
+        "evidence": "Surat distribution loss 2.77% (FY26)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
     "grid_tech_mentioned": [
       {
         "value_text": "FACTS",
@@ -2384,6 +2450,61 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "market_cap_inr_cr": [
+      {
+        "value_num": 80000.0,
+        "unit": "INR crore",
+        "evidence": "Market Cap ~\u20b980,000 cr (as on 12 May 2026)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "renewable_solar_operational_mwp": [
+      {
+        "value_num": 583.0,
+        "unit": "MWp",
+        "evidence": "Solar operational 583 MWp",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "renewable_wind_operational_mw": [
+      {
+        "value_num": 615.0,
+        "unit": "MW",
+        "evidence": "Wind operational 615 MW",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "thermal_capacity_operational_mw": [
+      {
+        "value_num": 3092.0,
+        "unit": "MW",
+        "evidence": "Operational thermal: 2,730 MW gas + 362 MW coal = 3,092 MW operational",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 27
+      }
+    ],
+    "thermal_under_development_mw": [
+      {
+        "value_num": 1600.0,
+        "unit": "MW",
+        "evidence": "1,600 MW coal-based under development; 1,400 MW under acquisition",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 27
       }
     ],

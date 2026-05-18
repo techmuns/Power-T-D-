@@ -2337,6 +2337,39 @@
         "document_id": 46
       }
     ],
+    "chandigarh_pat_fy26_inr_cr": [
+      {
+        "value_num": 25.0,
+        "unit": "INR crore",
+        "evidence": "Chandigarh PAT \u20b925 cr in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "chandigarh_revenue_fy26_inr_cr": [
+      {
+        "value_num": 1007.0,
+        "unit": "INR crore",
+        "evidence": "Chandigarh revenue \u20b91,007 cr in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "chandigarh_sales_mu": [
+      {
+        "value_num": 1746.0,
+        "unit": "MU",
+        "evidence": "Chandigarh sales volume 1,746 MU in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
     "customer_mention": [
       {
         "value_text": "SECI",
@@ -2349,6 +2382,16 @@
         "document_id": 46
       }
     ],
+    "customer_mention.SECI": [
+      {
+        "value_text": "SECI",
+        "evidence": "250 MW wind project awarded by SECI",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
     "export_share_pct": [
       {
         "value_num": 9.0,
@@ -2357,6 +2400,71 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 46
+      }
+    ],
+    "rajasthan_ebitda_fy26_inr_cr": [
+      {
+        "value_num": 118.0,
+        "unit": "INR crore",
+        "evidence": "Rajasthan DF EBITDA increased to \u20b9118 cr in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "renewable_pipeline_300mw_hybrid": [
+      {
+        "value_text": "300 MW hybrid + 250 MW wind (SECI)",
+        "evidence": "Purvah Green won 300 MW hybrid project (CESC Kolkata) + 250 MW wind project (SECI)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "td_loss_chandigarh_cpdl_fy26_pct": [
+      {
+        "value_num": 8.3,
+        "unit": "%",
+        "evidence": "Chandigarh Power (CPDL) T&D loss reduced to 8.3% in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "td_loss_kolkata_fy26_pct": [
+      {
+        "value_num": 6.11,
+        "unit": "%",
+        "evidence": "CESC Kolkata distribution business T&D loss reduced to all-time low of 6.11% in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "td_loss_malegaon_fy26_pct": [
+      {
+        "value_num": 36.3,
+        "unit": "%",
+        "evidence": "Malegaon DF T&D Loss reduced to 36.3% in FY26 from 39.7% in FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 46
+      }
+    ],
+    "td_loss_rajasthan_fy26_pct": [
+      {
+        "value_num": 11.4,
+        "unit": "%",
+        "evidence": "Rajasthan distribution franchisee T&D loss reduced to 11.4% in FY26 from 12.9% in FY25",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 46
       }
     ]

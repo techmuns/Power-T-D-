@@ -70,7 +70,53 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_mva_industry_context": [
+      {
+        "value_text": "part of India transformer component market ~$1.3bn 2024 -> ~$2.6bn 2030E",
+        "evidence": "Atlanta's RHP: Indian transformer component market grew 10.2% CAGR 2019-24 to USD 1.3 billion; expected USD 2.6 billion by 2030 (~12.2% CAGR)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "capex_planned_text": [
+      {
+        "value_text": "capacity expansion plans per RHP",
+        "evidence": "Atlanta RHP cites planned capacity expansion; specific amount in RHP details",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "customer_mention.industry": [
+      {
+        "value_text": "RE / thermal-hydro / railways / data centres / EV charging",
+        "evidence": "Atlanta RHP: transformer demand driven by RE integration, thermal/hydro capacity, government schemes, EV charging, railways, data centres and smart-grid development",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "order_book_inr_cr_notdisclosed": [
+      {
+        "value_text": "not disclosed (new listing - awaiting first IP)",
+        "evidence": "Order book disclosure pending; expected first investor presentation post-listing",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ],
+    "voltage_class.atlanta_capability": [
+      {
+        "value_text": "medium to high voltage power transformers (per RHP)",
+        "evidence": "Atlanta's RHP highlights advanced transformers needing smart-grid technologies, phase-shifting capabilities and voltage regulation features; manufacturers up to 132 kV",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -136,7 +182,7 @@
       "inputs": {}
     }
   ],
-  "coverage_pct": 6,
+  "coverage_pct": 38,
   "coverage_checks": {
     "has_quarterly_financials": false,
     "has_balance_sheet": false,
@@ -144,11 +190,11 @@
     "has_ratios": false,
     "has_market_data": true,
     "has_documents_text": false,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": false,
     "has_derived_growth": false,
     "has_derived_balance_sheet": false,

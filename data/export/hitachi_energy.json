@@ -1241,6 +1241,26 @@
     }
   ],
   "features": {
+    "capacity_gva_expansion": [
+      {
+        "value_text": "200-220 GVA industry expansion (Hitachi part of peer set)",
+        "evidence": "MOSL: leading players Hitachi, GE Vernova, Siemens Energy, CG Power, Atlanta, TARIL adding around 200-220 GVA capacity over 2-3 years",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 14
+      }
+    ],
+    "capex_capacity_expansion": [
+      {
+        "value_text": "capacity expansion in line with industry 200-220 GVA additions",
+        "evidence": "Capex deployed for capacity expansion to capture HVDC + EHV transformer demand",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 14
+      }
+    ],
     "customer_mention": [
       {
         "value_text": "Hitachi",
@@ -1260,6 +1280,36 @@
         "extractor": "heuristic",
         "source_tag": "fact_company",
         "confidence": 0.6,
+        "document_id": 14
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL HVDC",
+        "evidence": "Primary supplier to PGCIL HVDC projects",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 14
+      }
+    ],
+    "order_book_hvdc_pipeline": [
+      {
+        "value_text": "HVDC pipeline 32.3 GW (14.5 GW awarded)",
+        "evidence": "Hitachi Energy is qualified for 32.3 GW HVDC pipeline; 14.5 GW already awarded across industry",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 14
+      }
+    ],
+    "voltage_class.hitachi_hvdc": [
+      {
+        "value_text": "HVDC converter transformers",
+        "evidence": "Hitachi Energy India - largest HVDC converter transformer supplier in India; part of limited HVDC supplier pool (MOSL framework)",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
         "document_id": 14
       }
     ]
@@ -1329,7 +1379,7 @@
       "inputs": {}
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1337,11 +1387,11 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
     "has_customer_features": true,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,

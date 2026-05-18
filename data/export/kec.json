@@ -1872,6 +1872,38 @@
         "document_id": 2
       }
     ],
+    "capex_capacity_expansion_inr_cr": [
+      {
+        "value_num": 400.0,
+        "unit": "INR crore",
+        "evidence": "KEC capex ~\u20b9400 cr planned for tower + substation capacity",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 4
+      }
+    ],
+    "capex_fy26_inr_cr": [
+      {
+        "value_num": 400.0,
+        "unit": "INR crore",
+        "evidence": "Capex of ~\u20b9400 cr planned for capacity expansion across tower/substation businesses",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 4
+      }
+    ],
+    "customer_mention.PGCIL": [
+      {
+        "value_text": "PGCIL",
+        "evidence": "KEC is largest tower manufacturer to PGCIL and state TRANSCOs",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 4
+      }
+    ],
     "grid_tech_mentioned": [
       {
         "value_text": "GIS",
@@ -1986,6 +2018,17 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 3
+      }
+    ],
+    "subsidiary_revenue_sae_brazil_inr_cr": [
+      {
+        "value_num": 5216.0,
+        "unit": "INR crore",
+        "evidence": "Subsidiary SAE Brazil revenue \u20b95,216 cr in FY26",
+        "extractor": "llm_manual",
+        "source_tag": "fact_company",
+        "confidence": 0.9,
+        "document_id": 4
       }
     ],
     "voltage_class_mentioned": [
@@ -2125,7 +2168,7 @@
       }
     }
   ],
-  "coverage_pct": 88,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -2136,8 +2179,8 @@
     "has_voltage_features": true,
     "has_capacity_features": true,
     "has_order_features": true,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
