@@ -14,17 +14,135 @@
   "cash_flow": [],
   "ratios": [],
   "derived": [],
-  "market": null,
-  "documents": [],
+  "market": {
+    "price": null,
+    "pct_change": null,
+    "market_cap_cr": null,
+    "pe_ratio": 5.98,
+    "pb_ratio": null,
+    "dividend_yield": null,
+    "week52_high": null,
+    "week52_low": null,
+    "book_value": null,
+    "eps": 9.38,
+    "face_value": null,
+    "fetched_at": "2026-05-18T09:50:22+00:00"
+  },
+  "documents": [
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf885dd0-8f43-487c-9fff-5eea58ed4096.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a9e451f6-5408-4a24-8806-8e28e27d241a.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b0388872-fdd0-4769-ab4c-4fd80694db51.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5d318b56-5023-4796-88ee-70f4978bddb8.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ae9f5f2e-68e2-49a7-8e4c-8a9a34a741e9.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    }
+  ],
   "features": {},
-  "scorecard": [],
-  "coverage_pct": 0,
+  "scorecard": [
+    {
+      "factor": "approval_technology_depth",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "balance_sheet",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "capacity_readiness",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "competitive_position",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "margin_sustainability",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "order_book_quality",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "tam_relevance",
+      "score": 2,
+      "evidence": "order_wins=0, capex_mentions=0",
+      "inputs": {
+        "order_wins": 0,
+        "capex_mentions": 0
+      }
+    },
+    {
+      "factor": "valuation_comfort",
+      "score": null,
+      "evidence": "insufficient data (no market-cap source yet)",
+      "inputs": {}
+    },
+    {
+      "factor": "value_chain_quality",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "working_capital",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    }
+  ],
+  "coverage_pct": 6,
   "coverage_checks": {
     "has_quarterly_financials": false,
     "has_balance_sheet": false,
     "has_cash_flow": false,
     "has_ratios": false,
-    "has_market_data": false,
+    "has_market_data": true,
     "has_documents_text": false,
     "has_voltage_features": false,
     "has_capacity_features": false,

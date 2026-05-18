@@ -8,33 +8,1930 @@
     "secondary": null
   },
   "financials": {
-    "quarterly": []
+    "quarterly": [
+      {
+        "period_end": "2023-03-31",
+        "consolidated": 1,
+        "revenue": 4882.0,
+        "ebitda": 332.0,
+        "pat": 140.0
+      },
+      {
+        "period_end": "2023-06-30",
+        "consolidated": 1,
+        "revenue": 4241.0,
+        "ebitda": 382.0,
+        "pat": 113.0
+      },
+      {
+        "period_end": "2023-09-30",
+        "consolidated": 1,
+        "revenue": 4518.0,
+        "ebitda": 371.0,
+        "pat": 90.0
+      },
+      {
+        "period_end": "2023-12-31",
+        "consolidated": 1,
+        "revenue": 4896.0,
+        "ebitda": 424.0,
+        "pat": 144.0
+      },
+      {
+        "period_end": "2024-03-31",
+        "consolidated": 1,
+        "revenue": 5971.0,
+        "ebitda": 452.0,
+        "pat": 169.0
+      },
+      {
+        "period_end": "2024-06-30",
+        "consolidated": 1,
+        "revenue": 4587.0,
+        "ebitda": 379.0,
+        "pat": 84.0
+      },
+      {
+        "period_end": "2024-09-30",
+        "consolidated": 1,
+        "revenue": 4930.0,
+        "ebitda": 438.0,
+        "pat": 126.0
+      },
+      {
+        "period_end": "2024-12-31",
+        "consolidated": 1,
+        "revenue": 5732.0,
+        "ebitda": 479.0,
+        "pat": 140.0
+      },
+      {
+        "period_end": "2025-03-31",
+        "consolidated": 1,
+        "revenue": 7067.0,
+        "ebitda": 538.0,
+        "pat": 218.0
+      },
+      {
+        "period_end": "2025-06-30",
+        "consolidated": 1,
+        "revenue": 6171.0,
+        "ebitda": 525.0,
+        "pat": 214.0
+      },
+      {
+        "period_end": "2025-09-30",
+        "consolidated": 1,
+        "revenue": 6529.0,
+        "ebitda": 561.0,
+        "pat": 237.0
+      },
+      {
+        "period_end": "2025-12-31",
+        "consolidated": 1,
+        "revenue": 6665.0,
+        "ebitda": 513.0,
+        "pat": 149.0
+      },
+      {
+        "period_end": "2026-03-31",
+        "consolidated": 1,
+        "revenue": 7778.0,
+        "ebitda": 640.0,
+        "pat": 431.0
+      }
+    ]
   },
-  "balance_sheet": [],
-  "cash_flow": [],
-  "ratios": [],
-  "derived": [],
-  "market": null,
-  "documents": [],
+  "balance_sheet": [
+    {
+      "period_end": "2015-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 2186.0,
+      "borrowings": 3684.0,
+      "other_liab": 3050.0,
+      "total_liab": 8951.0,
+      "fixed_assets": 3204.0,
+      "cwip": 398.0,
+      "investments": 11.0,
+      "other_assets": 5338.0,
+      "total_assets": 8951.0
+    },
+    {
+      "period_end": "2016-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 2217.0,
+      "borrowings": 2922.0,
+      "other_liab": 4315.0,
+      "total_liab": 9485.0,
+      "fixed_assets": 3081.0,
+      "cwip": 27.0,
+      "investments": 63.0,
+      "other_assets": 6313.0,
+      "total_assets": 9485.0
+    },
+    {
+      "period_end": "2017-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 2391.0,
+      "borrowings": 2849.0,
+      "other_liab": 4947.0,
+      "total_liab": 10218.0,
+      "fixed_assets": 3061.0,
+      "cwip": 117.0,
+      "investments": 45.0,
+      "other_assets": 6995.0,
+      "total_assets": 10218.0
+    },
+    {
+      "period_end": "2018-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 2643.0,
+      "borrowings": 3319.0,
+      "other_liab": 6393.0,
+      "total_liab": 12385.0,
+      "fixed_assets": 3062.0,
+      "cwip": 724.0,
+      "investments": 51.0,
+      "other_assets": 8549.0,
+      "total_assets": 12385.0
+    },
+    {
+      "period_end": "2019-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 3089.0,
+      "borrowings": 2610.0,
+      "other_liab": 8406.0,
+      "total_liab": 14135.0,
+      "fixed_assets": 3141.0,
+      "cwip": 16.0,
+      "investments": 1.0,
+      "other_assets": 10977.0,
+      "total_assets": 14135.0
+    },
+    {
+      "period_end": "2020-03-31",
+      "consolidated": 1,
+      "equity_capital": 31.0,
+      "reserves": 3327.0,
+      "borrowings": 3296.0,
+      "other_liab": 9086.0,
+      "total_liab": 15741.0,
+      "fixed_assets": 3444.0,
+      "cwip": 54.0,
+      "investments": 1.0,
+      "other_assets": 12241.0,
+      "total_assets": 15741.0
+    },
+    {
+      "period_end": "2021-03-31",
+      "consolidated": 1,
+      "equity_capital": 30.0,
+      "reserves": 3709.0,
+      "borrowings": 3260.0,
+      "other_liab": 8323.0,
+      "total_liab": 15321.0,
+      "fixed_assets": 3472.0,
+      "cwip": 34.0,
+      "investments": 1.0,
+      "other_assets": 11814.0,
+      "total_assets": 15321.0
+    },
+    {
+      "period_end": "2022-03-31",
+      "consolidated": 1,
+      "equity_capital": 30.0,
+      "reserves": 4249.0,
+      "borrowings": 3838.0,
+      "other_liab": 8999.0,
+      "total_liab": 17116.0,
+      "fixed_assets": 3559.0,
+      "cwip": 25.0,
+      "investments": 5.0,
+      "other_assets": 13528.0,
+      "total_assets": 17116.0
+    },
+    {
+      "period_end": "2023-03-31",
+      "consolidated": 1,
+      "equity_capital": 32.0,
+      "reserves": 4688.0,
+      "borrowings": 3786.0,
+      "other_liab": 11014.0,
+      "total_liab": 19521.0,
+      "fixed_assets": 3124.0,
+      "cwip": 52.0,
+      "investments": 5.0,
+      "other_assets": 16339.0,
+      "total_assets": 19521.0
+    },
+    {
+      "period_end": "2024-03-31",
+      "consolidated": 1,
+      "equity_capital": 32.0,
+      "reserves": 5106.0,
+      "borrowings": 4008.0,
+      "other_liab": 12868.0,
+      "total_liab": 22014.0,
+      "fixed_assets": 3073.0,
+      "cwip": 33.0,
+      "investments": 0.0,
+      "other_assets": 18908.0,
+      "total_assets": 22014.0
+    },
+    {
+      "period_end": "2025-03-31",
+      "consolidated": 1,
+      "equity_capital": 34.0,
+      "reserves": 6479.0,
+      "borrowings": 4314.0,
+      "other_liab": 14746.0,
+      "total_liab": 25573.0,
+      "fixed_assets": 3252.0,
+      "cwip": 29.0,
+      "investments": 150.0,
+      "other_assets": 22142.0,
+      "total_assets": 25573.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "equity_capital": 34.0,
+      "reserves": 7742.0,
+      "borrowings": 3543.0,
+      "other_liab": 16394.0,
+      "total_liab": 27713.0,
+      "fixed_assets": 3148.0,
+      "cwip": 64.0,
+      "investments": 2.0,
+      "other_assets": 24499.0,
+      "total_assets": 27713.0
+    }
+  ],
+  "cash_flow": [
+    {
+      "period_end": "2015-03-31",
+      "consolidated": 1,
+      "cfo": 72.0,
+      "cfi": -605.0,
+      "cff": 550.0,
+      "net_cash_flow": 18.0
+    },
+    {
+      "period_end": "2016-03-31",
+      "consolidated": 1,
+      "cfo": 1104.0,
+      "cfi": -387.0,
+      "cff": -726.0,
+      "net_cash_flow": -9.0
+    },
+    {
+      "period_end": "2017-03-31",
+      "consolidated": 1,
+      "cfo": 766.0,
+      "cfi": -235.0,
+      "cff": -439.0,
+      "net_cash_flow": 93.0
+    },
+    {
+      "period_end": "2018-03-31",
+      "consolidated": 1,
+      "cfo": 650.0,
+      "cfi": -699.0,
+      "cff": 66.0,
+      "net_cash_flow": 17.0
+    },
+    {
+      "period_end": "2019-03-31",
+      "consolidated": 1,
+      "cfo": 1035.0,
+      "cfi": -835.0,
+      "cff": -219.0,
+      "net_cash_flow": -19.0
+    },
+    {
+      "period_end": "2020-03-31",
+      "consolidated": 1,
+      "cfo": 937.0,
+      "cfi": -713.0,
+      "cff": 40.0,
+      "net_cash_flow": 265.0
+    },
+    {
+      "period_end": "2021-03-31",
+      "consolidated": 1,
+      "cfo": 931.0,
+      "cfi": -6.0,
+      "cff": -897.0,
+      "net_cash_flow": 29.0
+    },
+    {
+      "period_end": "2022-03-31",
+      "consolidated": 1,
+      "cfo": 714.0,
+      "cfi": -214.0,
+      "cff": 25.0,
+      "net_cash_flow": 524.0
+    },
+    {
+      "period_end": "2023-03-31",
+      "consolidated": 1,
+      "cfo": 656.0,
+      "cfi": -323.0,
+      "cff": -438.0,
+      "net_cash_flow": -104.0
+    },
+    {
+      "period_end": "2024-03-31",
+      "consolidated": 1,
+      "cfo": 843.0,
+      "cfi": -266.0,
+      "cff": -524.0,
+      "net_cash_flow": 53.0
+    },
+    {
+      "period_end": "2025-03-31",
+      "consolidated": 1,
+      "cfo": 914.0,
+      "cfi": -718.0,
+      "cff": 400.0,
+      "net_cash_flow": 595.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "cfo": 1534.0,
+      "cfi": 0.0,
+      "cff": -1636.0,
+      "net_cash_flow": -102.0
+    }
+  ],
+  "ratios": [
+    {
+      "period_end": "2015-03-31",
+      "consolidated": 1,
+      "debtor_days": 114.0,
+      "inventory_days": 152.0,
+      "days_payable": 245.0,
+      "cash_conv_cycle": 21.0,
+      "working_cap_days": 59.0,
+      "roce_pct": 11.0
+    },
+    {
+      "period_end": "2016-03-31",
+      "consolidated": 1,
+      "debtor_days": 149.0,
+      "inventory_days": 113.0,
+      "days_payable": 277.0,
+      "cash_conv_cycle": -15.0,
+      "working_cap_days": 57.0,
+      "roce_pct": 11.0
+    },
+    {
+      "period_end": "2017-03-31",
+      "consolidated": 1,
+      "debtor_days": 166.0,
+      "inventory_days": 116.0,
+      "days_payable": 289.0,
+      "cash_conv_cycle": -7.0,
+      "working_cap_days": 67.0,
+      "roce_pct": 14.0
+    },
+    {
+      "period_end": "2018-03-31",
+      "consolidated": 1,
+      "debtor_days": 166.0,
+      "inventory_days": 97.0,
+      "days_payable": 267.0,
+      "cash_conv_cycle": -5.0,
+      "working_cap_days": 68.0,
+      "roce_pct": 16.0
+    },
+    {
+      "period_end": "2019-03-31",
+      "consolidated": 1,
+      "debtor_days": 142.0,
+      "inventory_days": 91.0,
+      "days_payable": 265.0,
+      "cash_conv_cycle": -32.0,
+      "working_cap_days": 76.0,
+      "roce_pct": 21.0
+    },
+    {
+      "period_end": "2020-03-31",
+      "consolidated": 1,
+      "debtor_days": 133.0,
+      "inventory_days": 84.0,
+      "days_payable": 239.0,
+      "cash_conv_cycle": -22.0,
+      "working_cap_days": 84.0,
+      "roce_pct": 20.0
+    },
+    {
+      "period_end": "2021-03-31",
+      "consolidated": 1,
+      "debtor_days": 141.0,
+      "inventory_days": 82.0,
+      "days_payable": 287.0,
+      "cash_conv_cycle": -63.0,
+      "working_cap_days": 67.0,
+      "roce_pct": 18.0
+    },
+    {
+      "period_end": "2022-03-31",
+      "consolidated": 1,
+      "debtor_days": 113.0,
+      "inventory_days": 62.0,
+      "days_payable": 241.0,
+      "cash_conv_cycle": -66.0,
+      "working_cap_days": 54.0,
+      "roce_pct": 13.0
+    },
+    {
+      "period_end": "2023-03-31",
+      "consolidated": 1,
+      "debtor_days": 117.0,
+      "inventory_days": 64.0,
+      "days_payable": 257.0,
+      "cash_conv_cycle": -75.0,
+      "working_cap_days": 47.0,
+      "roce_pct": 14.0
+    },
+    {
+      "period_end": "2024-03-31",
+      "consolidated": 1,
+      "debtor_days": 108.0,
+      "inventory_days": 60.0,
+      "days_payable": 260.0,
+      "cash_conv_cycle": -92.0,
+      "working_cap_days": 46.0,
+      "roce_pct": 16.0
+    },
+    {
+      "period_end": "2025-03-31",
+      "consolidated": 1,
+      "debtor_days": 128.0,
+      "inventory_days": 61.0,
+      "days_payable": 280.0,
+      "cash_conv_cycle": -92.0,
+      "working_cap_days": 43.0,
+      "roce_pct": 16.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "debtor_days": 113.0,
+      "inventory_days": 69.0,
+      "days_payable": 276.0,
+      "cash_conv_cycle": -94.0,
+      "working_cap_days": 38.0,
+      "roce_pct": 17.0
+    }
+  ],
+  "derived": [
+    {
+      "period_end": "2015-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 1.6617050067658998,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2015-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 2217.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2016-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": -494.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2016-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 1.2998220640569396,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2016-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 1598.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2016-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 2248.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2017-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 70.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2017-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 1.176300578034682,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2017-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 696.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 2,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2017-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 2422.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2018-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 608.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2018-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 1.2412116679132386,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2018-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 42.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2018-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 2674.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2019-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": -629.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2019-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.8365384615384616,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2019-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 1664.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2019-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 3120.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2020-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 341.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2020-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.9815366289458011,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2020-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 596.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2020-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 3358.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2021-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 8.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2021-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.8718908799144156,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2021-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 923.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2021-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 3739.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2022-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 78.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2022-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.8969385370413648,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2022-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 636.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2022-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 4279.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": -408.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.8021186440677966,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 2,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 6.80049160180254,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 1064.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.867677181482999,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2023-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 4720.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 9.007309596793208,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2023-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.664465927847206,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2023-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.211598052235502,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 1.9920318725099602,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2023-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.660130718954248,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2023-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.941176470588235,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "asset_turnover",
+      "value": 0.8915235759062414,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": -70.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "cfo_to_ebitda_pct",
+      "value": 51.74953959484346,
+      "unit": "%",
+      "formula": "cfo / ttm_ebitda * 100",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.7800700661736084,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 36.14457831325302,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 7.569921286216714,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 913.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.830346675598727,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 5138.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 20.714285714285708,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 22.306431790249892,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 1629.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 19626.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": -0.7853403141361293,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.26248092435143,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 1.831262262916939,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": -25.663716814159287,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 8.158453195001169,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 18.059299191374656,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2024-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.884381338742394,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.5557809330628802,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 39.99999999999999,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2024-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 9.119079238601158,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 4
+    },
+    {
+      "period_end": "2024-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 12.971698113207552,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.356594556873691,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.4424284717376135,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2024-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": -2.777777777777779,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2024-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 17.075163398692816,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "asset_turnover",
+      "value": 0.8726391115629766,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 175.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "cfo_to_ebitda_pct",
+      "value": 49.836423118865866,
+      "unit": "%",
+      "formula": "cfo / ttm_ebitda * 100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.6623675725472132,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 19.026548672566367,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 5,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 7.612848450544786,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 739.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 3.0847601528229798,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 6513.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 28.99408284023668,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 18.355384357729033,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 1834.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 22316.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 38.52242744063326,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.50753524550316,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 3.4678334143574783,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 154.76190476190476,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 34.53237410071943,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 28.08219178082192,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.59243375708378,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 3.6299586460407416,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 88.09523809523809,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-09-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 32.4340770791075,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 7.098121085594999,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 5,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 7.696924231057764,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 2.2355588897224306,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 6.428571428571428,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2025-12-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 16.277041172365657,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 3,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "asset_turnover",
+      "value": 0.9794320355068019,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": -69.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "cfo_to_ebitda_pct",
+      "value": 68.51272889682895,
+      "unit": "%",
+      "formula": "cfo / ttm_ebitda * 100",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.4556327160493827,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 18.959107806691456,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 8.228336333247622,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 1603.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 5.541270249421445,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 7776.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 97.70642201834863,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 10.060846186500626,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 2239.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 27143.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    }
+  ],
+  "market": {
+    "price": null,
+    "pct_change": null,
+    "market_cap_cr": null,
+    "pe_ratio": 25.39,
+    "pb_ratio": 3.62,
+    "dividend_yield": null,
+    "week52_high": null,
+    "week52_low": null,
+    "book_value": null,
+    "eps": 48.71,
+    "face_value": null,
+    "fetched_at": "2026-05-18T09:50:22+00:00"
+  },
+  "documents": [
+    {
+      "doc_kind": "press_release",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/695ecc50-aa50-43c2-8ad4-b9af99e42329.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3bd02219-9bed-4d35-8c60-94a310200951.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "press_release",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/292122a2-40fd-4a11-bd4e-def9d4d2d252.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f0f96d9a-485d-416f-a38f-f1b40e9461d0.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/84a71acd-3a5e-49f6-b157-a727a49c9331.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e548a420-c4b7-4917-b569-808a4dad50d7.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dde8c661-4f56-41bf-824a-6d1fe3588902.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8ce85b72-da41-4f19-bafa-b4a3d3a13cb7.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": 1,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b4dd5d39-969e-44e3-9042-68c6833599bb.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 32,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ebb2a415-981e-4a00-835c-ef95028c4bd5.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 4,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c35dd416-5a13-40e9-bb12-2397be838738.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 24,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c061c853-fd55-435d-8114-3e26619cb5ed.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": 2,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/10864928-d807-4f1b-9e77-dadd2a068723.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 1,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7eb129cc-6bcd-45e0-91b1-ebe2ab6cc6a4.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "press_release",
+      "page_count": 2,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/34ebf6dc-12b0-4364-b2eb-dc797a14cf89.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-18T08:42:58+00:00",
+      "has_text": true
+    }
+  ],
   "features": {},
-  "scorecard": [],
-  "coverage_pct": 0,
+  "scorecard": [
+    {
+      "factor": "approval_technology_depth",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "balance_sheet",
+      "score": 4,
+      "evidence": "debt/equity = 0.46",
+      "inputs": {
+        "debt_to_equity": 0.4556327160493827
+      }
+    },
+    {
+      "factor": "capacity_readiness",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "competitive_position",
+      "score": 5,
+      "evidence": "revenue rank 1/2, ebitda-margin rank 1/2",
+      "inputs": {
+        "revenue_rank": 1,
+        "revenue_n": 2,
+        "ebitda_margin_rank": 1,
+        "ebitda_margin_n": 2
+      }
+    },
+    {
+      "factor": "margin_sustainability",
+      "score": 5,
+      "evidence": "ebitda_margin=8.2% (peer rank 1/2), yoy_growth=19%",
+      "inputs": {
+        "ebitda_margin_pct": 8.228336333247622,
+        "ebitda_growth_yoy_pct": 18.959107806691456,
+        "peer_rank": 1,
+        "peer_n": 2
+      }
+    },
+    {
+      "factor": "order_book_quality",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "tam_relevance",
+      "score": 2,
+      "evidence": "order_wins=0, capex_mentions=0",
+      "inputs": {
+        "order_wins": 0,
+        "capex_mentions": 0
+      }
+    },
+    {
+      "factor": "valuation_comfort",
+      "score": 3,
+      "evidence": "proxy (no market-cap feed yet): rev_growth=10.060846186500626, ebitda_margin=8.228336333247622, debt/eq=0.4556327160493827",
+      "inputs": {
+        "rev_growth_yoy_pct": 10.060846186500626,
+        "ebitda_margin_pct": 8.228336333247622,
+        "debt_to_equity": 0.4556327160493827
+      }
+    },
+    {
+      "factor": "value_chain_quality",
+      "score": null,
+      "evidence": "insufficient data",
+      "inputs": {}
+    },
+    {
+      "factor": "working_capital",
+      "score": 5,
+      "evidence": "wc_days=38.0, debtor_days=113.0, cfo/ebitda=69%",
+      "inputs": {
+        "working_cap_days": 38.0,
+        "debtor_days": 113.0,
+        "cfo_to_ebitda_pct": 68.51272889682895
+      }
+    }
+  ],
+  "coverage_pct": 62,
   "coverage_checks": {
-    "has_quarterly_financials": false,
-    "has_balance_sheet": false,
-    "has_cash_flow": false,
-    "has_ratios": false,
-    "has_market_data": false,
-    "has_documents_text": false,
+    "has_quarterly_financials": true,
+    "has_balance_sheet": true,
+    "has_cash_flow": true,
+    "has_ratios": true,
+    "has_market_data": true,
+    "has_documents_text": true,
     "has_voltage_features": false,
     "has_capacity_features": false,
     "has_order_features": false,
     "has_customer_features": false,
     "has_capex_features": false,
-    "has_derived_margins": false,
-    "has_derived_growth": false,
-    "has_derived_balance_sheet": false,
-    "has_peer_ranks": false,
+    "has_derived_margins": true,
+    "has_derived_growth": true,
+    "has_derived_balance_sheet": true,
+    "has_peer_ranks": true,
     "has_scorecard_complete": false
   }
 }
