@@ -6,6 +6,12 @@ on:
       days:
         description: "Days of announcement history to pull"
         default: "365"
+      per_company:
+        description: "Max new PDFs / LLM extractions per company per run"
+        default: "12"
+      since:
+        description: "Oldest announcement date (YYYY-MM-DD) to download PDFs for"
+        default: "2024-01-01"
   push:
     branches: [main]
     paths:
@@ -27,7 +33,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -42,8 +48,14 @@ jobs:
       - name: Run pipeline
         env:
           DAYS: ${{ github.event.inputs.days || '365' }}
+          PER_COMPANY: ${{ github.event.inputs.per_company || '12' }}
+          SINCE: ${{ github.event.inputs.since || '2024-01-01' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          python -m pipeline.cli fetch-all --days "$DAYS"
+          python -m pipeline.cli fetch-all \
+            --days "$DAYS" \
+            --per-company "$PER_COMPANY" \
+            --since "$SINCE"
           python -m pipeline.cli status
 
       - name: Commit fetched data
@@ -57,7 +69,6 @@ jobs:
           fi
           ts=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "data: refresh ${ts}"
-          # retry push with backoff
           for delay in 0 2 4 8 16; do
             sleep "$delay"
             git pull --rebase origin main || true

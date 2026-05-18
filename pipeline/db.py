@@ -87,6 +87,99 @@ CREATE TABLE IF NOT EXISTS fetch_runs (
     rows_written  INTEGER DEFAULT 0,
     notes         TEXT
 );
+
+CREATE TABLE IF NOT EXISTS balance_sheet (
+    id              INTEGER PRIMARY KEY,
+    company_id      INTEGER NOT NULL REFERENCES companies(id),
+    period_end      TEXT NOT NULL,
+    consolidated    INTEGER NOT NULL,
+    equity_capital  REAL,
+    reserves        REAL,
+    borrowings      REAL,
+    other_liab      REAL,
+    total_liab      REAL,
+    fixed_assets    REAL,
+    cwip            REAL,
+    investments     REAL,
+    other_assets    REAL,
+    total_assets    REAL,
+    raw_json        TEXT,
+    source          TEXT NOT NULL,
+    source_url      TEXT NOT NULL,
+    fetched_at      TEXT NOT NULL,
+    UNIQUE(company_id, period_end, consolidated)
+);
+
+CREATE TABLE IF NOT EXISTS cash_flow (
+    id              INTEGER PRIMARY KEY,
+    company_id      INTEGER NOT NULL REFERENCES companies(id),
+    period_end      TEXT NOT NULL,
+    consolidated    INTEGER NOT NULL,
+    cfo             REAL,            -- cash from operating activities
+    cfi             REAL,            -- cash from investing activities
+    cff             REAL,            -- cash from financing activities
+    net_cash_flow   REAL,
+    raw_json        TEXT,
+    source          TEXT NOT NULL,
+    source_url      TEXT NOT NULL,
+    fetched_at      TEXT NOT NULL,
+    UNIQUE(company_id, period_end, consolidated)
+);
+
+CREATE TABLE IF NOT EXISTS ratios (
+    id              INTEGER PRIMARY KEY,
+    company_id      INTEGER NOT NULL REFERENCES companies(id),
+    period_end      TEXT NOT NULL,
+    consolidated    INTEGER NOT NULL,
+    debtor_days     REAL,
+    inventory_days  REAL,
+    days_payable    REAL,
+    cash_conv_cycle REAL,
+    working_cap_days REAL,
+    roce_pct        REAL,
+    roe_pct         REAL,
+    raw_json        TEXT,
+    source          TEXT NOT NULL,
+    source_url      TEXT NOT NULL,
+    fetched_at      TEXT NOT NULL,
+    UNIQUE(company_id, period_end, consolidated)
+);
+
+CREATE TABLE IF NOT EXISTS documents (
+    id              INTEGER PRIMARY KEY,
+    company_id      INTEGER REFERENCES companies(id),
+    announcement_id INTEGER REFERENCES announcements(id),
+    doc_kind        TEXT,             -- investor_presentation | transcript | results | rhp | press_release
+    pdf_url         TEXT NOT NULL,
+    pdf_sha256      TEXT,
+    pdf_bytes       INTEGER,
+    page_count      INTEGER,
+    full_text       TEXT,             -- extracted text body
+    extracted_at    TEXT,
+    extract_status  TEXT,              -- ok | failed | skipped
+    extract_error   TEXT,
+    source          TEXT,
+    source_url      TEXT,
+    UNIQUE(pdf_url)
+);
+
+CREATE TABLE IF NOT EXISTS features (
+    id              INTEGER PRIMARY KEY,
+    company_id      INTEGER NOT NULL REFERENCES companies(id),
+    document_id     INTEGER REFERENCES documents(id),
+    feature         TEXT NOT NULL,        -- e.g. voltage_class, mva_capacity, order_book_inr_cr
+    value_text      TEXT,
+    value_num       REAL,
+    unit            TEXT,
+    evidence        TEXT,                  -- verbatim quote
+    page_no         INTEGER,
+    extractor       TEXT NOT NULL,         -- heuristic | llm
+    source_tag      TEXT NOT NULL,         -- fact_company | fact_govt | inference | unknown
+    confidence      REAL,
+    as_of           TEXT,
+    created_at      TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_features_company_feature ON features(company_id, feature);
 """
 
 

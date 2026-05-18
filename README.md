@@ -2,29 +2,62 @@
 
 A daily, automated data pipeline that pulls real public filings and
 financials for ~30 listed Indian Power Transmission & Distribution
-companies, and stores them in a single SQLite database that the
-dashboard (built later) will read from.
+companies, reads the PDFs the companies post, extracts the
+framework-relevant facts, and stores everything in a single SQLite
+database (`data/power_td.db`) that the dashboard reads from.
 
 ## In one paragraph (no jargon)
 
-You hired this pipeline to read every official filing the listed Power
-T&D companies put out — quarterly results, investor presentations,
-earnings-call transcripts, RHPs, regulator reports — and keep them in
-one tidy file (`data/power_td.db`). It does this automatically every
-morning using GitHub Actions, which is a free robot inside GitHub that
-runs our code on a schedule. The robot has open internet access, so it
-can talk to the BSE, SEBI and CEA websites that this sandbox can't.
+This is your data plumbing. Every morning a small robot (GitHub
+Actions) wakes up and does eight things:
 
-## What it actually fetches
+1. Reads the master list of 28 Power T&D companies.
+2. Asks BSE for every filing each company has posted in the last year.
+3. Asks Screener for each company's quarterly numbers, balance sheet,
+   cash flow, and ratios (ROCE, debtor days, etc.).
+4. Asks SEBI for any new RHP / DRHP PDFs for new listings.
+5. Tries to fetch CEA's monthly transmission reports (CEA blocks cloud
+   IPs, so this is currently best-effort; a manual upload path is
+   provided in `data/manual/cea/`).
+6. Absorbs any regulator PDFs an analyst has dropped into
+   `data/manual/`.
+7. Downloads every investor presentation, transcript, results PDF and
+   relevant press release it has just discovered, and extracts the text.
+8. Runs two extractors over that text:
+   - a cheap regex pass (voltage classes mentioned, MVA / capacity
+     numbers, order book size, AT&C losses, capex amounts)
+   - an LLM pass (Claude) per company bucket, which returns structured
+     JSON of framework-specific fields - voltage mix, executed MVA,
+     approvals, order book by customer, HVDC scope, etc.
 
-| Source | What we get | Why it matters |
+It then commits everything it found back to this repo. The next morning
+it diffs and only commits what changed.
+
+## What's in the database
+
+Open `data/power_td.db` in any SQLite viewer. Tables:
+
+| Table | What it holds | Powers which framework section |
 |---|---|---|
-| **BSE corporate announcements** | Every filing each company posts: results, IPs, transcripts, press releases, AGM/EGM notices, board-meeting outcomes | This is where order-book, voltage-mix, capacity-expansion disclosures live |
-| **BSE financial results** | Quarterly revenue / EBITDA / PAT, standalone + consolidated | Backbone for ROCE, CFO/EBITDA, working-capital checks |
-| **SEBI public-issues page** | RHP / DRHP PDFs for new and recent listings | RHPs for Atlanta, Transrail, Quality Power, OPTL have voltage-class and capacity disclosures unavailable anywhere else |
-| **CEA executive summary + transmission reports** | Monthly ckm / MVA additions, HVDC pipeline, DISCOM AT&C losses | Maps to the framework doc's sections on sector capex, asset owners, DISCOMs |
+| `companies` | 28 names + bucket mapping + BSE/NSE codes | §1, §5 |
+| `announcements` | Every BSE filing's headline + PDF link | §5, §10 |
+| `financials` | Quarterly revenue / op profit / PAT | §12, §22 |
+| `balance_sheet` | Annual: equity, borrowings, fixed assets, CWIP | §12, §13 |
+| `cash_flow` | Annual: CFO, CFI, CFF, net cash flow | §12 |
+| `ratios` | Annual: debtor days, inventory days, WC days, ROCE, ROE | §8, §12 |
+| `sebi_filings` | New-listing RHP / DRHP PDFs | §15 |
+| `cea_reports` | CEA monthly reports (manual or scraped) | §13, §14 |
+| `documents` | Downloaded PDFs + extracted full text | feeds the extractors |
+| `features` | The structured facts pulled out of PDFs (voltage mix, MVA, order book, approvals, AT&C losses, capex...) with verbatim evidence | §1-§26 |
+| `fetch_runs` | Log of every pipeline run, per source | observability |
 
-## The 28 companies, bucketed per the framework doc
+Every row carries `source`, `source_url`, `fetched_at` - so when the
+dashboard shows a number you can click straight to the filing it came
+from. Every `features` row also carries the verbatim quote and which
+extractor produced it (`heuristic` vs `llm`) - matching the framework
+doc's section 3 source-tagging discipline.
+
+## The 28 companies
 
 | Bucket | Companies |
 |---|---|
@@ -36,34 +69,34 @@ can talk to the BSE, SEBI and CEA websites that this sandbox can't.
 | Distribution / DISCOM | Tata Power, CESC, Torrent Power |
 | Smart meters / automation | HPL, Genus, Schneider Infra |
 
-Full mapping with ticker codes lives in [`seeds/companies.yaml`](seeds/companies.yaml).
+## To enable LLM extraction
 
-## How the robot works (the pipeline in plain English)
+The LLM pass only runs if `ANTHROPIC_API_KEY` is configured as a
+repository secret. Once-only setup:
 
-1. Every morning at 8 am IST, GitHub Actions wakes up.
-2. It runs `python -m pipeline.cli fetch-all`.
-3. That command, in order:
-   - Reads the 28-company list from `seeds/companies.yaml`.
-   - Calls the BSE corporate-announcements API for each company and
-     stores every announcement of the last 365 days.
-   - Calls the BSE financial-results API for each company and stores
-     standalone + consolidated quarterly numbers.
-   - Scrapes SEBI's public-issues listing for any new RHP / DRHP PDFs.
-   - Scrapes CEA's executive-summary + transmission-reports pages for
-     the latest PDFs.
-   - Every row is tagged with `source`, `source_url`, `fetched_at` —
-     so when the dashboard shows a number you can click through to the
-     exact filing it came from. (This is the framework doc's section 3
-     source-tagging discipline, enforced at the schema level.)
-4. The robot commits the updated `data/` folder back to this repo.
-   The next day, it diffs against what's there and only commits what
-   changed.
+1. Get a key at https://console.anthropic.com.
+2. GitHub → this repo → Settings → Secrets and variables → Actions →
+   New repository secret.
+   Name: `ANTHROPIC_API_KEY`, value: your key.
+3. Next pipeline run will start using it. Default rate-limit: 4 docs
+   per company per run, so a full back-catalogue pass takes a few days
+   and stays well within reasonable API spend.
 
-If anything fails — a network blip, a website redesign — the run is
-logged in the `fetch_runs` table with status `error` plus the message,
-so we can see exactly what broke without reading workflow logs.
+If the key is absent the LLM stage logs "skipping" and the rest of the
+pipeline runs unaffected.
 
-## How to run it yourself
+## Manual uploads (workaround for blocked sites)
+
+`cea.nic.in` blocks Microsoft Azure IP ranges that GitHub Actions runs
+on. Until we route via a residential proxy, the workaround:
+
+1. Download a CEA Executive Summary or Transmission Report PDF.
+2. Drop it into `data/manual/cea/` with filename like
+   `2026-04_exec_summary.pdf`.
+3. Push to main. The next pipeline run absorbs it, parses the text,
+   stores it in `cea_reports` and `documents`.
+
+## To run it yourself
 
 You don't normally need to. But if you want to:
 
@@ -73,22 +106,14 @@ You don't normally need to. But if you want to:
 
 ```bash
 pip install -r requirements.txt
-python -m pipeline.cli init          # creates the DB, seeds companies
-python -m pipeline.cli fetch-all     # fetches everything
-python -m pipeline.cli status        # shows row counts per table
+python -m pipeline.cli init           # creates the DB, seeds companies
+python -m pipeline.cli fetch-all      # full pipeline
+python -m pipeline.cli status         # row counts per table
 ```
 
-## What it doesn't do yet (intentionally)
-
-- No PDF parsing. The pipeline stores the PDF URL for every IP /
-  transcript / RHP — extracting voltage-mix percentages and approval
-  lists from them is the next stage (LLM extractor).
-- No NSE scraper. BSE coverage is identical for these names; NSE's
-  session-cookie handshake is brittle. We'll add it only if BSE goes
-  down.
-- No broker reports. Those are paywalled; the plan is a watched folder
-  the analyst drops PDFs into.
-- No UI. Per your instruction: prove the data layer first.
+Sub-commands if you want to run one stage at a time:
+`fetch-bse`, `fetch-financials`, `fetch-sebi`, `fetch-cea`,
+`ingest-manual`, `pdf`, `heuristics`, `llm`.
 
 ## Files
 
@@ -96,17 +121,23 @@ python -m pipeline.cli status        # shows row counts per table
 seeds/companies.yaml          the 28-company universe
 pipeline/
   config.py                   paths + headers
-  db.py                       SQLite schema
+  db.py                       SQLite schema (11 tables)
   seed.py                     loads companies into DB
+  cli.py                      command-line entry point
   sources/
     bse.py                    BSE corporate announcements
-    bse_financials.py         BSE quarterly results
+    screener.py               Screener financials (quarters/BS/CF/ratios)
     sebi.py                   SEBI RHP / DRHP listing
-    cea.py                    CEA reports
-  cli.py                      command-line entry point
+    cea.py                    CEA reports (best-effort, often blocked)
+    manual.py                 ingestor for manually-uploaded PDFs
+  extract/
+    pdf_text.py               download + text-extract high-value PDFs
+    heuristics.py             regex extractor (voltage, MVA, order book, ...)
+    llm.py                    Claude-based per-bucket extractor
 .github/workflows/
   fetch-data.yml              the GitHub Actions robot
 data/
   power_td.db                 the SQLite database (committed)
-  raw/                        per-source raw JSON snapshots
+  raw/                        per-source raw JSON / HTML snapshots
+  manual/                     drop-zone for analyst-uploaded PDFs
 ```

@@ -4,3 +4,5 @@ beautifulsoup4>=4.12
 lxml>=5.2
 tenacity>=8.5
 python-dateutil>=2.9
+pypdf>=4.3
+anthropic>=0.40

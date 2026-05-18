@@ -7,7 +7,8 @@ from datetime import datetime, timezone
 
 from .db import connect, init
 from .seed import load_companies
-from .sources import bse, screener, sebi, cea
+from .sources import bse, screener, sebi, cea, manual
+from .extract import pdf_text, heuristics, llm
 
 
 def _all_companies() -> list[dict]:
@@ -26,6 +27,15 @@ def _log_run(source: str, status: str, rows: int, notes: str = ""):
         )
 
 
+def _run(name: str, fn):
+    try:
+        n = fn()
+        _log_run(name, "ok", n)
+    except Exception as e:
+        _log_run(name, "error", 0, str(e)[:500])
+        print(f"FAIL {name}: {e}", file=sys.stderr)
+
+
 def cmd_init(_args):
     init()
     n = load_companies()
@@ -34,31 +44,17 @@ def cmd_init(_args):
 
 def cmd_fetch_bse(args):
     companies = _all_companies()
-    try:
-        n = bse.ingest(companies, days_back=args.days)
-        _log_run("bse_announcements", "ok", n)
-    except Exception as e:
-        _log_run("bse_announcements", "error", 0, str(e))
-        raise
+    _run("bse_announcements",
+         lambda: bse.ingest(companies, days_back=args.days))
 
 
 def cmd_fetch_financials(_args):
     companies = _all_companies()
-    try:
-        n = screener.ingest(companies)
-        _log_run("screener_financials", "ok", n)
-    except Exception as e:
-        _log_run("screener_financials", "error", 0, str(e))
-        raise
+    _run("screener_financials", lambda: screener.ingest(companies))
 
 
 def cmd_fetch_sebi(_args):
-    try:
-        n = sebi.ingest()
-        _log_run("sebi_filings", "ok", n)
-    except Exception as e:
-        _log_run("sebi_filings", "error", 0, str(e))
-        raise
+    _run("sebi_filings", sebi.ingest)
 
 
 def cmd_fetch_cea(_args):
@@ -66,27 +62,51 @@ def cmd_fetch_cea(_args):
         n = cea.ingest()
         _log_run("cea_reports", "ok", n)
     except cea.CEABlocked as e:
-        # known issue, not a pipeline bug - log it and continue
-        _log_run("cea_reports", "error", 0, f"BLOCKED: {e}")
+        _log_run("cea_reports", "error", 0, f"BLOCKED: {e}"[:500])
         print(f"  cea: SKIP - {e}")
     except Exception as e:
-        _log_run("cea_reports", "error", 0, str(e))
-        raise
+        _log_run("cea_reports", "error", 0, str(e)[:500])
+
+
+def cmd_ingest_manual(_args):
+    _run("manual_uploads", manual.ingest)
+
+
+def cmd_pdf(args):
+    _run(
+        "pdf_text",
+        lambda: pdf_text.ingest(
+            limit_per_company=args.per_company, since=args.since
+        ),
+    )
+
+
+def cmd_heuristics(_args):
+    _run("heuristics", heuristics.ingest)
+
+
+def cmd_llm(args):
+    _run("llm", lambda: llm.ingest(per_company_cap=args.per_company))
 
 
 def cmd_fetch_all(args):
     cmd_init(args)
-    for fn in (cmd_fetch_bse, cmd_fetch_financials, cmd_fetch_sebi, cmd_fetch_cea):
-        try:
-            fn(args)
-        except Exception as e:
-            print(f"FAIL {fn.__name__}: {e}", file=sys.stderr)
+    cmd_fetch_bse(args)
+    cmd_fetch_financials(args)
+    cmd_fetch_sebi(args)
+    cmd_fetch_cea(args)
+    cmd_ingest_manual(args)
+    cmd_pdf(args)
+    cmd_heuristics(args)
+    cmd_llm(args)
 
 
 def cmd_status(_args):
     with connect() as conn:
         for table in ("companies", "announcements", "financials",
-                      "sebi_filings", "cea_reports", "fetch_runs"):
+                      "balance_sheet", "cash_flow", "ratios",
+                      "sebi_filings", "cea_reports",
+                      "documents", "features", "fetch_runs"):
             n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
             print(f"  {table:20s} {n}")
 
@@ -97,17 +117,31 @@ def main(argv=None):
 
     sub.add_parser("init").set_defaults(func=cmd_init)
 
-    bse_p = sub.add_parser("fetch-bse")
-    bse_p.add_argument("--days", type=int, default=365)
-    bse_p.set_defaults(func=cmd_fetch_bse)
+    bp = sub.add_parser("fetch-bse")
+    bp.add_argument("--days", type=int, default=365)
+    bp.set_defaults(func=cmd_fetch_bse)
 
     sub.add_parser("fetch-financials").set_defaults(func=cmd_fetch_financials)
     sub.add_parser("fetch-sebi").set_defaults(func=cmd_fetch_sebi)
     sub.add_parser("fetch-cea").set_defaults(func=cmd_fetch_cea)
+    sub.add_parser("ingest-manual").set_defaults(func=cmd_ingest_manual)
 
-    all_p = sub.add_parser("fetch-all")
-    all_p.add_argument("--days", type=int, default=365)
-    all_p.set_defaults(func=cmd_fetch_all)
+    pp = sub.add_parser("pdf")
+    pp.add_argument("--per-company", type=int, default=12)
+    pp.add_argument("--since", default="2024-01-01")
+    pp.set_defaults(func=cmd_pdf)
+
+    sub.add_parser("heuristics").set_defaults(func=cmd_heuristics)
+
+    lp = sub.add_parser("llm")
+    lp.add_argument("--per-company", type=int, default=4)
+    lp.set_defaults(func=cmd_llm)
+
+    ap = sub.add_parser("fetch-all")
+    ap.add_argument("--days", type=int, default=365)
+    ap.add_argument("--per-company", type=int, default=12)
+    ap.add_argument("--since", default="2024-01-01")
+    ap.set_defaults(func=cmd_fetch_all)
 
     sub.add_parser("status").set_defaults(func=cmd_status)
 
