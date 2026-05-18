@@ -1497,23 +1497,31 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 30.58,
-    "pb_ratio": 6.59,
+    "pe_ratio": 30.63,
+    "pb_ratio": 6.6,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 301.85,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
       "doc_kind": "press_release",
       "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9dbfa6be-c29c-497c-bb20-50f8f8278f15.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "press_release",
+      "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6aab9416-3052-4ed8-8e1f-f4f89c756eef.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1521,15 +1529,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3f5cd765-e7eb-4a33-81ca-5058e283070c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "press_release",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9dbfa6be-c29c-497c-bb20-50f8f8278f15.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1537,7 +1537,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/88064cfa-d6c8-464e-83d9-e3bfe3897aa7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1545,7 +1545,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b25de616-175d-4643-84b8-35ff0e1530d2.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1553,7 +1553,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/17694d2e-4296-48d2-a80b-1240ba2c1b73.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1561,7 +1561,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/85be0325-8b76-4877-a711-6835ee70ab18.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1569,7 +1569,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/715c8a9d-b184-4f16-8d19-87846aa3ec45.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1605,7 +1605,39 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_mva": [
+      {
+        "value_num": 10270.0,
+        "unit": "MVA",
+        "evidence": "ders.  \uf0b7 The Company has begun FY:2026-27 with order backlog of Rs.1200 crores (10270  MVA). The new orders worth Rs. 310 crores (2107 MVA) got added in the month of  Apr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 61
+      },
+      {
+        "value_num": 2107.0,
+        "unit": "MVA",
+        "evidence": "er backlog of Rs.1200 crores (10270  MVA). The new orders worth Rs. 310 crores (2107 MVA) got added in the month of  April, 2026. Enquiry pipeline is robust. The Compan",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 61
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 1200.0,
+        "unit": "INR crore",
+        "evidence": "bject to approval of the shareholders.  \uf0b7 The Company has begun FY:2026-27 with order backlog of Rs.1200 crores (10270  MVA). The new orders worth Rs. 310 crores (2107 MVA) got added in the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 61
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1621,9 +1653,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=2, GVA=0, MT=0, ckm=0, capex_amounts=0",
+      "inputs": {
+        "mva": 2,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 0
+      }
     },
     {
       "factor": "competitive_position",
@@ -1639,9 +1677,15 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b91200cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 1200.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 0,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
@@ -1671,7 +1715,7 @@
       "inputs": {}
     }
   ],
-  "coverage_pct": 56,
+  "coverage_pct": 69,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1680,8 +1724,8 @@
     "has_market_data": true,
     "has_documents_text": true,
     "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
+    "has_capacity_features": true,
+    "has_order_features": true,
     "has_customer_features": false,
     "has_capex_features": false,
     "has_derived_margins": true,

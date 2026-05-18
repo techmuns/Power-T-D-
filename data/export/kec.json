@@ -1697,15 +1697,15 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 30.21,
-    "pb_ratio": 2.62,
+    "pe_ratio": 30.44,
+    "pb_ratio": 2.64,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 16.08,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1713,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/63aa5f08-302d-40b5-b2c0-54f0433b4f8b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1721,7 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/09b77783-9021-4063-bd8b-77e94407dd9f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a94d8d29-fd2d-4452-977b-1ba6c2aaed68.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1737,15 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/afebfd0c-1c8e-46cd-ae1b-51e6db43f1e2.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "investor_presentation",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc8257fe-c5b1-4ff3-a99c-17d05ab3c9f0.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1753,7 +1745,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de791f57-2384-45c3-be0a-149b6b37906d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc8257fe-c5b1-4ff3-a99c-17d05ab3c9f0.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1761,7 +1761,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/137746bd-62ee-43f5-bbe5-bf746936ac8d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1769,7 +1769,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/302c923f-96e9-4fa3-8683-74be39fa494f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1829,7 +1829,198 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_gw": [
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "congestion \u2013 Large opportunities in HVDC \u25aa Renewable energy target increased to 900 GW by 2035 in India \u2013  Significant opportunities across T&D, Solar, Wind and BESS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      }
+    ],
+    "capacity_mt": [
+      {
+        "value_num": 480000.0,
+        "unit": "MT",
+        "evidence": "ufacturing Capabilities Increasing tower manufacturing capacity by ~15% to over 4,80,000 MT Manufacturing facility for  Aluminium Conductors Commissioned in FY25 \u2013 Supplie",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "th  two orders for 100+ MW Wind projects \u2022Commissioned two projects totalling  ~1,000 MW of solar capacity across  Rajasthan and Karnataka - among the  largest tracker-",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "cting working capital \u25aa Continued ROW issues in India T&D TAILWINDS  HEADWINDS  500 MW Solar Project at Bhadla, Rajasthan Environmental,  Social and  Governance (ESG)",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "GIS",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_text": "STATCOM",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "STATCOM",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 58
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 25000.0,
+        "unit": "INR crore",
+        "evidence": "order of over Rs. 1,000  Cr in India T&D from a reputed private client \u2022Robust order book & L1 of over Rs. 25,000 Cr T&D \u2022Revenues of Rs. 3,823 Cr \u2022Bheden water project supplying to over  58,000 h",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_num": 10000.0,
+        "unit": "INR crore",
+        "evidence": "r intake doubled to over Rs. 5,000 Cr in  Buildings & Factories segment \u2022Strong order book & L1 of over Rs. 10,000 Cr Civil \u2022Revenues of Rs. 516 Cr \u2022Forayed into the Wind Energy segment with  two o",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "ubstantially strengthened through multiple strategic wins,  taking the combined order book and L1 position beyond Rs. 40,000 crore. Despite the  uncertain operating environment, our robust order book and health",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": ": 56% SAE : 7% \u2713 Secured order intake of over Rs. 1,000 Cr in YTD FY27 \u2713 Robust Order Book + L1 of over Rs 40,000 Crore \u2713 Tenders under Evaluation and in Pipeline of over Rs. 1,80,000 Crore Order Int",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "506 crore, growth of 8%  All time high Order intake of Rs 25,280 crore  Healthy Order Book + L1 of over Rs. 40,000 crore  Dividend of 275%    Mumbai, May 16, 2026: KEC International Ltd., a global inf",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3
+      },
+      {
+        "value_num": 36267.0,
+        "unit": "INR crore",
+        "evidence": "\u25aa Secured orders of over Rs. 1,000 crore in FY27 till date    Order Book:   \u25aa Order Book as on 31 March 2026 of Rs. 36,267 crore  \u25aa Current order book & L1 position stands at over Rs. 40,000 crore    Consolid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "Order Book:   \u25aa Order Book as on 31 March 2026 of Rs. 36,267 crore  \u25aa Current order book & L1 position stands at over Rs. 40,000 crore    Consolidated Net Debt and Net Working Capital:  \u25aa Net Debt including Accepta",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "substantially strengthened through multiple strategic wins, taking the combined order  book and L1 position beyond Rs. 40,000 crore. Despite the uncertain operating environment, our robust order book  and health",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "400kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2
+      },
+      {
+        "value_text": "500kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "500kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 58
+      },
+      {
+        "value_text": "132kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "132kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 58
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1847,9 +2038,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=1, ckm=0, capex_amounts=0",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 1,
+        "ckm": 0,
+        "capex": 0
+      }
     },
     {
       "factor": "competitive_position",
@@ -1875,9 +2072,15 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b940000cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 40000.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 0,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
@@ -1900,9 +2103,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "max_approved_kV=0, hvdc_mentions=2, statcom_mentions=1, 765kV=0, 400kV=1, 220kV=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 2,
+        "statcom": 1,
+        "765kV_mentions": 0,
+        "400kV_mentions": 1,
+        "220kV_mentions": 0
+      }
     },
     {
       "factor": "working_capital",
@@ -1915,7 +2125,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1923,15 +2133,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
     "has_customer_features": false,
     "has_capex_features": false,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

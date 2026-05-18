@@ -1703,7 +1703,7 @@
     "book_value": null,
     "eps": 173.43,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1711,7 +1711,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0a6e3316-d562-4a37-94a4-acc847142461.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1719,7 +1719,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/157237ff-292b-4fd7-8232-082b9eec2da9.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1727,31 +1727,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ab476332-03d9-4198-a861-0c9bfc692894.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "transcript",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "transcript",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2d9d277e-446e-43f7-b7e2-45421ce8d1ce.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "investor_presentation",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9b665a82-e6f7-42aa-8d23-b4cc3572bac1.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1759,7 +1735,31 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8de524ad-06c7-45d8-a078-ac4d0174164e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2d9d277e-446e-43f7-b7e2-45421ce8d1ce.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9b665a82-e6f7-42aa-8d23-b4cc3572bac1.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1767,7 +1767,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/68a7423d-4624-4237-bbdd-9b7b6cd13341.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1827,7 +1827,261 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_ckm": [
+      {
+        "value_num": 0.0,
+        "unit": "CKM",
+        "evidence": "ates India Installed Power Capacity (GW) Cumulative Transmission line network (\u2018000 ckm) Aggressive Renewable Energy  Additions From 267 GW to ~500 GW by FY30E as Indi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      }
+    ],
+    "capacity_gw": [
+      {
+        "value_num": 267.0,
+        "unit": "GW",
+        "evidence": "ransmission line network (\u2018000 ckm) Aggressive Renewable Energy  Additions From 267 GW to ~500 GW by FY30E as India  aims to meet 50%+ energy needs through  non-fossi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 500.0,
+        "unit": "GW",
+        "evidence": "line network (\u2018000 ckm) Aggressive Renewable Energy  Additions From 267 GW to ~500 GW by FY30E as India  aims to meet 50%+ energy needs through  non-fossil fuel powe",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 12.0,
+        "unit": "GW",
+        "evidence": "e       Energy projects by 2030 \u2022 EU Offshore Wind Energy capacity to grow from 12 GW       in 2024 to 300 GW by 2050 \u2022 African Renewable Energy Initiative to create",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 300.0,
+        "unit": "GW",
+        "evidence": "by 2030 \u2022 EU Offshore Wind Energy capacity to grow from 12 GW       in 2024 to 300 GW by 2050 \u2022 African Renewable Energy Initiative to create 300 GW of renewable ele",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 300.0,
+        "unit": "GW",
+        "evidence": "in 2024 to 300 GW by 2050 \u2022 African Renewable Energy Initiative to create 300 GW of renewable electricity for Africa Power and Electricity Trend \u2022 Global Electr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      }
+    ],
+    "capacity_km": [
+      {
+        "value_num": 248.0,
+        "unit": "KM",
+        "evidence": "Sales (in Mn) Widening Metro Rail Connectivity India\u2019s metro network grew from 248 km in 2014 to  1,095 km by 2025, with metro coverage increasing  from 5 cities in",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 1095.0,
+        "unit": "KM",
+        "evidence": "ning Metro Rail Connectivity India\u2019s metro network grew from 248 km in 2014 to  1,095 km by 2025, with metro coverage increasing  from 5 cities in 2014 to 26 cities in",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 34428.0,
+        "unit": "KM",
+        "evidence": ". Railway Expansion & Modernization Between 2014 and 2025, Indian Railways laid 34,428  km of new track, averaging 8.57 km per day. This  rate is more than 2x of daily av",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 8.57,
+        "unit": "KM",
+        "evidence": "Between 2014 and 2025, Indian Railways laid 34,428  km of new track, averaging 8.57 km per day. This  rate is more than 2x of daily average of 4.2 km  during 2009\u201314.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 4.2,
+        "unit": "KM",
+        "evidence": "rack, averaging 8.57 km per day. This  rate is more than 2x of daily average of 4.2 km  during 2009\u201314..  Over the decade, investments exceeding \u20b97 trillion  are plan",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 50000.0,
+        "unit": "KM",
+        "evidence": "Over the decade, investments exceeding \u20b97 trillion  are planned to lay around 50,000 km of new train  tracks and modernize the infrastructure. Revamping Road Infrastru",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 10000.0,
+        "unit": "KM",
+        "evidence": "lakh KM national highways by 2037, up  from ~1.47 lakh KM in 2025. Since FY18, ~10,000 KM of  highways are being added p.a. Policy & Low Costs Driving Data Centers  Grow",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      }
+    ],
+    "capacity_mt": [
+      {
+        "value_num": 24600.0,
+        "unit": "MT",
+        "evidence": "lol& Daman  Wires & Cables 6 Mn kms Fans 6 Mn  Switches 10 Mn Pipes & Conduits: 24,600 MT  Metal box 3.6 Mn Nashik Switchgears 24.4 Mn Roorkee Fans 3.0 Mn Chennai Pipes",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 4800.0,
+        "unit": "MT",
+        "evidence": "3.6 Mn Nashik Switchgears 24.4 Mn Roorkee Fans 3.0 Mn Chennai Pipes & Conduits  4,800 MT Bangalore  Metal box 1.5 Mn 33  Polycab India Limited | Corporate Presentation",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 950.0,
+        "unit": "MW",
+        "evidence": "highways are being added p.a. Policy & Low Costs Driving Data Centers  Growth ~950 MW capacity is expected to double by FY27;  large part of fresh capacity expected",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 1450.0,
+        "unit": "INR crore",
+        "evidence": "ection point in capital investment.  For the first time in our history,  annual capex exceeded INR 14.5 billion, underscoring our long-term commitment to growth in  line with Project Spring.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 37
+      },
+      {
+        "value_num": 6000.0,
+        "unit": "INR crore",
+        "evidence": "rowth in  line with Project Spring.   We remain on track to execute our planned capex program of INR 60 billion to INR 80 billion  over the next 5 years, which will further enhance our capabi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 37
+      },
+      {
+        "value_num": 1480.0,
+        "unit": "INR crore",
+        "evidence": "owards our EBITDA margin goal of 8% to 10% by FY2030. During  FY26, we incurred capex of INR 14.8 billion, in line with our annual guidance of INR 12 billion  to INR 16 billion per annu",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 37
+      },
+      {
+        "value_num": 1500.0,
+        "unit": "INR crore",
+        "evidence": "5% kind of utilization. There is room for growth here.  Plus if you look at our capex guidance, we've already pumped in INR 1,500 crores in this  financial year. So that will also add to our capacity.  And we are co",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 37
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "ONGC",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "ONGC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_text": "JSW",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "JSW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_text": "ONGC",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "ONGC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 53
+      }
+    ],
+    "export_share_pct": [
+      {
+        "value_num": 5.4,
+        "unit": "%",
+        "evidence": "hank Yagnick: So see, like I mentioned today, in this financial year, we are at 5.4% export contribution to  overall top line. And we have to get to 10% by FY30. So we are",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 37
+      },
+      {
+        "value_num": 4.4,
+        "unit": "%",
+        "evidence": "2,885  Exports Revenue 3,859 4,345              3,276       15,695 13,452 Exports Contribution (%) 4.4% 5.7% 4.7% 5.4% 6.0% Quarter Year To Date  Polycab India Limited | Corporate Pre",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 52
+      },
+      {
+        "value_num": 4.4,
+        "unit": "%",
+        "evidence": "2,885  Exports Revenue 3,859 4,345              3,276       15,695 13,452 Exports Contribution (%) 4.4% 5.7% 4.7% 5.4% 6.0% Quarter Year To Date  28Polycab India Limited | Q4 FY26 Ear",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 53
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1845,9 +2099,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 3,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=2, ckm=1, capex_amounts=4",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 2,
+        "ckm": 1,
+        "capex": 4
+      }
     },
     {
       "factor": "competitive_position",
@@ -1879,11 +2139,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=4",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 4
       }
     },
     {
@@ -1913,7 +2173,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1922,14 +2182,14 @@
     "has_market_data": true,
     "has_documents_text": true,
     "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_capacity_features": true,
     "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

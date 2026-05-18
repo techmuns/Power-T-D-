@@ -1400,7 +1400,7 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 19.79,
+    "pe_ratio": 19.77,
     "pb_ratio": 5.34,
     "dividend_yield": null,
     "week52_high": null,
@@ -1408,7 +1408,7 @@
     "book_value": null,
     "eps": 22.83,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1416,7 +1416,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a1c5b11d-b9f6-41dc-b72d-d7ecb171fed2.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1424,7 +1424,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dab1d2a6-4522-4aff-8d48-301cbf0032b6.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1432,7 +1432,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1e50c39a-75b3-4ed6-95f9-2cd02a4d2b29.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1440,7 +1440,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4829328c-9ffa-4c87-ab60-1fbcda870730.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1448,7 +1448,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/595c8f37-4016-4625-ae55-84f2fb55c729.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1456,7 +1456,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/29aadaa6-1312-4386-9a55-311e698c61bd.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1464,7 +1464,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f4112013-088d-4e37-9899-e2d90d2bdc29.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1472,7 +1472,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e0fa2da-0c27-4a67-9f4a-7f6905854987.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1508,13 +1508,695 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_ckm": [
+      {
+        "value_num": 940.0,
+        "unit": "CKM",
+        "evidence": "rently underway During the year commisioned 4 nos of  765 Kv Projects measuring 940 ckm / Rs  15,000 mn. Achieved highest ever annual order  inflow in company\u2019s histor",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capacity_gva": [
+      {
+        "value_num": 2342.0,
+        "unit": "GVA",
+        "evidence": "in FY32 from 4.85 lakh ckm in 2024; 87% increase in  transformation capacity to 2,342GVA from 1,251GVA. Power T&D super-cycle underway in India PGCIL continues to domin",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 1251.0,
+        "unit": "GVA",
+        "evidence": ".85 lakh ckm in 2024; 87% increase in  transformation capacity to 2,342GVA from 1,251GVA. Power T&D super-cycle underway in India PGCIL continues to dominate transmissi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capacity_gw": [
+      {
+        "value_num": 255.85,
+        "unit": "GW",
+        "evidence": "demand neared record levels for the second consecutive time on Monday, reaching 255.85 Gw, driven by intense heat wave conditions that pushed usage of cooling appliances",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 252.07,
+        "unit": "GW",
+        "evidence": "Peak power demand started surging in the second half of this month and touched 252.07 Gw on April 24. How- ever, peak power demand moderated to 238 .15 Gw on April 26,",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 15.0,
+        "unit": "GW",
+        "evidence": "d touched 252.07 Gw on April 24. How- ever, peak power demand moderated to 238 .15 Gw on April 26, down from the record 256 Gw the previous day, as most commercial a",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 256.0,
+        "unit": "GW",
+        "evidence": "er, peak power demand moderated to 238 .15 Gw on April 26, down from the record 256 Gw the previous day, as most commercial and industrial estab- lishments remained c",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 237.21,
+        "unit": "GW",
+        "evidence": "er Ministry data, thepeak power demand met, or the highest supply in a day, was 237.21 Gw, leaving a shortfall of 0.93 Gw on Sunda y. Thus, the peak power demand on Sund",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 0.93,
+        "unit": "GW",
+        "evidence": "mand met, or the highest supply in a day, was 237.21 Gw, leaving a shortfall of 0.93 Gw on Sunda y. Thus, the peak power demand on Sundaywas 238.15 Gw. Last summer, th",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 238.15,
+        "unit": "GW",
+        "evidence": "ing a shortfall of 0.93 Gw on Sunda y. Thus, the peak power demand on Sundaywas 238.15 Gw. Last summer, thepeak power demand was 242.77 Gw, recorded in June, 2025, but s",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 242.77,
+        "unit": "GW",
+        "evidence": "peak power demand on Sundaywas 238.15 Gw. Last summer, thepeak power demand was 242.77 Gw, recorded in June, 2025, but stayed below the govern- ment\u2019sestimate of 277 Gw.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 277.0,
+        "unit": "GW",
+        "evidence": "2.77 Gw, recorded in June, 2025, but stayed below the govern- ment\u2019sestimate of 277 Gw. In 2024, the peak power demandwas 250 Gw in May,a record at the time and excee",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 250.0,
+        "unit": "GW",
+        "evidence": "d below the govern- ment\u2019sestimate of 277 Gw. In 2024, the peak power demandwas 250 Gw in May,a record at the time and exceeding the previous all- time peak of 243.27",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 243.27,
+        "unit": "GW",
+        "evidence": "250 Gw in May,a record at the time and exceeding the previous all- time peak of 243.27 Gw set in September 2023. The India Meteorological Department (IMD) has pro- jecte",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 75
+      },
+      {
+        "value_num": 786.0,
+        "unit": "GW",
+        "evidence": "expansion driven by energy transition \u2022 Non-fossil capacity expected to reach ~786 GW by  2035-36 (vs ~275 GW currently)  \u2022 Renewable (solar + wind) alone projected",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 275.0,
+        "unit": "GW",
+        "evidence": "rgy transition \u2022 Non-fossil capacity expected to reach ~786 GW by  2035-36 (vs ~275 GW currently)  \u2022 Renewable (solar + wind) alone projected at ~664  GW \u2022 Peak power",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 664.0,
+        "unit": "GW",
+        "evidence": "2035-36 (vs ~275 GW currently)  \u2022 Renewable (solar + wind) alone projected at ~664  GW \u2022 Peak power demand expected to grow to ~459 GW,  implying sustained infra buil",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 459.0,
+        "unit": "GW",
+        "evidence": "ar + wind) alone projected at ~664  GW \u2022 Peak power demand expected to grow to ~459 GW,  implying sustained infra buildout   Transmission is the backbone of energy tr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "ahead Massive Transmission Capex Visibility \u2022 Transmission network planned for >900 GW  integration by 2035-36  \u2022 Total investment opportunity: ~\u20b97.9 lakh  crore \u2022 In",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 260.0,
+        "unit": "GW",
+        "evidence": "ic Diversification of Opportunity \u2022 Major RE + transmission hubs: \u2022 Rajasthan (~260 GW potential) \u2022 Gujarat (~136 GW) \u2022 Southern states (AP, Karnataka, Tamil Nadu) \u2022",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 136.0,
+        "unit": "GW",
+        "evidence": "ity \u2022 Major RE + transmission hubs: \u2022 Rajasthan (~260 GW potential) \u2022 Gujarat (~136 GW) \u2022 Southern states (AP, Karnataka, Tamil Nadu) \u2022 Emerging corridors: \u2022 Ladakh (",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 45.0,
+        "unit": "GW",
+        "evidence": "development \u2022 Offshore wind & hybrid projects \u2022 Annual RE addition target: 40\u201345 GW per year  Sustained tendering pipeline ensures strong  order inflow visibility",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "shed players like Skipper Source: CEA Transmission Plan for Integration of over 900 GW Non-Fossil Fuel Capacity by 2035-36  9KIPPER  - L i m i t e d   Investor Presen",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 500.0,
+        "unit": "GW",
+        "evidence": "reduces cyclicality Policy & Regulatory Push \u2022 Strong government alignment: \u2022 500 GW RE target by 2030 \u2022 Aggressive grid expansion roadmap \u2022 New regulations (Solar",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 334.0,
+        "unit": "GW",
+        "evidence": "valent transmission already:  Commissioned + under implementation \u2022 Additional ~334 GW pipeline in planning  Strong near-term + medium-term execution visibility Skipp",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "uctural Opportunity (2/2) Source: CEA Transmission Plan for Integration of over 900 GW Non-Fossil Fuel Capacity by 2035-36  _\"  ,- - - - - - - - - --  9KIPPER  - Li m",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 33.0,
+        "unit": "GW",
+        "evidence": "n the period FY22-27 and 0.77 lakh ckm of  lines during FY27-32 \u27a2 Additionally, 33 GW of HVDC Bipole links are in the process of planning  \u27a2 The interregional transm",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 168.0,
+        "unit": "GW",
+        "evidence": "e process of planning  \u27a2 The interregional transmission capacity to increase to 168 GW by 2032 from present 119 GW \u27a2 Transmission network to increase by 33% to 6.48 l",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 119.0,
+        "unit": "GW",
+        "evidence": "interregional transmission capacity to increase to 168 GW by 2032 from present 119 GW \u27a2 Transmission network to increase by 33% to 6.48 lakh ckm in FY32 from 4.85 la",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capacity_mt": [
+      {
+        "value_num": 39686.0,
+        "unit": "MT",
+        "evidence": "nue, crossing Rs 5,000 million (+17% YoY), with volumes also reaching a  record 39,686 MT (+20% YoY) Operational & Financial  Performance Highlights Achieved strong prof",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 293.0,
+        "unit": "MT",
+        "evidence": "chmark by Prototyping and testing World\u2019s heaviest transmission tower, weighing 293 MT. \u2751 Successfully conducted India's first ever testing of CICA (Composite Insulat",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 250.0,
+        "unit": "MT",
+        "evidence": "rgon\u2013CO\u2082 mix in MIG welding and automation- led energy efficiency, saving up to 250 MT of CO\u2082 annually. Digital Transformation of ESG Monitoring: Real-time digital da",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capacity_mva": [
+      {
+        "value_num": 827600.0,
+        "unit": "MVA",
+        "evidence": "frastructure build-out includes: \u2022 1,37,500 circuit km of transmission  lines \u2022 8,27,600 MVA substation capacity Unprecedented visibility of multi-year order  pipeline acro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 35000.0,
+        "unit": "INR crore",
+        "evidence": "also, they have guided  for increase of capex spending. So they themselves did capex of INR35,000 crores in FY '26.  And they have guided for INR37,000 crores in FY '27 and INR45,000",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 262200.0,
+        "unit": "INR crore",
+        "evidence": "urther electrification, digitalization, and high-speed rail expansions \u2713 With a Capex of Rs. 2,622 bn and a Gross Budgetary Support of Rs. 2,522 bn, the GOI is transforming Indian R",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "PGCIL",
+        "value_num": 11.0,
+        "unit": "count",
+        "evidence": "PGCIL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "PFC",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "PFC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "REC",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "REC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "Adani",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "Adani",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "PGCIL",
+        "value_num": 12.0,
+        "unit": "count",
+        "evidence": "PGCIL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "export_share_pct": [
+      {
+        "value_num": 10.0,
+        "unit": "%",
+        "evidence": "INR1,029 crores. The order book remains  well diversified with 90% domestic and 10% export mix.    A key milestone during the year was securing a large multimillion dolla",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 25.0,
+        "unit": "%",
+        "evidence": "East market. So I think all in all, our long-term  trajectory of increasing our export order book to about 25% and then eventually 50%. That's  very much our long-term target. And we are wor",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 10.0,
+        "unit": "%",
+        "evidence": "ect to our order bid pipeline,  it's quite healthy at INR33,000 crores, and our exports are just 10% of our order book. So given  you have just told that we are targeting 15% top l",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 70.0,
+        "unit": "%",
+        "evidence": "9,376 million in the previous year  quarter, registering a growth of 33.2 % ;  Exports declined ~70 % YoY to Rs 540 million (Vs Rs 1,757 million), impacted by geopolitical developme",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 90.0,
+        "unit": "%",
+        "evidence": ", Solar, Water EPC  &  other Steel Structural items4 Segmental Breakup Domestic 90% Export 10% 9KIPPER  Limited  --------------------------- ' '  \u25a0 \u25a0 \u25a0  -----------------",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "HVDC",
+        "value_num": 18.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 14.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 8501.9,
+        "unit": "INR crore",
+        "evidence": "to order book and growth visibility, we closed the  year with our highest ever order book of INR8,501.9 crores, supported by record annual inflows  of INR5,678 crores. Quarter 4 order inflo",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 1029.0,
+        "unit": "INR crore",
+        "evidence": "501.9 crores, supported by record annual inflows  of INR5,678 crores. Quarter 4 order inflow stood at INR1,029 crores. The order book remains  well diversified with 90% domestic and 10% export mix",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 8500.0,
+        "unit": "INR crore",
+        "evidence": "of questions from my side. Firstly, on the order book. Currently, you have an  order book outstanding of around INR8,500 crores and a bidding pipeline of INR33,000 crores.  So what sort of conversion ratio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 5600.0,
+        "unit": "INR crore",
+        "evidence": "stry for the bidding in FY '26, it was significantly lower than  FY '25. So our order inflow, though we have maintained our overall order inflow of INR5,600  crores, which is better than last year, but it is still lower than our own estimation",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_num": 8502.0,
+        "unit": "INR crore",
+        "evidence": "finance costs, reinforcing the quality and  sustainability of our earnings. Our order book remains robust at a highest-ever level of \u20b98,502 crore, supported by strong  inflows and a record bidding pipeline of over \u20b933,000 cro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_num": 8502.0,
+        "unit": "INR crore",
+        "evidence": "st 12.3 % , up 180 Bps YoY Robust Order Book & Pipeline \u2022 Highest ever closing  order book: \u20b98,502 Cr;   \u2022  Highest ever YTD inflows of \u20b9 5,678 Cr \u2022 Record high bidding pipeline > \u20b9",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "765kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 13
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 13
+      },
+      {
+        "value_text": "800kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "800kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "765kV",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "132kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "132kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 62
+      },
+      {
+        "value_text": "765kV",
+        "value_num": 10.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "800kV",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "800kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 5.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "1150kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "1150kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "11kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "11kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "1200kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "1200kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "500kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "500kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 81
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, PGCIL=2, NTPC=0, SECI=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "pgcil": 2,
+        "ntpc": 0,
+        "seci": 0
+      }
     },
     {
       "factor": "balance_sheet",
@@ -1526,9 +2208,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 4,
+      "evidence": "capacity_mentions: MVA=1, GVA=2, MT=3, ckm=1, capex_amounts=2",
+      "inputs": {
+        "mva": 1,
+        "gva": 2,
+        "mt": 3,
+        "ckm": 1,
+        "capex": 2
+      }
     },
     {
       "factor": "competitive_position",
@@ -1554,17 +2242,23 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b98502cr, b2b=None, wins_mentioned=0, PGCIL=2, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 8502.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 2,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=2",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 2
       }
     },
     {
@@ -1579,9 +2273,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "max_approved_kV=0, hvdc_mentions=2, statcom_mentions=0, 765kV=3, 400kV=3, 220kV=2",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 2,
+        "statcom": 0,
+        "765kV_mentions": 3,
+        "400kV_mentions": 3,
+        "220kV_mentions": 2
+      }
     },
     {
       "factor": "working_capital",
@@ -1594,7 +2295,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1602,15 +2303,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

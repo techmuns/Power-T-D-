@@ -1673,23 +1673,23 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 279.34,
-    "pb_ratio": 8.23,
+    "pe_ratio": 280.21,
+    "pb_ratio": 8.26,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 4.75,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
       "doc_kind": "results",
       "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f7567bf8-a5be-4e0e-b4a2-90b9108eed6d.pdf",
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/254ff85b-5419-4dbd-94a8-1e19d3554f09.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1697,7 +1697,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/16a326c3-6560-4016-b89b-8c8d5ff8a70a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1705,7 +1705,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/08085720-6ed8-4661-856b-0502aece134e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f7567bf8-a5be-4e0e-b4a2-90b9108eed6d.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1713,15 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1ae6ae4e-82a0-4e36-be81-b4c561cc6202.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "results",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/254ff85b-5419-4dbd-94a8-1e19d3554f09.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/16ffde3f-1f5c-4d7c-b7ad-bcbe63ad4863.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a58eeafc-fe8f-4a4d-8fbd-b839970eee81.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/561ecd09-7b07-4ba1-b712-40445d0911bc.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1781,7 +1781,91 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capex_inr_cr": [
+      {
+        "value_num": 20.0,
+        "unit": "INR crore",
+        "evidence": "ns Limited   April 24, 2026    Page 3 of 17     We will continue to improve the capex and reach about INR20 crores capex this year. But while  we are improving capex, you also must have noted t",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      },
+      {
+        "value_num": 14431.0,
+        "unit": "INR crore",
+        "evidence": "ng cash flow of INR10,000 crores  -- almost INR11,000 crores, and we are having capex of INR14,431 crores. So effectively, our  free cash flow negative INR7,500 crores. So what is your",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      },
+      {
+        "value_num": 77000.0,
+        "unit": "INR crore",
+        "evidence": "t number 4.5x to 4.6x. And  second thing is also certain that we have locked in capex of INR77,000 crores.  Bharat Shah: In the 4-year period?  Kandarp Patel: Yes.  Bharat Shah: Yes. T",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "Adani",
+        "value_num": 25.0,
+        "unit": "count",
+        "evidence": "Adani",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      },
+      {
+        "value_text": "Hitachi",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Hitachi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "HVDC",
+        "value_num": 19.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      },
+      {
+        "value_text": "GIS",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 70
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1799,9 +1883,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=3",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 3
+      }
     },
     {
       "factor": "competitive_position",
@@ -1833,11 +1923,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=3",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 3
       }
     },
     {
@@ -1852,9 +1942,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=1, statcom_mentions=0, 765kV=0, 400kV=0, 220kV=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 1,
+        "statcom": 0,
+        "765kV_mentions": 0,
+        "400kV_mentions": 0,
+        "220kV_mentions": 0
+      }
     },
     {
       "factor": "working_capital",
@@ -1867,7 +1964,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 81,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1878,12 +1975,12 @@
     "has_voltage_features": false,
     "has_capacity_features": false,
     "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

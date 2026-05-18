@@ -1675,15 +1675,15 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 29.83,
-    "pb_ratio": 5.77,
+    "pe_ratio": 29.92,
+    "pb_ratio": 5.79,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 51.1,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1691,7 +1691,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/eeeb19e7-ac61-4290-8726-8e21a074118f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1699,7 +1699,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3ce4360e-b6ff-489f-8853-5ca6a092b7a1.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1707,7 +1707,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e124016a-b84c-490c-9a6f-0604263af840.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1715,7 +1715,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f9368881-a377-47d5-9990-26af0493f378.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1723,7 +1723,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/36e8936a-d3ca-477b-872e-76437fa57cdf.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1731,7 +1731,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c403b1d0-c2ff-48a6-8192-2ca1c879d18a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1739,7 +1739,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/294998a4-59e7-4841-99c8-60c07039f58d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1747,7 +1747,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e7a18dbe-d5e0-4882-9945-871a22065586.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1791,13 +1791,636 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "atc_loss_pct": [
+      {
+        "value_num": 48.0,
+        "unit": "%",
+        "evidence": "pshot of Franchisee Distribution Assets 13 Shil, Mumbra, Kalwa (SMK) \u2713 Reported AT&C losses of 48% at the time of takeover, reduced to ~23.1% in  FY26 License validity 29th Feb 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "capacity_ckm": [
+      {
+        "value_num": 952.0,
+        "unit": "CKM",
+        "evidence": "362 MW \u2013 Operational 1,600 MW \u2013 Under  Development 1,400 MW \u2013 Under Acquisition 952 ckm 400 kV  388 ckm 220 kV  Operational ~40 kms 400 kV D/C Under pipeline Licensed",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 388.0,
+        "unit": "CKM",
+        "evidence": "onal 1,600 MW \u2013 Under  Development 1,400 MW \u2013 Under Acquisition 952 ckm 400 kV  388 ckm 220 kV  Operational ~40 kms 400 kV D/C Under pipeline Licensed  (Ahmedabad, Sur",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 952.0,
+        "unit": "CKM",
+        "evidence": "der  Development Wind:  921 MW - Operational 2,163 MW- Under Development  2,730 952 ckm 400kV & 388 ckm 220kV 8 Pan India Footprint with Presence in Key States Wind  S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 388.0,
+        "unit": "CKM",
+        "evidence": "Wind:  921 MW - Operational 2,163 MW- Under Development  2,730 952 ckm 400kV & 388 ckm 220kV 8 Pan India Footprint with Presence in Key States Wind  Solar  Gas  Coal",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 952.0,
+        "unit": "CKM",
+        "evidence": "Wp) AMGEN (362 MW) SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Transmission Line (952 ckm  400kV & 388 ckm 220kV) Ahmedabad and Gandhinagar Surat Dahej SEZ Dholera RAJAS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 388.0,
+        "unit": "CKM",
+        "evidence": ") SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Transmission Line (952 ckm  400kV & 388 ckm 220kV) Ahmedabad and Gandhinagar Surat Dahej SEZ Dholera RAJASTHAN Wind (24 MW)",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "capacity_gw": [
+      {
+        "value_num": 8.4,
+        "unit": "GW",
+        "evidence": "PSP Awarded 18 KTPA capacity under  PLI Scheme for Green Hydrogen  production ~8.4 GW across Uttar Pradesh and  Maharashtra under pipeline. Of  which 3 GW is under c",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 3.0,
+        "unit": "GW",
+        "evidence": "duction ~8.4 GW across Uttar Pradesh and  Maharashtra under pipeline. Of  which 3 GW is under construction  with 2 GW tied up with  Maharashtra Transmission  Green",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 2.0,
+        "unit": "GW",
+        "evidence": "esh and  Maharashtra under pipeline. Of  which 3 GW is under construction  with 2 GW tied up with  Maharashtra Transmission  Green hydrogen /  Green Ammonia Public",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 4.5,
+        "unit": "GW",
+        "evidence": "s)  \uf075 TPGL was also awarded a transmission project for evacuation of power from 4.5 GW RE Project in Khavda, Gujarat as per CERC Tariff Regulations (i.e.  Post tax RO",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 2.3,
+        "unit": "GW",
+        "evidence": "cts^ ~509 ~859 Multiple Multiple ~4,500 To be commissioned progressively Total ~2.3 GW ~4.3 GW ~27,830 Renewable Energy Projects in Pipeline *MSEDCL- 259 MW (310.8 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "9 ~859 Multiple Multiple ~4,500 To be commissioned progressively Total ~2.3 GW ~4.3 GW ~27,830 Renewable Energy Projects in Pipeline *MSEDCL- 259 MW (310.8 MWp) solar",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 3.0,
+        "unit": "GW",
+        "evidence": "Electrical & Mechanical Package: LOA awarded \u2022 Environment Clearance: Received  3 GW Pumped Storage Hydro Project \u2013 Under Development \u27a2 Total Planned Capacity: 8.4",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 8.4,
+        "unit": "GW",
+        "evidence": "3 GW Pumped Storage Hydro Project \u2013 Under Development \u27a2 Total Planned Capacity: 8.4 GW (including 3 GW under construction)  \u27a2 States: Maharashtra & Uttar Pradesh  \u27a2 S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 3.0,
+        "unit": "GW",
+        "evidence": "e Hydro Project \u2013 Under Development \u27a2 Total Planned Capacity: 8.4 GW (including 3 GW under construction)  \u27a2 States: Maharashtra & Uttar Pradesh  \u27a2 Status: Sites und",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1.5,
+        "unit": "GW",
+        "evidence": "comes from integrated  generation and distribution business segment in  FY26 \uf075 ~1.5 GW (c.50%) of gas-based capacity available to  capitalise on short-term and mercha",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 8.4,
+        "unit": "GW",
+        "evidence": "gen and Pumped Storage Power (PSP)  with an eventual target of establishing c. ~8.4 GW of capacity #2 #1 #3 One of the  leading  integrated power  utility companies #",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "capacity_km": [
+      {
+        "value_num": 8100.0,
+        "unit": "KM",
+        "evidence": "ion Territory \u25fc Steel pipeline network of > 17,270  inch-Km, MDPE pipeline of > 8,100  Km and > 500 CNG Stations \u25fc More than 2.10 Lac PNG Domestic  Connections  6 Compan",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 40.0,
+        "unit": "KM",
+        "evidence": "etitive Bidding (TBCB) process. \uf075 Scope: 400 kV D/C transmission line spanning ~40 km, together with 2 line bays and 1 substation \uf075 AFC of Rs. 50 cores per annum for",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 355.0,
+        "unit": "KM",
+        "evidence": "tion of India  Limited holds 9.75%. \uf075 400 kV Double-Circuit Transmission Lines: 355 km & 220 kV Double-Circuit Transmission Lines: 128 km: For Transmission of power g",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 128.0,
+        "unit": "KM",
+        "evidence": "-Circuit Transmission Lines: 355 km & 220 kV Double-Circuit Transmission Lines: 128 km: For Transmission of power generated at  Company's gas-based power plants to va",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 60.0,
+        "unit": "KM",
+        "evidence": "commissioned the transmission project in Feb\u2019 26.  \uf075 Scope: 400 kV M/C line of 60 km and bay upgradation from 2,000 Amp to 3,150 Amp \uf075 Project cost ~\u20b9 600 Crore Exi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "capacity_mva": [
+      {
+        "value_num": 165.0,
+        "unit": "MVA",
+        "evidence": "r, reduced to ~23.1% in  FY26 License validity 29th Feb 2040 Peak Demand (FY26) 165  MVA  Licensed Area ~ 65  sq. km.  Highlights Bhiwandi \u2713 Country's first of its kind",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 634.0,
+        "unit": "MVA",
+        "evidence": "the time of takeover to ~9.1% in FY26 Highlights ~ 721  sq. km.  Licensed Area 634  MVA  Peak Demand (FY26) 25th Jan 2027 [The license validity for  the Bhiwandi area",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 588.0,
+        "unit": "MVA",
+        "evidence": "Y 26 Highlights ~ 221  sq. km.  Licensed Area 31st March  2030 License validity 588  MVA  Peak Demand (FY26)  14 #5: Transmission - Current Operations and Future Projec",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 2730.0,
+        "unit": "MW",
+        "evidence": "Cr1) Promoter 51.09% 48.91% Thermal Generation  Distribution Gas based plants:  2,730 MW \u2013 Operational Coal based plants:  362 MW \u2013 Operational 1,600 MW \u2013 Under  Develo",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 362.0,
+        "unit": "MW",
+        "evidence": "ion  Distribution Gas based plants:  2,730 MW \u2013 Operational Coal based plants:  362 MW \u2013 Operational 1,600 MW \u2013 Under  Development 1,400 MW \u2013 Under Acquisition 952 ck",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1600.0,
+        "unit": "MW",
+        "evidence": "based plants:  2,730 MW \u2013 Operational Coal based plants:  362 MW \u2013 Operational 1,600 MW \u2013 Under  Development 1,400 MW \u2013 Under Acquisition 952 ckm 400 kV  388 ckm 220 k",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1400.0,
+        "unit": "MW",
+        "evidence": "rational Coal based plants:  362 MW \u2013 Operational 1,600 MW \u2013 Under  Development 1,400 MW \u2013 Under Acquisition 952 ckm 400 kV  388 ckm 220 kV  Operational ~40 kms 400 kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 921.0,
+        "unit": "MW",
+        "evidence": "onia Public Solar:  1,081 MWp - Operational 1,787 MWp-Under  Development Wind:  921 MW - Operational 2,163 MW- Under Development  2,730 952 ckm 400kV & 388 ckm 220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 2163.0,
+        "unit": "MW",
+        "evidence": ",081 MWp - Operational 1,787 MWp-Under  Development Wind:  921 MW - Operational 2,163 MW- Under Development  2,730 952 ckm 400kV & 388 ckm 220kV 8 Pan India Footprint w",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 615.0,
+        "unit": "MW",
+        "evidence": "Coal Distribution Licensee Distribution Franchisee Transmission GUJARAT Wind (615 MW) Solar (583 MWp) AMGEN (362 MW) SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Trans",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 362.0,
+        "unit": "MW",
+        "evidence": "stribution Franchisee Transmission GUJARAT Wind (615 MW) Solar (583 MWp) AMGEN (362 MW) SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Transmission Line (952 ckm  400kV &",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1530.0,
+        "unit": "MW",
+        "evidence": "smission GUJARAT Wind (615 MW) Solar (583 MWp) AMGEN (362 MW) SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Transmission Line (952 ckm  400kV & 388 ckm 220kV) Ahmedabad an",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1200.0,
+        "unit": "MW",
+        "evidence": "T Wind (615 MW) Solar (583 MWp) AMGEN (362 MW) SUGEN & UNOSUGEN (1530 MW) DGEN (1200 MW) Transmission Line (952 ckm  400kV & 388 ckm 220kV) Ahmedabad and Gandhinagar S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 24.0,
+        "unit": "MW",
+        "evidence": "88 ckm 220kV) Ahmedabad and Gandhinagar Surat Dahej SEZ Dholera RAJASTHAN Wind (24 MW) KARNATAKA Wind (120 MW) MAHARASHTRA Wind  (126 MW) Solar (371 MWp) Bhiwandi Sh",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 120.0,
+        "unit": "MW",
+        "evidence": "and Gandhinagar Surat Dahej SEZ Dholera RAJASTHAN Wind (24 MW) KARNATAKA Wind (120 MW) MAHARASHTRA Wind  (126 MW) Solar (371 MWp) Bhiwandi Shil, Mumbra and Kalwa TEL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 126.0,
+        "unit": "MW",
+        "evidence": "j SEZ Dholera RAJASTHAN Wind (24 MW) KARNATAKA Wind (120 MW) MAHARASHTRA Wind  (126 MW) Solar (371 MWp) Bhiwandi Shil, Mumbra and Kalwa TELANGANA Solar (58 MWp) MADHY",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 36.0,
+        "unit": "MW",
+        "evidence": "Bhiwandi Shil, Mumbra and Kalwa TELANGANA Solar (58 MWp) MADHYA PRADESH Wind  (36 MW) UTTAR PRADESH Agra DADRA & NAGAR HAVELI AND DAMAN & DIU Dadra & Nagar Haveli &",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 886.0,
+        "unit": "MW",
+        "evidence": "DADRA & NAGAR HAVELI AND DAMAN & DIU Dadra & Nagar Haveli & Daman & Diu 1,081 (886 MW Contracted)  921 (920 MW Contracted) 362 Additionally, ~70 MWp C&I solar Projec",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 920.0,
+        "unit": "MW",
+        "evidence": "DAMAN & DIU Dadra & Nagar Haveli & Daman & Diu 1,081 (886 MW Contracted)  921 (920 MW Contracted) 362 Additionally, ~70 MWp C&I solar Project commissioned in the  st",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1400.0,
+        "unit": "MW",
+        "evidence": "Pradesh. Operational Capacity (MWp) All Capacities are as on 31.03.2026 [excl. (1,400 MW) Nabha under acquisition]  Coal + RE PIPELINE Solar,  2,868 , (27%) Wind,   3,0",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1400.0,
+        "unit": "MW",
+        "evidence": "ated EBITDA of INR 261 crores All capacities are as on 31.03.2026 [excl. Nabha (1,400 MW) under acquisition] Operational Capacity is estimated to Grow from ~5.1 GWp to",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 835.0,
+        "unit": "MW",
+        "evidence": "r 20 years from April 2017 Sugen Capacity   (MW)  Plant Type  Location  COD PPA 835 MW for Distribution areas of Ahmedabad / Gandhinagar &  Surat, and 50 MW with MPPT",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 50.0,
+        "unit": "MW",
+        "evidence": "COD PPA 835 MW for Distribution areas of Ahmedabad / Gandhinagar &  Surat, and 50 MW with MPPTC are regulated by CERC1 which allows  Cost + RoE under regulated tari",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 278.0,
+        "unit": "MW",
+        "evidence": "1,147.5 (3 x 382.5) Unosugen  Capacity   (MW)  Plant Type  Location  COD PPA 278 MW for Distribution areas of Ahmedabad / Gandhinagar &  Surat are regulated by CER",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1600.0,
+        "unit": "MW",
+        "evidence": "Assets  11 Strategic Expansion in Thermal Power  \uf075 Project Overview \uf075 Capacity: 1,600 MW (2x800 MW) \uf075 Location: Madhya Pradesh \uf075 Technology: Ultra-Supercritical (high e",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 18.0,
+        "unit": "MW",
+        "evidence": "ridor(DMIC) being developed as industrial hub Licensed Area  Peak Demand (FY26) 18 MW~ 920 sq. km.  Dadra & Nagar Haveli & Daman & Diu \u2713 Distribution loss <2% during",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 764.0,
+        "unit": "MW",
+        "evidence": "9%, which is among the highest in the country Licensed Area  Peak Demand (FY26) 764 MW~ 52 sq. km.  Highlights Highlights Highlights  Highlights As per Electricity Am",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1967.0,
+        "unit": "MW",
+        "evidence": "be renewed for further 25 years unless the same is revoked. Peak Demand (FY26) 1,967 MW Customer Base (FY26) >6 lakh ~ 17 sq. km.  Licensed  Area 146 Customer Base  (F",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 117.0,
+        "unit": "MW",
+        "evidence": "omer Base (FY26) >6 lakh ~ 17 sq. km.  Licensed  Area 146 Customer Base  (FY26) 117 MW Peak Demand  (FY26) ~ 603 sq. km.  Licensed  Area >1.7 lakh Customer Base  (FY2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1437.0,
+        "unit": "MW",
+        "evidence": "ak Demand  (FY26) ~ 603 sq. km.  Licensed  Area >1.7 lakh Customer Base  (FY26) 1,437 MW Peak Demand  (FY26)  #4: Snapshot of Franchisee Distribution Assets 13 Shil, Mu",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 1500.0,
+        "unit": "MW",
+        "evidence": "d Future Projects \uf075 Solapur Transmission project (in new SPV) for evacuation of 1,500 MW RE power was won by the Company, through Tariff Based Competitive Bidding (TBCB",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 259.0,
+        "unit": "MW",
+        "evidence": "ly Total ~2.3 GW ~4.3 GW ~27,830 Renewable Energy Projects in Pipeline *MSEDCL- 259 MW (310.8 MWp) solar project commissioned as on 31.03.2026; ^20.7 MWp commissioned",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 3000.0,
+        "unit": "MW",
+        "evidence": "are as on 31.03.2026   #7: Pumped Storage Hydro Projects 16 \u27a2 Project Capacity: 3,000 MW \u27a2 Location: Raigad District, Maharashtra \u27a2 Project Cost: ~14,000 Crore \u27a2 Tied-u",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 2000.0,
+        "unit": "MW",
+        "evidence": "Raigad District, Maharashtra \u27a2 Project Cost: ~14,000 Crore \u27a2 Tied-up Capacity: 2,000 MW / 16,000 MWh for 40 years   \u2022 Agreement: Executed Energy Storage Facility Agree",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 921.0,
+        "unit": "MW",
+        "evidence": "erations \u2013 Renewable Power 21 Renewable Power PLF % 18.9% 18.0%17.6% 22.9% WIND 921 MW/ 921 MW SOLAR 825 MWp / 1,081 MWp Q4-25 Q4-26 24.2% 16.4%24.5% 20.3% WIND 921 M",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 921.0,
+        "unit": "MW",
+        "evidence": "\u2013 Renewable Power 21 Renewable Power PLF % 18.9% 18.0%17.6% 22.9% WIND 921 MW/ 921 MW SOLAR 825 MWp / 1,081 MWp Q4-25 Q4-26 24.2% 16.4%24.5% 20.3% WIND 921 MW/ 921 M",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 921.0,
+        "unit": "MW",
+        "evidence": "21 MW/ 921 MW SOLAR 825 MWp / 1,081 MWp Q4-25 Q4-26 24.2% 16.4%24.5% 20.3% WIND 921 MW/ 921 MW SOLAR 825 MWp / 1,081 MWp FY25 FY26 PLF on contracted capacity  #3: Ove",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_num": 921.0,
+        "unit": "MW",
+        "evidence": "21 MW SOLAR 825 MWp / 1,081 MWp Q4-25 Q4-26 24.2% 16.4%24.5% 20.3% WIND 921 MW/ 921 MW SOLAR 825 MWp / 1,081 MWp FY25 FY26 PLF on contracted capacity  #3: Overview of",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "Power Grid",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_text": "SECI",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "SECI",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "FACTS",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "FACTS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "400kV",
+        "value_num": 7.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 27
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, PGCIL=0, NTPC=0, SECI=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "pgcil": 0,
+        "ntpc": 0,
+        "seci": 1
+      }
     },
     {
       "factor": "balance_sheet",
@@ -1809,9 +2432,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 4,
+      "evidence": "capacity_mentions: MVA=3, GVA=0, MT=0, ckm=6, capex_amounts=0",
+      "inputs": {
+        "mva": 3,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 6,
+        "capex": 0
+      }
     },
     {
       "factor": "competitive_position",
@@ -1862,9 +2491,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=0, statcom_mentions=0, 765kV=0, 400kV=1, 220kV=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 0,
+        "statcom": 0,
+        "765kV_mentions": 0,
+        "400kV_mentions": 1,
+        "220kV_mentions": 1
+      }
     },
     {
       "factor": "working_capital",
@@ -1877,7 +2513,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1885,15 +2521,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
     "has_order_features": false,
-    "has_customer_features": false,
+    "has_customer_features": true,
     "has_capex_features": false,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

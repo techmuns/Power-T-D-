@@ -1696,15 +1696,15 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 52.94,
-    "pb_ratio": 14.06,
+    "pe_ratio": 52.96,
+    "pb_ratio": 14.07,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 96.07,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1712,7 +1712,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c14e6884-e04a-4ac8-9406-c13a4ec216a7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1720,7 +1720,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f19e0b81-458a-42f3-aafa-e89fb516917b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1728,7 +1728,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2a5b2b79-4b84-4bc9-93d4-99791ef78a23.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1736,7 +1736,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2eed1c07-b49e-4979-9a04-4484694819ad.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1744,7 +1744,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/162f37f0-b32d-4583-ab9d-3882cc480264.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1752,7 +1752,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ddfddac2-9a6e-4d06-9fb8-c8e56a3b8be8.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1760,7 +1760,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fa1981af-42ba-4cc3-819f-65cbfe6c15e6.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1768,7 +1768,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bbeff84e-e813-4620-b39c-e5304030b23e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1804,7 +1804,170 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capex_inr_cr": [
+      {
+        "value_num": 600.0,
+        "unit": "INR crore",
+        "evidence": "ortion of growth will  come from Sanand.  Rajeev Gupta: And with regards to the capex investment, every year, we will be doing around INR600 crores  to INR700 crores capital expenditure for next 2 to 3 years continuous.  Ashis",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 800.0,
+        "unit": "INR crore",
+        "evidence": "ahul Agarwal: Right. I get that. And secondly, Rajeevji, I mean, you talk about capex of INR800 crores,  INR900 crores a year, your operating cash flow is going to be similar every",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      }
+    ],
+    "export_share_pct": [
+      {
+        "value_num": 45.0,
+        "unit": "%",
+        "evidence": "sales achievement is INR1,833 crores against  INR1,267 crores. So the growth in export is 45%. So the total cable institutional sales  contribution is 42%, which is at par w",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 20.0,
+        "unit": "%",
+        "evidence": "he tariffs. And we hope to do a substantial sale in U.S. this year, taking our  export to around approximately 20% of our total sales in the current financial year, which is as      KEI Industri",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 50.0,
+        "unit": "%",
+        "evidence": "enue for FY27. And if we assume even a 20% company level revenue, this  implies export revenue growing more than 50%. So a large part of 15% to 18% volume growth  is supported by exports. So is th",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 19.0,
+        "unit": "%",
+        "evidence": "larify the one doubt, sir.  For entire total institutional sales, including the export increased by around 19%. But the share  of the total revenue is somewhat decreased. Could you explain t",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 40.37,
+        "unit": "%",
+        "evidence": "rter as against PY115 Crore.\u2022 Total Institutional Cable and Wire Sale including exportcontributed 40.37% in Q-4 FY 26 against 45.57% in Q-4 FY25.\u2022 Total Institutional Cable and Wire Sa",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 64
+      },
+      {
+        "value_num": 5.64,
+        "unit": "%",
+        "evidence": "against 45.57% in Q-4 FY25.\u2022 Total Institutional Cable and Wire Sale including exportincreased by 5.64% YoY in Q-4 FY 26.\u2022 Domestic Institutional Cable and Wire sale is2688 Crore inFY",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 64
+      },
+      {
+        "value_num": 41.84,
+        "unit": "%",
+        "evidence": "Y 26 as against PY308 Crore.\u2022 Total Institutional Cable and Wire Sale including exportcontributed 41.84% in FY 26 against 42.33% in FY 25.\u2022 Total Institutional Cable and Wire sale incl",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 64
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 309.0,
+        "unit": "INR crore",
+        "evidence": "voltage domestic cable?  Rajeev Gupta: So we have the -- as on 31st March 2026, order book of EPC division is INR309 crores. Extra  high-voltage power cable order book is INR625 crores and we have also",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 625.0,
+        "unit": "INR crore",
+        "evidence": "6, order book of EPC division is INR309 crores. Extra  high-voltage power cable order book is INR625 crores and we have also L1 in extra high-voltage  power cable order book of INR233 cr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 233.0,
+        "unit": "INR crore",
+        "evidence": "er book is INR625 crores and we have also L1 in extra high-voltage  power cable order book of INR233 crores, another order. And cable domestic institution order  book around INR2,154 cro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 2154.0,
+        "unit": "INR crore",
+        "evidence": "able order book of INR233 crores, another order. And cable domestic institution order  book around INR2,154 crores and cable export order is INR497 crores.  So put together, all order book is c",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 3585.0,
+        "unit": "INR crore",
+        "evidence": "INR2,154 crores and cable export order is INR497 crores.  So put together, all order book is close to INR3,585 crores. And whatever order book from the  dealer distributor, that is not reflecting",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 309.0,
+        "unit": "INR crore",
+        "evidence": "order book, sir,  that would be great? Thank you.  Rajeev Gupta: Yes. Sir, EPC order book is INR309 crores. Extra high-voltage power cable order book is  INR625 crores. Domestic cable o",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      },
+      {
+        "value_num": 2154.0,
+        "unit": "INR crore",
+        "evidence": "es. Extra high-voltage power cable order book is  INR625 crores. Domestic cable order book is INR2,154 crores and export cable order is INR497  crores. Put together, all is INR3,585 crores",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 28
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "400kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 65
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1822,9 +1985,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=2",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 2
+      }
     },
     {
       "factor": "competitive_position",
@@ -1850,17 +2019,23 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b93585cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 3585.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 0,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=2",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 2
       }
     },
     {
@@ -1875,9 +2050,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=0, statcom_mentions=0, 765kV=0, 400kV=1, 220kV=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 0,
+        "statcom": 0,
+        "765kV_mentions": 0,
+        "400kV_mentions": 1,
+        "220kV_mentions": 0
+      }
     },
     {
       "factor": "working_capital",
@@ -1890,7 +2072,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1898,15 +2080,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
+    "has_voltage_features": true,
     "has_capacity_features": false,
-    "has_order_features": false,
+    "has_order_features": true,
     "has_customer_features": false,
-    "has_capex_features": false,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

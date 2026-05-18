@@ -1673,7 +1673,7 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 17.33,
+    "pe_ratio": 17.32,
     "pb_ratio": 3.02,
     "dividend_yield": null,
     "week52_high": null,
@@ -1681,7 +1681,7 @@
     "book_value": null,
     "eps": 17.12,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1689,7 +1689,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31b888a3-6061-40e7-aae7-2e0cd1588361.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1697,7 +1697,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7faa54a9-7670-4e2d-9dd8-4d842e6e0b6c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1705,7 +1705,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e04edce-f337-40fc-ac9e-e2aaf326003c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1713,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/05767a4b-5d88-4391-98e4-70404f964c7d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1721,23 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a617224-9433-457b-81bd-a52fe07a67c0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "investor_presentation",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c5b6f406-910d-4bb7-b4df-b49b438deb9c.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "press_release",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/388fc446-86d7-4cb7-86db-96110d36405c.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1729,23 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7b848cba-54d1-4263-8c7f-542a667a9880.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c5b6f406-910d-4bb7-b4df-b49b438deb9c.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "press_release",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/388fc446-86d7-4cb7-86db-96110d36405c.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1789,7 +1789,380 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_ckm": [
+      {
+        "value_num": 184960.0,
+        "unit": "CKM",
+        "evidence": "ability \u20b93 lakh crore+ Gross Fixed Assets On consolidated basis 64 Subsidiaries 1,84,960 ckm Transmission lines 1,584 nos. lines 6,24,016 MVA Transformation capacity 291 no",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 4765.0,
+        "unit": "CKM",
+        "evidence": "X E C U T I O N  &  I N N O V A T I O N Execution led large-scale commissioning 4,765 ckm Transmission lines added 72,055 MVA Transformation capacity 9 nos. New substati",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 54.0,
+        "unit": "CKM",
+        "evidence": "nsmission lines added 72,055 MVA Transformation capacity 9 nos. New substations4,054 ckm in FY25 32,819 MVA in FY25 4 nos. in FY25 K E Y  T R A N S M I S S I O N  L I N",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 137500.0,
+        "unit": "CKM",
+        "evidence": "CHOR PROGRAM 900+ GW Non-Fossil Plan ~\u20b97.9 lakh crore \u2022 CEA transmission plan \u2022 1,37,500 ckm lines \u2022 8,27,600 MVA capacity \u2022 ISTS + InSTS + Green H\u2082 0202 HYDRO POTENTIAL Br",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 31000.0,
+        "unit": "CKM",
+        "evidence": "Hydro ~\u20b96.4 lakh crore \u2022 ~76 GW across 12 sub-basins \u2022 42 GW HVDC corridors \u2022 ~31,000 ckm HVDC + AC lines 0503 NEW DEMAND CENTRES Data Centres & GH2 ~71 GW GH2 uplift by",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ],
+    "capacity_gw": [
+      {
+        "value_num": 6.0,
+        "unit": "GW",
+        "evidence": "ate (InSTS) 21 projects - 17% of value \u20b917,574 Cr. Rajasthan REZ Ph-IV (Part 5: 6 GW) - Barmer Complex HVDC, RE \u20b924,974 Cr. Vizag Green H\u2082 / Green Ammonia (AP) Gree",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 76.0,
+        "unit": "GW",
+        "evidence": "STS + Green H\u2082 0202 HYDRO POTENTIAL Brahmaputra Basin Hydro ~\u20b96.4 lakh crore \u2022 ~76 GW across 12 sub-basins \u2022 42 GW HVDC corridors \u2022 ~31,000 ckm HVDC + AC lines 0503",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 42.0,
+        "unit": "GW",
+        "evidence": "ENTIAL Brahmaputra Basin Hydro ~\u20b96.4 lakh crore \u2022 ~76 GW across 12 sub-basins \u2022 42 GW HVDC corridors \u2022 ~31,000 ckm HVDC + AC lines 0503 NEW DEMAND CENTRES Data Centr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 71.0,
+        "unit": "GW",
+        "evidence": "idors \u2022 ~31,000 ckm HVDC + AC lines 0503 NEW DEMAND CENTRES Data Centres & GH2 ~71 GW GH2 uplift by 2032 \u2022 AI / DC clusters drive 1 GW+  point loads \u2022 GH2 projects a",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 1.0,
+        "unit": "GW",
+        "evidence": "D CENTRES Data Centres & GH2 ~71 GW GH2 uplift by 2032 \u2022 AI / DC clusters drive 1 GW+  point loads \u2022 GH2 projects already at NCT  (Kakinada, Vizag, Tuticorin,  ~\u20b913",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "mar \u2022 India    UAE / Saudi Arabia \u2022 India    Singapore Information as per CEA\u2019s 900 GW non-fossil plan, Brahmaputra basin hydro outlook and NEP 2032 DOMESTIC GLOBAL I",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 127.0,
+        "unit": "GW",
+        "evidence": "L HVDC SCHEMES ENVISAGED 22 Under bidding and planning COMBINED HVDC CAPACITY ~ 127 GW 21  F I N A N C I A L  P E R F O R M A N C E Financial Performance (Consolidate",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ],
+    "capacity_km": [
+      {
+        "value_num": 50.0,
+        "unit": "KM",
+        "evidence": "Service  www.kia.com  26St EV Ready  Kfo Workshops  within yovr reach  50 kn,/h 50 km(h  Dual Pane P~noramlc Sunroo f ADAS Uv~I 2\"' with 20 Auronomous F'eatures  War",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 7
+      }
+    ],
+    "capacity_mva": [
+      {
+        "value_num": 624016.0,
+        "unit": "MVA",
+        "evidence": "olidated basis 64 Subsidiaries 1,84,960 ckm Transmission lines 1,584 nos. lines 6,24,016 MVA Transformation capacity 291 nos. substations 11 HVDC Projects Pioneer of \u00b1800 k",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 72055.0,
+        "unit": "MVA",
+        "evidence": "O N Execution led large-scale commissioning 4,765 ckm Transmission lines added 72,055 MVA Transformation capacity 9 nos. New substations4,054 ckm in FY25 32,819 MVA in F",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 32819.0,
+        "unit": "MVA",
+        "evidence": "dded 72,055 MVA Transformation capacity 9 nos. New substations4,054 ckm in FY25 32,819 MVA in FY25 4 nos. in FY25 K E Y  T R A N S M I S S I O N  L I N E S 765 kV Bhadla",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 315.0,
+        "unit": "MVA",
+        "evidence": "I O N  &  I N N O V A T I O N Asia\u2019s First Transformer With Synthetic Ester Oil 315 MVA, 400/220 kV at HVDC Bhiwadi substation K E Y  B E N E F I T S KEY BENEFITS Repl",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 827600.0,
+        "unit": "MVA",
+        "evidence": "Non-Fossil Plan ~\u20b97.9 lakh crore \u2022 CEA transmission plan \u2022 1,37,500 ckm lines \u2022 8,27,600 MVA capacity \u2022 ISTS + InSTS + Green H\u2082 0202 HYDRO POTENTIAL Brahmaputra Basin Hydro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 315.0,
+        "unit": "MVA",
+        "evidence": "022-23 Anti-Bribery  ISO 37001 certified 2023-24 1st ICT with ester oil 2024-25 315 MVA synthetic  ester oil ICT; 85 MW solar PV 2025-26 Progressing towards our  ESG g",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 101180.0,
+        "unit": "MW",
+        "evidence": "ity All information as on 31-Mar-2026*17 TBCB SPVs merged into 2 existing SPVs. 1,01,180 MW Inter-regional (IR) Capacity ~84% of total IR of the country India's largest Tr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 150.0,
+        "unit": "MW",
+        "evidence": "em (BESS) * Battery Energy Storage Purchase Agreement  Kalikiri, Andhra Pradesh 150 MW / 300 MWh standalone BESS \u20b929.52 crore Annual Tariff BESPA* signed between PESL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "a Basin (Oct 2025) 2 2Cross-border/ Undersea \u2022 India - Sri Lanka (Cross border) 500 MW VSC link \u2022  Paradeep - Andaman (Undersea) 500 MW, \u00b1320 kV VSC  Source: CEA Nati",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "dia - Sri Lanka (Cross border) 500 MW VSC link \u2022  Paradeep - Andaman (Undersea) 500 MW, \u00b1320 kV VSC  Source: CEA National Electricity Plan 2032 - Transmission  (Oct 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_num": 85.0,
+        "unit": "MW",
+        "evidence": "tified 2023-24 1st ICT with ester oil 2024-25 315 MVA synthetic  ester oil ICT; 85 MW solar PV 2025-26 Progressing towards our  ESG goals E S G R A T I N G 70 NSE As",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "Power Grid",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 38.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 8
+      },
+      {
+        "value_text": "PFC",
+        "value_num": 10.0,
+        "unit": "count",
+        "evidence": "PFC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 8
+      },
+      {
+        "value_text": "REC",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "REC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 8
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 25
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "GIS",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 10.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "REACTOR",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "REACTOR",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "400kV",
+        "value_num": 13.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "765kV",
+        "value_num": 10.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 8.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "800kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "800kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "132kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "132kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      },
+      {
+        "value_text": "320kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "320kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 1
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1807,9 +2180,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 4,
+      "evidence": "capacity_mentions: MVA=6, GVA=0, MT=0, ckm=5, capex_amounts=0",
+      "inputs": {
+        "mva": 6,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 5,
+        "capex": 0
+      }
     },
     {
       "factor": "competitive_position",
@@ -1860,9 +2239,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=1, statcom_mentions=0, 765kV=1, 400kV=1, 220kV=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 1,
+        "statcom": 0,
+        "765kV_mentions": 1,
+        "400kV_mentions": 1,
+        "220kV_mentions": 1
+      }
     },
     {
       "factor": "working_capital",
@@ -1875,7 +2261,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1883,15 +2269,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
     "has_order_features": false,
-    "has_customer_features": false,
+    "has_customer_features": true,
     "has_capex_features": false,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

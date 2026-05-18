@@ -1673,15 +1673,15 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 27.37,
-    "pb_ratio": 2.29,
+    "pe_ratio": 27.58,
+    "pb_ratio": 2.31,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 6.43,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1689,7 +1689,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/60153b86-c999-47c8-85fb-303159b9cb2a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1697,7 +1697,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/94195529-556d-4092-990e-a15757802685.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1705,7 +1705,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c8152735-a3bd-40cf-8b82-e1de3aece237.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1713,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/70c5c826-e01e-4197-8f8a-75ba418f33d4.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1721,7 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fbee9a24-89c0-4752-895f-4cc335b3a0a3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c3a3901-d3da-42b8-add6-14850faa5a2b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/923cf707-3330-4601-8c4a-381c57790a98.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd3400f6-19af-4328-993a-6379cc563563.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1781,13 +1781,597 @@
       "has_text": false
     }
   ],
-  "features": {},
+  "features": {
+    "capacity_gw": [
+      {
+        "value_num": 10.0,
+        "unit": "GW",
+        "evidence": "and scale. Delivering  . Eastern India\u2019s definitive  Aiming  and scale it up to 10GW by FY32. 2   CESC: Powering millions of Indian homes and businesses Distributio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 4.0,
+        "unit": "GW",
+        "evidence": "onnectivity & Land 2,000 MW signed PPAs RE Sites  Solar Projects Wind Projects8.4 GW  Connectivity Applied  (3.8 GW Secured) 15,700 acres  Land under acquisition  (",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 3.8,
+        "unit": "GW",
+        "evidence": "igned PPAs RE Sites  Solar Projects Wind Projects8.4 GW  Connectivity Applied  (3.8 GW Secured) 15,700 acres  Land under acquisition  (4,900 acres Secured) CESC Inves",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 3.0,
+        "unit": "GW",
+        "evidence": "hnology selection and vendor finalization currently underway Illustrative image 3 GW  Solar Cell & Module Manufacturing  11  3* 250 40 2*67.52*300 2*300 CESC, Kolka",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 4.9,
+        "unit": "GW",
+        "evidence": "Distribution Assets Presently serving more than 4.8 million Customers handling 4.9 GW+ power spanning across 1,454 Sq. KM area *as on FY26  Kolkata Licensee 567 37 1",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "nd businesses Distribution ThermalPower Renewable Power Purvah Green, Rajasthan 300 MW  NPCL,  Greater  Noida CESC Rajasthan,   Kota MPSL, Malegaon Crescent  Power  L",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 18.0,
+        "unit": "MW",
+        "evidence": "Noida CESC Rajasthan,   Kota MPSL, Malegaon Crescent  Power  Limited,  Ramnad  18  MW Solar Dhariwal Infrastructure   Limited, Chandrapur 600   MW TPP CESC, Kolkata",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "r  Limited,  Ramnad  18  MW Solar Dhariwal Infrastructure   Limited, Chandrapur 600   MW TPP CESC, Kolkata   885 MW TPP Haldia Energy Limited,  Haldia  600 MW TPP Asans",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 885.0,
+        "unit": "MW",
+        "evidence": "olar Dhariwal Infrastructure   Limited, Chandrapur 600   MW TPP CESC, Kolkata   885 MW TPP Haldia Energy Limited,  Haldia  600 MW TPP Asansol 40MW (TPP) CESC Rajastha",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "ndrapur 600   MW TPP CESC, Kolkata   885 MW TPP Haldia Energy Limited,  Haldia  600 MW TPP Asansol 40MW (TPP) CESC Rajasthan,   Bharatpur CPDL Chandigarh  Distributio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 40.0,
+        "unit": "MW",
+        "evidence": "P CESC, Kolkata   885 MW TPP Haldia Energy Limited,  Haldia  600 MW TPP Asansol 40MW (TPP) CESC Rajasthan,   Bharatpur CPDL Chandigarh  Distribution Consumer Locati",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "to 8.3% Renewables:  Purvah Green won two new projects during the quarter \u2013 a) 300 MW hybrid project with CESC Kolkata, b) 250 MW wind project with SECI. 300 MW Sola",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 250.0,
+        "unit": "MW",
+        "evidence": "ew projects during the quarter \u2013 a) 300 MW hybrid project with CESC Kolkata, b) 250 MW wind project with SECI. 300 MW Solar Project  with CESC  Kolkata is under commi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "\u2013 a) 300 MW hybrid project with CESC Kolkata, b) 250 MW wind project with SECI. 300 MW Solar Project  with CESC  Kolkata is under commissioning stage    Rajasthan DF:",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 1300.0,
+        "unit": "MW",
+        "evidence": "r w.e.f. Feb\u201925  6CESC Investor Presentation Q4FY26  Purvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "Feb\u201925  6CESC Investor Presentation Q4FY26  Purvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "6CESC Investor Presentation Q4FY26  Purvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,0",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "Investor Presentation Q4FY26  Purvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 2400.0,
+        "unit": "MW",
+        "evidence": "ation Q4FY26  Purvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Oper",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 1300.0,
+        "unit": "MW",
+        "evidence": "rvah Green\u2013Growth Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Operational Access",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 1100.0,
+        "unit": "MW",
+        "evidence": "Vision 1300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Operational Access to Best-in-Class",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "300 MW 300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Operational Access to Best-in-Class Solar &",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 3200.0,
+        "unit": "MW",
+        "evidence": "300 MW 300 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Operational Access to Best-in-Class Solar & Wind Reso",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 10000.0,
+        "unit": "MW",
+        "evidence": "0 MW 500 MW Land Bank 2,400 MW (Solar:1300 MW  I  Wind:1100 MW) 300 MW 3,200 MW 10,000 MW  By FY29 By FY32Operational Access to Best-in-Class Solar & Wind Resource Clust",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 2000.0,
+        "unit": "MW",
+        "evidence": "& Wind Resource ClustersGrowth Vision Under Implementation Connectivity & Land 2,000 MW signed PPAs RE Sites  Solar Projects Wind Projects8.4 GW  Connectivity Applied",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 750.0,
+        "unit": "MW",
+        "evidence": "r Presentation Q4FY26 7   Capacity Overview & Strategic Roadmap CESC  Kolkata,  750 MW NPCL,  450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 450.0,
+        "unit": "MW",
+        "evidence": "Q4FY26 7   Capacity Overview & Strategic Roadmap CESC  Kolkata,  750 MW NPCL,  450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 650.0,
+        "unit": "MW",
+        "evidence": "pacity Overview & Strategic Roadmap CESC  Kolkata,  750 MW NPCL,  450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 550.0,
+        "unit": "MW",
+        "evidence": "trategic Roadmap CESC  Kolkata,  750 MW NPCL,  450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 900.0,
+        "unit": "MW",
+        "evidence": "0 MW NPCL,  450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300 MW Wind,  250 MW Strong renewable p",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 550.0,
+        "unit": "MW",
+        "evidence": "450 MW SECI,  650 MW Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300 MW Wind,  250 MW Strong renewable project wins",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 400.0,
+        "unit": "MW",
+        "evidence": "Railways ,  550 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300 MW Wind,  250 MW Strong renewable project wins driving growth visib",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "0 MW Projects Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300 MW Wind,  250 MW Strong renewable project wins driving growth visibility Diversifi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 250.0,
+        "unit": "MW",
+        "evidence": "Offtakes  Hybrid,  900 MW RTC, 550 MW Solar+BESS,  400 MW Solar,  300 MW Wind,  250 MW Strong renewable project wins driving growth visibility Diversified Clean Energ",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 2400.0,
+        "unit": "MW",
+        "evidence": "ins driving growth visibility Diversified Clean Energy Portfolio Project Types  2400 MW 2400 MW Executing 1,500 MWh of BESS capacity across RTC & Solar + BESS projects",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 2400.0,
+        "unit": "MW",
+        "evidence": "ing growth visibility Diversified Clean Energy Portfolio Project Types  2400 MW 2400 MW Executing 1,500 MWh of BESS capacity across RTC & Solar + BESS projects 300 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "2400 MW Executing 1,500 MWh of BESS capacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 150.0,
+        "unit": "MW",
+        "evidence": "Executing 1,500 MWh of BESS capacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed  LOA",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 1550.0,
+        "unit": "MW",
+        "evidence": "ing 1,500 MWh of BESS capacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed  LOA  Issued U",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 400.0,
+        "unit": "MW",
+        "evidence": "0 MWh of BESS capacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed  LOA  Issued Under Im",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 2400.0,
+        "unit": "MW",
+        "evidence": "f BESS capacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed  LOA  Issued Under Implementa",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 3200.0,
+        "unit": "MW",
+        "evidence": "apacity across RTC & Solar + BESS projects 300 MW 150 MW 1550 MW 400 MW 2400 MW 3200 MW Operational Near Commissioning PPA Signed  LOA  Issued Under Implementation FY2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "r Presentation Q4FY26 8   Robust pipeline of Renewable Projects 9 CESC Kolkata  300 MW Solar  NPCL 300 MW  Hybrid  SECI 300 MW  Solar+ BESS  REMCL  180 MW RTC Install",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "26 8   Robust pipeline of Renewable Projects 9 CESC Kolkata  300 MW Solar  NPCL 300 MW  Hybrid  SECI 300 MW  Solar+ BESS  REMCL  180 MW RTC Installed  Capacity Tariff",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "e of Renewable Projects 9 CESC Kolkata  300 MW Solar  NPCL 300 MW  Hybrid  SECI 300 MW  Solar+ BESS  REMCL  180 MW RTC Installed  Capacity Tariff (Rs/Kwh) COD LOA/PPA",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 180.0,
+        "unit": "MW",
+        "evidence": "SC Kolkata  300 MW Solar  NPCL 300 MW  Hybrid  SECI 300 MW  Solar+ BESS  REMCL  180 MW RTC Installed  Capacity Tariff (Rs/Kwh) COD LOA/PPA  Status  CUF 300 MW 450 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "REMCL  180 MW RTC Installed  Capacity Tariff (Rs/Kwh) COD LOA/PPA  Status  CUF 300 MW 450 MW 400 MW + 600 MWh BESS 550 MW+  900 MWh BESS 2.69 3.84 2.86 4.35 ~29% ~48",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 450.0,
+        "unit": "MW",
+        "evidence": "180 MW RTC Installed  Capacity Tariff (Rs/Kwh) COD LOA/PPA  Status  CUF 300 MW 450 MW 400 MW + 600 MWh BESS 550 MW+  900 MWh BESS 2.69 3.84 2.86 4.35 ~29% ~48% ~29%",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 400.0,
+        "unit": "MW",
+        "evidence": "RTC Installed  Capacity Tariff (Rs/Kwh) COD LOA/PPA  Status  CUF 300 MW 450 MW 400 MW + 600 MWh BESS 550 MW+  900 MWh BESS 2.69 3.84 2.86 4.35 ~29% ~48% ~29% ~75% Un",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 550.0,
+        "unit": "MW",
+        "evidence": "ty Tariff (Rs/Kwh) COD LOA/PPA  Status  CUF 300 MW 450 MW 400 MW + 600 MWh BESS 550 MW+  900 MWh BESS 2.69 3.84 2.86 4.35 ~29% ~48% ~29% ~75% Under Commissioning Q4 F",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "ssued PPA Signed Project 1 Project 2 Project 5Project 3 Project 4 CESC Kolkata  300 MW Hybrid  450 MW 3.75 ~50% Q3 FY28 PPA Signed Project 6 SECI  250 MW Wind 250 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 450.0,
+        "unit": "MW",
+        "evidence": "d Project 1 Project 2 Project 5Project 3 Project 4 CESC Kolkata  300 MW Hybrid  450 MW 3.75 ~50% Q3 FY28 PPA Signed Project 6 SECI  250 MW Wind 250 MW 3.69 ~35% Q1 FY",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 250.0,
+        "unit": "MW",
+        "evidence": "ESC Kolkata  300 MW Hybrid  450 MW 3.75 ~50% Q3 FY28 PPA Signed Project 6 SECI  250 MW Wind 250 MW 3.69 ~35% Q1 FY29 PPA Signed  9CESC Investor Presentation Q4FY26  P",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 250.0,
+        "unit": "MW",
+        "evidence": "300 MW Hybrid  450 MW 3.75 ~50% Q3 FY28 PPA Signed Project 6 SECI  250 MW Wind 250 MW 3.69 ~35% Q1 FY29 PPA Signed  9CESC Investor Presentation Q4FY26  Project 1\u2013 CE",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "Q1 FY29 PPA Signed  9CESC Investor Presentation Q4FY26  Project 1\u2013 CESC Kolkata 300 MW Solar Update  \uf0d8 300 MW Solar Project with CESC Kolkata is under commissioning s",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "SC Investor Presentation Q4FY26  Project 1\u2013 CESC Kolkata 300 MW Solar Update  \uf0d8 300 MW Solar Project with CESC Kolkata is under commissioning stage \uf0d8 Capacity: 300 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "300 MW Solar Project with CESC Kolkata is under commissioning stage \uf0d8 Capacity: 300 MW  |  Est. Annual Sales: 800 MUs   I   Tariff: Rs 2.69/kWh  I  Solar Modules: 435",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 100.0,
+        "unit": "MW",
+        "evidence": "*300 CESC, Kolkata* Short Term Supply \u2013  CompetitiveCESC, Kolkata*CESC, Kolkata 100 MW - TANGEDCO 187 MW - NPCL 225 MW \u2013 Medium Term PPAs CIL Linkage Coal Mine E-auct",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 187.0,
+        "unit": "MW",
+        "evidence": "* Short Term Supply \u2013  CompetitiveCESC, Kolkata*CESC, Kolkata 100 MW - TANGEDCO 187 MW - NPCL 225 MW \u2013 Medium Term PPAs CIL Linkage Coal Mine E-auction Coal Washery R",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      },
+      {
+        "value_num": 225.0,
+        "unit": "MW",
+        "evidence": "upply \u2013  CompetitiveCESC, Kolkata*CESC, Kolkata 100 MW - TANGEDCO 187 MW - NPCL 225 MW \u2013 Medium Term PPAs CIL Linkage Coal Mine E-auction Coal Washery RejectsCIL Link",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 16500.0,
+        "unit": "INR crore",
+        "evidence": "struction Projects  CESC Kol., NPCL, SECI,   REMCL Projects   CESC Kolkata NPCL Capex : ~Rs. 16,500 Cr   I  Annualized Revenue:~Rs. 2,300 Cr. CESC Investor Presentation Q4FY26 8   Ro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "SECI",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "SECI",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      }
+    ],
+    "export_share_pct": [
+      {
+        "value_num": 9.0,
+        "unit": "%",
+        "evidence": "(3%) Power Purchase (MU) 1,497 1,432 5% 7,558 7,303 3% Total Sales (MU)  (incl. export & banking) 2,830 2,593 9% 11,990 11,857 1% Gross Revenue (Rs Cr.) 2,224 2,213 1% 9,939 9,765 2% EBITDA (R",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 46
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, PGCIL=0, NTPC=0, SECI=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "pgcil": 0,
+        "ntpc": 0,
+        "seci": 1
+      }
     },
     {
       "factor": "balance_sheet",
@@ -1799,9 +2383,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=1",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 1
+      }
     },
     {
       "factor": "competitive_position",
@@ -1833,11 +2423,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 3,
+      "evidence": "order_wins=0, capex_mentions=1",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 1
       }
     },
     {
@@ -1867,7 +2457,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 88,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1876,14 +2466,14 @@
     "has_market_data": true,
     "has_documents_text": true,
     "has_voltage_features": false,
-    "has_capacity_features": false,
+    "has_capacity_features": true,
     "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

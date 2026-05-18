@@ -1697,15 +1697,15 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 25.39,
-    "pb_ratio": 3.62,
+    "pe_ratio": 25.35,
+    "pb_ratio": 3.61,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 48.71,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1713,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/695ecc50-aa50-43c2-8ad4-b9af99e42329.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1721,7 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3bd02219-9bed-4d35-8c60-94a310200951.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/292122a2-40fd-4a11-bd4e-def9d4d2d252.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f0f96d9a-485d-416f-a38f-f1b40e9461d0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/84a71acd-3a5e-49f6-b157-a727a49c9331.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1753,7 +1753,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e548a420-c4b7-4917-b569-808a4dad50d7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1761,7 +1761,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dde8c661-4f56-41bf-824a-6d1fe3588902.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1769,7 +1769,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8ce85b72-da41-4f19-bafa-b4a3d3a13cb7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1829,7 +1829,55 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "order_book_inr_cr": [
+      {
+        "value_num": 26400.0,
+        "unit": "INR crore",
+        "evidence": "hyachal Road Asset  and Indore Real Estate Project Completed  as guided in FY26 Order inflow \u20b9 26,400 Crores led by T&D  and B&F; Tendering momentum strong in  T&D, B&F, Oil & Gas and Urb",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 15
+      },
+      {
+        "value_num": 3258.0,
+        "unit": "INR crore",
+        "evidence": "a \u2022 LMG (Sweden) reported revenue of \u20b93,023 crores in FY26, growth of 64% YoY;  Order book at \u20b9 3258 crore as on 31 March 2026 \u2022 Closed all projects in Fasttel (Brazil); Reported revenue",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 15
+      },
+      {
+        "value_num": 65457.0,
+        "unit": "INR crore",
+        "evidence": "bps    Sharp Deline in Consolidated Net Debt by 53% YoY to \u20b9915 crores  Robust Order Book Position of \u20b965,457 crores; Order Intake for FY26 at \u20b926,400 crores  Board Recommends Dividend of \u20b911 per",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 16
+      },
+      {
+        "value_num": 26400.0,
+        "unit": "INR crore",
+        "evidence": "VEPL (3) Provision for New Labour Codes     ORDER INTAKE & ORDER BOOK  \uf0b7 Total Order inflows of \u20b926,400 crores for FY26, led by T&D and B&F business  \uf0b7 Consolidated order book stands at \u20b965",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 16
+      },
+      {
+        "value_num": 65457.0,
+        "unit": "INR crore",
+        "evidence": "inflows of \u20b926,400 crores for FY26, led by T&D and B&F business  \uf0b7 Consolidated order book stands at \u20b965,457 crores as on 31st March 2026    \uf0b7 Received new orders of ~ \u20b91,833 crores YTD FY27; Fu",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 16
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
@@ -1875,9 +1923,15 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b965457cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 65457.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 0,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
@@ -1915,7 +1969,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 75,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1925,13 +1979,13 @@
     "has_documents_text": true,
     "has_voltage_features": false,
     "has_capacity_features": false,
-    "has_order_features": false,
+    "has_order_features": true,
     "has_customer_features": false,
     "has_capex_features": false,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

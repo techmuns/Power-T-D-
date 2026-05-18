@@ -1675,7 +1675,7 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 114.77,
+    "pe_ratio": 114.84,
     "pb_ratio": 7.61,
     "dividend_yield": null,
     "week52_high": null,
@@ -1683,7 +1683,7 @@
     "book_value": null,
     "eps": 3.52,
     "face_value": null,
-    "fetched_at": "2026-05-18T09:50:22+00:00"
+    "fetched_at": "2026-05-18T09:58:09+00:00"
   },
   "documents": [
     {
@@ -1691,7 +1691,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e19ef7cc-50c4-4c7c-a4d8-98e18f03cc90.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1699,7 +1699,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/93b975b6-96db-407e-b75e-8ba408beb787.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1707,7 +1707,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/99ae1684-701f-4ba9-877d-6754f9b960b7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1715,7 +1715,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f54cb27f-ac25-4170-854a-aad8f5c47731.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1723,7 +1723,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b8991466-ecdb-48d5-b14b-73ed2fc8dd85.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1731,7 +1731,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b0e76dc6-81fa-44cd-bfc2-8ea650363dc1.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1739,7 +1739,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b9804386-93b9-49e0-8f8e-45c7a01aed6a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1747,7 +1747,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3969162b-6d01-4d48-9af9-f15e506c9d20.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T09:50:39+00:00",
+      "extracted_at": "2026-05-18T09:58:23+00:00",
       "has_text": false
     },
     {
@@ -1807,13 +1807,1609 @@
       "has_text": true
     }
   ],
-  "features": {},
+  "features": {
+    "atc_loss_pct": [
+      {
+        "value_num": 15.5,
+        "unit": "%",
+        "evidence": "5 FY26 12.6% 9.9% FY25 FY26 Strong Financial Performance 40% 84% Odisha Discoms AT&C loss reduced to 15.5% vs 17.5% YoY G  TATA POWER TATA   Generation - Tata Power has Strong Pipeline o",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "capacity_ckm": [
+      {
+        "value_num": 1841.0,
+        "unit": "CKM",
+        "evidence": "pacity) 5,804 Public EV charging points  energized across 706 cities and  towns 1,841 Ckm Transmission lines under  construction ~4.9 GW  Integrated cell & module     ma",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 5562.0,
+        "unit": "CKM",
+        "evidence": "acity 2.8 GW MoU signed for Pumped  Hydro Project (PSP) ~26.3 GW Total Capacity 5,562 Ckm Operational Transmission  lines 13.1 Mn Customers in Distribution Distribution",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1521.0,
+        "unit": "CKM",
+        "evidence": "digit Q4 FY26: Key Highlights Fully commissions SEUPPTCL  transmission line of  1,521 CKm,  added 732 CKm in Q4 FY26 G  TATA POWER TATA   tatapower.com tatapower.c om 29",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 732.0,
+        "unit": "CKM",
+        "evidence": "Highlights Fully commissions SEUPPTCL  transmission line of  1,521 CKm,  added 732 CKm in Q4 FY26 G  TATA POWER TATA   tatapower.com tatapower.c om 29 Solar Cell and",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1521.0,
+        "unit": "CKM",
+        "evidence": "hieved a record  of 1.6 GWp \u2022 Fully commissions SEUPPTCL  transmission line of  1,521 cKM  Thank You!  www.tatapower.com w w w. t a t a p o w e r. c o m I N V E S T O R",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 7403.0,
+        "unit": "CKM",
+        "evidence": "Grid Transformation and Distribution    \u2022 Transmission Portfolio now stands at 7,403 Ckm inclusive of operational lines of  5,562 CKm and 1,841 Ckm of under-constructio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 5562.0,
+        "unit": "CKM",
+        "evidence": "ansmission Portfolio now stands at 7,403 Ckm inclusive of operational lines of  5,562 CKm and 1,841 Ckm of under-construction projects  \u2022 Completed two major TBCB transm",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1841.0,
+        "unit": "CKM",
+        "evidence": "tfolio now stands at 7,403 Ckm inclusive of operational lines of  5,562 CKm and 1,841 Ckm of under-construction projects  \u2022 Completed two major TBCB transmission project",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1823.0,
+        "unit": "CKM",
+        "evidence": "ast U.P. Power Transmission Company Ltd) with cumulative transmission  lines of 1,823 Ckm  \u2022 Completion of SEUPPTCL, marks a major milestone for Uttar Pradesh\u2019s transmis",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 732.0,
+        "unit": "CKM",
+        "evidence": "ully completed all Extra High Voltage (EHV)  transmission lines under SEUPPTCL (732 Ckm ). The expanded network now  includes three 765 kV lines spanning 951 circuit k",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      }
+    ],
+    "capacity_gw": [
+      {
+        "value_num": 17.5,
+        "unit": "GW",
+        "evidence": "on New-age Energy Solutions 5 Transmission New-age Energy Solutions Generation ~17.5 GW Clean & Green Energy (Including 9.6 GW Under Construction)  ~8.9 GW Thermal ene",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 9.6,
+        "unit": "GW",
+        "evidence": "on New-age Energy Solutions Generation ~17.5 GW Clean & Green Energy (Including 9.6 GW Under Construction)  ~8.9 GW Thermal energy generation (Installed capacity) 5,8",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 8.9,
+        "unit": "GW",
+        "evidence": "eneration ~17.5 GW Clean & Green Energy (Including 9.6 GW Under Construction)  ~8.9 GW Thermal energy generation (Installed capacity) 5,804 Public EV charging points",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.9,
+        "unit": "GW",
+        "evidence": "across 706 cities and  towns 1,841 Ckm Transmission lines under  construction ~4.9 GW  Integrated cell & module     manufacturing capacity 2.8 GW MoU signed for Pump",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2.8,
+        "unit": "GW",
+        "evidence": "nder  construction ~4.9 GW  Integrated cell & module     manufacturing capacity 2.8 GW MoU signed for Pumped  Hydro Project (PSP) ~26.3 GW Total Capacity 5,562 Ckm Op",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 26.3,
+        "unit": "GW",
+        "evidence": "e     manufacturing capacity 2.8 GW MoU signed for Pumped  Hydro Project (PSP) ~26.3 GW Total Capacity 5,562 Ckm Operational Transmission  lines 13.1 Mn Customers in D",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 16.7,
+        "unit": "GW",
+        "evidence": "lex /  FDRE Wind  Hydro  PSP Solar Operational Thermal  Hybrid Project Pipeline 16.7  GW 26.3  GW 8,860 4,577 846 880 443 1,110 16,716 434 612 1,725 2,447 2,800 1,612 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 26.3,
+        "unit": "GW",
+        "evidence": "RE Wind  Hydro  PSP Solar Operational Thermal  Hybrid Project Pipeline 16.7  GW 26.3  GW 8,860 4,577 846 880 443 1,110 16,716 434 612 1,725 2,447 2,800 1,612 26,347 TAT",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.0,
+        "unit": "GW",
+        "evidence": "and hosting inclusive movie  screening \u2022 Program development for EC compliances 4GW Tirunelveli  \u2013Regional Neurodiversity Model, Women  Entrepreneurship  & Biodive",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 533.0,
+        "unit": "GW",
+        "evidence": "ity additions in Q4 FY26 Total Installed Capacity in India  currently stands at 533 GW ~58 GW added in FY26 (IN GW) Renewables (incl. Hydro) added  55 GW in FY26 (IN",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 58.0,
+        "unit": "GW",
+        "evidence": "tions in Q4 FY26 Total Installed Capacity in India  currently stands at 533 GW ~58 GW added in FY26 (IN GW) Renewables (incl. Hydro) added  55 GW in FY26 (IN %) Hydr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 55.0,
+        "unit": "GW",
+        "evidence": "y stands at 533 GW ~58 GW added in FY26 (IN GW) Renewables (incl. Hydro) added  55 GW in FY26 (IN %) Hydro (incl. small Hydro) Wind Solar Other Renewable (Biomass, W",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 19.0,
+        "unit": "GW",
+        "evidence": "ll Hydro) Wind Solar Other Renewable (Biomass, Waste to Energy)Thermal Nuclear ~19 GW added in Q4FY26 (IN GW) Source: Central Electricity Authority & NPP 0.1 As on 3",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 6.5,
+        "unit": "GW",
+        "evidence": "Source: Central Electricity Authority & NPP 0.1 As on 31st March, 2026 Excludes 6.5 GW of thermal/gas plant which are under long term outage 3.4 4.3 4.1  1.4 1.2 5.9",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 533.0,
+        "unit": "GW",
+        "evidence": "ul 25 Aug 25 Sep 25 Oct 25 Nov 25 Dec 25 Jan 26 Feb 26 Mar 26 Thousands (IN GW) 533  GW 27% 28% 31% 34% 8% 7% 23% 11% 4% 5% 2% 3% 5% 3% 1% 1% 2% 7% 10% 13% 15% 13% 6%",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 238.0,
+        "unit": "GW",
+        "evidence": "8 Lakhs 2 Transformation  Capacity (GVA) 1,451 2,342 3 Peak Electricity  Demand 238 GW 458 GW 4 Inter-regional  transmission capacity 120 GW 168 GW Sr. No. Key Highli",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 458.0,
+        "unit": "GW",
+        "evidence": "2 Transformation  Capacity (GVA) 1,451 2,342 3 Peak Electricity  Demand 238 GW 458 GW 4 Inter-regional  transmission capacity 120 GW 168 GW Sr. No. Key Highlights Ma",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 120.0,
+        "unit": "GW",
+        "evidence": "Peak Electricity  Demand 238 GW 458 GW 4 Inter-regional  transmission capacity 120 GW 168 GW Sr. No. Key Highlights Mar-26 2032E 26.6 25.5 22.6 25.7 23.7 23.7 21.5 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 168.0,
+        "unit": "GW",
+        "evidence": "lectricity  Demand 238 GW 458 GW 4 Inter-regional  transmission capacity 120 GW 168 GW Sr. No. Key Highlights Mar-26 2032E 26.6 25.5 22.6 25.7 23.7 23.7 21.5 21.6 20.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1.3,
+        "unit": "GW",
+        "evidence": "usiness Highlights   tatapower.com tatapower.c om 28 Key Highlights Commissions 1.3 GW of  renewable projects in the  quarter (incl. Rooftop) 964 MW of Cells and 915",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 10.0,
+        "unit": "GW",
+        "evidence": "d from PFC for the 600  MW Khorlochhu hydro project,  Bhutan Crossed cumulative 10 GW EPC  Execution Milestone in the  quarter Mundra SPPA signed in Mar\u201926  with Guj",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 6.5,
+        "unit": "GW",
+        "evidence": "missions 406 MW utility  scale in house renewables  capacity resulting in total 6.5  GW of installed RE capacity TPNODL (Odisha)  AT&C losses reduced  to single digit",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 5.5,
+        "unit": "GW",
+        "evidence": "i i i i \u2022 \u2022 \u2022 \u2022 - \u00b7 - \u2022  \u2022  I  \u2022 \u2022 \u2022 \u2022 I   MoU with Druk Green Power to develop 5.5 GW clean energy projects in Bhutan 33 15 GW Bhutan\u2019s vision 2040 for hydro 5 GW Bh",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 15.0,
+        "unit": "GW",
+        "evidence": "MoU with Druk Green Power to develop 5.5 GW clean energy projects in Bhutan 33 15 GW Bhutan\u2019s vision 2040 for hydro 5 GW Bhutan\u2019s vision 2040 for solar 2.4 GW Total",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 5.0,
+        "unit": "GW",
+        "evidence": "5.5 GW clean energy projects in Bhutan 33 15 GW Bhutan\u2019s vision 2040 for hydro 5 GW Bhutan\u2019s vision 2040 for solar 2.4 GW Total installed capacity in Bhutan 2.8 GW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2.4,
+        "unit": "GW",
+        "evidence": "tan 33 15 GW Bhutan\u2019s vision 2040 for hydro 5 GW Bhutan\u2019s vision 2040 for solar 2.4 GW Total installed capacity in Bhutan 2.8 GW Projects under execution 10.9 GW Prop",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2.8,
+        "unit": "GW",
+        "evidence": "o 5 GW Bhutan\u2019s vision 2040 for solar 2.4 GW Total installed capacity in Bhutan 2.8 GW Projects under execution 10.9 GW Proposed projects  Existing hydro  station Pro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 10.9,
+        "unit": "GW",
+        "evidence": "solar 2.4 GW Total installed capacity in Bhutan 2.8 GW Projects under execution 10.9 GW Proposed projects  Existing hydro  station Proposed Hydro  Power Plants (HPP) P",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "021         821            828            48            111           TP Solar (4.3 GW Cell & module Manufacturing Plant) 1,879        1,506         501            40",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "3,808         3,519         3,182         414          526           TP Solar (4.3 GW Cell & module Manufacturing Plant) 6,968        5,337         1,744         875",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "226                140                158                 TP Solar (4.3 GW Cell & module Manufacturing Plant) 1,879            1,506            501",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "810                710                490                 TP Solar (4.3 GW Cell & module Manufacturing Plant) 6,968            5,337            1,744",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "orporate cost G  TATA POWER TATA   60 tatapower.com tatapower.c om 60 TP Solar (4.3 GW Cell & Module Plant) \u2013 Highlights \u20b9 Crore unless stated Particulars Q4FY26  Q4F",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2.8,
+        "unit": "GW",
+        "evidence": "id RE Project from  Tata Steel \u2022 Signed MoU with Maha  Govt. for development of 2.8  GW of Pumped Storage  Project (PSP) \u2022 4.3 GW Cell & Module Plant  achieved First M",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "with Maha  Govt. for development of 2.8  GW of Pumped Storage  Project (PSP) \u2022 4.3 GW Cell & Module Plant  achieved First Module Out  (FMO) \u2022 Won bids for Bikaner- N",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.3,
+        "unit": "GW",
+        "evidence": "Gopalpur  Transmission Project of 761 Ckt km  in Odisha \u2022 TP Solar commissioned 4.3GW  Module  and 4.0GW Cell capacity 2024 \u2022 Tata Power crosses 1GW of RE  capacity",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4.0,
+        "unit": "GW",
+        "evidence": "ion Project of 761 Ckt km  in Odisha \u2022 TP Solar commissioned 4.3GW  Module  and 4.0GW Cell capacity 2024 \u2022 Tata Power crosses 1GW of RE  capacity addition in FY25 \u2022",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1.0,
+        "unit": "GW",
+        "evidence": "r commissioned 4.3GW  Module  and 4.0GW Cell capacity 2024 \u2022 Tata Power crosses 1GW of RE  capacity addition in FY25 \u2022 Tata Power crosses the milestone of  \u20b9 5,000",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 10.0,
+        "unit": "GW",
+        "evidence": "enewable Execution Continues: Tata Power Renewable Energy Ltd   (TPREL) crosses 10 GW of cumulative Solar EPC execution; Commissions    2.5  GW of renewable capacity",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 2.5,
+        "unit": "GW",
+        "evidence": "y Ltd   (TPREL) crosses 10 GW of cumulative Solar EPC execution; Commissions    2.5  GW of renewable capacity in FY26, comprising 968 MW of in-house projects and  1,48",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 11.6,
+        "unit": "GW",
+        "evidence": "nd  1,484 MW of 3rd party projects. Company\u2019s Renewable portfolio now stands at 11.6  GW, including under construction capacity of 5.1 GW   \u2022 Solar Manufacturing: TP So",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 5.1,
+        "unit": "GW",
+        "evidence": "able portfolio now stands at 11.6  GW, including under construction capacity of 5.1 GW   \u2022 Solar Manufacturing: TP Solar achieves Revenue of \u20b9 6,968 crore and a PA T",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 10.0,
+        "unit": "GW",
+        "evidence": "of ~ \u20b9 6,500 crore in a photovoltaic ingot  and wafer manufacturing facility of 10 GW (in two phases of 5 GW each) to support  India\u2019s self-reliance in solar manufac",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 5.0,
+        "unit": "GW",
+        "evidence": "photovoltaic ingot  and wafer manufacturing facility of 10 GW (in two phases of 5 GW each) to support  India\u2019s self-reliance in solar manufacturing  \u2022 Solar Rooftop",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 270.0,
+        "unit": "GW",
+        "evidence": "ectricity demand continues to rise and peak requirements are projected to reach 270 GW  this year, energy security and reliability remain critical priorities. Our foc",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 26.0,
+        "unit": "GW",
+        "evidence": "power value chain, with its total  operational and pipeline capacity surpassing 26 GW. This includes approximately 17.5 GW of clean and green energy  capacity (inclu",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 17.5,
+        "unit": "GW",
+        "evidence": "operational and pipeline capacity surpassing 26 GW. This includes approximately 17.5 GW of clean and green energy  capacity (including projects under construction) and",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 8.9,
+        "unit": "GW",
+        "evidence": "n and green energy  capacity (including projects under construction) and around 8.9 GW of thermal generation capacity, ensuring a balanced  and resilient energy mix.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 4.9,
+        "unit": "GW",
+        "evidence": "ing its leadership in future-ready energy solutions, Tata Power has established 4.9 GW of integrated solar  cell and module manufacturing capacity, signed 2.8 GW of p",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 2.8,
+        "unit": "GW",
+        "evidence": "shed 4.9 GW of integrated solar  cell and module manufacturing capacity, signed 2.8 GW of pumped hydro storage projects, and expanded its EV charging  network to over",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      }
+    ],
+    "capacity_km": [
+      {
+        "value_num": 3.7,
+        "unit": "KM",
+        "evidence": "y  \u2022 Abird\u00b7watchingtower  MiifliHM  A leisure park, Atal Smruti  Udyan, located 3.7 km away  from the upcoming mangrove  park, is a!so named after the  former prime m",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 21
+      },
+      {
+        "value_num": 145.0,
+        "unit": "KM",
+        "evidence": "rporation 48% Plant load factor Vertical Pelton       @ 375 RPM Type of turbine 145 Km Transmission line  (to be constructed by Bhutan Power  corporation) Constructio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1200.0,
+        "unit": "KM",
+        "evidence": "51%)  and Delhi Government (49%) \u2022 2003: Entered a JV with PGCIL,  to develop a 1,200 Km long  transmission line to bring  electricity from Bhutan to Delhi \u2022 Completed",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "capacity_mt": [
+      {
+        "value_num": 78.0,
+        "unit": "MT",
+        "evidence": "CL stake  187 MW Installed capacity  120 MW Installed capacity  50% TPCL stake  78 MT Total Capacity Georgia, Adjaristsqali  Bhutan, Dagachhu  Zambia, Itezhi Tezhi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 60.0,
+        "unit": "MT",
+        "evidence": "% INDONESIA COAL MINES, SHIPPING & INFRA MINE CAPACITY STAKE Kaltim Prima (KPC) 60 MT 30% BSSR & AGM 18 MT 26% NTP (Coal Infra) - 30% TERPL (Coal Shipping)** - 100%",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 18.0,
+        "unit": "MT",
+        "evidence": "S, SHIPPING & INFRA MINE CAPACITY STAKE Kaltim Prima (KPC) 60 MT 30% BSSR & AGM 18 MT 26% NTP (Coal Infra) - 30% TERPL (Coal Shipping)** - 100% RENEWABLES CAPACITY S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "capacity_mva": [
+      {
+        "value_num": 3460.0,
+        "unit": "MVA",
+        "evidence": "s and three 765/400 kV substations  with an aggregate  transmission capacity of 3,460 MVA.  \u2022 Tata Power through its subsidiary Tata Power Trading Company Limited and Ke",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 126.0,
+        "unit": "MW",
+        "evidence": "ational + Under construction) G  TATA POWER TATA   Assets located outside India 126 MW Installed capacity  26% TPCL stake  187 MW Installed capacity  120 MW Installed",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 187.0,
+        "unit": "MW",
+        "evidence": "TATA   Assets located outside India 126 MW Installed capacity  26% TPCL stake  187 MW Installed capacity  120 MW Installed capacity  50% TPCL stake  78 MT Total Capa",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 120.0,
+        "unit": "MW",
+        "evidence": "ide India 126 MW Installed capacity  26% TPCL stake  187 MW Installed capacity  120 MW Installed capacity  50% TPCL stake  78 MT Total Capacity Georgia, Adjaristsqali",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 54.0,
+        "unit": "MW",
+        "evidence": "Mines  Hydro  Coal Mines  *Operational numbers on a 100% basis. 50% TPCL stake  54 MW Installed capacity  30% TPCL stake  PT Citra , Indonesia Thermal Power Plant  6",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "Installed capacity  30% TPCL stake  PT Citra , Indonesia Thermal Power Plant  6 600 MW Under-construction   40% TPCL stake  Under Construction Hydro Plant Bhutan, Kho",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "TPCL stake  Under Construction Hydro Plant Bhutan, Khorlochhu Bhutan, Dorjilung 1,125 MW Pipeline capacity  40% TPCL stake  Coal mines Tata Power Share % Kaltim Prima C",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 964.0,
+        "unit": "MW",
+        "evidence": "ights Commissions 1.3 GW of  renewable projects in the  quarter (incl. Rooftop) 964 MW of Cells and 915 MW  of Modules produced in the  quarter, industry leading yiel",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 915.0,
+        "unit": "MW",
+        "evidence": "3 GW of  renewable projects in the  quarter (incl. Rooftop) 964 MW of Cells and 915 MW  of Modules produced in the  quarter, industry leading yield  of >95% Rooftop b",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "70 MWp in the quarter First disbursement of \u20b9500 Cr  completed from PFC for the 600  MW Khorlochhu hydro project,  Bhutan Crossed cumulative 10 GW EPC  Execution Miles",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 406.0,
+        "unit": "MW",
+        "evidence": "alled more than  7,000 public and Bus  charging points as of  FY26  Commissions 406 MW utility  scale in house renewables  capacity resulting in total 6.5  GW of inst",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 915.0,
+        "unit": "MW",
+        "evidence": "nufacturing \u2013 Industry Leading Plant Yield Highlights  \u2022 Achieved production of 915 MW modules  and 964 MW cells during Q4 FY26 \u2022 Industry leading plant yield of >95%",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 964.0,
+        "unit": "MW",
+        "evidence": "ry Leading Plant Yield Highlights  \u2022 Achieved production of 915 MW modules  and 964 MW cells during Q4 FY26 \u2022 Industry leading plant yield of >95%  \u2022 Revenue from the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2001.0,
+        "unit": "MW",
+        "evidence": "Revenue of 3rd Party Rooftop  (In \u20b9 Cr) 3rd Party Rooftop Order Book  (In \u20b9 Cr) 2,001 MW orders won in FY26 48% 52% Rooftop Residential Rooftop C&I 864 1,075  1,732  Q4",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 460.0,
+        "unit": "MW",
+        "evidence": "Electronic Reverse Auction, LoA- Letter of Award *PPA Capacity PPA status SJVN 460MW*  FDRE NTPC 200MW* FDRE 4.38 7 Nov 2023 1,317 MW FDRE ~3x Phase wise  Commissio",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 200.0,
+        "unit": "MW",
+        "evidence": "e Auction, LoA- Letter of Award *PPA Capacity PPA status SJVN 460MW*  FDRE NTPC 200MW* FDRE 4.38 7 Nov 2023 1,317 MW FDRE ~3x Phase wise  Commissioning  from FY 2027",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1317.0,
+        "unit": "MW",
+        "evidence": "ard *PPA Capacity PPA status SJVN 460MW*  FDRE NTPC 200MW* FDRE 4.38 7 Nov 2023 1,317 MW FDRE ~3x Phase wise  Commissioning  from FY 2027 Received 4.71 22 Mar 2024 585",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 585.0,
+        "unit": "MW",
+        "evidence": "7 MW FDRE ~3x Phase wise  Commissioning  from FY 2027 Received 4.71 22 Mar 2024 585 MW FDRE ~3x FY 2028 Received 3.60 16 Aug 2024 501 MW Hybrid ~1.3x FY 2027 Received",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 501.0,
+        "unit": "MW",
+        "evidence": "027 Received 4.71 22 Mar 2024 585 MW FDRE ~3x FY 2028 Received 3.60 16 Aug 2024 501 MW Hybrid ~1.3x FY 2027 Received MSEDCL 400MW* PH  IV Hybrid Signed SignedSigned S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 400.0,
+        "unit": "MW",
+        "evidence": "x FY 2028 Received 3.60 16 Aug 2024 501 MW Hybrid ~1.3x FY 2027 Received MSEDCL 400MW* PH  IV Hybrid Signed SignedSigned SJVN RTC 88MW*  4.91 272 MW Pending RTC Rece",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 88.0,
+        "unit": "MW",
+        "evidence": "~1.3x FY 2027 Received MSEDCL 400MW* PH  IV Hybrid Signed SignedSigned SJVN RTC 88MW*  4.91 272 MW Pending RTC Received 27 Feb 2025 ~3x FY 2028 Tata Power Mumbai  D",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 272.0,
+        "unit": "MW",
+        "evidence": "7 Received MSEDCL 400MW* PH  IV Hybrid Signed SignedSigned SJVN RTC 88MW*  4.91 272 MW Pending RTC Received 27 Feb 2025 ~3x FY 2028 Tata Power Mumbai  DISCOM 80 MW* 4",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 80.0,
+        "unit": "MW",
+        "evidence": "1 272 MW Pending RTC Received 27 Feb 2025 ~3x FY 2028 Tata Power Mumbai  DISCOM 80 MW* 4.77 244MW Signed FDRE Received 19 Aug 2025 ~3x 24 months post  signing of PPA",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 244.0,
+        "unit": "MW",
+        "evidence": "ding RTC Received 27 Feb 2025 ~3x FY 2028 Tata Power Mumbai  DISCOM 80 MW* 4.77 244MW Signed FDRE Received 19 Aug 2025 ~3x 24 months post  signing of PPA G  TATA POW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 126.0,
+        "unit": "MW",
+        "evidence": "Plants (HPP) Potential  Plants (HPP/  PSP) Bhutan Dagachhu HPP Khorlochhu  HPP 126 MW 740 MW Chamkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 740.0,
+        "unit": "MW",
+        "evidence": "(HPP) Potential  Plants (HPP/  PSP) Bhutan Dagachhu HPP Khorlochhu  HPP 126 MW 740 MW Chamkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW Gongri",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 364.0,
+        "unit": "MW",
+        "evidence": "P/  PSP) Bhutan Dagachhu HPP Khorlochhu  HPP 126 MW 740 MW Chamkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW Gongri HPP 1,125 MW Plant name Inst",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "hu HPP Khorlochhu  HPP 126 MW 740 MW Chamkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW Gongri HPP 1,125 MW Plant name Installed capacity (MW) De",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1800.0,
+        "unit": "MW",
+        "evidence": "PP 126 MW 740 MW Chamkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW Gongri HPP 1,125 MW Plant name Installed capacity (MW) Design energy (GWh) Proj",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "mkharchhu IV  HPP 364 MW Dorjilung  HPP 600 MW Jerichhu PSP 1,800 MW Gongri HPP 1,125 MW Plant name Installed capacity (MW) Design energy (GWh) Project status Khorlochh",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 404.0,
+        "unit": "MW",
+        "evidence": "era Amari  I & II HPP 404 1,598 Signed MoU Solar project 500 Total 5,533 16,790 404 MW Nyera Amari  I&II G  TATA POWER TATA   Construction Activities in Progress at 6",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "W Nyera Amari  I&II G  TATA POWER TATA   Construction Activities in Progress at 600 MW Khorlochhu HPP , Bhutan 34 Khorlochhu Hydro Power project details Project expec",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "ject expected to  commission September 2029 59 Months Project completion period 600 MW Total project capacity 1.12% Aux power consumption 90.6% Average TG efficiency",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "Stake  G  TATA POWER TATA  ----------- 0 ---------- 0   Dorjilung HPP Bhutan | 1,125 MW | Financing Agreement Signed 35 Dorjilung Hydro Power Project 1,125 MW Total pr",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "Bhutan | 1,125 MW | Financing Agreement Signed 35 Dorjilung Hydro Power Project 1,125 MW Total project capacity Run-of-River Type Kurichhu River ~6,350 Employment durin",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "5,666 Crores Timeline Construction Activities: Started Completion: End-CY 2028 1,000 MW Type Off-stream Upper Reservoir New -15 MCM  Lower Reservoir Existing Shirwata",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1800.0,
+        "unit": "MW",
+        "evidence": "7,850 Crores Timeline  Preliminary activities started  Completion: End- CY 2029 1,800 MW BHIVPURI PSP  Key Highlights SHIRWATA PSP  Key Highlights G  TATA POWER TATA  [",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "- Bhivpuri Pumped Storage Hydro Plants - Project Update Bhivpuri PSP Project \u2013 1,000 MW \u2022 The upper reservoir has already  been constructed \u2022 The project land is fully",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 406.0,
+        "unit": "MW",
+        "evidence": "5,540           968       6,509        5,540           968       Added 406 MW capacity in the quarter Capacity - Wind (MW) 1,235           1,030           20",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 583.0,
+        "unit": "MW",
+        "evidence": "7)        -Large projects & Group Captive 480 2,246 (1,766) 5,037 7,833 (2,796) 583 MW of utility scale project execution         -Solar Rooftop 1,728 864 863 4,759 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4150.0,
+        "unit": "MW",
+        "evidence": "rsified business and hence stable margins 67 THERMAL CAPACITY FUEL STAKE Mundra 4,150 MW Coal 100% Trombay 930 MW Coal/Gas 100% Maithon (MPL) 1,050 MW Coal 74% Prayagra",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 930.0,
+        "unit": "MW",
+        "evidence": "stable margins 67 THERMAL CAPACITY FUEL STAKE Mundra 4,150 MW Coal 100% Trombay 930 MW Coal/Gas 100% Maithon (MPL) 1,050 MW Coal 74% Prayagraj (PPGCL)* 1,980 MW Coal",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1050.0,
+        "unit": "MW",
+        "evidence": "FUEL STAKE Mundra 4,150 MW Coal 100% Trombay 930 MW Coal/Gas 100% Maithon (MPL) 1,050 MW Coal 74% Prayagraj (PPGCL)* 1,980 MW Coal 20% Jojobera 428 MW Coal 100% Haldia",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1980.0,
+        "unit": "MW",
+        "evidence": "Trombay 930 MW Coal/Gas 100% Maithon (MPL) 1,050 MW Coal 74% Prayagraj (PPGCL)* 1,980 MW Coal 20% Jojobera 428 MW Coal 100% Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHR",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 428.0,
+        "unit": "MW",
+        "evidence": "% Maithon (MPL) 1,050 MW Coal 74% Prayagraj (PPGCL)* 1,980 MW Coal 20% Jojobera 428 MW Coal 100% Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHRS 74% Rithala 108 MW Gas",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 120.0,
+        "unit": "MW",
+        "evidence": "Coal 74% Prayagraj (PPGCL)* 1,980 MW Coal 20% Jojobera 428 MW Coal 100% Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHRS 74% Rithala 108 MW Gas 51% PT CKP 54 MW Coal 30",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 483.0,
+        "unit": "MW",
+        "evidence": "PPGCL)* 1,980 MW Coal 20% Jojobera 428 MW Coal 100% Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHRS 74% Rithala 108 MW Gas 51% PT CKP 54 MW Coal 30% INDONESIA COAL MINE",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 108.0,
+        "unit": "MW",
+        "evidence": "bera 428 MW Coal 100% Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHRS 74% Rithala 108 MW Gas 51% PT CKP 54 MW Coal 30% INDONESIA COAL MINES, SHIPPING & INFRA MINE CAPAC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 54.0,
+        "unit": "MW",
+        "evidence": "Haldia 120 MW WHRS 100% IEL 483 MW Coal/ WHRS 74% Rithala 108 MW Gas 51% PT CKP 54 MW Coal 30% INDONESIA COAL MINES, SHIPPING & INFRA MINE CAPACITY STAKE Kaltim Prim",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 5294.0,
+        "unit": "MW",
+        "evidence": "oal Infra) - 30% TERPL (Coal Shipping)** - 100% RENEWABLES CAPACITY Solar Power 5,294 MW Wind Energy 1,239 MW UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1239.0,
+        "unit": "MW",
+        "evidence": "L (Coal Shipping)** - 100% RENEWABLES CAPACITY Solar Power 5,294 MW Wind Energy 1,239 MW UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind Complex/FDRE 434 MW",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 612.0,
+        "unit": "MW",
+        "evidence": "PACITY Solar Power 5,294 MW Wind Energy 1,239 MW UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind Complex/FDRE 434 MW 2,447 MW EV CUMMULATIVE CHARGING POINT",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1612.0,
+        "unit": "MW",
+        "evidence": "ower 5,294 MW Wind Energy 1,239 MW UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind Complex/FDRE 434 MW 2,447 MW EV CUMMULATIVE CHARGING POINTS Public 5,804 H",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 434.0,
+        "unit": "MW",
+        "evidence": ",239 MW UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind Complex/FDRE 434 MW 2,447 MW EV CUMMULATIVE CHARGING POINTS Public 5,804 Home 2,14,061 E-Bus 1,248",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 2447.0,
+        "unit": "MW",
+        "evidence": "UNDER CONSTRUCTION Solar Power 612 MW Hybrid 1,612 MW Wind Complex/FDRE 434 MW 2,447 MW EV CUMMULATIVE CHARGING POINTS Public 5,804 Home 2,14,061 E-Bus 1,248 SOLAR EPC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4900.0,
+        "unit": "MW",
+        "evidence": "C-Third Party \u20b9766 Cr Rooftop EPC \u20b9898 Cr SOLAR CELL AND MODULE CAPACITY Module 4,900 MW  Cell 4,900 MW DISTRIBUTION LICENSE CUSTOMERS STAKE Mumbai 0.81 Mn 100% Tata Po",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 4900.0,
+        "unit": "MW",
+        "evidence": "766 Cr Rooftop EPC \u20b9898 Cr SOLAR CELL AND MODULE CAPACITY Module 4,900 MW  Cell 4,900 MW DISTRIBUTION LICENSE CUSTOMERS STAKE Mumbai 0.81 Mn 100% Tata Power Delhi (TPDD",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 300.0,
+        "unit": "MW",
+        "evidence": "77 100% Jejuri Hinjewadi Power Transmission 226 100% HYDRO CAPACITY STAKE Bhira 300 MW 100% Bhivpuri 75 MW 100% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 12",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 75.0,
+        "unit": "MW",
+        "evidence": "adi Power Transmission 226 100% HYDRO CAPACITY STAKE Bhira 300 MW 100% Bhivpuri 75 MW 100% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 120 MW 50% Adjaristsqa",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 72.0,
+        "unit": "MW",
+        "evidence": "ion 226 100% HYDRO CAPACITY STAKE Bhira 300 MW 100% Bhivpuri 75 MW 100% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 120 MW 50% Adjaristsqali 187 MW 50% UNDER",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 126.0,
+        "unit": "MW",
+        "evidence": "APACITY STAKE Bhira 300 MW 100% Bhivpuri 75 MW 100% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 120 MW 50% Adjaristsqali 187 MW 50% UNDER CONSTRUCTION Khorloc",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 120.0,
+        "unit": "MW",
+        "evidence": "MW 100% Bhivpuri 75 MW 100% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 120 MW 50% Adjaristsqali 187 MW 50% UNDER CONSTRUCTION Khorlochhu HPP 600 MW 40% Bhivp",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 187.0,
+        "unit": "MW",
+        "evidence": "0% Khopoli 72 MW 100% Dagachhu 126 MW 26% Itezhi Tezhi 120 MW 50% Adjaristsqali 187 MW 50% UNDER CONSTRUCTION Khorlochhu HPP 600 MW 40% Bhivpuri PSP 1,000 MW 100% Shi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "zhi Tezhi 120 MW 50% Adjaristsqali 187 MW 50% UNDER CONSTRUCTION Khorlochhu HPP 600 MW 40% Bhivpuri PSP 1,000 MW 100% Shirwata PSP 1,800 MW 100% Dorjilung HPP 1,125 M",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "aristsqali 187 MW 50% UNDER CONSTRUCTION Khorlochhu HPP 600 MW 40% Bhivpuri PSP 1,000 MW 100% Shirwata PSP 1,800 MW 100% Dorjilung HPP 1,125 MW 40% JVs and associates S",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1800.0,
+        "unit": "MW",
+        "evidence": "CONSTRUCTION Khorlochhu HPP 600 MW 40% Bhivpuri PSP 1,000 MW 100% Shirwata PSP 1,800 MW 100% Dorjilung HPP 1,125 MW 40% JVs and associates Standalone divisions Subsidi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "600 MW 40% Bhivpuri PSP 1,000 MW 100% Shirwata PSP 1,800 MW 100% Dorjilung HPP 1,125 MW 40% JVs and associates Standalone divisions Subsidiary 1,449  EBITDA Margins 2%",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 40.0,
+        "unit": "MW",
+        "evidence": "droelectric Power  Supply Company  \u2022 1915: 1st Hydro power  generating station (40 MW)  commissioned at Khopoli,  followed by Bhivpuri (1922)  and Bhira (1927) 1910-",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 62.5,
+        "unit": "MW",
+        "evidence": "followed by Bhivpuri (1922)  and Bhira (1927) 1910-1955 \u2022 1956-65: 3 units of 62.5 MW  each and 4th thermal unit of 150  MW capacity at Trombay  commissioned \u2022 1977:",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 150.0,
+        "unit": "MW",
+        "evidence": "ra (1927) 1910-1955 \u2022 1956-65: 3 units of 62.5 MW  each and 4th thermal unit of 150  MW capacity at Trombay  commissioned \u2022 1977: 150 MW pumped storage  at Bhira upgra",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 150.0,
+        "unit": "MW",
+        "evidence": "each and 4th thermal unit of 150  MW capacity at Trombay  commissioned \u2022 1977: 150 MW pumped storage  at Bhira upgraded \u2022 1984: 500 MW-5th Unit  established at Tromb",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "Trombay  commissioned \u2022 1977: 150 MW pumped storage  at Bhira upgraded \u2022 1984: 500 MW-5th Unit  established at Trombay, to  supply uninterrupted supply to  Mumbai \u2022",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 17.0,
+        "unit": "MW",
+        "evidence": "on with  BP Solar 1956-2000 2001-2005 \u2022 2001: Commissioned first wind  asset of 17 MW at Supa  Maharashtra  \u2022 2002: Took over distribution of  Delhi, later renamed a",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 3.0,
+        "unit": "MW",
+        "evidence": "t power  requirements for Tata Steel  2007 \u2022 Commissioned first solar  asset of 3 MW at Mulshi,  Maharashtra  \u2022 Unit 1 of 525 MW Maithon  Power Limited (MPL)  commi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 525.0,
+        "unit": "MW",
+        "evidence": "\u2022 Commissioned first solar  asset of 3 MW at Mulshi,  Maharashtra  \u2022 Unit 1 of 525 MW Maithon  Power Limited (MPL)  commissioned 2011 \u2022 2012: Commissioned 2nd  unit",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 525.0,
+        "unit": "MW",
+        "evidence": "ithon  Power Limited (MPL)  commissioned 2011 \u2022 2012: Commissioned 2nd  unit of 525 MW in MPL \u2022 2013: 5 units of 800 MW  each at Mundra UMPP  commissioned, the first",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 800.0,
+        "unit": "MW",
+        "evidence": "ssioned 2011 \u2022 2012: Commissioned 2nd  unit of 525 MW in MPL \u2022 2013: 5 units of 800 MW  each at Mundra UMPP  commissioned, the first  super critical technology in  In",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 126.0,
+        "unit": "MW",
+        "evidence": "agreement to sell 30%  stake in Arutmin for  $401 Mn \u2022 2015: Commissioned  the 126 MW  Dagachhu Hydro  Power Corporation in  Bhutan 2014-2015 2016-2017 \u2022 2016: Acqui",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 1010.0,
+        "unit": "MW",
+        "evidence": "gachhu Hydro  Power Corporation in  Bhutan 2014-2015 2016-2017 \u2022 2016: Acquired 1,010MW  operational RE assets of  Welspun, renamed it to  Walwhan Renewable Energy  Lt",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 966.0,
+        "unit": "MW",
+        "evidence": "of  \u20b92,000 Cr from Blackrock  and Mubadala Consortium \u2022 TPREL Received LoA for 966  MW Hybrid RE Project from  Tata Steel \u2022 Signed MoU with Maha  Govt. for developmen",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 585.0,
+        "unit": "MW",
+        "evidence": "more than 100 years \u2022 TPREL received a Letter of Award  (LOA) for developing a 585 MW Firm  and Dispatchable Renewable Energy  (FDRE) project with NTPC Limited \u2022 Par",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 5100.0,
+        "unit": "MW",
+        "evidence": "ited \u2022 Partnership with Bhutan\u2019s Druk  Green Power Corporation Ltd. to  develop 5,100 MW of clean energy  projects in Bhutan \u2022 Won bids for Paradeep & Gopalpur  Transmi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_num": 968.0,
+        "unit": "MW",
+        "evidence": "EPC execution; Commissions    2.5  GW of renewable capacity in FY26, comprising 968 MW of in-house projects and  1,484 MW of 3rd party projects. Company\u2019s Renewable p",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1484.0,
+        "unit": "MW",
+        "evidence": "GW of renewable capacity in FY26, comprising 968 MW of in-house projects and  1,484 MW of 3rd party projects. Company\u2019s Renewable portfolio now stands at 11.6  GW, in",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 3825.0,
+        "unit": "MW",
+        "evidence": "enue of \u20b9 6,968 crore and a PA T of      \u20b9 857 crore in FY26 with production of 3,825 MW of modules and 3,759 MW of  cells. TPREL Board approves investment of ~ \u20b9 6,500",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 3759.0,
+        "unit": "MW",
+        "evidence": "d a PA T of      \u20b9 857 crore in FY26 with production of 3,825 MW of modules and 3,759 MW of  cells. TPREL Board approves investment of ~ \u20b9 6,500 crore in a photovoltaic",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 5000.0,
+        "unit": "MW",
+        "evidence": "rm energy security   \u2022 Tata Power and DGPC\u2019s clean energy collaboration crosses 5,000 MW mark with  the identification and addition of 404 MW Nyera Amari I & II Integra",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 404.0,
+        "unit": "MW",
+        "evidence": "gy collaboration crosses 5,000 MW mark with  the identification and addition of 404 MW Nyera Amari I & II Integrated  Hydropower Project.   \u2022 Royal Government of Bhut",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "the World Bank Group signed financing  agreement totalling $515 million for the 1,125 MW Dorjilung Hydroelectric  Power Project. Tata Power owns 40% equity stake in the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 600.0,
+        "unit": "MW",
+        "evidence": "ration Limited)   \u2022 First disbursement of \u20b9500 crore completed from PFC for the 600 MW Khorlochhu  Hydro Power Project   \u2022 Signed an MoU with DGPC for building a comp",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "Plant resumes operations under Section 11 from 1st April 2026.  \u2022 Bhivpuri PSP 1,000 MW: All major electro-mechanical (EM) and hydro -mechanical  (HM) packages for the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": ") and hydro -mechanical  (HM) packages for the Bhivpuri Pumped Storage Project (1,000 MW) have been  awarded, with construction progressing steadily. The project has al",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_num": 1125.0,
+        "unit": "MW",
+        "evidence": "with Druk Green Power Corporation  (DGPC) of Bhutan for the development of the 1,125 MW Dorjilung Hydro Power Project, through the acquisition  of a 40% equity stake i",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 32
+      },
+      {
+        "value_num": 125.0,
+        "unit": "MW",
+        "evidence": "th Druk Green Power Corporation (DGPC) of  Bhutan for the development of the 1, 125 MW Dorjilung Hydro Power Project, through the acquisition of a 40%  equity stake i",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 32
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 25000.0,
+        "unit": "INR crore",
+        "evidence": "hese solar and wind projects will come by 2030.  Rajesh Majumdar: And sir, your capex figure of INR25,000 crores, if you take an addition of 2 gigawatts  per annum, then the capex is roughly",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 9
+      },
+      {
+        "value_num": 12000.0,
+        "unit": "INR crore",
+        "evidence": "f INR25,000 crores, if you take an addition of 2 gigawatts  per annum, then the capex is roughly about, say, on the higher side, maybe INR12,000  crores to INR15,000 crores. Does this mean that INR10,000 crores of regulated capex",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 9
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "Tata Steel",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Tata Steel",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 9
+      },
+      {
+        "value_text": "PFC",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "PFC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_text": "NTPC",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "NTPC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_text": "PGCIL",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "PGCIL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_text": "Tata Steel",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "Tata Steel",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      },
+      {
+        "value_text": "PFC",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "PFC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "GIS",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 898.0,
+        "unit": "INR crore",
+        "evidence": "MW) G  TATA POWER TATA  \u25a0   tatapower.com tatapower.c om 30 3rd PARTY ROOFTOP \u2022 Order Book at Q4 FY26 stands at \u20b9 898 crore  \u2022 670 MWp Solar Rooftop installed in Q4 and  1.7 GWp in FY26 \u2022 Channel partner",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 30
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "765kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 31
+      }
+    ]
+  },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, PGCIL=1, NTPC=1, SECI=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "pgcil": 1,
+        "ntpc": 1,
+        "seci": 0
+      }
     },
     {
       "factor": "balance_sheet",
@@ -1825,9 +3421,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 5,
+      "evidence": "capacity_mentions: MVA=1, GVA=0, MT=3, ckm=10, capex_amounts=2",
+      "inputs": {
+        "mva": 1,
+        "gva": 0,
+        "mt": 3,
+        "ckm": 10,
+        "capex": 2
+      }
     },
     {
       "factor": "competitive_position",
@@ -1853,17 +3455,23 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b9898cr, b2b=None, wins_mentioned=0, PGCIL=1, NTPC=1",
+      "inputs": {
+        "order_book_inr_cr": 898.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 1,
+        "ntpc_mentions": 1
+      }
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=2",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 2
       }
     },
     {
@@ -1878,9 +3486,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=0, statcom_mentions=0, 765kV=1, 400kV=1, 220kV=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 0,
+        "statcom": 0,
+        "765kV_mentions": 1,
+        "400kV_mentions": 1,
+        "220kV_mentions": 0
+      }
     },
     {
       "factor": "working_capital",
@@ -1893,7 +3508,7 @@
       }
     }
   ],
-  "coverage_pct": 62,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -1901,15 +3516,15 @@
     "has_ratios": true,
     "has_market_data": true,
     "has_documents_text": true,
-    "has_voltage_features": false,
-    "has_capacity_features": false,
-    "has_order_features": false,
-    "has_customer_features": false,
-    "has_capex_features": false,
+    "has_voltage_features": true,
+    "has_capacity_features": true,
+    "has_order_features": true,
+    "has_customer_features": true,
+    "has_capex_features": true,
     "has_derived_margins": true,
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }
