@@ -19,7 +19,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from pypdf import PdfReader
+# pypdf is imported lazily inside _extract to keep the cli importable
+# in dev sandboxes where the system cryptography lib is broken.
 
 from ..config import DATA_DIR
 from ..db import connect
@@ -41,7 +42,8 @@ def _kind(name: str) -> str:
 
 def _extract(path: Path) -> tuple[str, int]:
     try:
-        reader = PdfReader(str(path))
+        from pypdf import PdfReader
+        reader = PdfReader(str(path), strict=False)
         pages = []
         n = min(len(reader.pages), 400)
         for i in range(n):

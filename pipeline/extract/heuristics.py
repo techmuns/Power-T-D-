@@ -64,6 +64,56 @@ CAPEX_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Order win: "received order of ₹500 crore", "won contract worth ₹1,200 cr"
+ORDER_WIN_RE = re.compile(
+    r"(?:received|secured|won|bagged|awarded)\s+(?:an?\s+)?"
+    r"(?:order|contract)s?\s*"
+    r"(?:worth|of|valued\s*at|aggregating|amounting\s*to)?\s*"
+    r"(?:Rs\.?|INR|₹)\s*([\d,]+(?:\.\d+)?)\s*"
+    r"(crore|cr|billion|bn|lakh\s*crore)",
+    re.IGNORECASE,
+)
+
+# Customer-name mentions (high-value approval / order signal)
+KEY_CUSTOMERS = (
+    "PGCIL", "Power Grid", "NTPC", "SECI", "RVNL", "ONGC",
+    "GAIL", "Adani", "JSW", "Tata Steel", "Reliance",
+    "PFC", "REC", "BHEL", "Hitachi", "Siemens", "GE",
+    "Saudi Electricity", "Aramco", "DEWA", "EDF", "ENGIE",
+    "TenneT", "PJM",
+)
+CUSTOMER_RE = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in KEY_CUSTOMERS) + r")\b"
+)
+
+# "approved up to XXX kV" -- claimed capability
+APPROVED_UPTO_RE = re.compile(
+    r"approved\s+(?:up\s+to|for)\s+([\d,]+)\s*kV",
+    re.IGNORECASE,
+)
+
+# fixed-price vs pass-through mentions
+FIXED_PRICE_RE = re.compile(
+    r"\bfixed[- ]price[^.\n]{0,80}?(\d{1,3}(?:\.\d+)?)\s*%",
+    re.IGNORECASE,
+)
+PASS_THROUGH_RE = re.compile(
+    r"\bpass[- ]through[^.\n]{0,80}?(\d{1,3}(?:\.\d+)?)\s*%",
+    re.IGNORECASE,
+)
+
+# export share %
+EXPORT_PCT_RE = re.compile(
+    r"\bexports?\s*(?:share|contribut\w*)?[^.\n]{0,40}?(\d{1,3}(?:\.\d+)?)\s*%"
+    r"|\b(\d{1,3}(?:\.\d+)?)\s*%\s*(?:of\s+(?:revenue|order\s*book)\s+)?(?:from\s+)?exports?",
+    re.IGNORECASE,
+)
+
+# book-to-bill: "book to bill of 2.5x"
+BOOK_TO_BILL_RE = re.compile(
+    r"book[- ]to[- ]bill[^.\n]{0,40}?([\d.]+)\s*x?", re.IGNORECASE,
+)
+
 
 def _num(s: str) -> float | None:
     try:
@@ -180,6 +230,93 @@ def _extract(text: str) -> list[dict]:
             "feature": "capex_inr_cr",
             "value_num": cr,
             "unit": "INR crore",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Order wins
+    for m in ORDER_WIN_RE.finditer(text):
+        n = _num(m.group(1))
+        if n is None:
+            continue
+        cr = _to_inr_cr(n, m.group(2))
+        out.append({
+            "feature": "order_win_inr_cr",
+            "value_num": cr,
+            "unit": "INR crore",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Key customer mentions
+    cust_counts: dict[str, int] = {}
+    for m in CUSTOMER_RE.finditer(text):
+        c = m.group(1)
+        cust_counts[c] = cust_counts.get(c, 0) + 1
+    for cust, n in cust_counts.items():
+        out.append({
+            "feature": "customer_mention",
+            "value_text": cust,
+            "value_num": float(n),
+            "unit": "count",
+            "evidence": cust,
+        })
+
+    # "approved up to XX kV" - claimed capability
+    for m in APPROVED_UPTO_RE.finditer(text):
+        n = _num(m.group(1))
+        if n is None:
+            continue
+        out.append({
+            "feature": "approved_up_to_kv",
+            "value_num": n,
+            "unit": "kV",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Fixed-price exposure
+    for m in FIXED_PRICE_RE.finditer(text):
+        n = _num(m.group(1))
+        if n is None:
+            continue
+        out.append({
+            "feature": "fixed_price_pct",
+            "value_num": n,
+            "unit": "%",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Pass-through %
+    for m in PASS_THROUGH_RE.finditer(text):
+        n = _num(m.group(1))
+        if n is None:
+            continue
+        out.append({
+            "feature": "pass_through_pct",
+            "value_num": n,
+            "unit": "%",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Export share %
+    for m in EXPORT_PCT_RE.finditer(text):
+        n = _num(m.group(1) or m.group(2))
+        if n is None or n > 100:
+            continue
+        out.append({
+            "feature": "export_share_pct",
+            "value_num": n,
+            "unit": "%",
+            "evidence": _ctx(text, m.start(), m.end()),
+        })
+
+    # Book-to-bill
+    for m in BOOK_TO_BILL_RE.finditer(text):
+        n = _num(m.group(1))
+        if n is None or n > 10:  # sanity: book-to-bill rarely > 10
+            continue
+        out.append({
+            "feature": "book_to_bill",
+            "value_num": n,
+            "unit": "x",
             "evidence": _ctx(text, m.start(), m.end()),
         })
 

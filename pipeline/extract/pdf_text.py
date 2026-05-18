@@ -1,26 +1,33 @@
 """Download high-value BSE announcement PDFs and extract their text.
 
-We don't try to ingest every filing - that would be hundreds of GBs.
-Instead we focus on the four document kinds that hold the diligence
-content the framework needs:
+We don't try to ingest every filing - hundreds of GBs. We focus on the
+four document kinds that hold the diligence content the framework needs:
   - investor presentation
   - earnings-call transcript
   - financial results
-  - press release (only if the headline hints at order win / capacity)
+  - press release (only when headline hints at order / capacity / kV / MVA)
 
-The PDF itself is NOT committed to git (too large). Only the extracted
-text is stored, in the `documents` table.
+The PDF itself is NOT committed to git. Only extracted text lands in the
+`documents` table.
+
+Robustness notes (after first prod run):
+  - throttle 0.4s between requests; BSE rate-limits aggressively
+  - validate downloaded bytes start with `%PDF-` before parsing
+  - parse pypdf in `strict=False` mode (BSE attachments are often
+    malformed but contain extractable text)
+  - failed docs are re-queued on next run (extract_status='failed' rows
+    are NOT in the "already done" set the candidate query uses)
 """
 
 from __future__ import annotations
 import hashlib
 import re
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from pypdf import PdfReader
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from ..config import UA
@@ -32,10 +39,10 @@ HEADERS = {
     "Accept": "application/pdf,*/*",
 }
 
-MAX_BYTES = 25 * 1024 * 1024     # 25 MB hard cap, skip larger files
-MAX_PAGES = 400                  # stop extraction beyond this many pages
+MAX_BYTES = 25 * 1024 * 1024
+MAX_PAGES = 400
+SLEEP_BETWEEN = 0.4   # seconds; BSE rate limit
 
-# How we classify announcements into doc_kind. Match against subject + headline.
 KIND_RULES: list[tuple[str, re.Pattern]] = [
     ("investor_presentation",
      re.compile(r"investor\s*present|analyst\s*present|institutional\s*invest", re.I)),
@@ -57,7 +64,7 @@ def classify(category: str, subject: str, headline: str) -> str | None:
     return None
 
 
-@retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=15))
+@retry(stop=stop_after_attempt(4), wait=wait_exponential(min=2, max=20))
 def _download(url: str, dest: Path) -> int:
     with requests.get(url, headers=HEADERS, timeout=60, stream=True) as r:
         r.raise_for_status()
@@ -76,8 +83,21 @@ def _download(url: str, dest: Path) -> int:
         return written
 
 
+def _is_pdf(path: Path) -> bool:
+    """Quick magic-byte check so we don't try to parse a 4-byte 403 HTML."""
+    try:
+        with path.open("rb") as f:
+            head = f.read(5)
+        return head == b"%PDF-"
+    except Exception:
+        return False
+
+
 def _extract_text(path: Path) -> tuple[str, int]:
-    reader = PdfReader(str(path))
+    # Import lazily so the cli loads even when pypdf import is broken in
+    # a dev sandbox.
+    from pypdf import PdfReader
+    reader = PdfReader(str(path), strict=False)
     pages = []
     n = min(len(reader.pages), MAX_PAGES)
     for i in range(n):
@@ -85,31 +105,38 @@ def _extract_text(path: Path) -> tuple[str, int]:
             t = reader.pages[i].extract_text() or ""
         except Exception:
             t = ""
-        if t:
+        if t.strip():
             pages.append(t)
     return ("\n\n".join(pages), len(reader.pages))
 
 
-def _candidate_rows(conn, limit_per_company: int, since: str | None) -> list[dict]:
+def _candidate_rows(conn, limit_per_company: int, since: str | None,
+                    include_failed: bool) -> list[dict]:
+    """Pick announcements that classify as high-value AND either:
+      - have no document row yet, OR
+      - have one with status='failed' (so we retry across runs)
+    """
     where = ["a.pdf_url IS NOT NULL", "a.pdf_url <> ''"]
     params: list = []
     if since:
         where.append("a.broadcast_ts >= ?")
         params.append(since)
+
+    join_pred = "d.extract_status='ok'"
     rows = conn.execute(
         f"""
         SELECT a.id AS aid, a.company_id, a.headline, a.category, a.subject,
                a.pdf_url, a.broadcast_ts, co.short
         FROM announcements a
         JOIN companies co ON co.id = a.company_id
-        LEFT JOIN documents d ON d.pdf_url = a.pdf_url
+        LEFT JOIN documents d ON d.pdf_url = a.pdf_url AND {join_pred}
         WHERE {' AND '.join(where)}
           AND d.id IS NULL
         ORDER BY a.broadcast_ts DESC
         """,
         params,
     ).fetchall()
-    # cap per company
+
     counts: dict[int, int] = {}
     keep = []
     for r in rows:
@@ -126,21 +153,21 @@ def _candidate_rows(conn, limit_per_company: int, since: str | None) -> list[dic
 
 
 def ingest(limit_per_company: int = 12, since: str = "2024-01-01") -> int:
-    """Download + extract for up to `limit_per_company` new docs per company."""
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     written = 0
 
     with connect() as conn:
-        candidates = _candidate_rows(conn, limit_per_company, since)
+        candidates = _candidate_rows(conn, limit_per_company, since, True)
         print(f"  pdf: {len(candidates)} candidates queued")
 
         with tempfile.TemporaryDirectory(prefix="pdfdl_") as tmp:
             for r in candidates:
                 url = r["pdf_url"]
                 dest = Path(tmp) / hashlib.sha1(url.encode()).hexdigest()[:16]
-                doc_id = None
                 try:
                     nbytes = _download(url, dest)
+                    if not _is_pdf(dest):
+                        raise ValueError("downloaded file is not a PDF")
                     sha = hashlib.sha256(dest.read_bytes()).hexdigest()
                     text, pages = _extract_text(dest)
                     cur = conn.execute(
@@ -157,11 +184,11 @@ def ingest(limit_per_company: int = 12, since: str = "2024-01-01") -> int:
                          now, "ok", None,
                          "bse_attachment", url),
                     )
-                    doc_id = cur.lastrowid
                     written += 1
                     print(f"    {r['short']:18s} [{r['doc_kind']:22s}] "
-                          f"{pages}p {nbytes//1024}KB  {url.rsplit('/',1)[-1][:40]}")
+                          f"{pages}p {nbytes//1024}KB  ok")
                 except Exception as e:
+                    err = f"{type(e).__name__}: {str(e)[:200]}"
                     conn.execute(
                         """
                         INSERT OR REPLACE INTO documents(
@@ -171,13 +198,14 @@ def ingest(limit_per_company: int = 12, since: str = "2024-01-01") -> int:
                         ) VALUES(?,?,?,?,?,?,?,?,?)
                         """,
                         (r["company_id"], r["aid"], r["doc_kind"], url,
-                         now, "failed", str(e)[:500],
+                         now, "failed", err[:500],
                          "bse_attachment", url),
                     )
-                    print(f"    {r['short']:18s} FAIL {type(e).__name__}: {str(e)[:80]}")
+                    print(f"    {r['short']:18s} FAIL  {err[:100]}")
                 finally:
                     try:
                         dest.unlink()
                     except Exception:
                         pass
+                    time.sleep(SLEEP_BETWEEN)
     return written

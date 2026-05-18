@@ -9,6 +9,7 @@ from .db import connect, init
 from .seed import load_companies
 from .sources import bse, screener, sebi, cea, manual
 from .extract import pdf_text, heuristics, llm
+from .derive import metrics
 
 
 def _all_companies() -> list[dict]:
@@ -82,11 +83,18 @@ def cmd_pdf(args):
 
 
 def cmd_heuristics(_args):
+    # Wipe heuristic features first so re-runs pick up new patterns
+    with connect() as conn:
+        conn.execute("DELETE FROM features WHERE extractor='heuristic'")
     _run("heuristics", heuristics.ingest)
 
 
 def cmd_llm(args):
     _run("llm", lambda: llm.ingest(per_company_cap=args.per_company))
+
+
+def cmd_derive(_args):
+    _run("derive", metrics.ingest)
 
 
 def cmd_fetch_all(args):
@@ -99,6 +107,7 @@ def cmd_fetch_all(args):
     cmd_pdf(args)
     cmd_heuristics(args)
     cmd_llm(args)
+    cmd_derive(args)
 
 
 def cmd_status(_args):
@@ -106,9 +115,13 @@ def cmd_status(_args):
         for table in ("companies", "announcements", "financials",
                       "balance_sheet", "cash_flow", "ratios",
                       "sebi_filings", "cea_reports",
-                      "documents", "features", "fetch_runs"):
-            n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
-            print(f"  {table:20s} {n}")
+                      "documents", "features", "derived",
+                      "fetch_runs"):
+            try:
+                n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
+                print(f"  {table:20s} {n}")
+            except Exception:
+                print(f"  {table:20s} (not yet created)")
 
 
 def main(argv=None):
@@ -132,6 +145,7 @@ def main(argv=None):
     pp.set_defaults(func=cmd_pdf)
 
     sub.add_parser("heuristics").set_defaults(func=cmd_heuristics)
+    sub.add_parser("derive").set_defaults(func=cmd_derive)
 
     lp = sub.add_parser("llm")
     lp.add_argument("--per-company", type=int, default=4)
