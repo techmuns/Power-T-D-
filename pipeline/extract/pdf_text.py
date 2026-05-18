@@ -94,20 +94,44 @@ def _is_pdf(path: Path) -> bool:
 
 
 def _extract_text(path: Path) -> tuple[str, int]:
-    # Import lazily so the cli loads even when pypdf import is broken in
-    # a dev sandbox.
-    from pypdf import PdfReader
-    reader = PdfReader(str(path), strict=False)
-    pages = []
-    n = min(len(reader.pages), MAX_PAGES)
-    for i in range(n):
-        try:
-            t = reader.pages[i].extract_text() or ""
-        except Exception:
-            t = ""
-        if t.strip():
-            pages.append(t)
-    return ("\n\n".join(pages), len(reader.pages))
+    """Try pypdf first (fast). If it fails or yields almost no text, fall
+    back to pdfminer.six (slower but tolerates malformed PDFs)."""
+    # 1. pypdf
+    text = ""
+    pages_count = 0
+    try:
+        from pypdf import PdfReader
+        reader = PdfReader(str(path), strict=False)
+        pages_count = len(reader.pages)
+        chunks = []
+        for i in range(min(pages_count, MAX_PAGES)):
+            try:
+                t = reader.pages[i].extract_text() or ""
+            except Exception:
+                t = ""
+            if t.strip():
+                chunks.append(t)
+        text = "\n\n".join(chunks)
+    except Exception:
+        text = ""
+
+    if len(text.strip()) >= 200:
+        return text, pages_count
+
+    # 2. pdfminer fallback
+    try:
+        from pdfminer.high_level import extract_text as miner_extract
+        from pdfminer.pdfpage import PDFPage
+        miner_text = miner_extract(str(path), maxpages=MAX_PAGES) or ""
+        if not pages_count:
+            with path.open("rb") as f:
+                pages_count = sum(1 for _ in PDFPage.get_pages(f))
+        if len(miner_text.strip()) > len(text.strip()):
+            text = miner_text
+    except Exception:
+        pass
+
+    return text, pages_count
 
 
 def _candidate_rows(conn, limit_per_company: int, since: str | None,

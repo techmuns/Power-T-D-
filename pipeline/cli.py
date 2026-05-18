@@ -8,8 +8,8 @@ from datetime import datetime, timezone
 from .db import connect, init
 from .seed import load_companies
 from .sources import bse, screener, sebi, cea, manual
-from .extract import pdf_text, heuristics, llm
-from .derive import metrics
+from .extract import pdf_text, sebi_rhp, heuristics, llm
+from .derive import metrics, scorecard
 
 
 def _all_companies() -> list[dict]:
@@ -97,6 +97,14 @@ def cmd_derive(_args):
     _run("derive", metrics.ingest)
 
 
+def cmd_rhp(_args):
+    _run("sebi_rhp_pdfs", sebi_rhp.ingest)
+
+
+def cmd_scorecard(_args):
+    _run("scorecard", scorecard.ingest)
+
+
 def cmd_fetch_all(args):
     cmd_init(args)
     cmd_fetch_bse(args)
@@ -105,9 +113,11 @@ def cmd_fetch_all(args):
     cmd_fetch_cea(args)
     cmd_ingest_manual(args)
     cmd_pdf(args)
+    cmd_rhp(args)
     cmd_heuristics(args)
     cmd_llm(args)
     cmd_derive(args)
+    cmd_scorecard(args)
 
 
 def cmd_status(_args):
@@ -116,7 +126,7 @@ def cmd_status(_args):
                       "balance_sheet", "cash_flow", "ratios",
                       "sebi_filings", "cea_reports",
                       "documents", "features", "derived",
-                      "fetch_runs"):
+                      "scorecard", "fetch_runs"):
             try:
                 n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
                 print(f"  {table:20s} {n}")
@@ -146,6 +156,8 @@ def main(argv=None):
 
     sub.add_parser("heuristics").set_defaults(func=cmd_heuristics)
     sub.add_parser("derive").set_defaults(func=cmd_derive)
+    sub.add_parser("rhp").set_defaults(func=cmd_rhp)
+    sub.add_parser("scorecard").set_defaults(func=cmd_scorecard)
 
     lp = sub.add_parser("llm")
     lp.add_argument("--per-company", type=int, default=4)
