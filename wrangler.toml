@@ -1,3 +1,13 @@
 name = "power-t-d"
 compatibility_date = "2025-09-01"
-pages_build_output_dir = "."
+
+# Static-assets-only Worker. `wrangler deploy` treats this as a static
+# site, uploads everything in `directory` as assets, and serves them
+# directly (no Worker code needed).
+#
+# `not_found_handling = "single-page-application"` makes any 404 fall
+# back to /index.html, which is what we want for the hash-routed
+# dashboard (e.g. /#/c/tata_power should still load index.html).
+[assets]
+directory = "."
+not_found_handling = "single-page-application"
