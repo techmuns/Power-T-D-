@@ -83,19 +83,28 @@ def parse_pdfs(html: str, base: str) -> list[dict]:
     return out
 
 
+class CEABlocked(Exception):
+    pass
+
+
 def ingest() -> int:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     debug_path = RAW_DIR / "cea"
     debug_path.mkdir(parents=True, exist_ok=True)
 
     total = 0
+    succeeded = 0
+    last_error: Exception | None = None
+
     with connect() as conn:
         for report_type, url in PAGES.items():
             try:
                 html = _fetch(url)
             except Exception as e:
+                last_error = e
                 print(f"  cea {report_type}: FAILED {e}")
                 continue
+            succeeded += 1
             (debug_path / f"{report_type}.html").write_text(html[:2_000_000])
 
             rows = parse_pdfs(html, url)
@@ -114,4 +123,11 @@ def ingest() -> int:
                 written += cur.rowcount or 0
             print(f"  cea {report_type}: {len(rows)} pdf links, {written} new rows")
             total += written
+
+    if succeeded == 0 and last_error is not None:
+        # cea.nic.in blocks most cloud-provider IP ranges; surface this
+        # clearly instead of pretending the run was ok-with-zero-rows.
+        raise CEABlocked(
+            f"all CEA pages failed (likely IP block from CI runner): {last_error}"
+        )
     return total

@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 
 from .db import connect, init
 from .seed import load_companies
-from .sources import bse, bse_financials, sebi, cea
+from .sources import bse, screener, sebi, cea
 
 
 def _all_companies() -> list[dict]:
@@ -45,10 +45,10 @@ def cmd_fetch_bse(args):
 def cmd_fetch_financials(_args):
     companies = _all_companies()
     try:
-        n = bse_financials.ingest(companies)
-        _log_run("bse_financials", "ok", n)
+        n = screener.ingest(companies)
+        _log_run("screener_financials", "ok", n)
     except Exception as e:
-        _log_run("bse_financials", "error", 0, str(e))
+        _log_run("screener_financials", "error", 0, str(e))
         raise
 
 
@@ -65,6 +65,10 @@ def cmd_fetch_cea(_args):
     try:
         n = cea.ingest()
         _log_run("cea_reports", "ok", n)
+    except cea.CEABlocked as e:
+        # known issue, not a pipeline bug - log it and continue
+        _log_run("cea_reports", "error", 0, f"BLOCKED: {e}")
+        print(f"  cea: SKIP - {e}")
     except Exception as e:
         _log_run("cea_reports", "error", 0, str(e))
         raise
