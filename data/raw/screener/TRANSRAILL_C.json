@@ -1,0 +1,65 @@
+[
+  {
+    "period_end": "2023-09-30",
+    "period_label": "Sep 2023",
+    "revenue": null,
+    "op_profit": 117.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2024-03-31",
+    "period_label": "Mar 2024",
+    "revenue": null,
+    "op_profit": 169.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2024-06-30",
+    "period_label": "Jun 2024",
+    "revenue": null,
+    "op_profit": 120.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2024-09-30",
+    "period_label": "Sep 2024",
+    "revenue": null,
+    "op_profit": 138.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2024-12-31",
+    "period_label": "Dec 2024",
+    "revenue": null,
+    "op_profit": 179.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2025-03-31",
+    "period_label": "Mar 2025",
+    "revenue": null,
+    "op_profit": 236.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2025-06-30",
+    "period_label": "Jun 2025",
+    "revenue": null,
+    "op_profit": 199.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2025-09-30",
+    "period_label": "Sep 2025",
+    "revenue": null,
+    "op_profit": 184.0,
+    "net_profit": null
+  },
+  {
+    "period_end": "2025-12-31",
+    "period_label": "Dec 2025",
+    "revenue": null,
+    "op_profit": 227.0,
+    "net_profit": null
+  }
+]
