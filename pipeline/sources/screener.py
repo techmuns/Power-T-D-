@@ -6,7 +6,7 @@ most stable scrapeable source we can hit from a CI runner. Every row is
 tagged source='screener' so analysts know to cross-check against the
 company's own filed results before using a number in a memo.
 
-URL form (BSE-coded NSE symbols are normal):
+URL form:
   https://www.screener.in/company/POWERGRID/consolidated/
   https://www.screener.in/company/POWERGRID/                # standalone
 
@@ -36,13 +36,39 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Line-item label aliases - Screener has tweaked these over the years
-SALES_LABELS = ("Sales", "Revenue", "Sales +", "Revenue +")
-OPPROFIT_LABELS = ("Operating Profit",)
-NET_LABELS = ("Net Profit", "Net Profit +")
+# All comparisons happen after _norm_label() normalization, so list the
+# labels here in lower-case-ascii form without trailing "+" markers.
+# Screener varies the label by industry template (utility / manufacturer
+# / NBFC / bank), hence the union.
+SALES_LABELS = (
+    "sales",
+    "revenue",
+    "net sales",
+    "income from operations",
+    "revenue from operations",
+    "interest earned",
+)
+OPPROFIT_LABELS = (
+    "operating profit",
+    "financing profit",
+    "operating income",
+)
+NET_LABELS = (
+    "net profit",
+    "profit after tax",
+    "profit for the period",
+)
 
 MONTH_MAP = {m.lower(): i for i, m in enumerate(calendar.month_abbr) if m}
 PERIOD_RE = re.compile(r"^([A-Za-z]{3})\s+(\d{4})$")
+
+
+def _norm_label(s: str) -> str:
+    """Fold non-breaking spaces, drop the screener trailing '+' marker,
+    collapse whitespace, lowercase."""
+    return " ".join(
+        s.replace(" ", " ").replace("+", " ").split()
+    ).lower()
 
 
 def _period_end(label: str) -> str | None:
@@ -80,7 +106,6 @@ def _fetch(symbol: str, consolidated: bool) -> str | None:
 
 
 def _parse_quarters(html: str) -> list[dict]:
-    """Return list of {period_end, revenue, op_profit, net_profit}."""
     soup = BeautifulSoup(html, "lxml")
     sec = soup.find("section", id="quarters")
     if not sec:
@@ -88,16 +113,17 @@ def _parse_quarters(html: str) -> list[dict]:
     table = sec.find("table")
     if not table:
         return []
+
     headers = [th.get_text(strip=True) for th in table.find("thead").find_all("th")]
-    # first header is the row label column ("Quarterly Results")
     periods = [(_period_end(h), h) for h in headers[1:]]
 
+    # series is keyed by NORMALIZED label
     series: dict[str, list[str]] = {}
     for tr in table.find("tbody").find_all("tr"):
         cells = tr.find_all("td")
         if not cells:
             continue
-        label = cells[0].get_text(" ", strip=True)
+        label = _norm_label(cells[0].get_text(" ", strip=True))
         vals = [c.get_text(strip=True) for c in cells[1:]]
         series[label] = vals
 
@@ -143,16 +169,16 @@ def ingest(companies: Iterable[dict]) -> int:
                     print(f"  scr {c['short']} cons={cons}: FAILED {e}")
                     continue
                 if html is None:
-                    # 404 for that variant - try the other
                     continue
 
                 rows = _parse_quarters(html)
+                tag = "C" if cons else "S"
                 if rows:
-                    (debug / f"{sym}_{'C' if cons else 'S'}.json").write_text(
+                    (debug / f"{sym}_{tag}.json").write_text(
                         json.dumps(rows, indent=2)
                     )
                 else:
-                    (debug / f"{sym}_{'C' if cons else 'S'}.empty.html").write_text(
+                    (debug / f"{sym}_{tag}.empty.html").write_text(
                         html[:200_000]
                     )
 
@@ -160,7 +186,7 @@ def ingest(companies: Iterable[dict]) -> int:
                 for r in rows:
                     cur = conn.execute(
                         """
-                        INSERT OR IGNORE INTO financials(
+                        INSERT OR REPLACE INTO financials(
                             company_id, period_end, period_type, consolidated,
                             revenue, ebitda, pat, raw_json,
                             source, source_url, fetched_at
@@ -178,8 +204,7 @@ def ingest(companies: Iterable[dict]) -> int:
                     inserted += cur.rowcount or 0
                     written += cur.rowcount or 0
                 print(f"  scr {c['short']} {'cons' if cons else 'standalone'}: "
-                      f"{len(rows)} quarters, {inserted} new")
-                # once we got a populated variant, no need to fall back
+                      f"{len(rows)} quarters, {inserted} new/updated")
                 if rows:
                     break
     return written
