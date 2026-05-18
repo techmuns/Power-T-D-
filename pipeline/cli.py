@@ -7,9 +7,9 @@ from datetime import datetime, timezone
 
 from .db import connect, init
 from .seed import load_companies
-from .sources import bse, screener, sebi, cea, manual
+from .sources import bse, screener, sebi, cea, manual, bse_market
 from .extract import pdf_text, sebi_rhp, heuristics, llm
-from .derive import metrics, scorecard
+from .derive import metrics, scorecard, export
 
 
 def _all_companies() -> list[dict]:
@@ -105,12 +105,22 @@ def cmd_scorecard(_args):
     _run("scorecard", scorecard.ingest)
 
 
+def cmd_market(_args):
+    companies = _all_companies()
+    _run("bse_market", lambda: bse_market.ingest(companies))
+
+
+def cmd_export(_args):
+    _run("export", export.ingest)
+
+
 def cmd_fetch_all(args):
     cmd_init(args)
     cmd_fetch_bse(args)
     cmd_fetch_financials(args)
     cmd_fetch_sebi(args)
     cmd_fetch_cea(args)
+    cmd_market(args)
     cmd_ingest_manual(args)
     cmd_pdf(args)
     cmd_rhp(args)
@@ -118,13 +128,14 @@ def cmd_fetch_all(args):
     cmd_llm(args)
     cmd_derive(args)
     cmd_scorecard(args)
+    cmd_export(args)
 
 
 def cmd_status(_args):
     with connect() as conn:
         for table in ("companies", "announcements", "financials",
                       "balance_sheet", "cash_flow", "ratios",
-                      "sebi_filings", "cea_reports",
+                      "sebi_filings", "cea_reports", "market_data",
                       "documents", "features", "derived",
                       "scorecard", "fetch_runs"):
             try:
@@ -158,6 +169,8 @@ def main(argv=None):
     sub.add_parser("derive").set_defaults(func=cmd_derive)
     sub.add_parser("rhp").set_defaults(func=cmd_rhp)
     sub.add_parser("scorecard").set_defaults(func=cmd_scorecard)
+    sub.add_parser("market").set_defaults(func=cmd_market)
+    sub.add_parser("export").set_defaults(func=cmd_export)
 
     lp = sub.add_parser("llm")
     lp.add_argument("--per-company", type=int, default=4)

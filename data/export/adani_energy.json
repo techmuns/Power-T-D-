@@ -1,0 +1,40 @@
+{
+  "company": {
+    "name": "Adani Energy Solutions",
+    "short": "Adani Energy",
+    "bse": "539254",
+    "nse": "ADANIENSOL",
+    "bucket": "transmission_asset_owner",
+    "secondary": null
+  },
+  "financials": {
+    "quarterly": []
+  },
+  "balance_sheet": [],
+  "cash_flow": [],
+  "ratios": [],
+  "derived": [],
+  "market": null,
+  "documents": [],
+  "features": {},
+  "scorecard": [],
+  "coverage_pct": 0,
+  "coverage_checks": {
+    "has_quarterly_financials": false,
+    "has_balance_sheet": false,
+    "has_cash_flow": false,
+    "has_ratios": false,
+    "has_market_data": false,
+    "has_documents_text": false,
+    "has_voltage_features": false,
+    "has_capacity_features": false,
+    "has_order_features": false,
+    "has_customer_features": false,
+    "has_capex_features": false,
+    "has_derived_margins": false,
+    "has_derived_growth": false,
+    "has_derived_balance_sheet": false,
+    "has_peer_ranks": false,
+    "has_scorecard_complete": false
+  }
+}

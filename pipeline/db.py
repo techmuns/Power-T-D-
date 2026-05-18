@@ -180,6 +180,57 @@ CREATE TABLE IF NOT EXISTS features (
     created_at      TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_features_company_feature ON features(company_id, feature);
+
+CREATE TABLE IF NOT EXISTS derived (
+    id            INTEGER PRIMARY KEY,
+    company_id    INTEGER NOT NULL REFERENCES companies(id),
+    period_end    TEXT NOT NULL,
+    period_type   TEXT NOT NULL,
+    consolidated  INTEGER NOT NULL,
+    metric        TEXT NOT NULL,
+    value         REAL,
+    unit          TEXT,
+    formula       TEXT,
+    bucket_rank   INTEGER,
+    bucket_n      INTEGER,
+    created_at    TEXT NOT NULL,
+    UNIQUE(company_id, period_end, period_type, consolidated, metric)
+);
+CREATE INDEX IF NOT EXISTS idx_derived_company_metric ON derived(company_id, metric);
+CREATE INDEX IF NOT EXISTS idx_derived_period ON derived(period_end);
+
+CREATE TABLE IF NOT EXISTS scorecard (
+    id            INTEGER PRIMARY KEY,
+    company_id    INTEGER NOT NULL REFERENCES companies(id),
+    factor        TEXT NOT NULL,
+    score         INTEGER,
+    evidence      TEXT,
+    inputs        TEXT,
+    as_of         TEXT,
+    created_at    TEXT NOT NULL,
+    UNIQUE(company_id, factor)
+);
+
+CREATE TABLE IF NOT EXISTS market_data (
+    id            INTEGER PRIMARY KEY,
+    company_id    INTEGER NOT NULL REFERENCES companies(id),
+    fetched_at    TEXT NOT NULL,
+    price         REAL,
+    pct_change    REAL,
+    market_cap_cr REAL,
+    pe_ratio      REAL,
+    pb_ratio      REAL,
+    dividend_yield REAL,
+    week52_high   REAL,
+    week52_low    REAL,
+    book_value    REAL,
+    eps           REAL,
+    face_value    REAL,
+    raw_json      TEXT,
+    source        TEXT NOT NULL,
+    source_url    TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_market_data_company ON market_data(company_id, fetched_at);
 """
 
 
