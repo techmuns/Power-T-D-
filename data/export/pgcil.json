@@ -1673,23 +1673,31 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 17.32,
-    "pb_ratio": 3.02,
+    "pe_ratio": 17.44,
+    "pb_ratio": 3.04,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 17.12,
     "face_value": null,
-    "fetched_at": "2026-05-18T10:53:44+00:00"
+    "fetched_at": "2026-05-19T13:47:35+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 1,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9ed2703b-2d52-4792-ade3-7aa68acdb4e5.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "transcript",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31b888a3-6061-40e7-aae7-2e0cd1588361.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1697,7 +1705,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7faa54a9-7670-4e2d-9dd8-4d842e6e0b6c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1705,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e04edce-f337-40fc-ac9e-e2aaf326003c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1713,7 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/05767a4b-5d88-4391-98e4-70404f964c7d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1721,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a617224-9433-457b-81bd-a52fe07a67c0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c5b6f406-910d-4bb7-b4df-b49b438deb9c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/388fc446-86d7-4cb7-86db-96110d36405c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-18T10:53:57+00:00",
+      "extracted_at": "2026-05-19T13:47:51+00:00",
       "has_text": false
     },
     {

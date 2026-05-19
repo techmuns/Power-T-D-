@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:55:16+00:00",
+  "generated_at": "2026-05-19T13:49:11+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -45,7 +45,7 @@
       "short": "Siemens Energy",
       "slug": "siemens_energy",
       "bucket": "hvdc_facts_oem",
-      "coverage_pct": 38,
+      "coverage_pct": 44,
       "score_total": 2,
       "scored_factors": 1
     },
@@ -114,6 +114,14 @@
       "scored_factors": 9
     },
     {
+      "short": "TARIL",
+      "slug": "taril",
+      "bucket": "transformer_manufacturer",
+      "coverage_pct": 100,
+      "score_total": 23,
+      "scored_factors": 8
+    },
+    {
       "short": "CG Power",
       "slug": "cg_power",
       "bucket": "transformer_manufacturer",
@@ -128,14 +136,6 @@
       "coverage_pct": 94,
       "score_total": 7,
       "scored_factors": 3
-    },
-    {
-      "short": "TARIL",
-      "slug": "taril",
-      "bucket": "transformer_manufacturer",
-      "coverage_pct": 94,
-      "score_total": 20,
-      "scored_factors": 6
     },
     {
       "short": "Hitachi Energy",
@@ -228,6 +228,6 @@
   ],
   "totals": {
     "companies": 28,
-    "avg_coverage": 90.4
+    "avg_coverage": 90.9
   }
 }
