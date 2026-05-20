@@ -1537,32 +1537,5 @@
     "DissemDT": "2025-05-23T16:59:04.12",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 842939
-  },
-  {
-    "NEWSID": "a99afbf3-ff19-464f-9162-9c40fbf78aaa",
-    "SCRIP_CD": 542141,
-    "XML_NAME": "ANN_542141_A99AFBF3-FF19-464F-9162-9C40FBF78AAA",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-    "DT_TM": "2025-05-19T15:47:37.073",
-    "NEWS_DT": "2025-05-19T15:47:37.073",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "a9436a64-3a1f-450f-b3f9-9048356bef54.pdf",
-    "MORE": "",
-    "HEADLINE": "Intimation of Concall",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/techno-electric--engineering-company-ltd/technoe/542141/",
-    "SLONGNAME": "Techno Electric & Engineering Company Ltd",
-    "AGENDA_ID": 80,
-    "TotalPageCnt": 2,
-    "News_submission_dt": "2025-05-19T15:47:36",
-    "DissemDT": "2025-05-19T15:47:37.073",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 413039
   }
 ]

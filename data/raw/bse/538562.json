@@ -2995,32 +2995,5 @@
     "DissemDT": "2025-05-20T16:55:53.783",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 269299
-  },
-  {
-    "NEWSID": "4831c891-cd93-4114-83ae-6d2e42bf9215",
-    "SCRIP_CD": 538562,
-    "XML_NAME": "ANN_538562_4831C891-CD93-4114-83AE-6D2E42BF9215",
-    "NEWSSUB": "Intimation Of Participation In Investors Conference",
-    "DT_TM": "2025-05-19T18:11:58.82",
-    "NEWS_DT": "2025-05-19T18:11:58.82",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "824a2d2a-7230-4824-b6ee-5982fdfba571.pdf",
-    "MORE": "",
-    "HEADLINE": "This is to inform that management will participate in Invest India Global Conference on Friday, 23rd May, 2025.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/skipper-ltd/skipper/538562/",
-    "SLONGNAME": "Skipper Ltd",
-    "AGENDA_ID": 1,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-19T18:11:58",
-    "DissemDT": "2025-05-19T18:11:58.82",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 640219
   }
 ]

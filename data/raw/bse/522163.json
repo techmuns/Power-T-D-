@@ -2941,32 +2941,5 @@
     "DissemDT": "2025-05-26T16:41:37.49",
     "TimeDiff": null,
     "Fld_Attachsize": null
-  },
-  {
-    "NEWSID": "3475ba18-9e58-4eb9-91a7-14c6730ec07e",
-    "SCRIP_CD": 522163,
-    "XML_NAME": "ANN_522163_3475BA18-9E58-4EB9-91A7-14C6730EC07E",
-    "NEWSSUB": "Board Meeting Intimation for Approval Of Audited Financial Results Of The Company For The Quarter And Year Ended March 31, 2025",
-    "DT_TM": "2025-05-19T16:35:08.573",
-    "NEWS_DT": "2025-05-19T16:35:08.573",
-    "CRITICALNEWS": 1,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "4a791700-5ea9-486a-9f81-7c130ffe3a7e.pdf",
-    "MORE": "",
-    "HEADLINE": "Diamond Power Infrastructure Ltd-has informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/05/2025 ,inter alia, to consider and approve Audited Financial Results of the company for the quarter and year ended March 31, 2025",
-    "CATEGORYNAME": "Board Meeting",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/diamond-power-infrastructure-ltd/diacabs/522163/",
-    "SLONGNAME": "Diamond Power Infrastructure Ltd-$",
-    "AGENDA_ID": 9,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-19T16:35:07",
-    "DissemDT": "2025-05-19T16:35:08.573",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 196145
   }
 ]

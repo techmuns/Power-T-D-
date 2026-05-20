@@ -4102,32 +4102,5 @@
     "DissemDT": "2025-05-23T15:02:19.343",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 192777
-  },
-  {
-    "NEWSID": "e24f4619-84ab-4173-9dff-91702d06060a",
-    "SCRIP_CD": 522287,
-    "XML_NAME": "ANN_522287_E24F4619-84AB-4173-9DFF-91702D06060A",
-    "NEWSSUB": "Audio Recording Of Earnings Conference Call Held For Audited Financial Results (Consolidated And Standalone) For The Quarter And Year Ended 31St March, 2025",
-    "DT_TM": "2025-05-19T17:22:58.597",
-    "NEWS_DT": "2025-05-19T17:22:58.597",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "7befa610-226d-4733-9246-8d95299b7e48.pdf",
-    "MORE": "",
-    "HEADLINE": "Audio Recording of Earnings Conference Call for Audited Financial Results (Consolidated and Standalone) for the quarter and year ended 31st March, 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/kalpataru-projects-international-ltd/kpil/522287/",
-    "SLONGNAME": "Kalpataru Projects International Ltd",
-    "AGENDA_ID": 1,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-19T17:22:58",
-    "DissemDT": "2025-05-19T17:22:58.597",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 206581
   }
 ]

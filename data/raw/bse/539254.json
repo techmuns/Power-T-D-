@@ -3373,32 +3373,5 @@
     "DissemDT": "2025-05-21T16:29:02.767",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 141678
-  },
-  {
-    "NEWSID": "c80b7ed4-46ef-4519-9585-242b63640a55",
-    "SCRIP_CD": 539254,
-    "XML_NAME": "ANN_539254_C80B7ED4-46EF-4519-9585-242B63640A55",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-    "DT_TM": "2025-05-19T18:45:00.74",
-    "NEWS_DT": "2025-05-19T18:45:00.74",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "a6bd242e-52d1-4ebb-9f13-231351c998cc.pdf",
-    "MORE": "",
-    "HEADLINE": "Intimation of Interaction with Investors",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/adani-energy-solutions-ltd/adaniensol/539254/",
-    "SLONGNAME": "Adani Energy Solutions Ltd",
-    "AGENDA_ID": 80,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-19T18:45:00",
-    "DissemDT": "2025-05-19T18:45:00.74",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 153522
   }
 ]

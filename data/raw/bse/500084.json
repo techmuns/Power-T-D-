@@ -2644,32 +2644,5 @@
     "DissemDT": "2025-06-03T09:34:18.13",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 226319
-  },
-  {
-    "NEWSID": "fe35febf-d9b8-4eb1-aee9-dfd02bd71c71",
-    "SCRIP_CD": 500084,
-    "XML_NAME": "ANN_500084_FE35FEBF-D9B8-4EB1-AEE9-DFD02BD71C71",
-    "NEWSSUB": "Compliances-Reg.24(A)-Annual Secretarial Compliance",
-    "DT_TM": "2025-05-19T17:27:06.437",
-    "NEWS_DT": "2025-05-19T17:27:06.437",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "24e2f4ae-6cbf-4928-b6b0-6a675149d770.pdf",
-    "MORE": "",
-    "HEADLINE": "Annual Secretarial Compliance Report",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/cesc-ltd/cesc/500084/",
-    "SLONGNAME": "CESC Ltd",
-    "AGENDA_ID": 210,
-    "TotalPageCnt": 2,
-    "News_submission_dt": "2025-05-19T17:27:06",
-    "DissemDT": "2025-05-19T17:27:06.437",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 695696
   }
 ]
