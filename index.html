@@ -3,481 +3,2089 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Power T&D Dashboard</title>
+<title>Power T&D · Investment Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
-  :root {
-    --bg:#0b0f17; --panel:#111826; --panel2:#0f1521; --border:#1f2a3a;
-    --txt:#dbe4f0; --muted:#8b9bb4; --accent:#5fb3ff; --good:#3ed598;
-    --warn:#ffc857; --bad:#ff6b6b; --buckethue: 210;
+  html, body { background:#020617; color:#cbd5e1; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .mono, .tnum { font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .panel { background:#0b1220; border:1px solid #1e293b; border-radius:8px; }
+  .panel-pad { padding: 14px 16px; }
+  .panel-tight { padding: 10px 12px; }
+  .lbl { color:#64748b; font-size:10px; text-transform:uppercase; letter-spacing:.06em; font-weight:600; }
+  .verdict-good { color:#34d399; }
+  .verdict-bad  { color:#f87171; }
+  .verdict-neu  { color:#fbbf24; }
+  .verdict-na   { color:#64748b; }
+  .heat-1 { background:#7f1d1d; color:#fecaca; }
+  .heat-2 { background:#9a3412; color:#fed7aa; }
+  .heat-3 { background:#854d0e; color:#fde68a; }
+  .heat-4 { background:#166534; color:#bbf7d0; }
+  .heat-5 { background:#065f46; color:#a7f3d0; }
+  .heat-na{ background:#0f172a; color:#475569; }
+  .rank-pill {
+    display:inline-block; padding:1px 6px; border-radius:999px;
+    font-size:10px; font-weight:600; background:#0f172a; color:#94a3b8;
+    border:1px solid #1e293b;
   }
-  * { box-sizing: border-box; }
-  html, body {
-    margin:0; padding:0; background:var(--bg); color:var(--txt);
-    font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-          Roboto, "Helvetica Neue", Arial, sans-serif;
+  .rank-pill.top   { background:#064e3b; color:#6ee7b7; border-color:#065f46; }
+  .rank-pill.mid   { background:#374151; color:#cbd5e1; border-color:#4b5563; }
+  .rank-pill.bot   { background:#7f1d1d; color:#fecaca; border-color:#991b1b; }
+  .chip {
+    display:inline-block; padding:2px 8px; border-radius:4px;
+    font-size:11px; font-weight:500; background:#0f172a; color:#7dd3fc;
+    border:1px solid #1e293b;
   }
-  header {
-    padding:18px 26px; border-bottom:1px solid var(--border);
-    display:flex; align-items:center; gap:16px;
+  .chip.muted { color:#64748b; }
+  .chip.warn  { color:#fbbf24; border-color:#854d0e; }
+  .chip.bad   { color:#f87171; border-color:#7f1d1d; }
+  .chip.good  { color:#34d399; border-color:#065f46; }
+  .row-link { cursor:pointer; transition:background-color .12s; }
+  .row-link:hover { background:#111827; }
+  .empty-note {
+    color:#64748b; font-size:12px; font-style:italic; padding:10px 6px;
+    background:#0f172a; border:1px dashed #1e293b; border-radius:6px;
   }
-  header h1 { font-size:18px; margin:0; font-weight:600; }
-  header .sub { color:var(--muted); font-size:12px; }
-  header .grow { flex:1; }
-  header .pill {
-    background:var(--panel); border:1px solid var(--border);
-    border-radius:999px; padding:4px 10px; font-size:11px; color:var(--muted);
-  }
+  .scroll-x { overflow-x:auto; }
+  th { font-weight:600; }
+  ::selection { background:#0c4a6e; color:#e0f2fe; }
 
-  main { padding:20px 26px 60px; }
-  section.panel {
-    background:var(--panel); border:1px solid var(--border); border-radius:8px;
-    padding:14px 18px; margin-bottom:18px;
+  /* small heat-cell */
+  .heat-cell {
+    width:34px; height:30px; display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:600; cursor:pointer; border-right:1px solid #020617;
   }
-  section.panel h2 {
-    font-size:13px; font-weight:600; margin:0 0 10px;
-    color:var(--muted); text-transform:uppercase; letter-spacing:.04em;
-  }
+  .heat-cell:hover { outline:2px solid #38bdf8; outline-offset:-2px; }
 
-  table { width:100%; border-collapse:collapse; font-size:13px; }
-  th, td {
-    text-align:left; padding:7px 10px; border-bottom:1px solid var(--border);
-    white-space:nowrap;
-  }
-  th {
-    font-weight:600; font-size:11px; color:var(--muted);
-    text-transform:uppercase; letter-spacing:.03em;
-    cursor:pointer; user-select:none;
-  }
-  th.sortable:hover { color:var(--txt); }
-  tr.row { cursor:pointer; }
-  tr.row:hover td { background:var(--panel2); }
-  td.num { text-align:right; font-variant-numeric: tabular-nums; }
-  td.pct { text-align:right; font-variant-numeric: tabular-nums; }
-
-  .bucket {
-    display:inline-block; padding:2px 7px; border-radius:4px;
-    font-size:11px; font-weight:500; background:var(--panel2);
-    color:var(--accent); border:1px solid var(--border);
-  }
-  .cov-bar {
-    width:80px; height:6px; background:var(--panel2); border-radius:3px;
-    display:inline-block; vertical-align:middle; margin-right:6px; overflow:hidden;
-  }
-  .cov-fill { height:100%; background:var(--good); }
-  .cov-fill.warn { background:var(--warn); }
-  .cov-fill.bad { background:var(--bad); }
-
-  .scorecard {
-    display:grid; grid-template-columns: repeat(2, 1fr); gap:8px;
-  }
-  .score-cell {
-    background:var(--panel2); border:1px solid var(--border);
-    border-radius:6px; padding:10px 12px;
-  }
-  .score-cell .factor { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
-  .score-cell .score { font-size:22px; font-weight:600; margin:2px 0; }
-  .score-cell .score.s5 { color:var(--good); }
-  .score-cell .score.s4 { color:var(--good); }
-  .score-cell .score.s3 { color:var(--warn); }
-  .score-cell .score.s2 { color:var(--bad); }
-  .score-cell .score.s1 { color:var(--bad); }
-  .score-cell .score.sNA { color:var(--muted); font-size:14px; }
-  .score-cell .evid { font-size:11px; color:var(--muted); line-height:1.4; }
-
-  .kpis { display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; }
-  .kpi {
-    background:var(--panel2); border:1px solid var(--border);
-    border-radius:6px; padding:10px 12px;
-  }
-  .kpi .lbl { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
-  .kpi .val { font-size:18px; font-weight:600; font-variant-numeric: tabular-nums; }
-  .kpi .sub { font-size:11px; color:var(--muted); }
-
-  .feature-list { display:grid; grid-template-columns: 1fr 1fr; gap:6px; }
-  .feature {
-    background:var(--panel2); border:1px solid var(--border);
-    border-radius:5px; padding:7px 10px; font-size:12px;
-  }
-  .feature .nm { color:var(--accent); font-weight:500; }
-  .feature .ev { color:var(--muted); font-size:11px; margin-top:2px; }
-
-  .doc-link { color:var(--accent); text-decoration:none; }
-  .doc-link:hover { text-decoration:underline; }
-
-  .breadcrumb {
-    display:flex; gap:8px; align-items:center; color:var(--muted);
-    font-size:12px; margin-bottom:10px;
-  }
-  .breadcrumb a { color:var(--accent); text-decoration:none; }
-  .breadcrumb a:hover { text-decoration:underline; }
-
-  .loading { color:var(--muted); padding:20px; }
-
-  .tag {
-    display:inline-block; font-size:10px; padding:1px 5px; border-radius:3px;
-    background:var(--panel2); color:var(--muted); margin-left:4px;
-  }
-
-  @media (max-width:760px) {
-    .scorecard, .kpis, .feature-list { grid-template-columns: 1fr; }
-    header { flex-wrap:wrap; }
-  }
+  .nav a { color:#cbd5e1; }
+  .nav a.active { color:#7dd3fc; }
+  .nav a:hover { color:#7dd3fc; }
 </style>
 </head>
-<body>
+<body class="min-h-screen">
 
-<header>
-  <h1>Power T&D Dashboard</h1>
-  <div class="sub">India listed transmission &amp; distribution universe</div>
-  <div class="grow"></div>
-  <div class="pill" id="meta-pill">loading…</div>
+<!-- ====================== TOP NAV ====================== -->
+<header class="border-b border-slate-800 bg-slate-950/70 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-[1500px] mx-auto px-5 py-3 flex items-center gap-6">
+    <div class="flex items-center gap-3 mr-4">
+      <div class="w-8 h-8 rounded-md bg-gradient-to-br from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-bold">T</div>
+      <div>
+        <div class="text-sm font-semibold text-slate-100">Power T&amp;D Dashboard</div>
+        <div class="text-[11px] text-slate-500">Indian listed transmission &amp; distribution universe · buy-side framework</div>
+      </div>
+    </div>
+    <nav class="nav text-sm flex gap-5 ml-2">
+      <a href="#/" data-route="universe">Universe</a>
+      <a href="#/buckets" data-route="buckets">Buckets</a>
+      <a href="#/flags" data-route="flags">Red Flags</a>
+    </nav>
+    <div class="flex-1"></div>
+    <div class="flex items-center gap-2">
+      <input id="globalSearch" type="search" placeholder="Search company…"
+             class="bg-slate-900 border border-slate-800 rounded px-3 py-1.5 text-sm w-56 focus:outline-none focus:border-sky-500" />
+    </div>
+    <div id="metaPill" class="text-[11px] text-slate-500 mono">loading…</div>
+  </div>
 </header>
 
-<main id="app">
-  <div class="loading">Loading data…</div>
+<main id="app" class="max-w-[1500px] mx-auto px-5 py-6">
+  <div class="text-slate-500 py-10">Loading data…</div>
 </main>
 
+<footer class="text-[11px] text-slate-600 max-w-[1500px] mx-auto px-5 py-8 mono">
+  Every cell traceable to source: <span class="text-slate-400">source = BSE filings · Screener · CEA · framework doc</span> ·
+  any "Not disclosed" label means the underlying export does not yet contain that field.
+</footer>
+
 <script>
-// ---------- routing ----------
-function getSlug() {
-  const h = window.location.hash || '';
-  const m = h.match(/^#\/c\/([a-z0-9_-]+)/i);
-  return m ? decodeURIComponent(m[1]) : null;
+/* ==========================================================================
+   1.  DATA LOADING
+   ========================================================================== */
+const CACHE = { index: null, companies: {} };
+
+async function loadIndex() {
+  if (CACHE.index) return CACHE.index;
+  const r = await fetch('data/export/index.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error('index.json ' + r.status);
+  CACHE.index = await r.json();
+  return CACHE.index;
 }
-function nav(slug) { window.location.hash = slug ? '#/c/' + slug : ''; }
+async function loadCompany(slug) {
+  if (CACHE.companies[slug]) return CACHE.companies[slug];
+  const r = await fetch('data/export/' + slug + '.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error(slug + '.json ' + r.status);
+  CACHE.companies[slug] = await r.json();
+  return CACHE.companies[slug];
+}
+/* Load every company's JSON in parallel. Used by Buckets, Red Flags. */
+async function loadAllCompanies() {
+  const idx = await loadIndex();
+  await Promise.all(idx.companies.map(c => loadCompany(c.slug).catch(() => null)));
+  return idx.companies.map(c => CACHE.companies[c.slug]).filter(Boolean);
+}
+
+/* ==========================================================================
+   2.  ROUTING
+   ========================================================================== */
+function parseRoute() {
+  const h = (window.location.hash || '#/').slice(1);
+  if (h === '/' || h === '') return { name: 'universe' };
+  let m;
+  if ((m = h.match(/^\/c\/([a-z0-9_-]+)/i))) return { name: 'company', slug: m[1] };
+  if ((m = h.match(/^\/bucket\/([a-z0-9_-]+)/i))) return { name: 'bucket', bucket: m[1] };
+  if (h === '/buckets') return { name: 'buckets' };
+  if (h === '/flags') return { name: 'flags' };
+  return { name: 'universe' };
+}
+function nav(path) { window.location.hash = path; }
 window.addEventListener('hashchange', render);
 
-// ---------- helpers ----------
+/* ==========================================================================
+   3.  FORMATTING HELPERS
+   ========================================================================== */
+const MISSING = 'Not disclosed / Not available in current export';
+
 const fmt = {
   num(v, dp=0) {
     if (v === null || v === undefined || isNaN(v)) return '—';
-    return Number(v).toLocaleString('en-IN', {maximumFractionDigits: dp});
+    return Number(v).toLocaleString('en-IN', { maximumFractionDigits: dp });
   },
   pct(v, dp=1) {
     if (v === null || v === undefined || isNaN(v)) return '—';
     return Number(v).toFixed(dp) + '%';
   },
+  signedPct(v, dp=1) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    const s = v >= 0 ? '+' : '';
+    return s + Number(v).toFixed(dp) + '%';
+  },
   crore(v) {
     if (v === null || v === undefined || isNaN(v)) return '—';
-    if (Math.abs(v) >= 100000) return '₹' + (v/100000).toFixed(2) + ' L cr';
-    if (Math.abs(v) >= 1000) return '₹' + (v/1000).toFixed(2) + ' K cr';
-    return '₹' + Number(v).toLocaleString('en-IN', {maximumFractionDigits: 0}) + ' cr';
+    const a = Math.abs(v);
+    if (a >= 100000) return '₹' + (v/100000).toFixed(2) + ' L cr';
+    if (a >= 1000)   return '₹' + (v/1000).toFixed(2) + ' K cr';
+    return '₹' + Number(v).toLocaleString('en-IN', { maximumFractionDigits: 0 }) + ' cr';
   },
+  ratio(v, dp=2) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    return Number(v).toFixed(dp) + 'x';
+  },
+  date(s) { return s ? String(s).slice(0,10) : '—'; },
   bucketLabel(b) {
     return ({
       transmission_asset_owner: 'Transmission asset owner',
       transformer_manufacturer: 'Transformer manufacturer',
-      hvdc_facts_oem: 'HVDC / FACTS / grid OEM',
-      transmission_epc: 'Transmission EPC',
+      hvdc_facts_oem:           'HVDC / FACTS / grid OEM',
+      transmission_epc:         'Transmission EPC',
       towers_conductors_cables: 'Towers / conductors / cables',
-      distribution_discom: 'Distribution / DISCOM',
-      smart_meters_automation: 'Smart meters / automation',
-      component_supplier: 'Component supplier',
+      distribution_discom:      'Distribution / DISCOM',
+      smart_meters_automation:  'Smart meters / automation',
+      component_supplier:       'Component supplier',
     })[b] || b;
+  },
+  factor(f) {
+    return f.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   },
 };
 
-function covClass(p) { return p>=80 ? '' : p>=50 ? 'warn' : 'bad'; }
-
-async function fetchJSON(path) {
-  const r = await fetch(path, {cache:'no-store'});
-  if (!r.ok) throw new Error(path + ' ' + r.status);
-  return r.json();
+/* ==========================================================================
+   4.  DATA PICKERS (insight-driven, missing-data-safe)
+   ========================================================================== */
+function latest(arr, opts={}) {
+  if (!Array.isArray(arr) || !arr.length) return null;
+  const cons = opts.consolidated; // 1 or 0
+  const filtered = cons === undefined ? arr : arr.filter(r => r.consolidated === cons);
+  const pool = filtered.length ? filtered : arr;
+  return pool.slice().sort((a,b) => (b.period_end||'').localeCompare(a.period_end||''))[0] || null;
+}
+function series(arr, key, opts={}) {
+  if (!Array.isArray(arr) || !arr.length) return [];
+  const cons = opts.consolidated;
+  const filtered = cons === undefined ? arr : arr.filter(r => r.consolidated === cons);
+  const pool = filtered.length ? filtered : arr;
+  return pool.slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''))
+             .map(r => ({ period_end: r.period_end, value: r[key] }));
+}
+function derivedLatest(co, metric, opts={}) {
+  const rows = (co.derived || []).filter(r => r.metric === metric);
+  if (!rows.length) return null;
+  const cons = opts.consolidated === undefined ? 1 : opts.consolidated;
+  const pool = rows.filter(r => r.consolidated === cons).length
+             ? rows.filter(r => r.consolidated === cons) : rows;
+  return pool.slice().sort((a,b) => (b.period_end||'').localeCompare(a.period_end||''))[0] || null;
+}
+function derivedSeries(co, metric, opts={}) {
+  const rows = (co.derived || []).filter(r => r.metric === metric);
+  if (!rows.length) return [];
+  const cons = opts.consolidated === undefined ? 1 : opts.consolidated;
+  const pool = rows.filter(r => r.consolidated === cons).length
+             ? rows.filter(r => r.consolidated === cons) : rows;
+  return pool.slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''))
+             .map(r => ({ period_end: r.period_end, value: r.value }));
+}
+function featureFirst(co, name) {
+  const v = (co.features || {})[name];
+  return (Array.isArray(v) && v.length) ? v[0] : null;
+}
+function featureValues(co, name) {
+  const v = (co.features || {})[name];
+  return Array.isArray(v) ? v : [];
+}
+function featureNamesPrefixed(co, prefix) {
+  return Object.keys(co.features || {}).filter(k => k.startsWith(prefix));
 }
 
-// ---------- UNIVERSE PAGE ----------
+/* Convert a slope ↑/↓/stable into a verdict label. */
+function trendVerdict(values, opts={}) {
+  const xs = values.filter(v => typeof v === 'number' && !isNaN(v));
+  if (xs.length < 2) return { verb: 'insufficient history', cls: 'verdict-na' };
+  const first = xs[0], last = xs[xs.length - 1];
+  if (first === 0) return { verb: 'stable', cls: 'verdict-neu' };
+  const change = (last - first) / Math.abs(first);
+  const dir = opts.lowerIsBetter ? -1 : 1;
+  if (change * dir >  0.10) return { verb: 'improving',      cls: 'verdict-good' };
+  if (change * dir < -0.10) return { verb: 'deteriorating',  cls: 'verdict-bad'  };
+  return { verb: 'stable', cls: 'verdict-neu' };
+}
+
+/* Format a missing-data placeholder block (panel-level). */
+function emptyState(text) {
+  return `<div class="empty-note">${text}</div>`;
+}
+
+/* ==========================================================================
+   5.  CHART HELPERS  (Chart.js)
+   ========================================================================== */
+function sparkline(canvas, values, color='#38bdf8') {
+  if (!canvas) return;
+  const xs = values.filter(v => typeof v === 'number' && !isNaN(v));
+  if (xs.length < 2) return;
+  new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: xs.map((_, i) => i),
+      datasets: [{ data: xs, borderColor: color, borderWidth: 1.6, fill: false,
+                   pointRadius: 0, tension: 0.25 }]
+    },
+    options: {
+      responsive: false, animation: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: { x: { display: false }, y: { display: false } },
+      elements: { line: { borderJoinStyle: 'round' } },
+    }
+  });
+}
+function hbar(canvas, labels, values, colors) {
+  if (!canvas || !labels.length) return;
+  new Chart(canvas, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: values, backgroundColor: colors || '#0ea5e9',
+                                  borderColor: '#0284c7', borderWidth: 1 }] },
+    options: {
+      indexAxis: 'y', responsive: false, animation: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color:'#64748b', font:{ size:10 } }, grid: { color:'#1e293b' } },
+        y: { ticks: { color:'#cbd5e1', font:{ size:11 } }, grid: { display: false } },
+      }
+    }
+  });
+}
+function radar(canvas, axes, mine, peer) {
+  if (!canvas) return;
+  new Chart(canvas, {
+    type: 'radar',
+    data: {
+      labels: axes,
+      datasets: [
+        { label: 'This co', data: mine, borderColor:'#38bdf8',
+          backgroundColor:'rgba(56,189,248,0.25)', borderWidth: 1.8 },
+        { label: 'Bucket avg', data: peer, borderColor:'#64748b',
+          backgroundColor:'rgba(100,116,139,0.15)', borderWidth: 1.2,
+          borderDash:[3,3] },
+      ]
+    },
+    options: {
+      responsive: false, animation: false,
+      plugins: { legend: { labels:{ color:'#94a3b8', boxWidth:8 } } },
+      scales: {
+        r: {
+          angleLines: { color:'#1e293b' }, grid: { color:'#1e293b' },
+          pointLabels: { color:'#cbd5e1', font:{ size:10 } },
+          ticks: { display:false, backdropColor:'transparent' },
+          suggestedMin: 0, suggestedMax: 100,
+        }
+      }
+    }
+  });
+}
+
+/* ==========================================================================
+   6.  SHARED COMPONENTS
+   ========================================================================== */
+function scoreClass(s) {
+  if (s === null || s === undefined) return 'heat-na';
+  return 'heat-' + s;
+}
+function scoreText(s) {
+  if (s === null || s === undefined) return '—';
+  return s + '/5';
+}
+function rankPill(rank, n) {
+  if (!rank || !n || n < 2) return '';
+  const cls = rank === 1 ? 'top' : (rank === n ? 'bot' : 'mid');
+  return `<span class="rank-pill ${cls}">Rank ${rank}/${n}</span>`;
+}
+function kpiCard(label, value, sub, verdict, verdictCls) {
+  return `
+    <div class="panel panel-tight">
+      <div class="lbl">${label}</div>
+      <div class="text-xl font-semibold text-slate-100 tnum">${value ?? '—'}</div>
+      ${sub ? `<div class="text-[11px] text-slate-500 tnum">${sub}</div>` : ''}
+      ${verdict ? `<div class="text-[11px] mt-1 ${verdictCls||'verdict-neu'}">${verdict}</div>` : ''}
+    </div>`;
+}
+function coverageBar(pct) {
+  const cls = pct >= 80 ? 'bg-emerald-500' : pct >= 50 ? 'bg-amber-500' : 'bg-red-500';
+  return `<span class="inline-flex items-center gap-2">
+    <span class="inline-block w-20 h-1.5 bg-slate-800 rounded overflow-hidden">
+      <span class="block h-full ${cls}" style="width:${pct}%"></span>
+    </span>
+    <span class="text-[11px] text-slate-400 tnum">${pct}%</span>
+  </span>`;
+}
+
+/* ==========================================================================
+   7.  UNIVERSE VIEW   (client-demo grade, calmer)
+   ========================================================================== */
 async function renderUniverse() {
   const app = document.getElementById('app');
-  app.innerHTML = '<div class="loading">Loading index…</div>';
-  const idx = await fetchJSON('data/export/index.json');
-  document.getElementById('meta-pill').textContent =
-    `${idx.totals.companies} companies · ${idx.totals.avg_coverage}% avg coverage · refreshed ${(idx.generated_at||'').slice(0,10)}`;
+  app.innerHTML = '<div class="text-slate-500 py-10">Loading universe…</div>';
+  const idx = await loadIndex();
+  const cos = await loadAllCompanies();
 
-  let sortKey = 'coverage_pct', sortDir = -1;
+  document.getElementById('metaPill').textContent =
+    `${idx.totals.companies} cos · ${idx.totals.avg_coverage}% avg coverage · ${fmt.date(idx.generated_at)}`;
+
+  /* per-company total score = sum of 1-5 across 10 factors */
+  const topScorer = idx.companies.slice().sort((a,b) => b.score_total - a.score_total)[0];
+
+  /* bucket grouping */
+  const byBucket = {};
+  for (const c of idx.companies) (byBucket[c.bucket] ||= []).push(c);
+
+  /* derived metrics map for bucket avg ROCE */
+  function avgRoceFor(slugs) {
+    const xs = slugs.map(s => {
+      const co = CACHE.companies[s]; if (!co) return null;
+      const r = derivedLatest(co, 'asset_turnover'); // not roce; use ratios
+      // prefer ratios.roce_pct
+      const ratioLatest = latest(co.ratios || [], { consolidated: 1 });
+      return ratioLatest && ratioLatest.roce_pct != null ? ratioLatest.roce_pct : null;
+    }).filter(v => v !== null);
+    if (!xs.length) return null;
+    return xs.reduce((s,v)=>s+v,0) / xs.length;
+  }
+
+  /* factor order matches scorecard panel layout */
+  const FACTORS = [
+    'tam_relevance', 'value_chain_quality', 'approval_technology_depth',
+    'order_book_quality', 'capacity_readiness', 'margin_sustainability',
+    'working_capital', 'competitive_position', 'balance_sheet',
+    'valuation_comfort'
+  ];
+  function scoreOf(co, factor) {
+    const s = (co.scorecard || []).find(r => r.factor === factor);
+    return s ? s.score : null;
+  }
+
+  /* filters */
   let bucketFilter = 'all';
-
-  function buckets() {
-    const set = new Set(idx.companies.map(c => c.bucket));
-    return ['all', ...[...set].sort()];
-  }
-
-  function rowsFor() {
-    const rows = idx.companies.filter(c => bucketFilter === 'all' || c.bucket === bucketFilter);
-    rows.sort((a,b) => {
-      const x = a[sortKey] ?? 0, y = b[sortKey] ?? 0;
-      return (x === y ? a.short.localeCompare(b.short) : (x<y ? 1 : -1)) * sortDir;
-    });
-    return rows;
-  }
+  let coverageFilter = 0;
+  const bucketOptions = ['all', ...Object.keys(byBucket).sort()];
 
   function repaint() {
-    const rows = rowsFor();
-    const totalScored = rows.reduce((s,r)=>s+r.score_total,0);
-    const avgCov = rows.length ? Math.round(rows.reduce((s,r)=>s+r.coverage_pct,0)/rows.length) : 0;
+    const filtered = idx.companies.filter(c =>
+      (bucketFilter === 'all' || c.bucket === bucketFilter) &&
+      c.coverage_pct >= coverageFilter
+    ).sort((a,b) => b.score_total - a.score_total);
 
     app.innerHTML = `
-      <section class="panel">
-        <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:14px;">
+      <!-- HERO -->
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        ${kpiCard('Companies tracked', idx.totals.companies, idx.totals.companies + ' across 7 buckets', null)}
+        ${kpiCard('Avg framework coverage', idx.totals.avg_coverage + '%', 'across all 28 names', null)}
+        ${kpiCard('Top scorer',
+          `<a href="#/c/${topScorer.slug}" class="text-sky-300 hover:underline">${topScorer.short}</a>`,
+          topScorer.score_total + ' / 50 across 10 factors', null)}
+        ${kpiCard('Avg score per company',
+          (idx.companies.reduce((s,c)=>s+c.score_total,0) / idx.companies.length).toFixed(1) + ' / 50',
+          'scored from framework rules', null)}
+      </section>
+
+      <!-- HEATMAP -->
+      <section class="panel panel-pad mb-6">
+        <div class="flex items-end justify-between mb-3 gap-3 flex-wrap">
           <div>
-            <label style="color:var(--muted); font-size:11px; text-transform:uppercase;">Bucket</label><br>
-            <select id="bucket" style="background:var(--panel2); color:var(--txt); border:1px solid var(--border); padding:6px 8px; border-radius:4px;">
-              ${buckets().map(b => `<option value="${b}" ${b===bucketFilter?'selected':''}>${b==='all'?'All buckets':fmt.bucketLabel(b)}</option>`).join('')}
+            <h2 class="text-base font-semibold text-slate-100">Universe scorecard heatmap</h2>
+            <div class="text-[12px] text-slate-500 mt-0.5">
+              Each row a company, each column a framework factor. Click a cell to open the X-Ray.
+            </div>
+          </div>
+          <div class="flex gap-2 items-center">
+            <select id="bucketSel" class="bg-slate-900 border border-slate-800 rounded px-2 py-1 text-xs">
+              ${bucketOptions.map(b => `<option value="${b}" ${b===bucketFilter?'selected':''}>
+                ${b==='all'?'All buckets':fmt.bucketLabel(b)}</option>`).join('')}
             </select>
-          </div>
-          <div class="kpi" style="margin-left:auto; min-width:140px;">
-            <div class="lbl">Companies shown</div>
-            <div class="val">${rows.length}</div>
-          </div>
-          <div class="kpi" style="min-width:140px;">
-            <div class="lbl">Avg coverage</div>
-            <div class="val">${avgCov}%</div>
-          </div>
-          <div class="kpi" style="min-width:140px;">
-            <div class="lbl">Total framework score</div>
-            <div class="val">${totalScored}</div>
+            <label class="text-[11px] text-slate-500">min coverage</label>
+            <input id="covSel" type="range" min="0" max="100" step="10" value="${coverageFilter}"
+                   class="w-24 accent-sky-500">
+            <span id="covVal" class="text-[11px] tnum text-slate-400">${coverageFilter}%</span>
           </div>
         </div>
 
-        <table>
-          <thead>
+        <div class="scroll-x">
+          <table class="text-[11px]">
+            <thead>
+              <tr>
+                <th class="text-left text-slate-500 px-2 py-1 sticky left-0 bg-[#0b1220]">Company</th>
+                <th class="text-left text-slate-500 px-2 py-1">Bucket</th>
+                <th class="text-right text-slate-500 px-2 py-1">Coverage</th>
+                <th class="text-right text-slate-500 px-2 py-1">Score</th>
+                ${FACTORS.map(f => `<th class="text-slate-500 px-1 py-1 text-[10px] uppercase tracking-wide" style="writing-mode:horizontal-tb">${fmt.factor(f).split(' ').slice(0,2).join(' ')}</th>`).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${filtered.map(c => {
+                const co = CACHE.companies[c.slug];
+                if (!co) return '';
+                return `
+                <tr class="row-link" data-slug="${c.slug}">
+                  <td class="px-2 py-1 sticky left-0 bg-[#0b1220] text-slate-200">
+                    <a href="#/c/${c.slug}" class="hover:text-sky-300">${c.short}</a>
+                  </td>
+                  <td class="px-2 py-1">
+                    <span class="chip muted text-[10px]">${fmt.bucketLabel(c.bucket)}</span>
+                  </td>
+                  <td class="px-2 py-1 text-right">${coverageBar(c.coverage_pct)}</td>
+                  <td class="px-2 py-1 text-right tnum text-slate-200 font-semibold">${c.score_total}</td>
+                  ${FACTORS.map(f => {
+                    const s = scoreOf(co, f);
+                    return `<td class="p-0">
+                      <a class="heat-cell ${scoreClass(s)}" href="#/c/${c.slug}"
+                         title="${fmt.factor(f)}: ${scoreText(s)}">${scoreText(s)}</a>
+                    </td>`;
+                  }).join('')}
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-[10px] text-slate-500 mt-3 flex gap-4 flex-wrap">
+          <span><span class="inline-block w-3 h-3 align-middle heat-5"></span> 5 (best in bucket)</span>
+          <span><span class="inline-block w-3 h-3 align-middle heat-4"></span> 4</span>
+          <span><span class="inline-block w-3 h-3 align-middle heat-3"></span> 3</span>
+          <span><span class="inline-block w-3 h-3 align-middle heat-2"></span> 2</span>
+          <span><span class="inline-block w-3 h-3 align-middle heat-1"></span> 1</span>
+          <span><span class="inline-block w-3 h-3 align-middle heat-na"></span> insufficient data</span>
+        </div>
+      </section>
+
+      <!-- BUCKET SUMMARY -->
+      <section class="panel panel-pad">
+        <h2 class="text-base font-semibold text-slate-100 mb-1">Buckets at a glance</h2>
+        <p class="text-[12px] text-slate-500 mb-3">
+          Average ROCE only shown where Screener ratios are present for the constituents.
+        </p>
+        <table class="w-full text-sm">
+          <thead class="text-[10px] uppercase text-slate-500 tracking-wide">
             <tr>
-              <th class="sortable" data-k="short">Company</th>
-              <th class="sortable" data-k="bucket">Bucket</th>
-              <th class="sortable" data-k="coverage_pct" style="text-align:right;">Coverage</th>
-              <th class="sortable" data-k="score_total" style="text-align:right;">Score</th>
-              <th class="sortable" data-k="scored_factors" style="text-align:right;">Scored factors</th>
+              <th class="text-left py-2">Bucket</th>
+              <th class="text-right">Cos</th>
+              <th class="text-right">Avg coverage</th>
+              <th class="text-right">Avg score</th>
+              <th class="text-left pl-6">Top scorer</th>
+              <th class="text-right">Avg ROCE</th>
+            </tr>
+          </thead>
+          <tbody class="text-[13px]">
+            ${Object.entries(byBucket).map(([bk, cs]) => {
+              const avgCov = Math.round(cs.reduce((s,c)=>s+c.coverage_pct,0)/cs.length);
+              const avgScr = (cs.reduce((s,c)=>s+c.score_total,0)/cs.length).toFixed(1);
+              const top = cs.slice().sort((a,b)=>b.score_total-a.score_total)[0];
+              const avgRoce = avgRoceFor(cs.map(c=>c.slug));
+              return `<tr class="border-t border-slate-800 hover:bg-slate-900/40">
+                <td class="py-2">
+                  <a href="#/bucket/${bk}" class="text-sky-300 hover:underline">${fmt.bucketLabel(bk)}</a>
+                </td>
+                <td class="text-right tnum">${cs.length}</td>
+                <td class="text-right tnum">${avgCov}%</td>
+                <td class="text-right tnum">${avgScr}</td>
+                <td class="pl-6">
+                  <a href="#/c/${top.slug}" class="text-slate-200 hover:text-sky-300">${top.short}</a>
+                  <span class="text-slate-500 text-[11px]">(${top.score_total})</span>
+                </td>
+                <td class="text-right tnum">${avgRoce === null ? '—' : fmt.pct(avgRoce,1)}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+      </section>
+    `;
+
+    /* wire filter controls */
+    document.getElementById('bucketSel').addEventListener('change', e => {
+      bucketFilter = e.target.value; repaint();
+    });
+    const cov = document.getElementById('covSel');
+    cov.addEventListener('input', e => {
+      coverageFilter = +e.target.value;
+      document.getElementById('covVal').textContent = coverageFilter + '%';
+    });
+    cov.addEventListener('change', e => {
+      coverageFilter = +e.target.value; repaint();
+    });
+    document.querySelectorAll('tr.row-link').forEach(tr => {
+      tr.addEventListener('click', ev => {
+        if (ev.target.closest('a.heat-cell, a')) return; // anchors handle their own clicks
+        nav('/c/' + tr.dataset.slug);
+      });
+    });
+  }
+  repaint();
+}
+
+/* ==========================================================================
+   8.  COMPANY X-RAY   (primary, dense Bloomberg vibe)
+   ========================================================================== */
+async function renderCompany(slug) {
+  const app = document.getElementById('app');
+  app.innerHTML = '<div class="text-slate-500 py-10">Loading ' + slug + '…</div>';
+  let co;
+  try { co = await loadCompany(slug); }
+  catch (e) {
+    app.innerHTML = `<div class="empty-note">Company "${slug}" not found.</div>`;
+    return;
+  }
+
+  /* preload peer data for the bucket */
+  await loadAllCompanies();
+
+  const idx = await loadIndex();
+  const meta = idx.companies.find(c => c.slug === slug) || {};
+  document.getElementById('metaPill').textContent =
+    `${co.company.short} · ${fmt.bucketLabel(co.company.bucket)} · ${co.coverage_pct}%`;
+
+  /* gather latest values */
+  const m = co.market || null;
+  const fyQ = (co.financials && co.financials.quarterly) || [];
+  const latestQ_C  = latest(fyQ, { consolidated: 1 });
+  const latestQ_S  = latest(fyQ, { consolidated: 0 });
+  const latestQ    = latestQ_C || latestQ_S;
+  const latestBS   = latest(co.balance_sheet || [], { consolidated: 1 });
+  const latestCF   = latest(co.cash_flow || [], { consolidated: 1 });
+  const latestRT   = latest(co.ratios || [], { consolidated: 1 });
+
+  const ebitdaM = derivedLatest(co, 'ebitda_margin_pct');
+  const revGrw  = derivedLatest(co, 'revenue_growth_yoy_pct');
+  const ebGrw   = derivedLatest(co, 'ebitda_growth_yoy_pct');
+  const patGrw  = derivedLatest(co, 'pat_growth_yoy_pct');
+  const debtEq  = derivedLatest(co, 'debt_to_equity');
+  const fcfPx   = derivedLatest(co, 'fcf_proxy_inr_cr');
+  const cfoEb   = derivedLatest(co, 'cfo_to_ebitda_pct');
+  const netW    = derivedLatest(co, 'net_worth_inr_cr');
+  const ttmRev  = derivedLatest(co, 'ttm_revenue_inr_cr');
+  const ttmEb   = derivedLatest(co, 'ttm_ebitda_inr_cr');
+
+  /* derived: peer rank for headline metric */
+  const totalScore = (co.scorecard || []).reduce((s,r) => s + (r.score || 0), 0);
+  const scoredCnt  = (co.scorecard || []).filter(r => r.score != null).length;
+
+  /* market data row */
+  let marketRow;
+  if (!m) {
+    marketRow = `<div class="text-[11px] text-slate-500 italic">Market data not available in current export.</div>`;
+  } else {
+    const change = m.pct_change;
+    const chgCls = change == null ? 'text-slate-400' : (change >= 0 ? 'text-emerald-300' : 'text-red-300');
+    const rangeBar = (m.week52_low != null && m.week52_high != null && m.price != null)
+      ? renderRangeBar(m.price, m.week52_low, m.week52_high) : '';
+    marketRow = `
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-[12px] tnum mt-1">
+        <div><span class="lbl mr-1">Latest mkt</span>
+             <span class="text-slate-200">₹${fmt.num(m.price,2)}</span>
+             <span class="${chgCls} ml-1">${change != null ? fmt.signedPct(change,2) : ''}</span></div>
+        <div><span class="lbl mr-1">MCap</span><span class="text-slate-200">${fmt.crore(m.market_cap_cr)}</span></div>
+        <div><span class="lbl mr-1">P/E</span><span class="text-slate-200">${fmt.num(m.pe_ratio,1)}</span></div>
+        <div><span class="lbl mr-1">P/B</span><span class="text-slate-200">${fmt.num(m.pb_ratio,2)}</span></div>
+        <div><span class="lbl mr-1">Div yield</span><span class="text-slate-200">${m.dividend_yield != null ? fmt.pct(m.dividend_yield,2) : '—'}</span></div>
+        ${rangeBar ? `<div class="flex items-center gap-2"><span class="lbl">52w</span>${rangeBar}</div>`:''}
+        <div class="text-slate-500">as of ${fmt.date(m.fetched_at)}</div>
+      </div>`;
+  }
+
+  /* render */
+  app.innerHTML = `
+    <!-- BREADCRUMB -->
+    <div class="text-[12px] text-slate-500 mb-3 flex items-center gap-2">
+      <a href="#/" class="text-sky-300 hover:underline">Universe</a>
+      <span>›</span>
+      <a href="#/bucket/${co.company.bucket}" class="hover:text-sky-300">${fmt.bucketLabel(co.company.bucket)}</a>
+      <span>›</span>
+      <span class="text-slate-300">${co.company.short}</span>
+    </div>
+
+    <!-- P1: HEADER -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-start gap-4 flex-wrap">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-3 flex-wrap">
+            <h1 class="text-xl font-semibold text-slate-100">${co.company.name}</h1>
+            <span class="chip">${fmt.bucketLabel(co.company.bucket)}</span>
+            ${co.company.secondary ? `<span class="chip muted">secondary: ${fmt.bucketLabel(co.company.secondary)}</span>` : ''}
+          </div>
+          <div class="text-[12px] text-slate-500 mt-1 tnum">
+            BSE ${co.company.bse || '—'} · NSE ${co.company.nse || '—'}
+          </div>
+          ${marketRow}
+        </div>
+        <div class="text-right">
+          <div class="text-[10px] text-slate-500 uppercase tracking-wide">Framework score</div>
+          <div class="text-2xl font-semibold text-slate-100 tnum">${totalScore}<span class="text-slate-500 text-base">/50</span></div>
+          <div class="text-[11px] text-slate-500 tnum">${scoredCnt}/10 factors scored</div>
+          <div class="mt-2">${coverageBar(co.coverage_pct)}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P2: 10-FACTOR SCORECARD -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">10-factor framework scorecard</h2>
+        <span class="text-[11px] text-slate-500">framework § 10 · click a card for inputs</span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-2" id="scorecardGrid">
+        ${(co.scorecard || []).map((s, i) => renderScoreCell(s, i, co)).join('')}
+      </div>
+    </section>
+
+    <!-- P3: FINANCIAL TREND SPARKLINES -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Financial trend (last 13 quarters)</h2>
+        <span class="text-[11px] text-slate-500">framework § 11 · margin sustainability</span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="finTiles">
+        ${renderFinTile('Revenue', series(fyQ, 'revenue', {consolidated:1}), latestQ && latestQ.revenue, revGrw, 'cr')}
+        ${renderFinTile('EBITDA', series(fyQ, 'ebitda', {consolidated:1}),  latestQ && latestQ.ebitda,  ebGrw, 'cr')}
+        ${renderFinTile('PAT',    series(fyQ, 'pat',    {consolidated:1}),  latestQ && latestQ.pat,    patGrw,'cr')}
+        ${renderMarginTile(fyQ, ebitdaM)}
+      </div>
+    </section>
+
+    <!-- P4: WORKING CAPITAL & CASH CONVERSION -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Working capital &amp; cash conversion</h2>
+        <span class="text-[11px] text-slate-500">framework § 8 + § 12</span>
+      </div>
+      ${renderWorkingCap(co, latestRT, cfoEb)}
+    </section>
+
+    <!-- P5: BUCKET-SPECIFIC PANEL -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">
+          Bucket diligence · ${fmt.bucketLabel(co.company.bucket)}
+        </h2>
+        <span class="text-[11px] text-slate-500">framework § ${bucketFrameworkSection(co.company.bucket)}</span>
+      </div>
+      ${renderBucketPanel(co)}
+    </section>
+
+    <!-- P6: PEER COMPARISON -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Peer comparison · within bucket</h2>
+        <span class="text-[11px] text-slate-500">framework § 14 (peer rank discipline)</span>
+      </div>
+      ${renderPeerComparison(co)}
+    </section>
+
+    <!-- P7: RED FLAGS -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Red-flag detector</h2>
+        <span class="text-[11px] text-slate-500">framework § 23 · every flag cites trigger</span>
+      </div>
+      ${renderRedFlags(co)}
+    </section>
+
+    <!-- P8: SOURCE DOCUMENTS -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Source documents</h2>
+        <span class="text-[11px] text-slate-500">framework § 2 · source hierarchy</span>
+      </div>
+      ${renderDocuments(co)}
+    </section>
+
+    <!-- P9: MANAGEMENT QUESTIONS -->
+    <section class="panel panel-pad mb-4">
+      <div class="flex items-baseline justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-200">Management questions to ask</h2>
+        <span class="text-[11px] text-slate-500">framework § 24 · bucket-specific</span>
+      </div>
+      ${renderMgmtQuestions(co.company.bucket)}
+    </section>
+
+    <!-- THESIS PROMPT -->
+    <section class="panel panel-pad mb-6 border-dashed">
+      <div class="lbl mb-1">Framework § 25 · analyst-fill</div>
+      <div class="text-[13px] text-slate-300">What needs to be true for this to be a good investment? &nbsp;·&nbsp; What would prove the thesis wrong?</div>
+    </section>
+  `;
+
+  /* wire scorecard expand-on-click */
+  document.querySelectorAll('.score-cell').forEach(el => {
+    el.addEventListener('click', () => {
+      const exp = el.querySelector('.score-inputs');
+      if (exp) exp.classList.toggle('hidden');
+    });
+  });
+
+  /* draw all sparklines + charts after DOM */
+  finalizeCharts(co);
+}
+
+function bucketFrameworkSection(b) {
+  return ({
+    transmission_asset_owner: 13,
+    distribution_discom: 14,
+    transformer_manufacturer: 15,
+    hvdc_facts_oem: 16,
+    towers_conductors_cables: 17,
+    smart_meters_automation: 18,
+    transmission_epc: 19,
+    component_supplier: 20,
+  })[b] || '—';
+}
+
+function renderScoreCell(s, i, co) {
+  const cls = scoreClass(s.score);
+  const inputs = (s.inputs && typeof s.inputs === 'object') ? s.inputs : {};
+  const rows = (co.scorecard || []);
+  // peer rank: pull from derived if available e.g. for margin & growth
+  return `
+    <div class="score-cell rounded-md border border-slate-800 ${cls} p-2 cursor-pointer transition-all">
+      <div class="flex items-start justify-between gap-1">
+        <div class="text-[10px] uppercase tracking-wide opacity-80 font-semibold">${fmt.factor(s.factor)}</div>
+        <div class="text-base font-semibold tnum opacity-95">${scoreText(s.score)}</div>
+      </div>
+      <div class="text-[11px] opacity-90 mt-1 leading-snug">${(s.evidence||'').slice(0, 180)}</div>
+      <div class="score-inputs hidden mt-2 text-[10px] opacity-80">
+        <pre class="whitespace-pre-wrap break-words bg-black/30 p-2 rounded">${
+          Object.keys(inputs).length ? JSON.stringify(inputs, null, 1) : '(no underlying inputs recorded)'
+        }</pre>
+      </div>
+    </div>`;
+}
+
+function renderFinTile(label, srs, latestVal, growthRow, unit) {
+  const id = 'spark_' + label.toLowerCase().replace(/[^a-z]/g,'') + '_' + Math.random().toString(36).slice(2,7);
+  const values = srs.map(r => r.value);
+  const verdict = trendVerdict(values);
+  const yoyPct = growthRow ? growthRow.value : null;
+  const yoyTxt = yoyPct == null ? '—' : fmt.signedPct(yoyPct,1);
+  const yoyCls = yoyPct == null ? 'verdict-na' : (yoyPct >= 0 ? 'verdict-good' : 'verdict-bad');
+  const valTxt = latestVal == null ? '—' : (unit==='cr' ? fmt.crore(latestVal) : fmt.num(latestVal));
+  return `
+    <div class="panel panel-tight">
+      <div class="flex items-baseline justify-between">
+        <div class="lbl">${label} (Q)</div>
+        <div class="text-[11px] tnum ${yoyCls}">YoY ${yoyTxt}</div>
+      </div>
+      <div class="text-lg font-semibold text-slate-100 tnum mt-0.5">${valTxt}</div>
+      <canvas id="${id}" width="240" height="36" class="mt-1 max-w-full"></canvas>
+      <div class="text-[11px] mt-1 ${verdict.cls}">trend: ${verdict.verb}</div>
+    </div>`;
+}
+function renderMarginTile(fyQ, ebitdaM) {
+  /* ebitda margin per quarter, computed inline (we don't have it stored per-quarter) */
+  const margins = fyQ.filter(r => r.consolidated === 1)
+                     .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''))
+                     .map(r => (r.revenue && r.ebitda) ? (r.ebitda/r.revenue)*100 : null);
+  const valid = margins.filter(v => v != null && !isNaN(v));
+  const id = 'spark_margin_' + Math.random().toString(36).slice(2,7);
+  const verdict = trendVerdict(valid);
+  const latestM = valid.length ? valid[valid.length - 1] : null;
+  /* peak detector */
+  const avg = valid.length ? valid.reduce((s,v)=>s+v,0)/valid.length : null;
+  let peakNote = '';
+  if (latestM != null && avg != null && avg > 0) {
+    if (latestM > 1.2 * avg) peakNote = `<div class="verdict-neu text-[11px] mt-1">at ${(latestM/avg).toFixed(2)}× 4yr avg — peak-cycle risk (§11)</div>`;
+    else if (latestM < 0.8 * avg) peakNote = `<div class="verdict-bad text-[11px] mt-1">below 4yr avg (${avg.toFixed(1)}%) — under-earning</div>`;
+  }
+  return `
+    <div class="panel panel-tight">
+      <div class="flex items-baseline justify-between">
+        <div class="lbl">EBITDA margin (Q)</div>
+        <div class="text-[11px] tnum text-slate-500">avg ${avg!=null?avg.toFixed(1)+'%':'—'}</div>
+      </div>
+      <div class="text-lg font-semibold text-slate-100 tnum mt-0.5">${latestM != null ? latestM.toFixed(1)+'%' : '—'}</div>
+      <canvas id="${id}" width="240" height="36" class="mt-1 max-w-full"></canvas>
+      <div class="text-[11px] mt-1 ${verdict.cls}">trend: ${verdict.verb}</div>
+      ${peakNote}
+    </div>`;
+}
+
+function renderWorkingCap(co, latestRT, cfoEb) {
+  const rt = (co.ratios || []).filter(r => r.consolidated === 1)
+               .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''));
+  if (!rt.length) {
+    return emptyState('Working capital trajectory not derivable — ratios table is empty for this company.');
+  }
+  const first = rt[0], last = rt[rt.length - 1];
+  const dD = (last.debtor_days != null && first.debtor_days != null && first.debtor_days > 0)
+              ? (last.debtor_days - first.debtor_days) / first.debtor_days * 100 : null;
+  const wcD = (last.working_cap_days != null && first.working_cap_days != null && first.working_cap_days > 0)
+              ? (last.working_cap_days - first.working_cap_days) / first.working_cap_days * 100 : null;
+  let verdict, cls;
+  if (wcD == null && dD == null) { verdict = 'no trend (single-period data only)'; cls = 'verdict-na'; }
+  else {
+    const k = wcD != null ? wcD : dD;
+    if (k <= -10)      { verdict = 'improving — days falling'; cls = 'verdict-good'; }
+    else if (k >=  10) { verdict = 'deteriorating — days rising'; cls = 'verdict-bad'; }
+    else               { verdict = 'broadly stable'; cls = 'verdict-neu'; }
+  }
+  const chgWcStr = wcD == null ? '' : ` (${fmt.signedPct(wcD,1)} over ${rt.length-1}y)`;
+
+  return `
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+      ${kpiCard('Working capital days', latestRT && latestRT.working_cap_days != null ? fmt.num(latestRT.working_cap_days) : '—',
+                latestRT ? 'as of ' + fmt.date(latestRT.period_end) : '', null)}
+      ${kpiCard('Debtor days', latestRT && latestRT.debtor_days != null ? fmt.num(latestRT.debtor_days) : '—',
+                dD != null ? fmt.signedPct(dD,0)+' over '+(rt.length-1)+'y' : '', null)}
+      ${kpiCard('Inventory days', latestRT && latestRT.inventory_days != null ? fmt.num(latestRT.inventory_days) : '—', '', null)}
+      ${kpiCard('CFO / EBITDA', cfoEb && cfoEb.value != null ? fmt.pct(cfoEb.value,0) : '—',
+                "framework's key earnings-quality test", cfoEb && cfoEb.value != null && cfoEb.value < 50 ? 'weak cash conversion' : '',
+                cfoEb && cfoEb.value != null && cfoEb.value < 50 ? 'verdict-bad' : '')}
+    </div>
+    <div class="text-[12px] ${cls}">
+      <span class="lbl mr-2">Verdict</span>Working capital ${verdict}${chgWcStr}.
+    </div>`;
+}
+
+/* peer comparison panel */
+function renderPeerComparison(co) {
+  const idx = CACHE.index;
+  const peers = idx.companies.filter(c => c.bucket === co.company.bucket);
+  if (peers.length < 2) {
+    return emptyState('Single-company bucket — peer comparison not applicable.');
+  }
+  /* compute axes */
+  const axes = ['EBITDA margin', 'Rev growth', 'ROCE', 'Asset turn', 'Low debt', 'Low WC days'];
+  function norm(co, metric, lowerBetter=false) {
+    const m = derivedLatest(co, metric);
+    if (!m || m.bucket_rank == null || m.bucket_n == null || m.bucket_n < 2) return null;
+    /* invert so rank 1 = 100, rank N = 0 */
+    const score = 100 * (m.bucket_n - m.bucket_rank) / (m.bucket_n - 1);
+    return Math.max(0, Math.min(100, score));
+  }
+  function ratioRank(co, key, lowerBetter=true) {
+    const rt = latest(co.ratios || [], { consolidated: 1 });
+    if (!rt) return null;
+    const peersVals = peers.map(p => {
+      const r = latest((CACHE.companies[p.slug]||{}).ratios||[], { consolidated: 1 });
+      return r ? r[key] : null;
+    }).filter(v => v != null);
+    if (peersVals.length < 2 || rt[key] == null) return null;
+    const sorted = peersVals.slice().sort((a,b) => lowerBetter ? a-b : b-a);
+    const rank = sorted.indexOf(rt[key]) + 1;
+    return 100 * (peersVals.length - rank) / (peersVals.length - 1);
+  }
+
+  const mine = [
+    norm(co, 'ebitda_margin_pct'),
+    norm(co, 'revenue_growth_yoy_pct'),
+    ratioRank(co, 'roce_pct', false),
+    norm(co, 'asset_turnover'),
+    norm(co, 'debt_to_equity', true) === null ? null : (100 - norm(co, 'debt_to_equity', true)),
+    ratioRank(co, 'working_cap_days', true),
+  ].map(v => v == null ? 0 : v);
+
+  const peerAvg = axes.map(() => 50); // mid by definition (peer-rank space)
+
+  const id = 'radar_' + Math.random().toString(36).slice(2,7);
+
+  /* peer table */
+  const rows = peers.map(p => {
+    const cco = CACHE.companies[p.slug];
+    if (!cco) return null;
+    const rt = latest(cco.ratios || [], { consolidated:1 });
+    const em = derivedLatest(cco, 'ebitda_margin_pct');
+    const rg = derivedLatest(cco, 'revenue_growth_yoy_pct');
+    const de = derivedLatest(cco, 'debt_to_equity');
+    return {
+      slug: p.slug, short: p.short, isMe: p.slug === co.company.short.toLowerCase().replace(/[^a-z0-9]+/g,'_'),
+      coverage: p.coverage_pct, score: p.score_total,
+      roce: rt ? rt.roce_pct : null,
+      wc:   rt ? rt.working_cap_days : null,
+      em:   em ? em.value : null,
+      rg:   rg ? rg.value : null,
+      de:   de ? de.value : null,
+    };
+  }).filter(Boolean);
+  /* find this co's row */
+  rows.forEach(r => r.isMe = (r.slug === co.company.short.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'_')));
+  /* if isMe still none, try matching by raw slug from short */
+  if (!rows.some(r => r.isMe)) {
+    rows.forEach(r => r.isMe = (CACHE.companies[r.slug] === co));
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <canvas id="${id}" width="360" height="280" class="max-w-full"></canvas>
+        <div class="text-[11px] text-slate-500 mt-1">
+          Each axis = peer percentile within bucket (100 = best, 0 = worst). Dashed = bucket midpoint.
+        </div>
+      </div>
+      <div class="scroll-x">
+        <table class="w-full text-[12px]">
+          <thead class="text-[10px] uppercase text-slate-500 tracking-wide">
+            <tr>
+              <th class="text-left py-1">Co</th>
+              <th class="text-right">Coverage</th>
+              <th class="text-right">Score</th>
+              <th class="text-right">ROCE</th>
+              <th class="text-right">EBITDA m</th>
+              <th class="text-right">Rev YoY</th>
+              <th class="text-right">D/E</th>
+              <th class="text-right">WC days</th>
             </tr>
           </thead>
           <tbody>
             ${rows.map(r => `
-              <tr class="row" data-slug="${r.slug}">
-                <td><strong>${r.short}</strong></td>
-                <td><span class="bucket">${fmt.bucketLabel(r.bucket)}</span></td>
-                <td class="pct">
-                  <span class="cov-bar"><span class="cov-fill ${covClass(r.coverage_pct)}" style="width:${r.coverage_pct}%"></span></span>
-                  ${r.coverage_pct}%
-                </td>
-                <td class="num">${r.score_total}</td>
-                <td class="num">${r.scored_factors}/10</td>
+              <tr class="${r.isMe ? 'bg-sky-950/30 text-sky-200' : ''} border-t border-slate-800">
+                <td class="py-1"><a href="#/c/${r.slug}" class="hover:text-sky-300">${r.short}${r.isMe ? ' ←' : ''}</a></td>
+                <td class="text-right tnum">${r.coverage}%</td>
+                <td class="text-right tnum">${r.score}</td>
+                <td class="text-right tnum">${r.roce != null ? fmt.pct(r.roce,1) : '—'}</td>
+                <td class="text-right tnum">${r.em != null ? fmt.pct(r.em,1) : '—'}</td>
+                <td class="text-right tnum">${r.rg != null ? fmt.signedPct(r.rg,1) : '—'}</td>
+                <td class="text-right tnum">${r.de != null ? fmt.ratio(r.de,2) : '—'}</td>
+                <td class="text-right tnum">${r.wc != null ? fmt.num(r.wc) : '—'}</td>
               </tr>
             `).join('')}
           </tbody>
         </table>
+      </div>
+    </div>
+    <script type="application/json" id="radarData_${id}">${
+      JSON.stringify({ axes, mine, peer: peerAvg })
+    }<\/script>
+  `;
+}
+
+/* documents panel */
+function renderDocuments(co) {
+  const docs = (co.documents || []);
+  if (!docs.length) return emptyState('No company filings indexed yet.');
+
+  /* group by doc_kind */
+  const groups = {};
+  for (const d of docs) (groups[d.doc_kind || 'other'] ||= []).push(d);
+
+  return `<div class="grid md:grid-cols-2 gap-3">${
+    Object.entries(groups).map(([kind, list]) => `
+      <div>
+        <div class="lbl mb-1">${kind.replace(/_/g, ' ')} (${list.length})</div>
+        <div class="space-y-1">
+          ${list.slice(0, 10).map(d => `
+            <div class="text-[12px] flex items-center gap-2">
+              <span class="${d.extract_status === 'ok' ? 'text-emerald-400' : 'text-slate-600'}">●</span>
+              ${d.pdf_url ? `<a href="${d.pdf_url}" target="_blank" rel="noreferrer" class="text-sky-300 hover:underline truncate flex-1">open PDF</a>` : '<span class="text-slate-500">—</span>'}
+              <span class="text-slate-500 tnum">${d.page_count != null ? d.page_count + 'p' : ''}</span>
+              <span class="text-slate-600 text-[10px] tnum">${fmt.date(d.extracted_at)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('')
+  }</div>`;
+}
+
+/* range bar for 52-week */
+function renderRangeBar(price, lo, hi) {
+  if (lo == null || hi == null || hi <= lo) return '';
+  const pct = Math.max(0, Math.min(100, (price - lo) / (hi - lo) * 100));
+  return `
+    <span class="inline-flex items-center gap-1">
+      <span class="text-[10px] text-slate-500 tnum">${fmt.num(lo)}</span>
+      <span class="relative w-20 h-1 bg-slate-800 rounded">
+        <span class="absolute -top-0.5 w-2 h-2 bg-sky-300 rounded-full" style="left:calc(${pct}% - 4px)"></span>
+      </span>
+      <span class="text-[10px] text-slate-500 tnum">${fmt.num(hi)}</span>
+    </span>`;
+}
+
+/* ==========================================================================
+   8b. SCORECARD / SPARKLINE CHARTS FINALIZER
+   ========================================================================== */
+function finalizeCharts(co) {
+  /* sparklines for the financial tile canvases */
+  const fyQ = (co.financials && co.financials.quarterly) || [];
+  const cons = fyQ.filter(r => r.consolidated === 1)
+                  .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''));
+  const draw = (id_prefix, key, color='#38bdf8') => {
+    const els = document.querySelectorAll(`canvas[id^="${id_prefix}"]`);
+    els.forEach(el => {
+      const vals = cons.map(r => r[key]).filter(v => v != null && !isNaN(v));
+      if (vals.length >= 2) sparkline(el, vals, color);
+    });
+  };
+  /* match canvas ids: spark_revenue_*, spark_ebitda_*, spark_pat_*, spark_margin_* */
+  document.querySelectorAll('canvas[id^="spark_revenue"]').forEach(el => {
+    sparkline(el, cons.map(r => r.revenue).filter(v => v != null), '#38bdf8');
+  });
+  document.querySelectorAll('canvas[id^="spark_ebitda"]').forEach(el => {
+    sparkline(el, cons.map(r => r.ebitda).filter(v => v != null), '#10b981');
+  });
+  document.querySelectorAll('canvas[id^="spark_pat"]').forEach(el => {
+    sparkline(el, cons.map(r => r.pat).filter(v => v != null), '#f59e0b');
+  });
+  document.querySelectorAll('canvas[id^="spark_margin"]').forEach(el => {
+    const margins = cons.map(r => (r.revenue && r.ebitda) ? (r.ebitda/r.revenue)*100 : null)
+                        .filter(v => v != null);
+    sparkline(el, margins, '#fbbf24');
+  });
+
+  /* radar */
+  document.querySelectorAll('script[id^="radarData_"]').forEach(s => {
+    const id = s.id.replace('radarData_', '');
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+    const d = JSON.parse(s.textContent);
+    radar(canvas, d.axes, d.mine, d.peer);
+  });
+
+  /* DISCOM AT&C horizontal bars */
+  const atcCanvas = document.getElementById('discom_atc_chart');
+  if (atcCanvas) {
+    const dataNode = document.getElementById('discom_atc_data');
+    if (dataNode) {
+      const d = JSON.parse(dataNode.textContent);
+      hbar(atcCanvas, d.labels, d.values, d.values.map(v => v < 10 ? '#10b981' : v < 20 ? '#f59e0b' : '#ef4444'));
+    }
+  }
+}
+
+/* ==========================================================================
+   9.  BUCKET-SPECIFIC PANELS
+   ========================================================================== */
+function renderBucketPanel(co) {
+  switch (co.company.bucket) {
+    case 'distribution_discom':       return panelDiscom(co);
+    case 'transmission_asset_owner':  return panelAssetOwner(co);
+    case 'transformer_manufacturer':  return panelTransformer(co);
+    case 'hvdc_facts_oem':            return panelHvdc(co);
+    case 'towers_conductors_cables':  return panelTowers(co);
+    case 'smart_meters_automation':   return panelSmartMeters(co);
+    case 'transmission_epc':          return panelEpc(co);
+    case 'component_supplier':        return panelComponent(co);
+    default: return emptyState('No bucket-specific panel registered for this bucket.');
+  }
+}
+
+/* ---- DISCOM (§14) ---- */
+function panelDiscom(co) {
+  const keys = featureNamesPrefixed(co, 'atc_loss_pct.');
+  const main = [];
+  for (const k of keys) {
+    const f = featureFirst(co, k);
+    if (f && f.value_num != null) {
+      /* extract circle / period from the key, e.g. atc_loss_pct.TPDDL.fy26 */
+      const parts = k.split('.').slice(1);
+      const circle = parts.slice(0, parts.length - 1).join('.') || 'all-India';
+      const period = parts[parts.length - 1] || '';
+      main.push({
+        circle, period, value: f.value_num, evidence: f.evidence,
+      });
+    }
+  }
+  /* sort by value desc */
+  main.sort((a,b) => b.value - a.value);
+
+  const smartFeatures = ['smart_meter_progress_text']
+    .map(n => featureFirst(co, n)).filter(Boolean);
+
+  const sectorCapex = featureFirst(co, 'sector_capex_pipeline_fy25_32_inr_trn');
+
+  let chartBlock = '';
+  if (main.length) {
+    const labels = main.map(m => m.circle + (m.period ? ` (${m.period})` : ''));
+    const values = main.map(m => m.value);
+    chartBlock = `
+      <div>
+        <div class="lbl mb-1">AT&amp;C losses by circle / franchisee</div>
+        <canvas id="discom_atc_chart" width="${Math.max(360, labels.length*16)}" height="${Math.max(120, labels.length*26)}" class="max-w-full"></canvas>
+        <script type="application/json" id="discom_atc_data">${JSON.stringify({labels, values})}<\/script>
+        <div class="mt-2 grid md:grid-cols-2 gap-1 text-[11px] text-slate-500">
+          ${main.slice(0, 8).map(m => `<div>${m.circle} ${m.period}: <span class="text-slate-300 tnum">${m.value.toFixed(1)}%</span> — ${(m.evidence||'').slice(0,80)}</div>`).join('')}
+        </div>
+      </div>`;
+  } else {
+    chartBlock = emptyState('AT&C circle-level data not available for this company in current export.');
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      ${chartBlock}
+      <div>
+        <div class="lbl mb-1">Other DISCOM diligence (framework §14)</div>
+        <div class="space-y-2 text-[12px]">
+          ${smartFeatures.length ? smartFeatures.map(f => `
+            <div class="panel panel-tight">
+              <div class="text-slate-300">${f.value_text || ''}</div>
+              <div class="text-slate-500 text-[11px] mt-1">${(f.evidence||'').slice(0,200)}</div>
+            </div>
+          `).join('') : emptyState('Smart meter rollout disclosure not available.')}
+
+          ${sectorCapex ? `
+            <div class="panel panel-tight">
+              <div class="lbl">Sector context</div>
+              <div class="text-slate-300 tnum">${fmt.num(sectorCapex.value_num,2)} ${sectorCapex.unit || ''}</div>
+              <div class="text-slate-500 text-[11px] mt-1">${(sectorCapex.evidence||'').slice(0,200)}</div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    </div>`;
+}
+
+/* ---- Asset owner (§13) ---- */
+function panelAssetOwner(co) {
+  /* look for ingredients */
+  const transmissionIncome = featureFirst(co, 'transmission_income_fy26_consolidated_inr_cr');
+  const cwip = latest(co.balance_sheet || [], { consolidated: 1 });
+  const cwipSeries = (co.balance_sheet || []).filter(r => r.consolidated === 1)
+                          .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''));
+  const tbcbItems = featureValues(co, 'tbcb_transmission_pipeline_ckm');
+  const capexFY28 = featureFirst(co, 'capex_guidance_fy28_inr_cr') || featureFirst(co, 'fy27_planned_capex_inr_cr');
+  const hvdcStatus = featureFirst(co, 'hvdc_projects_under_execution_text');
+  const rowStatus = featureFirst(co, 'row_status.fatehpur_bhadla') || featureFirst(co, 'row_issues');
+
+  const showable = transmissionIncome || cwip || tbcbItems.length || capexFY28 || hvdcStatus || rowStatus;
+  if (!showable) {
+    return emptyState('Regulated income / CWIP / TBCB pipeline disclosure not available in current export.');
+  }
+
+  /* CWIP trend block */
+  let cwipBlock = '';
+  if (cwipSeries.length >= 2) {
+    const cwipVals = cwipSeries.map(r => r.cwip).filter(v => v != null);
+    if (cwipVals.length >= 2) {
+      const first = cwipVals[0], last = cwipVals[cwipVals.length - 1];
+      const chg = first > 0 ? (last - first) / first * 100 : null;
+      const verb = chg != null && chg > 40 ? 'ramping (capex acceleration)' : chg != null && chg > 0 ? 'growing' : 'flat/declining';
+      const cls = chg != null && chg > 40 ? 'verdict-neu' : 'verdict-good';
+      cwipBlock = `
+        <div class="panel panel-tight">
+          <div class="lbl">CWIP trajectory (consolidated)</div>
+          <div class="text-base font-semibold text-slate-100 tnum">${fmt.crore(last)}</div>
+          <div class="text-[11px] ${cls}">${verb} · ${chg != null ? fmt.signedPct(chg,0) : ''} over ${cwipSeries.length-1}y</div>
+        </div>`;
+    }
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="space-y-3">
+        ${transmissionIncome ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Transmission income (FY26 cons.)</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.crore(transmissionIncome.value_num)}</div>
+            <div class="text-[11px] text-slate-500">${(transmissionIncome.evidence||'').slice(0,160)}</div>
+          </div>` : ''}
+        ${cwipBlock}
+        ${capexFY28 ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Capex guidance</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.crore(capexFY28.value_num)}</div>
+            <div class="text-[11px] text-slate-500">${(capexFY28.evidence||'').slice(0,160)}</div>
+          </div>` : ''}
+      </div>
+      <div class="space-y-3">
+        ${tbcbItems.length ? `
+          <div>
+            <div class="lbl mb-1">TBCB / transmission pipeline</div>
+            <div class="space-y-1 text-[12px]">
+              ${tbcbItems.slice(0, 8).map(f => `
+                <div class="panel panel-tight">
+                  <div class="text-slate-200">${f.value_text || (f.value_num != null ? fmt.num(f.value_num) + ' ' + (f.unit||'') : '')}</div>
+                  <div class="text-slate-500 text-[11px]">${(f.evidence||'').slice(0,160)}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>` : emptyState('TBCB / transmission project list not disclosed in current export.')}
+        ${hvdcStatus ? `
+          <div class="panel panel-tight">
+            <div class="lbl">HVDC projects under execution</div>
+            <div class="text-slate-200 text-[12px]">${hvdcStatus.value_text || ''}</div>
+            <div class="text-slate-500 text-[11px] mt-1">${(hvdcStatus.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${rowStatus ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Right-of-way status</div>
+            <div class="text-slate-200 text-[12px]">${rowStatus.value_text || ''}</div>
+            <div class="text-slate-500 text-[11px] mt-1">${(rowStatus.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+      </div>
+    </div>`;
+}
+
+/* ---- Transformer manufacturer (§15) ---- */
+function panelTransformer(co) {
+  const voltages = [33, 66, 132, 220, 400, 765];
+  const mentions = featureValues(co, 'voltage_class_mentioned');
+  const seen = new Set(mentions.map(m => (m.value_text||'').replace(/[^0-9]/g,'')));
+
+  /* additional capability features */
+  const capabilityFeatures = Object.keys(co.features || {})
+    .filter(k => k.startsWith('voltage_class.'))
+    .map(k => ({ key: k, f: featureFirst(co, k) }));
+
+  const maxMva = featureFirst(co, 'capacity_mva') || featureFirst(co, 'max_mva_executed') || featureFirst(co, 'capacity_mva_expansion');
+  const approvals = Object.keys(co.features || {})
+    .filter(k => k.startsWith('customer_mention'))
+    .map(k => featureFirst(co, k)).filter(Boolean);
+
+  const showable = mentions.length || capabilityFeatures.length || maxMva || approvals.length;
+  if (!showable) {
+    return emptyState('Voltage-class disclosure not available in current source set.');
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <div class="lbl mb-2">Voltage class ladder (presence in filings)</div>
+        <div class="flex flex-wrap gap-1.5">
+          ${voltages.map(v => {
+            const hit = seen.has(String(v));
+            return `<span class="chip ${hit ? 'good' : 'muted'}">${v} kV ${hit ? '✓' : '·'}</span>`;
+          }).join('')}
+        </div>
+        <div class="text-[11px] text-slate-500 mt-2">
+          ✓ means at least one filing mentions that class. Executed MVA at each class is rarely disclosed — see capability features below.
+        </div>
+
+        ${capabilityFeatures.length ? `
+          <div class="lbl mt-4 mb-1">Stated capability</div>
+          <div class="space-y-1 text-[12px]">
+            ${capabilityFeatures.slice(0,6).map(({f}) => f ? `
+              <div class="panel panel-tight">
+                <div class="text-slate-200">${f.value_text || ''}</div>
+                <div class="text-slate-500 text-[11px]">${(f.evidence||'').slice(0,200)}</div>
+              </div>` : '').join('')}
+          </div>
+        ` : ''}
+
+        ${maxMva ? `
+          <div class="lbl mt-4 mb-1">MVA capacity disclosure</div>
+          <div class="panel panel-tight">
+            <div class="text-slate-200 tnum">${fmt.num(maxMva.value_num,0)} ${maxMva.unit || 'MVA'}</div>
+            <div class="text-slate-500 text-[11px]">${(maxMva.evidence||'').slice(0,200)}</div>
+          </div>
+        ` : `<div class="lbl mt-4 mb-1">MVA capacity</div>${emptyState('Maximum executed MVA not disclosed in current export.')}`}
+      </div>
+
+      <div>
+        <div class="lbl mb-2">Approvals / key customers</div>
+        ${approvals.length ? `<div class="space-y-1 text-[12px]">${approvals.slice(0,8).map(f => `
+          <div class="panel panel-tight">
+            <div class="text-slate-200">${f.value_text || ''}</div>
+            <div class="text-slate-500 text-[11px]">${(f.evidence||'').slice(0,180)}</div>
+          </div>
+        `).join('')}</div>` : emptyState('Approval list (PGCIL / NTPC / export utility) not disclosed in current export.')}
+      </div>
+    </div>`;
+}
+
+/* ---- HVDC / FACTS OEM (§16) ---- */
+function panelHvdc(co) {
+  const scopeItems = ['converter', 'valves', 'control', 'reactors', 'filters', 'BoP', 'protection'];
+  const allFeatureText = Object.values(co.features || {}).flat()
+                          .map(f => (f.evidence || '') + ' ' + (f.value_text || ''))
+                          .join(' ').toLowerCase();
+  const scopeChecks = scopeItems.map(item => ({
+    name: item,
+    hit: allFeatureText.includes(item.toLowerCase()),
+  }));
+
+  const facts = ['STATCOM', 'SVC', 'TCSC', 'UPFC', 'shunt reactor', 'capacitor bank'];
+  const factsChecks = facts.map(p => ({ name: p, hit: allFeatureText.includes(p.toLowerCase()) }));
+
+  const hvdcCapacity = featureFirst(co, 'capacity_industry_pipeline_gw');
+  const parentTech = featureFirst(co, 'capex_parent_tech_dependence') || featureFirst(co, 'parent_tech');
+
+  const showable = scopeChecks.some(c => c.hit) || factsChecks.some(c => c.hit) || hvdcCapacity || parentTech;
+  if (!showable) {
+    return emptyState('HVDC scope disclosure not available in current export.');
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <div class="lbl mb-2">HVDC scope (mentioned in filings)</div>
+        <div class="flex flex-wrap gap-1.5">
+          ${scopeChecks.map(c => `
+            <span class="chip ${c.hit ? 'good' : 'muted'}">${c.name} ${c.hit ? '✓' : '·'}</span>
+          `).join('')}
+        </div>
+
+        <div class="lbl mt-4 mb-2">FACTS / grid stability products</div>
+        <div class="flex flex-wrap gap-1.5">
+          ${factsChecks.map(c => `
+            <span class="chip ${c.hit ? 'good' : 'muted'}">${c.name} ${c.hit ? '✓' : '·'}</span>
+          `).join('')}
+        </div>
+      </div>
+      <div class="space-y-3">
+        ${hvdcCapacity ? `
+          <div class="panel panel-tight">
+            <div class="lbl">HVDC pipeline context</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.num(hvdcCapacity.value_num,1)} ${hvdcCapacity.unit || 'GW'}</div>
+            <div class="text-[11px] text-slate-500">${(hvdcCapacity.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${parentTech ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Parent-tech dependence (MNC entity)</div>
+            <div class="text-slate-200 text-[12px]">${parentTech.value_text || ''}</div>
+            <div class="text-[11px] text-slate-500">${(parentTech.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${!hvdcCapacity && !parentTech ? emptyState('Pipeline context + parent-tech profile not disclosed for this entity.') : ''}
+      </div>
+    </div>`;
+}
+
+/* ---- Towers / conductors (§17) ---- */
+function panelTowers(co) {
+  const towerMt = featureFirst(co, 'capacity_mt') || featureFirst(co, 'tower_capacity_mt') || featureFirst(co, 'production_fy26_mt');
+  const expansion = featureFirst(co, 'target_capacity_jun26_mtpa');
+  const exportShare = featureFirst(co, 'export_share_pct') || featureFirst(co, 'capacity_export_share_pct');
+  const exportMarkets = featureFirst(co, 'export_market_mentions');
+  const voltages = [220, 400, 500, 765, 800];
+  const allFeatureText = Object.values(co.features || {}).flat()
+                          .map(f => (f.evidence || '') + ' ' + (f.value_text || ''))
+                          .join(' ');
+  const voltageHits = voltages.map(v => ({
+    kV: v, hit: new RegExp(`\\b${v}\\s*kV\\b`, 'i').test(allFeatureText),
+  }));
+
+  const showable = towerMt || expansion || exportShare || voltageHits.some(v => v.hit);
+  if (!showable) {
+    return emptyState('Tower / conductor capacity disclosure not available in current export.');
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="space-y-3">
+        ${towerMt ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Capacity / production (MT)</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.num(towerMt.value_num,0)} ${towerMt.unit || 'MT'}</div>
+            <div class="text-[11px] text-slate-500">${(towerMt.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${expansion ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Target capacity</div>
+            <div class="text-slate-200 tnum">${fmt.num(expansion.value_num,0)} ${expansion.unit || ''}</div>
+            <div class="text-[11px] text-slate-500">${(expansion.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${(!towerMt && !expansion) ? emptyState('MT capacity not disclosed.') : ''}
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="lbl mb-2">Voltage capability</div>
+          <div class="flex flex-wrap gap-1.5">
+            ${voltageHits.map(v => `<span class="chip ${v.hit ? 'good' : 'muted'}">${v.kV} kV ${v.hit ? '✓' : '·'}</span>`).join('')}
+          </div>
+        </div>
+        ${exportShare ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Export share</div>
+            <div class="text-slate-200 tnum">${fmt.pct(exportShare.value_num,1)}</div>
+            <div class="text-[11px] text-slate-500">${(exportShare.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${exportMarkets ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Export markets</div>
+            <div class="text-slate-200 text-[12px]">${exportMarkets.value_text || ''}</div>
+            <div class="text-[11px] text-slate-500">${(exportMarkets.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+      </div>
+    </div>`;
+}
+
+/* ---- Smart meters (§18) ---- */
+function panelSmartMeters(co) {
+  const orderBook = featureFirst(co, 'order_book_total_inr_cr') || featureFirst(co, 'order_book_inr_cr');
+  const amisp = featureFirst(co, 'amisp_jv_order_book_inr_cr');
+  const nonJv = featureFirst(co, 'non_jv_order_book_inr_cr');
+  const jvStake = featureFirst(co, 'jv_equity_stake_pct');
+  const cap = featureFirst(co, 'capacity_smart_meter_amisp');
+  const otherFeats = featureNamesPrefixed(co, 'voltage_class.').map(k => featureFirst(co, k)).filter(Boolean);
+
+  const showable = orderBook || amisp || cap;
+  if (!showable) {
+    return emptyState('Meter / AMISP economics not available in current export.');
+  }
+
+  /* compose AMISP vs non-JV donut data */
+  let donut = '';
+  if (orderBook && amisp) {
+    const amispV = amisp.value_num || 0;
+    const restV = (orderBook.value_num || 0) - amispV;
+    if (amispV > 0 || restV > 0) {
+      const pct = orderBook.value_num > 0 ? Math.round((amispV/orderBook.value_num)*100) : 0;
+      donut = `
+        <div class="panel panel-tight">
+          <div class="lbl">Order book composition</div>
+          <div class="text-[12px] text-slate-300 mt-1">AMISP JV: <span class="tnum">${fmt.crore(amispV)} (${pct}%)</span></div>
+          <div class="text-[12px] text-slate-300">Non-JV: <span class="tnum">${fmt.crore(restV)}</span></div>
+          <div class="w-full h-2 mt-2 rounded overflow-hidden bg-slate-800 flex">
+            <div class="bg-sky-500" style="width:${pct}%"></div>
+            <div class="bg-emerald-500" style="width:${100-pct}%"></div>
+          </div>
+        </div>`;
+    }
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="space-y-3">
+        ${orderBook ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Order book / executable</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.crore(orderBook.value_num)}</div>
+            <div class="text-[11px] text-slate-500">${(orderBook.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${donut}
+        ${jvStake ? `
+          <div class="panel panel-tight">
+            <div class="lbl">JV equity stake</div>
+            <div class="text-slate-200 tnum">${fmt.pct(jvStake.value_num,0)}</div>
+            <div class="text-[11px] text-slate-500">${(jvStake.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+      </div>
+      <div class="space-y-2">
+        <div class="lbl">Business model signal (framework §18)</div>
+        ${otherFeats.length ? otherFeats.slice(0,6).map(f => `
+          <div class="panel panel-tight">
+            <div class="text-slate-200 text-[12px]">${f.value_text || ''}</div>
+            <div class="text-[11px] text-slate-500">${(f.evidence||'').slice(0,180)}</div>
+          </div>
+        `).join('') : emptyState('Per-meter realization + AMISP vs hardware split not disclosed.')}
+      </div>
+    </div>`;
+}
+
+/* ---- Transmission EPC (§19) ---- */
+function panelEpc(co) {
+  const orderBook = featureFirst(co, 'order_book_total_inr_cr') || featureFirst(co, 'order_book_inr_cr');
+  const ob_td = featureFirst(co, 'order_book.td_pct');
+  const ob_bnf = featureFirst(co, 'order_book.bnf_pct');
+  const ob_water = featureFirst(co, 'order_book.water_pct');
+  const inflow = featureFirst(co, 'order_inflow_fy26_inr_cr');
+  const geoInt = featureFirst(co, 'geography.international_pct');
+  const ebitdaMQ = featureFirst(co, 'core_ebitda_margin_q4fy26_pct');
+  const wc = featureFirst(co, 'net_working_capital_days');
+  const ld = featureValues(co, 'ld_arbitration');
+  const allFeatureText = Object.values(co.features || {}).flat()
+                          .map(f => (f.evidence || '') + ' ' + (f.value_text || ''))
+                          .join(' ');
+  const voltageHits = [132, 220, 400, 765].map(v => ({
+    kV: v, hit: new RegExp(`\\b${v}\\s*kV\\b`, 'i').test(allFeatureText),
+  }));
+
+  const showable = orderBook || inflow || geoInt || voltageHits.some(v => v.hit);
+  if (!showable) {
+    return emptyState('EPC order book quality fields not available in current export.');
+  }
+
+  /* segment mix bar */
+  let segBar = '';
+  if (ob_td || ob_bnf || ob_water) {
+    const td = ob_td ? ob_td.value_num : 0;
+    const bnf = ob_bnf ? ob_bnf.value_num : 0;
+    const water = ob_water ? ob_water.value_num : 0;
+    const other = Math.max(0, 100 - td - bnf - water);
+    segBar = `
+      <div class="panel panel-tight">
+        <div class="lbl mb-1">Order book mix</div>
+        <div class="text-[12px] flex justify-between"><span>T&D: <span class="tnum text-slate-200">${td.toFixed(0)}%</span></span>
+          <span>B&F: <span class="tnum text-slate-200">${bnf.toFixed(0)}%</span></span>
+          <span>Water: <span class="tnum text-slate-200">${water.toFixed(0)}%</span></span>
+          <span>Other: <span class="tnum text-slate-200">${other.toFixed(0)}%</span></span></div>
+        <div class="w-full h-2 mt-2 rounded overflow-hidden bg-slate-800 flex">
+          <div class="bg-sky-500" style="width:${td}%"></div>
+          <div class="bg-emerald-500" style="width:${bnf}%"></div>
+          <div class="bg-amber-500" style="width:${water}%"></div>
+          <div class="bg-slate-600" style="width:${other}%"></div>
+        </div>
+      </div>`;
+  }
+
+  return `
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="space-y-3">
+        ${orderBook ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Order book</div>
+            <div class="text-lg font-semibold text-slate-100 tnum">${fmt.crore(orderBook.value_num)}</div>
+            <div class="text-[11px] text-slate-500">${(orderBook.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${inflow ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Order inflow (FY26)</div>
+            <div class="text-slate-200 tnum">${fmt.crore(inflow.value_num)}</div>
+            <div class="text-[11px] text-slate-500">${(inflow.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${segBar}
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="lbl mb-1">Voltage capability</div>
+          <div class="flex flex-wrap gap-1.5">
+            ${voltageHits.map(v => `<span class="chip ${v.hit ? 'good' : 'muted'}">${v.kV} kV ${v.hit ? '✓' : '·'}</span>`).join('')}
+          </div>
+        </div>
+        ${geoInt ? `
+          <div class="panel panel-tight">
+            <div class="lbl">International order book share</div>
+            <div class="text-slate-200 tnum">${fmt.pct(geoInt.value_num,0)}</div>
+            <div class="text-[11px] text-slate-500">${(geoInt.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${ebitdaMQ ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Core EBITDA margin (Q)</div>
+            <div class="text-slate-200 tnum">${fmt.pct(ebitdaMQ.value_num,1)}</div>
+            <div class="text-[11px] text-slate-500">${(ebitdaMQ.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${wc ? `
+          <div class="panel panel-tight">
+            <div class="lbl">Net working capital days</div>
+            <div class="text-slate-200 tnum">${fmt.num(wc.value_num,0)} days</div>
+            <div class="text-[11px] text-slate-500">${(wc.evidence||'').slice(0,200)}</div>
+          </div>` : ''}
+        ${ld.length ? `
+          <div class="panel panel-tight">
+            <div class="lbl">LD / arbitration flags</div>
+            ${ld.slice(0,3).map(f => `<div class="text-[12px] text-slate-300">${f.value_text || ''}</div>`).join('')}
+          </div>` : ''}
+      </div>
+    </div>`;
+}
+
+/* ---- Component supplier (§20) ---- */
+function panelComponent(co) {
+  return emptyState('No component-supplier names currently in universe.');
+}
+
+/* ==========================================================================
+   10. RED FLAG SCANNER  (per-company panel + cross-bucket scanner page)
+   ========================================================================== */
+function redFlags(co) {
+  const flags = [];
+
+  /* working capital deteriorating */
+  const rt = (co.ratios || []).filter(r => r.consolidated === 1)
+                 .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''));
+  if (rt.length >= 2) {
+    const first = rt[0].debtor_days, last = rt[rt.length-1].debtor_days;
+    if (first != null && last != null && first > 0 && last / first > 1.2) {
+      flags.push({
+        sev:'high', rule:'wc_deterioration', section:'§8',
+        text:`Debtor days ${Math.round(first)} → ${Math.round(last)} (+${Math.round((last/first-1)*100)}%) over ${rt.length-1}y`
+      });
+    }
+    const wfirst = rt[0].working_cap_days, wlast = rt[rt.length-1].working_cap_days;
+    if (wfirst != null && wlast != null && wfirst > 0 && wlast / wfirst > 1.2) {
+      flags.push({
+        sev:'high', rule:'wc_days', section:'§8',
+        text:`WC days ${Math.round(wfirst)} → ${Math.round(wlast)} (+${Math.round((wlast/wfirst-1)*100)}%)`
+      });
+    }
+  }
+
+  /* cash conversion weak */
+  const cfoEb = derivedLatest(co, 'cfo_to_ebitda_pct');
+  if (cfoEb && cfoEb.value != null && cfoEb.value < 50) {
+    flags.push({
+      sev:'high', rule:'cash_conv', section:'§12',
+      text:`CFO/EBITDA only ${cfoEb.value.toFixed(0)}% — earnings quality risk`
+    });
+  }
+
+  /* margin at peak */
+  const fyQ = (co.financials && co.financials.quarterly || []).filter(r => r.consolidated === 1);
+  const margins = fyQ.map(r => (r.revenue && r.ebitda) ? r.ebitda/r.revenue*100 : null).filter(v => v != null);
+  if (margins.length >= 4) {
+    const last = margins[margins.length-1];
+    const avg = margins.reduce((s,v)=>s+v,0)/margins.length;
+    if (avg > 0 && last > 1.2 * avg) {
+      flags.push({
+        sev:'medium', rule:'margin_peak', section:'§11',
+        text:`EBITDA margin ${last.toFixed(1)}% vs ${margins.length}-quarter avg ${avg.toFixed(1)}% — peak-cycle risk`
+      });
+    }
+  }
+
+  /* CWIP buildup */
+  const bs = (co.balance_sheet || []).filter(r => r.consolidated === 1)
+                 .slice().sort((a,b) => (a.period_end||'').localeCompare(b.period_end||''));
+  if (bs.length >= 2) {
+    const first = bs[0].cwip, last = bs[bs.length-1].cwip;
+    if (first != null && last != null && first > 0 && last / first > 1.4) {
+      flags.push({
+        sev:'medium', rule:'cwip_buildup', section:'§13',
+        text:`CWIP ${fmt.crore(last)} (+${Math.round((last/first-1)*100)}% over ${bs.length-1}y) — capex ramping; watch capitalization cadence`
+      });
+    }
+
+    /* borrowings up + ROCE down */
+    const bf = bs[0].borrowings, bl = bs[bs.length-1].borrowings;
+    if (bf != null && bl != null && bf > 0 && (bl/bf - 1) > 0.2) {
+      const rtf = rt.length ? rt[0].roce_pct : null;
+      const rtl = rt.length ? rt[rt.length-1].roce_pct : null;
+      if (rtf != null && rtl != null && (rtf - rtl) >= 2) {
+        flags.push({
+          sev:'high', rule:'debt_rocedown', section:'§12',
+          text:`Borrowings ${fmt.crore(bl)} (+${Math.round((bl/bf-1)*100)}% over ${bs.length-1}y) while ROCE ${rtf.toFixed(1)}% → ${rtl.toFixed(1)}%`
+        });
+      }
+    }
+  }
+
+  /* disclosure gaps based on bucket */
+  const b = co.company.bucket;
+  const wantsOB = ['transmission_epc','transformer_manufacturer','hvdc_facts_oem','towers_conductors_cables','smart_meters_automation'].includes(b);
+  if (wantsOB) {
+    const hasOB = Object.keys(co.features || {}).some(k => k.includes('order_book') || k.includes('order_win') || k.includes('order_inflow'));
+    if (!hasOB) {
+      flags.push({
+        sev:'low', rule:'ob_gap', section:'§3',
+        text:'Order book size not disclosed in available filings — diligence gap'
+      });
+    }
+  }
+  const wantsVolt = ['transmission_epc','transformer_manufacturer','hvdc_facts_oem','towers_conductors_cables'].includes(b);
+  if (wantsVolt) {
+    const hasV = Object.keys(co.features || {}).some(k => k.startsWith('voltage_class') || k.toLowerCase().includes('kv'));
+    if (!hasV) {
+      flags.push({
+        sev:'low', rule:'volt_gap', section:'§3',
+        text:'Voltage-class capability not disclosed — source gap'
+      });
+    }
+  }
+
+  return flags;
+}
+
+function renderRedFlags(co) {
+  const flags = redFlags(co);
+  if (!flags.length) {
+    return `<div class="panel panel-tight border-emerald-700/40">
+      <div class="text-emerald-300 text-[13px]">No red flags detected from currently available data.</div>
+      <div class="text-[11px] text-slate-500 mt-1">Rules applied: WC deterioration, cash conversion, margin peak, CWIP buildup, borrowings+ROCE, order book / voltage disclosure gaps.</div>
+    </div>`;
+  }
+  return `<div class="space-y-2">${flags.map(f => {
+    const cls = f.sev === 'high' ? 'border-red-700/50 bg-red-950/30 text-red-200'
+              : f.sev === 'medium' ? 'border-amber-700/50 bg-amber-950/30 text-amber-200'
+              : 'border-slate-700 bg-slate-900 text-slate-300';
+    return `<div class="panel panel-tight ${cls}">
+      <div class="flex items-center gap-2">
+        <span class="chip ${f.sev==='high'?'bad':f.sev==='medium'?'warn':'muted'}">${f.sev}</span>
+        <span class="text-[10px] text-slate-500">${f.rule} · ${f.section}</span>
+      </div>
+      <div class="text-[13px] mt-1">${f.text}</div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+/* ==========================================================================
+   11. MANAGEMENT QUESTIONS (framework §24)
+   ========================================================================== */
+const MGMT_QUESTIONS = {
+  transmission_asset_owner: [
+    'Regulated vs TBCB asset split?',
+    'Annual capex and capitalization guidance?',
+    'Regulated equity growth over 3-5 years?',
+    'Cost of debt and refinancing pipeline?',
+    'ROW issues by project?',
+    'Input-cost exposure under TBCB?',
+    'Win-rate in new bids?',
+    'Dividend policy vs reinvestment requirement?',
+    'Expected ROE on incremental projects?',
+    'Competitive pressure from private developers?',
+  ],
+  distribution_discom: [
+    'AT&C loss trajectory by circle?',
+    'Collection efficiency by circle?',
+    'Regulated equity and capex plan?',
+    'Smart meter rollout progress?',
+    'Tariff order status and regulatory assets?',
+    'Power procurement cost pass-through?',
+    'Customer mix: residential, C&I, agriculture?',
+    'Outage reduction metrics (SAIDI / SAIFI)?',
+    'Privatization pipeline?',
+    'Can the model scale outside current geography?',
+  ],
+  transformer_manufacturer: [
+    'Revenue split by voltage: <66 kV / 66-220 / 220-400 / 765 / HVDC?',
+    'What is your maximum executed rating, not just approved rating?',
+    '% of order book with copper / CRGO / freight escalation?',
+    'Current capacity in GVA and post-expansion?',
+    'Bottleneck: winding, core cutting, tanking, testing, dispatch logistics?',
+    'Export order book + end customers?',
+    'Warranty claim history over 5 years?',
+    '% of revenue from repeat customers?',
+    'New-order margin vs current order-book margin?',
+    'Normalized EBITDA margin once supply tightness eases?',
+  ],
+  hvdc_facts_oem: [
+    'HVDC scope: converter, valves, control, reactors, BoP?',
+    'LCC vs VSC HVDC capability?',
+    'Recent and pipeline HVDC orders?',
+    'Imported content % under HVDC contracts?',
+    'Parent-tech dependence + Indian entity profit share?',
+    'STATCOM / SVC order book?',
+    'Service + spares + digital revenue %?',
+    'LD provisioning under turnkey contracts?',
+    'Capacity expansion timeline?',
+    'Export opportunity via parent network?',
+  ],
+  transmission_epc: [
+    '% of order book: PGCIL / SEB / private / export?',
+    'Who bears ROW and statutory approval risk?',
+    'Debtor days and retention money separately?',
+    'Average execution cycle?',
+    '% of order book fixed-price?',
+    '% of work subcontracted?',
+    'BG blocked against order book?',
+    'LD / arbitration history?',
+    'Why is CFO different from EBITDA?',
+    'Maximum order size executable without balance-sheet stress?',
+  ],
+  towers_conductors_cables: [
+    'Tower MT capacity + utilization?',
+    'Voltage capability: 400 / 765 / 1200 kV?',
+    'Galvanizing capacity in-house?',
+    'Conductor mix: ACSR / AAAC / HTLS / OPGW?',
+    'Cable capability up to which voltage?',
+    'Steel / zinc / aluminium pass-through clauses?',
+    'Export approvals (US / EU / Middle East / Africa)?',
+    'EBITDA per MT?',
+    'EPC vs manufacturing margin split?',
+    'Heavy-tower transport bottlenecks?',
+  ],
+  smart_meters_automation: [
+    'Hardware sale vs AMISP annuity mix?',
+    'Meters installed vs under order?',
+    'Per-meter monthly realization?',
+    'Communication tech (RF mesh / NB-IoT / PLC)?',
+    'SLA penalty exposure?',
+    'Receivables from state DISCOMs?',
+    'Cybersecurity / data hosting model?',
+    'Software / analytics revenue %?',
+    'Warranty provisioning?',
+    'Project IRR for AMISP contracts?',
+  ],
+  component_supplier: [
+    'Component criticality + voltage class?',
+    'OEM approvals + qualification cycle?',
+    'OEM backward integration risk?',
+    'Customer concentration?',
+    'Import substitution angle?',
+    'Raw material pass-through?',
+    'Rejection / warranty rate?',
+    'Export approvals?',
+    'Capacity expansion linked to customer commitments?',
+    'Working capital intensity vs OEM?',
+  ],
+};
+
+function renderMgmtQuestions(bucket) {
+  const qs = MGMT_QUESTIONS[bucket] || [];
+  if (!qs.length) {
+    return emptyState('Bucket-specific question set not registered.');
+  }
+  return `<div class="grid md:grid-cols-2 gap-2 text-[13px]">${
+    qs.map(q => `<div class="panel panel-tight">
+      <span class="text-sky-300 mr-2">→</span><span class="text-slate-300">${q}</span>
+    </div>`).join('')
+  }</div>`;
+}
+
+/* ==========================================================================
+   12. BUCKETS VIEW  (index of all buckets)
+   ========================================================================== */
+async function renderBucketsIndex() {
+  const app = document.getElementById('app');
+  const idx = await loadIndex();
+  await loadAllCompanies();
+  document.getElementById('metaPill').textContent = 'Bucket index';
+
+  const byBucket = {};
+  for (const c of idx.companies) (byBucket[c.bucket] ||= []).push(c);
+
+  app.innerHTML = `
+    <h1 class="text-xl font-semibold text-slate-100 mb-3">Buckets</h1>
+    <div class="text-[12px] text-slate-500 mb-5">Click a bucket to drill into the peer comparison view.</div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      ${Object.entries(byBucket).map(([b, cs]) => {
+        const avg = Math.round(cs.reduce((s,c)=>s+c.coverage_pct,0)/cs.length);
+        const top = cs.slice().sort((a,b)=>b.score_total-a.score_total)[0];
+        return `<a class="panel panel-pad block hover:border-sky-700 transition" href="#/bucket/${b}">
+          <div class="lbl">${fmt.bucketLabel(b)}</div>
+          <div class="text-lg font-semibold text-slate-100 mt-1">${cs.length} companies</div>
+          <div class="text-[12px] text-slate-500 mt-1">Avg coverage ${avg}% · framework § ${bucketFrameworkSection(b)}</div>
+          <div class="text-[12px] text-slate-400 mt-2">Top scorer: <span class="text-sky-300">${top.short}</span> (${top.score_total})</div>
+        </a>`;
+      }).join('')}
+    </div>
+  `;
+}
+
+/* ==========================================================================
+   13. BUCKET COMPARE VIEW
+   ========================================================================== */
+async function renderBucket(bucket) {
+  const app = document.getElementById('app');
+  app.innerHTML = '<div class="text-slate-500 py-10">Loading bucket…</div>';
+  const idx = await loadIndex();
+  await loadAllCompanies();
+  const peers = idx.companies.filter(c => c.bucket === bucket);
+  if (!peers.length) {
+    app.innerHTML = `<div class="empty-note">No companies in bucket "${bucket}".</div>`;
+    return;
+  }
+  document.getElementById('metaPill').textContent =
+    `${fmt.bucketLabel(bucket)} · ${peers.length} cos`;
+
+  const rows = peers.map(p => {
+    const co = CACHE.companies[p.slug];
+    if (!co) return null;
+    const rt = latest(co.ratios || [], { consolidated: 1 });
+    const em = derivedLatest(co, 'ebitda_margin_pct');
+    const rg = derivedLatest(co, 'revenue_growth_yoy_pct');
+    const de = derivedLatest(co, 'debt_to_equity');
+    return {
+      slug: p.slug, short: p.short, score: p.score_total, cov: p.coverage_pct,
+      roce: rt ? rt.roce_pct : null,
+      em:   em ? em.value : null,
+      rg:   rg ? rg.value : null,
+      wc:   rt ? rt.working_cap_days : null,
+      de:   de ? de.value : null,
+    };
+  }).filter(Boolean);
+
+  /* best-in-bucket callouts */
+  function pick(metric, lowerBetter=false) {
+    const xs = rows.filter(r => r[metric] != null);
+    if (!xs.length) return null;
+    return xs.slice().sort((a,b) => lowerBetter ? a[metric] - b[metric] : b[metric] - a[metric])[0];
+  }
+  const bestRoce = pick('roce'), bestGrowth = pick('rg'),
+        lowestWc = pick('wc', true), bestCov = pick('cov');
+
+  let sortKey = 'score', sortDir = -1;
+  function repaint() {
+    const sorted = rows.slice().sort((a,b) => {
+      const x = a[sortKey], y = b[sortKey];
+      if (x == null && y == null) return 0;
+      if (x == null) return 1;
+      if (y == null) return -1;
+      return (x - y) * sortDir;
+    });
+    app.innerHTML = `
+      <div class="text-[12px] text-slate-500 mb-3 flex items-center gap-2">
+        <a href="#/" class="text-sky-300 hover:underline">Universe</a>
+        <span>›</span>
+        <a href="#/buckets" class="hover:text-sky-300">Buckets</a>
+        <span>›</span>
+        <span class="text-slate-300">${fmt.bucketLabel(bucket)}</span>
+      </div>
+
+      <h1 class="text-xl font-semibold text-slate-100">${fmt.bucketLabel(bucket)}</h1>
+      <div class="text-[12px] text-slate-500 mb-4">${peers.length} companies · framework § ${bucketFrameworkSection(bucket)}</div>
+
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+        ${kpiCard('Best ROCE',
+          bestRoce ? `<a href="#/c/${bestRoce.slug}" class="text-sky-300 hover:underline">${bestRoce.short}</a>` : '—',
+          bestRoce ? fmt.pct(bestRoce.roce,1) : '', null)}
+        ${kpiCard('Best growth',
+          bestGrowth ? `<a href="#/c/${bestGrowth.slug}" class="text-sky-300 hover:underline">${bestGrowth.short}</a>` : '—',
+          bestGrowth ? fmt.signedPct(bestGrowth.rg,1) + ' YoY' : '', null)}
+        ${kpiCard('Lowest WC days',
+          lowestWc ? `<a href="#/c/${lowestWc.slug}" class="text-sky-300 hover:underline">${lowestWc.short}</a>` : '—',
+          lowestWc ? lowestWc.wc + ' days' : '', null)}
+        ${kpiCard('Highest coverage',
+          bestCov ? `<a href="#/c/${bestCov.slug}" class="text-sky-300 hover:underline">${bestCov.short}</a>` : '—',
+          bestCov ? bestCov.cov + '%' : '', null)}
       </section>
 
-      <section class="panel">
-        <h2>Bucket summary</h2>
-        ${(() => {
-          const groups = {};
-          for (const c of idx.companies) {
-            (groups[c.bucket] ||= []).push(c);
-          }
-          return `<table>
-            <thead><tr><th>Bucket</th><th style="text-align:right;">Cos</th><th style="text-align:right;">Avg coverage</th><th style="text-align:right;">Avg score</th><th>Top scorer</th></tr></thead>
-            <tbody>
-            ${Object.entries(groups).map(([b, cs]) => {
-              const avg = Math.round(cs.reduce((s,c)=>s+c.coverage_pct,0)/cs.length);
-              const sc  = (cs.reduce((s,c)=>s+c.score_total,0)/cs.length).toFixed(1);
-              const top = [...cs].sort((a,b)=>b.score_total-a.score_total)[0];
-              return `<tr><td><span class="bucket">${fmt.bucketLabel(b)}</span></td>
-                <td class="num">${cs.length}</td>
-                <td class="pct">${avg}%</td>
-                <td class="num">${sc}</td>
-                <td><a class="doc-link" href="#/c/${top.slug}">${top.short}</a> (${top.score_total})</td></tr>`;
-            }).join('')}
-            </tbody></table>`;
-        })()}
+      <section class="panel panel-pad">
+        <h2 class="text-sm font-semibold text-slate-200 mb-3">Peer ranking</h2>
+        <table class="w-full text-[13px]">
+          <thead class="text-[10px] uppercase text-slate-500 tracking-wide">
+            <tr>
+              <th class="text-left py-2 cursor-pointer" data-k="short">Company</th>
+              <th class="text-right cursor-pointer" data-k="cov">Coverage</th>
+              <th class="text-right cursor-pointer" data-k="score">Score</th>
+              <th class="text-right cursor-pointer" data-k="roce">ROCE</th>
+              <th class="text-right cursor-pointer" data-k="em">EBITDA m</th>
+              <th class="text-right cursor-pointer" data-k="rg">Rev YoY</th>
+              <th class="text-right cursor-pointer" data-k="de">D/E</th>
+              <th class="text-right cursor-pointer" data-k="wc">WC days</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${sorted.map(r => `<tr class="border-t border-slate-800 hover:bg-slate-900/50">
+              <td class="py-1.5">
+                <a href="#/c/${r.slug}" class="text-slate-200 hover:text-sky-300">${r.short}</a>
+              </td>
+              <td class="text-right tnum">${r.cov}%</td>
+              <td class="text-right tnum text-slate-100 font-semibold">${r.score}</td>
+              <td class="text-right tnum">${r.roce != null ? fmt.pct(r.roce,1) : '—'}</td>
+              <td class="text-right tnum">${r.em   != null ? fmt.pct(r.em,1)   : '—'}</td>
+              <td class="text-right tnum">${r.rg   != null ? fmt.signedPct(r.rg,1) : '—'}</td>
+              <td class="text-right tnum">${r.de   != null ? fmt.ratio(r.de,2) : '—'}</td>
+              <td class="text-right tnum">${r.wc   != null ? fmt.num(r.wc)     : '—'}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
       </section>
     `;
-
-    document.getElementById('bucket').addEventListener('change', e => {
-      bucketFilter = e.target.value; repaint();
-    });
-    app.querySelectorAll('th.sortable').forEach(th => {
+    app.querySelectorAll('th[data-k]').forEach(th => {
       th.addEventListener('click', () => {
         const k = th.dataset.k;
         if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = -1; }
         repaint();
       });
     });
-    app.querySelectorAll('tr.row').forEach(tr => {
-      tr.addEventListener('click', () => nav(tr.dataset.slug));
-    });
   }
   repaint();
 }
 
-// ---------- COMPANY PAGE ----------
-async function renderCompany(slug) {
+/* ==========================================================================
+   14. RED FLAG SCANNER VIEW  (cross-bucket)
+   ========================================================================== */
+async function renderFlagsView() {
   const app = document.getElementById('app');
-  app.innerHTML = '<div class="loading">Loading ' + slug + '…</div>';
-  let co;
-  try { co = await fetchJSON('data/export/' + slug + '.json'); }
-  catch (e) { app.innerHTML = '<div class="loading">Company "'+slug+'" not found.</div>'; return; }
+  app.innerHTML = '<div class="text-slate-500 py-10">Loading red flags…</div>';
+  await loadIndex();
+  const cos = await loadAllCompanies();
+  document.getElementById('metaPill').textContent = 'Red flag scanner';
 
-  document.getElementById('meta-pill').textContent =
-    `${co.company.short} · ${fmt.bucketLabel(co.company.bucket)} · ${co.coverage_pct}% coverage`;
+  const buckets = {
+    wc_deterioration: { title:'Working capital deteriorating', section:'§8', sev:'high', items:[] },
+    cash_conv:        { title:'Cash conversion weak (CFO/EBITDA <50%)', section:'§12', sev:'high', items:[] },
+    margin_peak:      { title:'Margins at peak (>1.2× multi-quarter avg)', section:'§11', sev:'medium', items:[] },
+    debt_rocedown:    { title:'Borrowings up while ROCE down', section:'§12', sev:'high', items:[] },
+    cwip_buildup:     { title:'CWIP buildup >40%', section:'§13', sev:'medium', items:[] },
+    ob_gap:           { title:'Order book disclosure gap', section:'§3', sev:'low', items:[] },
+    volt_gap:         { title:'Voltage-class disclosure gap', section:'§3', sev:'low', items:[] },
+    wc_days:          { title:'WC days rising', section:'§8', sev:'high', items:[] },
+  };
 
-  const m = co.market || {};
-  const latestQ = (co.financials.quarterly || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
-  const latestBS = (co.balance_sheet || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
-  const latestRatio = (co.ratios || []).slice().sort((a,b)=>b.period_end.localeCompare(a.period_end))[0] || {};
-
-  function metric(key) {
-    const r = (co.derived||[]).filter(d => d.metric === key)
-                              .sort((a,b)=>b.period_end.localeCompare(a.period_end))[0];
-    return r || null;
+  for (const co of cos) {
+    const flags = redFlags(co);
+    for (const f of flags) {
+      if (!buckets[f.rule]) continue;
+      buckets[f.rule].items.push({ co, text:f.text });
+    }
   }
-  const ebitdaMargin = metric('ebitda_margin_pct');
-  const revGrowth    = metric('revenue_growth_yoy_pct');
-  const debtEq       = metric('debt_to_equity');
-  const fcfProxy     = metric('fcf_proxy_inr_cr');
+  const cosWithAnyFlag = new Set();
+  for (const co of cos) {
+    if (redFlags(co).length) cosWithAnyFlag.add(co.company.short);
+  }
 
   app.innerHTML = `
-    <div class="breadcrumb">
-      <a href="#">← Universe</a>
-      <span>·</span>
-      <span class="bucket">${fmt.bucketLabel(co.company.bucket)}</span>
+    <h1 class="text-xl font-semibold text-slate-100 mb-1">Red flag scanner</h1>
+    <div class="text-[12px] text-slate-500 mb-5">
+      ${cosWithAnyFlag.size} of ${cos.length} companies have at least one flag.
+      Every flag cites the exact metric trigger. Source = computed from <span class="mono">derived</span>, <span class="mono">ratios</span>, <span class="mono">balance_sheet</span>, <span class="mono">features</span>.
     </div>
-
-    <section class="panel">
-      <div style="display:flex; gap:14px; align-items:start; flex-wrap:wrap;">
-        <div>
-          <h2 style="margin:0; font-size:20px; color:var(--txt);">${co.company.name}</h2>
-          <div style="color:var(--muted); font-size:12px; margin-top:4px;">
-            BSE ${co.company.bse || '—'} · NSE ${co.company.nse || '—'}
-            ${co.company.secondary ? ` · secondary: <span class="tag">${fmt.bucketLabel(co.company.secondary)}</span>` : ''}
+    <div class="grid md:grid-cols-2 gap-4">
+      ${Object.entries(buckets).map(([key, b]) => {
+        const sevCls = b.sev==='high'?'border-red-700/40':b.sev==='medium'?'border-amber-700/40':'border-slate-700';
+        return `<section class="panel panel-pad ${sevCls}">
+          <div class="flex items-baseline justify-between mb-2">
+            <div class="text-[13px] font-semibold text-slate-100">${b.title}</div>
+            <div class="text-[11px] text-slate-500">${b.section} · ${b.items.length} co${b.items.length===1?'':'s'}</div>
           </div>
-        </div>
-        <div style="margin-left:auto;">
-          <div class="cov-bar" style="width:160px; height:8px;"><span class="cov-fill ${covClass(co.coverage_pct)}" style="width:${co.coverage_pct}%"></span></div>
-          <div style="font-size:11px; color:var(--muted); margin-top:4px; text-align:right;">${co.coverage_pct}% framework coverage</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Market &amp; latest financials</h2>
-      <div class="kpis">
-        <div class="kpi"><div class="lbl">Market cap</div><div class="val">${fmt.crore(m.market_cap_cr)}</div><div class="sub">Price ₹${fmt.num(m.price,2)}</div></div>
-        <div class="kpi"><div class="lbl">P/E</div><div class="val">${fmt.num(m.pe_ratio,1)}</div><div class="sub">P/B ${fmt.num(m.pb_ratio,1)}</div></div>
-        <div class="kpi"><div class="lbl">Q revenue</div><div class="val">${fmt.crore(latestQ.revenue)}</div><div class="sub">${latestQ.period_end || ''}</div></div>
-        <div class="kpi"><div class="lbl">Q PAT</div><div class="val">${fmt.crore(latestQ.pat)}</div><div class="sub">${latestQ.period_end || ''}</div></div>
-        <div class="kpi"><div class="lbl">EBITDA margin</div><div class="val">${ebitdaMargin ? fmt.pct(ebitdaMargin.value,1) : '—'}</div><div class="sub">peer rank ${ebitdaMargin?.bucket_rank ?? '—'}/${ebitdaMargin?.bucket_n ?? '—'}</div></div>
-        <div class="kpi"><div class="lbl">Revenue growth YoY</div><div class="val">${revGrowth ? fmt.pct(revGrowth.value,1) : '—'}</div></div>
-        <div class="kpi"><div class="lbl">Debt / Equity</div><div class="val">${debtEq ? fmt.num(debtEq.value,2) : '—'}</div></div>
-        <div class="kpi"><div class="lbl">FCF proxy</div><div class="val">${fcfProxy ? fmt.crore(fcfProxy.value) : '—'}</div></div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Framework scorecard (10 factors)</h2>
-      <div class="scorecard">
-        ${(co.scorecard||[]).map(s => `
-          <div class="score-cell">
-            <div class="factor">${s.factor.replace(/_/g,' ')}</div>
-            <div class="score ${s.score===null?'sNA':'s'+s.score}">${s.score===null ? 'insufficient data' : s.score + ' / 5'}</div>
-            <div class="evid">${(s.evidence||'').replace(/</g,'&lt;')}</div>
-          </div>
-        `).join('')}
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Balance sheet trend (annual, consolidated)</h2>
-      ${(() => {
-        const bs = (co.balance_sheet||[]).filter(r=>r.consolidated===1).sort((a,b)=>a.period_end.localeCompare(b.period_end));
-        if (!bs.length) return '<div class="loading">No balance sheet data.</div>';
-        return `<table>
-          <thead><tr><th>Period</th><th class="num">Total assets</th><th class="num">Borrowings</th><th class="num">Fixed assets</th><th class="num">CWIP</th><th class="num">Net worth (E+R)</th></tr></thead>
-          <tbody>${bs.map(r=>`<tr>
-            <td>${r.period_end}</td>
-            <td class="num">${fmt.crore(r.total_assets)}</td>
-            <td class="num">${fmt.crore(r.borrowings)}</td>
-            <td class="num">${fmt.crore(r.fixed_assets)}</td>
-            <td class="num">${fmt.crore(r.cwip)}</td>
-            <td class="num">${fmt.crore((r.equity_capital||0)+(r.reserves||0))}</td>
-          </tr>`).join('')}</tbody>
-        </table>`;
-      })()}
-    </section>
-
-    <section class="panel">
-      <h2>Ratios (consolidated)</h2>
-      ${(() => {
-        const rt = (co.ratios||[]).filter(r=>r.consolidated===1).sort((a,b)=>a.period_end.localeCompare(b.period_end));
-        if (!rt.length) return '<div class="loading">No ratios data.</div>';
-        return `<table>
-          <thead><tr><th>Period</th><th class="num">ROCE</th><th class="num">ROE</th><th class="num">Debtor days</th><th class="num">Inventory days</th><th class="num">Working cap days</th></tr></thead>
-          <tbody>${rt.map(r=>`<tr>
-            <td>${r.period_end}</td>
-            <td class="num">${fmt.pct(r.roce_pct,1)}</td>
-            <td class="num">${fmt.pct(r.roe_pct,1)}</td>
-            <td class="num">${fmt.num(r.debtor_days)}</td>
-            <td class="num">${fmt.num(r.inventory_days)}</td>
-            <td class="num">${fmt.num(r.working_cap_days)}</td>
-          </tr>`).join('')}</tbody>
-        </table>`;
-      })()}
-    </section>
-
-    <section class="panel">
-      <h2>Framework features (${Object.keys(co.features||{}).length} types)</h2>
-      <div class="feature-list">
-        ${Object.entries(co.features||{}).slice(0, 60).map(([name, vs]) => `
-          <div class="feature">
-            <div class="nm">${name}</div>
-            ${vs.slice(0,3).map(v => `
-              <div class="ev">${v.value_text || (v.value_num ? fmt.num(v.value_num,2)+' '+(v.unit||'') : '')} — ${(v.evidence||'').slice(0,180).replace(/</g,'&lt;')}</div>
-            `).join('')}
-          </div>
-        `).join('')}
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Source documents (${(co.documents||[]).length})</h2>
-      <table>
-        <thead><tr><th>Type</th><th>Pages</th><th>Status</th><th>Source</th></tr></thead>
-        <tbody>
-          ${(co.documents||[]).slice(0, 30).map(d => `
-            <tr>
-              <td><span class="bucket">${(d.doc_kind||'').replace(/_/g,' ')}</span></td>
-              <td class="num">${d.page_count ?? '—'}</td>
-              <td>${d.extract_status || '—'}</td>
-              <td>${d.pdf_url ? '<a class="doc-link" target="_blank" rel="noreferrer" href="'+d.pdf_url+'">open PDF</a>' : '—'}</td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    </section>
-
-    <section class="panel">
-      <h2>Coverage breakdown</h2>
-      <div class="feature-list">
-        ${Object.entries(co.coverage_checks||{}).map(([k,v]) => `
-          <div class="feature">
-            <div class="nm">${k.replace(/_/g,' ')}</div>
-            <div class="ev" style="color:${v ? 'var(--good)' : 'var(--bad)'};">${v ? '✓ present' : '✗ missing'}</div>
-          </div>
-        `).join('')}
-      </div>
-    </section>
+          ${b.items.length ? `<div class="space-y-1.5">${
+            b.items.slice(0, 8).map(it => `<div class="text-[12px]">
+              <a href="#/c/${slugify(it.co.company.short)}" class="text-sky-300 hover:underline">${it.co.company.short}</a>
+              <span class="text-slate-300 ml-1">— ${it.text}</span>
+            </div>`).join('')
+          }</div>` : `<div class="text-[12px] text-slate-500">0 companies — no signals</div>`}
+        </section>`;
+      }).join('')}
+    </div>
   `;
 }
 
-// ---------- entry ----------
+function slugify(s) {
+  return s.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
+}
+
+/* ==========================================================================
+   15. ENTRY POINT
+   ========================================================================== */
 async function render() {
+  /* nav highlight */
+  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+  const r = parseRoute();
+  const navTarget = r.name === 'universe' ? 'universe'
+                  : r.name === 'flags' ? 'flags'
+                  : r.name === 'buckets' || r.name === 'bucket' ? 'buckets'
+                  : null;
+  if (navTarget) {
+    const a = document.querySelector(`.nav a[data-route="${navTarget}"]`);
+    if (a) a.classList.add('active');
+  }
+
   try {
-    const s = getSlug();
-    if (s) await renderCompany(s);
-    else await renderUniverse();
+    if      (r.name === 'company') await renderCompany(r.slug);
+    else if (r.name === 'bucket')  await renderBucket(r.bucket);
+    else if (r.name === 'buckets') await renderBucketsIndex();
+    else if (r.name === 'flags')   await renderFlagsView();
+    else                            await renderUniverse();
   } catch (e) {
     console.error(e);
     document.getElementById('app').innerHTML =
-      '<div class="loading">Error: ' + e.message + '</div>';
+      `<div class="empty-note">Error: ${e.message}</div>`;
   }
 }
+
+/* global search → company X-Ray on Enter */
+document.getElementById('globalSearch').addEventListener('keydown', async e => {
+  if (e.key !== 'Enter') return;
+  const q = e.target.value.trim().toLowerCase();
+  if (!q) return;
+  const idx = await loadIndex();
+  const hit = idx.companies.find(c =>
+    c.short.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q));
+  if (hit) { nav('/c/' + hit.slug); e.target.value = ''; }
+});
+
 render();
 </script>
 </body>
