@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T12:13:31+00:00",
+  "generated_at": "2026-05-21T13:54:14+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -210,24 +210,24 @@
       "scored_factors": 6
     },
     {
+      "short": "Techno Electric",
+      "slug": "techno_electric",
+      "bucket": "transmission_epc",
+      "coverage_pct": 94,
+      "score_total": 25,
+      "scored_factors": 6
+    },
+    {
       "short": "Transrail",
       "slug": "transrail",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
       "score_total": 23,
       "scored_factors": 6
-    },
-    {
-      "short": "Techno Electric",
-      "slug": "techno_electric",
-      "bucket": "transmission_epc",
-      "coverage_pct": 88,
-      "score_total": 25,
-      "scored_factors": 6
     }
   ],
   "totals": {
     "companies": 28,
-    "avg_coverage": 90.9
+    "avg_coverage": 91.1
   }
 }

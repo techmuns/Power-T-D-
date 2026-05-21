@@ -862,32 +862,5 @@
     "DissemDT": "2025-05-27T20:11:57.577",
     "TimeDiff": "00:00:02",
     "Fld_Attachsize": 4849616
-  },
-  {
-    "NEWSID": "fdf79db9-7251-4e46-90f7-93a9688e08c9",
-    "SCRIP_CD": 544378,
-    "XML_NAME": "ANN_544378_FDF79DB9-7251-4E46-90F7-93A9688E08C9",
-    "NEWSSUB": "Board Meeting Intimation for Prior Intimation Of Board Meeting Under Regulation 29 Of The Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015",
-    "DT_TM": "2025-05-20T19:12:54.38",
-    "NEWS_DT": "2025-05-20T19:12:54.38",
-    "CRITICALNEWS": 1,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "ae9f5f2e-68e2-49a7-8e4c-8a9a34a741e9.pdf",
-    "MORE": "",
-    "HEADLINE": "PDP Shipping & Projects Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/05/2025 ,inter alia, to consider and approve to consider and approve the audited financial results of the Company for the half year and year ended 31st March, 2025.",
-    "CATEGORYNAME": "Board Meeting",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/pdp-shipping--projects-ltd/pspl/544378/",
-    "SLONGNAME": "PDP Shipping & Projects Ltd",
-    "AGENDA_ID": 9,
-    "TotalPageCnt": 1,
-    "News_submission_dt": "2025-05-20T19:12:53",
-    "DissemDT": "2025-05-20T19:12:54.38",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 272510
   }
 ]
