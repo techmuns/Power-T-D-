@@ -2455,32 +2455,5 @@
     "DissemDT": "2025-05-29T11:43:55.433",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 304989
-  },
-  {
-    "NEWSID": "bc528c09-5050-4385-a69c-3ce1d12cec8f",
-    "SCRIP_CD": 543187,
-    "XML_NAME": "ANN_543187_BC528C09-5050-4385-A69C-3CE1D12CEC8F",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-    "DT_TM": "2025-05-21T20:01:43",
-    "NEWS_DT": "2025-05-21T20:01:43",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "8e6cad37-2825-4ec7-973d-e1b216797368.pdf",
-    "MORE": "",
-    "HEADLINE": "Please refer the enclosed file",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/hitachi-energy-india-ltd/powerindia/543187/",
-    "SLONGNAME": "Hitachi Energy India Ltd",
-    "AGENDA_ID": 157,
-    "TotalPageCnt": 2,
-    "News_submission_dt": "2025-05-21T20:01:42",
-    "DissemDT": "2025-05-21T20:01:43",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 259430
   }
 ]

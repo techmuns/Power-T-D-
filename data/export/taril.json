@@ -1697,31 +1697,31 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 40.62,
-    "pb_ratio": 8.45,
+    "pe_ratio": 41.3,
+    "pb_ratio": 8.6,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 7.51,
     "face_value": null,
-    "fetched_at": "2026-05-21T13:52:40+00:00"
+    "fetched_at": "2026-05-22T12:07:47+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "press_release",
+      "page_count": 1,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/79392d75-b360-4f2e-9889-ac64e3b13abf.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "transcript",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3148dc8c-2942-459f-a015-7a1e465046e4.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "transcript",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c31840f-eec4-4dbf-a924-532a40785158.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1729,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e18fb6fb-e0dc-47d4-bb13-950610079466.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c31840f-eec4-4dbf-a924-532a40785158.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1753,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ba27cd08-7ab1-4be8-b24e-bb46a71e2a0b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1753,7 +1761,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4dcdb358-23a4-4791-9e93-8d887ddd9ec0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1761,7 +1769,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e93671bf-9315-4124-8991-bf75a475a347.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-21T13:52:56+00:00",
+      "extracted_at": "2026-05-22T12:07:59+00:00",
       "has_text": false
     },
     {
@@ -1863,6 +1871,15 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1390
+      },
+      {
+        "value_num": 228.26,
+        "unit": "INR crore",
+        "evidence": "would like to inform you th at Transformers and Rectifiers (India) Limited  has secured Order of Rs. 228.26 Crore. The details of this order are as follows:    Particulars Details  Name of the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2014
       }
     ],
     "voltage_class.taril_capability": [
@@ -1934,21 +1951,21 @@
     {
       "factor": "order_book_quality",
       "score": 1,
-      "evidence": "order_book\u2248\u20b90cr, b2b=None, wins_mentioned=1, PGCIL=0, NTPC=0",
+      "evidence": "order_book\u2248\u20b90cr, b2b=None, wins_mentioned=2, PGCIL=0, NTPC=0",
       "inputs": {
         "order_book_inr_cr": null,
         "book_to_bill": null,
-        "order_wins_mentioned": 1,
+        "order_wins_mentioned": 2,
         "pgcil_mentions": 0,
         "ntpc_mentions": 0
       }
     },
     {
       "factor": "tam_relevance",
-      "score": 3,
-      "evidence": "order_wins=1, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=2, capex_mentions=0",
       "inputs": {
-        "order_wins": 1,
+        "order_wins": 2,
         "capex_mentions": 0
       }
     },
