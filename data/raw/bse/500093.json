@@ -4129,32 +4129,5 @@
     "DissemDT": "2025-05-28T16:13:43.603",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 384165
-  },
-  {
-    "NEWSID": "fdd2757e-8d0d-4f79-9b79-15955832c3d9",
-    "SCRIP_CD": 500093,
-    "XML_NAME": "ANN_500093_FDD2757E-8D0D-4F79-9B79-15955832C3D9",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Change in Management",
-    "DT_TM": "2025-05-22T21:50:54.693",
-    "NEWS_DT": "2025-05-22T21:50:54.693",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "e16d7c79-c0cf-43d3-8419-23f823256099.pdf",
-    "MORE": "",
-    "HEADLINE": "Please find enclosed disclosure regarding change in designation of Senior Management Personnel of the Company.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/",
-    "SLONGNAME": "CG Power and Industrial Solutions Ltd",
-    "AGENDA_ID": 124,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-22T21:50:54",
-    "DissemDT": "2025-05-22T21:50:54.693",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 483464
   }
 ]
