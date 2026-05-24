@@ -2941,32 +2941,5 @@
     "DissemDT": "2025-05-24T11:29:03.65",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 2090333
-  },
-  {
-    "NEWSID": "8c4d6d4a-d252-4235-a562-5dd705983018",
-    "SCRIP_CD": 538562,
-    "XML_NAME": "ANN_538562_8C4D6D4A-D252-4235-A562-5DD705983018",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-    "DT_TM": "2025-05-23T15:47:43.43",
-    "NEWS_DT": "2025-05-23T15:47:43.43",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "304d722a-f011-47a9-806d-60a41b6365fc.pdf",
-    "MORE": "",
-    "HEADLINE": "We are enclosing Newspaper Publication made today 23rd May, 2025  for final reminder-cum-forfeiture notice",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/skipper-ltd/skipper/538562/",
-    "SLONGNAME": "Skipper Ltd",
-    "AGENDA_ID": 144,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-23T15:47:43",
-    "DissemDT": "2025-05-23T15:47:43.43",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 7198455
   }
 ]
