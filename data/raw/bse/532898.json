@@ -4291,32 +4291,5 @@
     "DissemDT": "2025-05-27T17:55:43.007",
     "TimeDiff": "00:00:01",
     "Fld_Attachsize": 5124231
-  },
-  {
-    "NEWSID": "ce628431-130c-47d9-873b-9e646f208cf9",
-    "SCRIP_CD": 532898,
-    "XML_NAME": "ANN_532898_CE628431-130C-47D9-873B-9E646F208CF9",
-    "NEWSSUB": "POWERGRID Dharamjaigarh Transmission Limited Has Successfully Commissioned The Project",
-    "DT_TM": "2025-05-24T17:42:45.95",
-    "NEWS_DT": "2025-05-24T17:42:45.95",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "9312fadd-5ba4-4130-a9bc-4487869e52c3.pdf",
-    "MORE": "",
-    "HEADLINE": "POWERGRID Dharamjaigarh Transmission Ltd. has successfully commissioned the project.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/power-grid-corporation-of-india-ltd/powergrid/532898/",
-    "SLONGNAME": "Power Grid Corporation of India Ltd",
-    "AGENDA_ID": 1,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-24T17:42:45",
-    "DissemDT": "2025-05-24T17:42:45.95",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 302743
   }
 ]
