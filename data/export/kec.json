@@ -1560,7 +1560,7 @@
       "unit": "x",
       "formula": "ttm_revenue / total_assets",
       "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1580,7 +1580,7 @@
       "unit": "%",
       "formula": "cfo / ttm_ebitda * 100",
       "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1590,8 +1590,8 @@
       "value": 0.8731937002760188,
       "unit": "ratio",
       "formula": "borrowings / net_worth",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1601,8 +1601,8 @@
       "value": -16.883116883116877,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1612,8 +1612,8 @@
       "value": 7.010954616588419,
       "unit": "%",
       "formula": "ebitda/revenue*100",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1623,8 +1623,8 @@
       "value": -615.0,
       "unit": "INR crore",
       "formula": "cfo - capex_proxy",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1634,8 +1634,8 @@
       "value": 3.020344287949922,
       "unit": "%",
       "formula": "pat/revenue*100",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1646,7 +1646,7 @@
       "unit": "INR crore",
       "formula": "equity_capital + reserves",
       "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1656,8 +1656,8 @@
       "value": -27.985074626865668,
       "unit": "%",
       "formula": "pat/pat_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1667,8 +1667,8 @@
       "value": -7.013969732246794,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1679,7 +1679,7 @@
       "unit": "INR crore",
       "formula": "sum(quarter.ebitda, 4q)",
       "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_n": 3
     },
     {
       "period_end": "2026-03-31",
@@ -1690,22 +1690,22 @@
       "unit": "INR crore",
       "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_n": 3
     }
   ],
   "market": {
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 31.5,
-    "pb_ratio": 2.73,
+    "pe_ratio": 31.39,
+    "pb_ratio": 2.72,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 16.08,
     "face_value": null,
-    "fetched_at": "2026-05-25T06:52:13+00:00"
+    "fetched_at": "2026-05-26T06:32:24+00:00"
   },
   "documents": [
     {
@@ -1713,15 +1713,23 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/63aa5f08-302d-40b5-b2c0-54f0433b4f8b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 20,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e0f2abda-29a8-4c82-aea9-ae05fa8c83d9.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "has_text": true
     },
     {
       "doc_kind": "press_release",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/09b77783-9021-4063-bd8b-77e94407dd9f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a94d8d29-fd2d-4452-977b-1ba6c2aaed68.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/afebfd0c-1c8e-46cd-ae1b-51e6db43f1e2.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1745,7 +1753,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de791f57-2384-45c3-be0a-149b6b37906d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1753,7 +1761,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc8257fe-c5b1-4ff3-a99c-17d05ab3c9f0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1761,7 +1769,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/137746bd-62ee-43f5-bbe5-bf746936ac8d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1871,6 +1879,15 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 2
+      },
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "es to reduce  hydrocarbon  dependence \u2022 India\u2019s renewable target  scaled up to ~900 GW by  2035, unlocking large  opportunities across  Solar & Wind \u2022 Increasing size",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
       }
     ],
     "capacity_mt": [
@@ -1902,6 +1919,33 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 2
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "C terminal project at Aarey, Kudus and Mandvi in Mumbai,  Maharashtra, enabling 1000 MW power transfer Key Achievements  & Business  Highlights 1  400 kV Transmission",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "ured two orders for 100+ MW \u2022 Successfully commissioned two projects totalling ~1,000 MW of solar  capacity across Rajasthan and Karnataka; these projects are among the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MW",
+        "evidence": "ding organisation capabilities across Renewables Oil & Gas Pipelines Renewables 500 MW Solar project in Rajasthan Booster to Blending Unit Piping works at  Vadinar, G",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
       }
     ],
     "capex_capacity_expansion_inr_cr": [
@@ -1976,6 +2020,16 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 58
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
       }
     ],
     "order_book_inr_cr": [
@@ -2050,6 +2104,60 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 3
+      },
+      {
+        "value_num": 17700.0,
+        "unit": "INR crore",
+        "evidence": "83 Cr, growth of  24% YoY \u2022 SAE continues to deliver profitable growth \u2022 Robust order inflows of ~Rs. 17,700 Cr \u2022 Record Order Book & L1 of over Rs. 25,000 Cr \u2022 Overall tender pipeline in T&D",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 25000.0,
+        "unit": "INR crore",
+        "evidence": "to deliver profitable growth \u2022 Robust order inflows of ~Rs. 17,700 Cr \u2022 Record Order Book & L1 of over Rs. 25,000 Cr \u2022 Overall tender pipeline in T&D ~Rs. 70,000 Cr \u2022 Expanded tower manufacturing",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 10000.0,
+        "unit": "INR crore",
+        "evidence": "er intake of over Rs. 5,000 Cr, growth of more than 2x \u2022 Robust and diversified order book & L1 of over Rs. 10,000 Cr, primarily in Buildings & Factories segment \u2022 Completed three metro projects in",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "e costs related to the completion and delay of RODs for metro projects \u2022 Robust Order Book & L1 of over Rs. 40,000 Cr Revenue (\u20b9 Crore) Operating PAT* (\u20b9 Crore) Order Book (\u20b9 Crore) 17,282 19,914 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "10% 10% Mar'23 Mar'24 Mar'25 Mar'26  Diversified and Robust Order Book Current Order Book & L1 of over Rs. 40,000 Cr Order Book to Revenue Ratio of 1.7 times T&D Transportation Civil Cables Oil &",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_num": 40000.0,
+        "unit": "INR crore",
+        "evidence": "ent Adjacent  Growth Execution  Excellence Capability  Development ESG \u2713 Strong Order Book and L1 Position of over Rs. 40,000 Cr (Including Rs. 25,000 Cr+ from T&D) \u2713 Tenders under Evaluation & Tenders in Pip",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
       }
     ],
     "subsidiary_revenue_sae_brazil_inr_cr": [
@@ -2093,6 +2201,26 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 58
+      },
+      {
+        "value_text": "320kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "320kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2891
       }
     ]
   },
@@ -2125,24 +2253,24 @@
     },
     {
       "factor": "competitive_position",
-      "score": 1,
-      "evidence": "revenue rank 2/2, ebitda-margin rank 2/2",
+      "score": 2,
+      "evidence": "revenue rank 2/3, ebitda-margin rank 3/3",
       "inputs": {
         "revenue_rank": 2,
-        "revenue_n": 2,
-        "ebitda_margin_rank": 2,
-        "ebitda_margin_n": 2
+        "revenue_n": 3,
+        "ebitda_margin_rank": 3,
+        "ebitda_margin_n": 3
       }
     },
     {
       "factor": "margin_sustainability",
       "score": 1,
-      "evidence": "ebitda_margin=7.0% (peer rank 2/2), yoy_growth=-17%",
+      "evidence": "ebitda_margin=7.0% (peer rank 3/3), yoy_growth=-17%",
       "inputs": {
         "ebitda_margin_pct": 7.010954616588419,
         "ebitda_growth_yoy_pct": -16.883116883116877,
-        "peer_rank": 2,
-        "peer_n": 2
+        "peer_rank": 3,
+        "peer_n": 3
       }
     },
     {
@@ -2178,14 +2306,14 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": 2,
-      "evidence": "max_approved_kV=0, hvdc_mentions=2, statcom_mentions=1, 765kV=0, 400kV=1, 220kV=0",
+      "score": 3,
+      "evidence": "max_approved_kV=0, hvdc_mentions=3, statcom_mentions=1, 765kV=0, 400kV=2, 220kV=0",
       "inputs": {
         "max_approved_kv": 0,
-        "hvdc": 2,
+        "hvdc": 3,
         "statcom": 1,
         "765kV_mentions": 0,
-        "400kV_mentions": 1,
+        "400kV_mentions": 2,
         "220kV_mentions": 0
       }
     },

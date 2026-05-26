@@ -99,6 +99,13 @@
         "revenue": 2082.0,
         "ebitda": 345.0,
         "pat": 261.0
+      },
+      {
+        "period_end": "2026-03-31",
+        "consolidated": 0,
+        "revenue": 2754.0,
+        "ebitda": 416.0,
+        "pat": 330.0
       }
     ]
   },
@@ -130,6 +137,10 @@
       "investments": 0.0,
       "other_assets": 2815.0,
       "total_assets": 3503.0
+    },
+    {
+      "period_end": "2021-12-31",
+      "consolidated": 0
     },
     {
       "period_end": "2022-03-31",
@@ -200,6 +211,20 @@
       "investments": 0.0,
       "other_assets": 8949.0,
       "total_assets": 9762.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0,
+      "equity_capital": 9.0,
+      "reserves": 5167.0,
+      "borrowings": 86.0,
+      "other_liab": 6782.0,
+      "total_liab": 12044.0,
+      "fixed_assets": 952.0,
+      "cwip": 85.0,
+      "investments": 0.0,
+      "other_assets": 11006.0,
+      "total_assets": 12044.0
     }
   ],
   "cash_flow": [
@@ -258,6 +283,14 @@
       "cfi": -110.0,
       "cff": 2295.0,
       "net_cash_flow": 3679.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0,
+      "cfo": 1245.0,
+      "cfi": -271.0,
+      "cff": -91.0,
+      "net_cash_flow": 883.0
     }
   ],
   "ratios": [
@@ -323,6 +356,16 @@
       "cash_conv_cycle": 10.0,
       "working_cap_days": -31.0,
       "roce_pct": 19.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0,
+      "debtor_days": 86.0,
+      "inventory_days": 119.0,
+      "days_payable": 246.0,
+      "cash_conv_cycle": -42.0,
+      "working_cap_days": -46.0,
+      "roce_pct": 29.0
     }
   ],
   "derived": [
@@ -384,28 +427,10 @@
       "period_end": "2022-03-31",
       "period_type": "annual",
       "consolidated": 0,
-      "metric": "capex_proxy_inr_cr",
-      "value": 83.0,
-      "unit": "INR crore",
-      "formula": "delta(fixed_assets + cwip)"
-    },
-    {
-      "period_end": "2022-03-31",
-      "period_type": "annual",
-      "consolidated": 0,
       "metric": "debt_to_equity",
       "value": 0.16784452296819788,
       "unit": "ratio",
       "formula": "borrowings / net_worth"
-    },
-    {
-      "period_end": "2022-03-31",
-      "period_type": "annual",
-      "consolidated": 0,
-      "metric": "fcf_proxy_inr_cr",
-      "value": -210.0,
-      "unit": "INR crore",
-      "formula": "cfo - capex_proxy"
     },
     {
       "period_end": "2022-03-31",
@@ -1126,29 +1151,162 @@
       "value": 28.51851851851852,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "asset_turnover",
+      "value": 0.6765194287612089,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "capex_proxy_inr_cr",
+      "value": 223.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "cfo_to_ebitda_pct",
+      "value": 102.46913580246914,
+      "unit": "%",
+      "formula": "cfo / ttm_ebitda * 100"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "debt_to_equity",
+      "value": 0.01661514683153014,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 74.78991596638656,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "ebitda_margin_pct",
+      "value": 15.105301379811184,
+      "unit": "%",
+      "formula": "ebitda/revenue*100"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "fcf_proxy_inr_cr",
+      "value": 1022.0,
+      "unit": "INR crore",
+      "formula": "cfo - capex_proxy"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "net_margin_pct",
+      "value": 11.982570806100219,
+      "unit": "%",
+      "formula": "pat/revenue*100"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "net_worth_inr_cr",
+      "value": 5176.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "pat_growth_yoy_pct",
+      "value": 79.34782608695652,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 46.17834394904459,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 1215.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 8148.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)"
     }
   ],
   "market": {
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 187.43,
-    "pb_ratio": 112.42,
+    "pe_ratio": 192.02,
+    "pb_ratio": 115.17,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 188.74,
     "face_value": null,
-    "fetched_at": "2026-05-25T06:52:13+00:00"
+    "fetched_at": "2026-05-26T06:32:24+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 15,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/72b85f9a-af19-49e0-8e77-db9bc108439a.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 13,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5585ffbb-ce71-40a2-abf5-ca9f46572e7e.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "investor_presentation",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8eb8b05f-5582-4706-bac8-bd6ef45d2d81.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1156,7 +1314,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e2dc23ac-6068-49a6-87f6-f058d1cfc37f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1164,7 +1322,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ade5f144-1c9b-4780-82e1-f063be4c5701.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1172,7 +1330,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/64bdcc90-14a2-4b9d-acd6-5bd4618a574b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1180,7 +1338,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f213a493-1280-4462-9e74-2c1bcd93e71e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1188,7 +1346,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f27b8e91-61b9-48cd-8933-9cd9d10a7c18.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1251,6 +1409,75 @@
         "document_id": 14
       }
     ],
+    "capacity_gw": [
+      {
+        "value_num": 900.0,
+        "unit": "GW",
+        "evidence": "ts5in India to Rs 92,000 Crby 2030Rs 7.93 Lakh Cr investment6for integration of 900 GW Non-Fossil capacity by 2035 announced at the BES-2026To support industrial expa",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      }
+    ],
+    "capacity_mva": [
+      {
+        "value_num": 110.0,
+        "unit": "MVA",
+        "evidence": "0 kVA dry type transformer from a leading renewable company at West, India. 3 X 110 MVA, 400 kV & 1 X 85 MVA, 66 kV transformer for a Solar park in Angola Transport: 7",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_num": 85.0,
+        "unit": "MVA",
+        "evidence": "rmer from a leading renewable company at West, India. 3 X 110 MVA, 400 kV & 1 X 85 MVA, 66 kV transformer for a Solar park in Angola Transport: 70 units traction tran",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MVA",
+        "evidence": "for +/- 320 KV 1x1000  MW Voltage Source Converter  (VSC) based HVDC project  \u2022 500 MVA, 765/400/33 kV, ICTs  - 03 nos. commissioned at  Ramgarh.   \u2022 500 MVA, 765/400/",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MVA",
+        "evidence": "roject  \u2022 500 MVA, 765/400/33 kV, ICTs  - 03 nos. commissioned at  Ramgarh.   \u2022 500 MVA, 765/400/33 kV, ICTs  - 03 nos. commissioned at  Bhiwani.  Transformer for the",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_num": 174.0,
+        "unit": "MVA",
+        "evidence": "n at  Shiv Barmer Rajasthan Transformer at Jamnagar  for a leading O&G  company 174 MVA, 220/33 kV Power  Transformers \u2013 02 nos.  commissioned at Jamnagar HITACHI   In",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      }
+    ],
+    "capacity_mw": [
+      {
+        "value_num": 1000.0,
+        "unit": "MW",
+        "evidence": "ross the renewable and utility segment Commisioning of Mumbai  city infeed HVDC 1000MW  VSC Project \u2022 Design ,engineering Supply,  erection and Commissiong of  HVDC c",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      }
+    ],
     "capex_capacity_expansion": [
       {
         "value_text": "capacity expansion in line with industry 200-220 GVA additions",
@@ -1259,6 +1486,44 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 14
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 2000.0,
+        "unit": "INR crore",
+        "evidence": "Rs 4,000 crore * In October 2024, we announced Rs 2,000 Crs and now additional capex of Rs 2,000 Crs leading to Rs 4,000 Crs HITACHI   11 Financial performance Rs Crores FY25FY26Q",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_num": 4000.0,
+        "unit": "INR crore",
+        "evidence": "vide the Company\u2019s press  release dated October 7, 2024, taking the cumulative capex to INR 4,000 crores.    Further, pursuant to Regulation 33(3)(d) of the SEBI Listing Regulations,",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
+      },
+      {
+        "value_num": 4000.0,
+        "unit": "INR crore",
+        "evidence": "vide the Company\u2019s  press release dated October 7, 2024, taking the cumulative capex to INR 4,000 crores.     Outlook   The prevailing global scenario has pushed energy security to th",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
+      },
+      {
+        "value_num": 4000.0,
+        "unit": "INR crore",
+        "evidence": "vide the Company's  press release dated October 7, 2024, taking the cumulative capex to INR 4,000 crores.  Outlook  The prevailing global scenario has pushed energy security to the to",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
       }
     ],
     "customer_mention": [
@@ -1281,6 +1546,26 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 14
+      },
+      {
+        "value_text": "Hitachi",
+        "value_num": 5.0,
+        "unit": "count",
+        "evidence": "Hitachi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "Hitachi",
+        "value_num": 47.0,
+        "unit": "count",
+        "evidence": "Hitachi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
       }
     ],
     "customer_mention.PGCIL": [
@@ -1293,6 +1578,49 @@
         "document_id": 14
       }
     ],
+    "export_share_pct": [
+      {
+        "value_num": 36.8,
+        "unit": "%",
+        "evidence": "e major contributor is the data center, followed by rail and metro.  In 04FY26, exports accounted for 36.8% of total orders booked for the quarter. The Company  received export orders fro",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "AIS",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "AIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
+      }
+    ],
     "order_book_hvdc_pipeline": [
       {
         "value_text": "HVDC pipeline 32.3 GW (14.5 GW awarded)",
@@ -1303,6 +1631,17 @@
         "document_id": 14
       }
     ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 29555.3,
+        "unit": "INR crore",
+        "evidence": "positively impacted  order backlog in 04FY26. The 04 also saw a surge in total order backlog with INR 29,555.3 crore  as of March 31, 2026, providing strong revenue visibility for several quarters",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2890
+      }
+    ],
     "voltage_class.hitachi_hvdc": [
       {
         "value_text": "HVDC converter transformers",
@@ -1311,6 +1650,68 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 14
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "200kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "200kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "66kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "66kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "320kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "320kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
+      },
+      {
+        "value_text": "33kV",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "33kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2860
       }
     ]
   },
@@ -1329,9 +1730,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 4,
+      "evidence": "capacity_mentions: MVA=5, GVA=0, MT=0, ckm=0, capex_amounts=4",
+      "inputs": {
+        "mva": 5,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 4
+      }
     },
     {
       "factor": "competitive_position",
@@ -1347,17 +1754,23 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b929555cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "inputs": {
+        "order_book_inr_cr": 29555.3,
+        "book_to_bill": null,
+        "order_wins_mentioned": 0,
+        "pgcil_mentions": 0,
+        "ntpc_mentions": 0
+      }
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=4",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 4
       }
     },
     {
@@ -1368,9 +1781,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, hvdc_mentions=2, statcom_mentions=0, 765kV=0, 400kV=1, 220kV=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 2,
+        "statcom": 0,
+        "765kV_mentions": 0,
+        "400kV_mentions": 1,
+        "220kV_mentions": 1
+      }
     },
     {
       "factor": "working_capital",

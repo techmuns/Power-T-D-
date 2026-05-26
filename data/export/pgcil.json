@@ -1673,23 +1673,31 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 17.29,
-    "pb_ratio": 3.01,
+    "pe_ratio": 17.18,
+    "pb_ratio": 2.99,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 17.12,
     "face_value": null,
-    "fetched_at": "2026-05-25T06:52:13+00:00"
+    "fetched_at": "2026-05-26T06:32:24+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 24,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4fe8a91b-00ea-4603-96d7-ff9e6c48add9.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "transcript",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31b888a3-6061-40e7-aae7-2e0cd1588361.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1697,7 +1705,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7faa54a9-7670-4e2d-9dd8-4d842e6e0b6c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1705,7 +1713,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e04edce-f337-40fc-ac9e-e2aaf326003c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1713,7 +1721,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/05767a4b-5d88-4391-98e4-70404f964c7d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1721,7 +1729,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a617224-9433-457b-81bd-a52fe07a67c0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1729,7 +1737,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c5b6f406-910d-4bb7-b4df-b49b438deb9c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1737,7 +1745,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/388fc446-86d7-4cb7-86db-96110d36405c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-25T06:52:29+00:00",
+      "extracted_at": "2026-05-26T06:32:38+00:00",
       "has_text": false
     },
     {
@@ -1843,6 +1851,44 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_num": 4765.0,
+        "unit": "CKM",
+        "evidence": "rward that this also will be materializing shortly.   \uf02d On the execution front, 4,765 ckm have been added in the previous financial year and a whopping  72,055 MVA, amou",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 13.0,
+        "unit": "CKM",
+        "evidence": "opping  72,055 MVA, amounting to almost one 500 MVA in every 2.5 days and about 13 ckm every day.  That is the kind of pace with which work has happened over there. A",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      }
+    ],
+    "capacity_gva": [
+      {
+        "value_num": 624.0,
+        "unit": "GVA",
+        "evidence": "s, as on 31st  March, stand at 1.84 lakh ckm and the transformation capacity at 624 GVA.   \uf02d HVDC projects running, about 11 projects running, includes both back-to-ba",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 300.0,
+        "unit": "GVA",
+        "evidence": "si Rama Mohan \u2013 Chairman and Managing Director:  \uf02d The capacity stands at about 300 GVA and the demand is much higher than that. 400 plus GVA in a  particular year. I",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "capacity_gw": [
@@ -1908,6 +1954,51 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_num": 101.0,
+        "unit": "GW",
+        "evidence": "ts running, about 11 projects running, includes both back-to-back and bi-poles ~101  GW of inter-regional capacity out of the total 120 GW inter-regional capacity. 99.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 120.0,
+        "unit": "GW",
+        "evidence": "back-to-back and bi-poles ~101  GW of inter-regional capacity out of the total 120 GW inter-regional capacity. 99.84% as the system  availability and comprising a to",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 76.0,
+        "unit": "GW",
+        "evidence": "meeting the load requirements of green hydrogen. The hydro potential of  about 76 GW in the Brahmaputra basin, we see that this also adds up to \u20b96.4 lakh crore in t",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 71.0,
+        "unit": "GW",
+        "evidence": "erms of data centres and green hydrogen further adds to about a  requirement of 71 GW being transported, which as I already said, obviously it should be a  transmiss",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 127.0,
+        "unit": "GW",
+        "evidence": ". Total HVDC schemes  envisaged are 22 and combined with total HVDC capacity of 127 GW. Presently, the Barmer II \u2013  South Kalamb project, which is under bidding prese",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "capacity_km": [
@@ -1975,6 +2066,42 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_num": 72055.0,
+        "unit": "MVA",
+        "evidence": "front, 4,765 ckm have been added in the previous financial year and a whopping  72,055 MVA, amounting to almost one 500 MVA in every 2.5 days and about 13 ckm every day.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MVA",
+        "evidence": "the previous financial year and a whopping  72,055 MVA, amounting to almost one 500 MVA in every 2.5 days and about 13 ckm every day.  That is the kind of pace with wh",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 315.0,
+        "unit": "MVA",
+        "evidence": "system in position, 2024-2025 the first ICT with ester oil, 2025-2026 the first 315 MVA  synthetic ester oil which has been commissioned and also the 85 MW solar PV.",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_num": 72000.0,
+        "unit": "MVA",
+        "evidence": "for the OEM also to supply the equipment. So, that is  the reason you could see 72,000 MVA being added in one single year. Massive amount of capacity  which has been adde",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "capacity_mw": [
@@ -2022,6 +2149,15 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_num": 85.0,
+        "unit": "MW",
+        "evidence": "the first 315 MVA  synthetic ester oil which has been commissioned and also the 85 MW solar PV.   \uf02d ESG rating stands by NSE at 70.   \uf02d We have nine substations whic",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "capex_guidance_fy28_inr_cr": [
@@ -2033,6 +2169,17 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 8
+      }
+    ],
+    "capex_inr_cr": [
+      {
+        "value_num": 50000.0,
+        "unit": "INR crore",
+        "evidence": "now. So, is it fair to understand that maybe three years from now, the annual  CapEx number itself can increase to \u20b950,000 crore, \u20b960,000 crore or \u20b970,000 crore or is that like a  too far-fetched assumption?",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "cerc_tariff_order_adjustment_fy26_inr_cr": [
@@ -2096,6 +2243,16 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 25
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "grid_tech_mentioned": [
@@ -2128,6 +2285,36 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_text": "HVDC",
+        "value_num": 10.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_text": "GIS",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_text": "REACTOR",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "REACTOR",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ],
     "order_book_capex_pipeline_inr_cr": [
@@ -2244,6 +2431,46 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1
+      },
+      {
+        "value_text": "765kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
+      },
+      {
+        "value_text": "132kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "132kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 2869
       }
     ]
   },
@@ -2264,14 +2491,14 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": 4,
-      "evidence": "capacity_mentions: MVA=6, GVA=0, MT=0, ckm=5, capex_amounts=0",
+      "score": 5,
+      "evidence": "capacity_mentions: MVA=10, GVA=2, MT=0, ckm=7, capex_amounts=1",
       "inputs": {
-        "mva": 6,
-        "gva": 0,
+        "mva": 10,
+        "gva": 2,
         "mt": 0,
-        "ckm": 5,
-        "capex": 0
+        "ckm": 7,
+        "capex": 1
       }
     },
     {
@@ -2304,11 +2531,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 3,
+      "evidence": "order_wins=0, capex_mentions=1",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 1
       }
     },
     {
@@ -2324,14 +2551,14 @@
     {
       "factor": "value_chain_quality",
       "score": 1,
-      "evidence": "max_approved_kV=0, hvdc_mentions=1, statcom_mentions=0, 765kV=1, 400kV=1, 220kV=1",
+      "evidence": "max_approved_kV=0, hvdc_mentions=2, statcom_mentions=0, 765kV=2, 400kV=2, 220kV=2",
       "inputs": {
         "max_approved_kv": 0,
-        "hvdc": 1,
+        "hvdc": 2,
         "statcom": 0,
-        "765kV_mentions": 1,
-        "400kV_mentions": 1,
-        "220kV_mentions": 1
+        "765kV_mentions": 2,
+        "400kV_mentions": 2,
+        "220kV_mentions": 2
       }
     },
     {

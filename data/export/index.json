@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T06:53:50+00:00",
+  "generated_at": "2026-05-26T06:34:05+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -142,8 +142,8 @@
       "slug": "hitachi_energy",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 88,
-      "score_total": 2,
-      "scored_factors": 1
+      "score_total": 10,
+      "scored_factors": 4
     },
     {
       "short": "Voltamp",
@@ -174,7 +174,7 @@
       "slug": "pgcil",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 100,
-      "score_total": 27,
+      "score_total": 29,
       "scored_factors": 8
     },
     {
@@ -190,7 +190,7 @@
       "slug": "kec",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
-      "score_total": 16,
+      "score_total": 18,
       "scored_factors": 9
     },
     {
@@ -198,7 +198,7 @@
       "slug": "kpil",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
-      "score_total": 25,
+      "score_total": 22,
       "scored_factors": 7
     },
     {
@@ -214,7 +214,7 @@
       "slug": "techno_electric",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 25,
+      "score_total": 19,
       "scored_factors": 6
     },
     {

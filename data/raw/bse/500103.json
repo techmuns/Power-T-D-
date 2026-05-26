@@ -3508,32 +3508,5 @@
     "DissemDT": "2025-05-28T15:04:39.253",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 219901
-  },
-  {
-    "NEWSID": "f08d103a-af97-4194-9621-c9661a407509",
-    "SCRIP_CD": 500103,
-    "XML_NAME": "ANN_500103_F08D103A-AF97-4194-9621-C9661A407509",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Change in Management",
-    "DT_TM": "2025-05-25T07:17:34.203",
-    "NEWS_DT": "2025-05-25T07:17:34.203",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "0fe753ba-2bdb-4bb0-9450-7125f5ba9ad6.pdf",
-    "MORE": "",
-    "HEADLINE": "Changes in Management",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/bharat-heavy-electricals-ltd/bhel/500103/",
-    "SLONGNAME": "Bharat Heavy Electricals Ltd",
-    "AGENDA_ID": 124,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-25T07:17:34",
-    "DissemDT": "2025-05-25T07:17:34.203",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 208889
   }
 ]

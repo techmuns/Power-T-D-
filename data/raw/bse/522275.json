@@ -2725,32 +2725,5 @@
     "DissemDT": "2025-05-28T12:44:34.407",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 2189081
-  },
-  {
-    "NEWSID": "44eab90e-fd69-45e2-84f7-f2f6f2c999bd",
-    "SCRIP_CD": 522275,
-    "XML_NAME": "ANN_522275_44EAB90E-FD69-45E2-84F7-F2F6F2C999BD",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-    "DT_TM": "2025-05-25T12:08:10.46",
-    "NEWS_DT": "2025-05-25T12:08:10.46",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "29929f64-16d8-4da0-8bf8-63fd902b562b.pdf",
-    "MORE": "",
-    "HEADLINE": "Intimation for newspaper publication regarding financial results for the quarter and year ended on March 31, 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/ge-vernova-td-india-ltd/gvtd/522275/",
-    "SLONGNAME": "GE Vernova T&D India Ltd",
-    "AGENDA_ID": 144,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-25T12:08:10",
-    "DissemDT": "2025-05-25T12:08:10.46",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 2090765
   }
 ]
