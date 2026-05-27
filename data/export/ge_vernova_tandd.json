@@ -1738,31 +1738,39 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 100.23,
-    "pb_ratio": 89.8,
+    "pe_ratio": 104.69,
+    "pb_ratio": 93.81,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 48.17,
     "face_value": null,
-    "fetched_at": "2026-05-26T06:32:24+00:00"
+    "fetched_at": "2026-05-27T06:45:36+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 1,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/99e7a797-78f1-4f23-9b01-ae14c635db57.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": 23,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a5bb42ee-030d-4609-8c0c-c870d331a898.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "transcript",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b2670282-6ba5-4675-bdeb-4f0f79acf91b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "results",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2311eaa0-b26c-45ab-9171-8837153e5882.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1770,7 +1778,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0212ba44-6465-43c3-b20a-495c8075f23f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2311eaa0-b26c-45ab-9171-8837153e5882.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1778,7 +1794,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9fcddcc8-45b4-4318-aad9-dba9f05bf5cb.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1786,7 +1802,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a4243e7c-b226-41e7-87ca-e8e1590dcd1c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1794,7 +1810,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/71ffd3a7-48e1-4821-8e88-375c82b959ed.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1871,6 +1887,35 @@
     }
   ],
   "features": {
+    "capacity_mva": [
+      {
+        "value_num": 400.0,
+        "unit": "MVA",
+        "evidence": "rter was for power evacuation from NTPC Kahalgaon, a 400 kV AIS bays along with 400  MVA power transformers.  And then for our customer, HPPTCL, at the site location of",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MVA",
+        "evidence": "VAr 765 kV single -phase shunt  reactors were commissioned along with 3 numbers 500 MVA, 765 kV interconnecting  transformers. Then for our customer, Sterlite at Kisht",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_num": 500.0,
+        "unit": "MVA",
+        "evidence": "k V  single-phase shunt reactor.   PGCIL Maheshwaram, where we had commissioned 500 MVA transformers and 765 kV  reactors and then PGCIL Bhadla-III. In addition to tha",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      }
+    ],
     "capex_capacity_expansion_inr_cr": [
       {
         "value_num": 200.0,
@@ -1932,6 +1977,76 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1605
+      },
+      {
+        "value_text": "GE",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "GE",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3070
+      },
+      {
+        "value_text": "GE",
+        "value_num": 46.0,
+        "unit": "count",
+        "evidence": "GE",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "PGCIL",
+        "value_num": 4.0,
+        "unit": "count",
+        "evidence": "PGCIL",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "NTPC",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "NTPC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "Power Grid",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Power Grid",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "Adani",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "Adani",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "Hitachi",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Hitachi",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
       }
     ],
     "customer_mention.PGCIL": [
@@ -1944,6 +2059,69 @@
         "document_id": 29
       }
     ],
+    "export_share_pct": [
+      {
+        "value_num": 40.0,
+        "unit": "%",
+        "evidence": "uch a high value driver, so do we see,  let's say, over a 3 - or 4-year period, export mix can expand further, maybe to 40% or more. Is  that a possibility?  Sushil Kumar: So we typically do not target a",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "HVDC",
+        "value_num": 45.0,
+        "unit": "count",
+        "evidence": "HVDC",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "AIS",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "AIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "GIS",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "REACTOR",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "REACTOR",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "STATCOM",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "STATCOM",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      }
+    ],
     "order_book_hvdc_pipeline": [
       {
         "value_text": "HVDC + grid automation order book",
@@ -1952,6 +2130,28 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 29
+      }
+    ],
+    "order_book_inr_cr": [
+      {
+        "value_num": 21460.0,
+        "unit": "INR crore",
+        "evidence": "on, up by 45% year- on-year. New orders outpaced revenue, further expanding the order backlog to INR214.6 billion  as on March '26 versus INR 143.8 billion, up by 49%.   Our profit before tax a",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      }
+    ],
+    "order_win_inr_cr": [
+      {
+        "value_num": 8600.0,
+        "unit": "INR crore",
+        "evidence": "seen an unprecedented acceleration in  demand. In the fourth quarter alone, we secured orders worth INR86 billion, a staggering 188%  increase over the last year. This surge has propelled the t",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
       }
     ],
     "voltage_class.gevernova_hvdc": [
@@ -1974,15 +2174,70 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1382
+      },
+      {
+        "value_text": "220kV",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "220kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "132kV",
+        "value_num": 2.0,
+        "unit": "count",
+        "evidence": "132kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "400kV",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "400kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "33kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "33kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
+      },
+      {
+        "value_text": "765kV",
+        "value_num": 6.0,
+        "unit": "count",
+        "evidence": "765kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3083
       }
     ]
   },
   "scorecard": [
     {
       "factor": "approval_technology_depth",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "max_approved_kV=0, PGCIL=1, NTPC=1, SECI=0",
+      "inputs": {
+        "max_approved_kv": 0,
+        "pgcil": 1,
+        "ntpc": 1,
+        "seci": 0
+      }
     },
     {
       "factor": "balance_sheet",
@@ -1994,9 +2249,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=3, GVA=0, MT=0, ckm=0, capex_amounts=0",
+      "inputs": {
+        "mva": 3,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 0
+      }
     },
     {
       "factor": "competitive_position",
@@ -2012,16 +2273,22 @@
     },
     {
       "factor": "order_book_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 1,
+      "evidence": "order_book\u2248\u20b921460cr, b2b=None, wins_mentioned=1, PGCIL=1, NTPC=1",
+      "inputs": {
+        "order_book_inr_cr": 21460.0,
+        "book_to_bill": null,
+        "order_wins_mentioned": 1,
+        "pgcil_mentions": 1,
+        "ntpc_mentions": 1
+      }
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 3,
+      "evidence": "order_wins=1, capex_mentions=0",
       "inputs": {
-        "order_wins": 0,
+        "order_wins": 1,
         "capex_mentions": 0
       }
     },
@@ -2033,9 +2300,16 @@
     },
     {
       "factor": "value_chain_quality",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "max_approved_kV=0, hvdc_mentions=1, statcom_mentions=1, 765kV=1, 400kV=1, 220kV=1",
+      "inputs": {
+        "max_approved_kv": 0,
+        "hvdc": 1,
+        "statcom": 1,
+        "765kV_mentions": 1,
+        "400kV_mentions": 1,
+        "220kV_mentions": 1
+      }
     },
     {
       "factor": "working_capital",
@@ -2048,7 +2322,7 @@
       }
     }
   ],
-  "coverage_pct": 94,
+  "coverage_pct": 100,
   "coverage_checks": {
     "has_quarterly_financials": true,
     "has_balance_sheet": true,
@@ -2065,6 +2339,6 @@
     "has_derived_growth": true,
     "has_derived_balance_sheet": true,
     "has_peer_ranks": true,
-    "has_scorecard_complete": false
+    "has_scorecard_complete": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T06:34:05+00:00",
+  "generated_at": "2026-05-27T06:47:10+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -54,8 +54,8 @@
       "slug": "genus",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 17,
-      "scored_factors": 7
+      "score_total": 21,
+      "scored_factors": 8
     },
     {
       "short": "HPL",
@@ -86,7 +86,7 @@
       "slug": "skipper",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 25,
+      "score_total": 26,
       "scored_factors": 10
     },
     {
@@ -102,7 +102,7 @@
       "slug": "diamond_power",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 24,
+      "score_total": 22,
       "scored_factors": 6
     },
     {
@@ -110,8 +110,16 @@
       "slug": "kei",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 27,
+      "score_total": 26,
       "scored_factors": 9
+    },
+    {
+      "short": "GE Vernova T&D",
+      "slug": "ge_vernova_tandd",
+      "bucket": "transformer_manufacturer",
+      "coverage_pct": 100,
+      "score_total": 14,
+      "scored_factors": 7
     },
     {
       "short": "TARIL",
@@ -128,14 +136,6 @@
       "coverage_pct": 94,
       "score_total": 18,
       "scored_factors": 6
-    },
-    {
-      "short": "GE Vernova T&D",
-      "slug": "ge_vernova_tandd",
-      "bucket": "transformer_manufacturer",
-      "coverage_pct": 94,
-      "score_total": 7,
-      "scored_factors": 3
     },
     {
       "short": "Hitachi Energy",
@@ -228,6 +228,6 @@
   ],
   "totals": {
     "companies": 28,
-    "avg_coverage": 91.3
+    "avg_coverage": 91.5
   }
 }

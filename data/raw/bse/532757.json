@@ -1510,32 +1510,5 @@
     "DissemDT": "2025-05-29T14:54:14.073",
     "TimeDiff": null,
     "Fld_Attachsize": 80957
-  },
-  {
-    "NEWSID": "6c80bcc4-b5b8-418e-bef3-e055e41ac92c",
-    "SCRIP_CD": 532757,
-    "XML_NAME": "ANN_532757_6C80BCC4-B5B8-418E-BEF3-E055E41AC92C",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-    "DT_TM": "2025-05-26T17:58:45.097",
-    "NEWS_DT": "2025-05-26T17:58:45.097",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "a110915f-b679-46b2-b059-ea62552398f8.pdf",
-    "MORE": "",
-    "HEADLINE": "Pursuant to Regulation 30 read with Para A of Part A of Schedule III of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, the officials of the Company will be participating in one-on-one Institutional Investors' Meeting as per details attached.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/voltamp-transformers-ltd/voltamp/532757/",
-    "SLONGNAME": "Voltamp Transformers Ltd",
-    "AGENDA_ID": 80,
-    "TotalPageCnt": 2,
-    "News_submission_dt": "2025-05-26T17:58:44",
-    "DissemDT": "2025-05-26T17:58:45.097",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 541581
   }
 ]

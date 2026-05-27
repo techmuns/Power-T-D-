@@ -1622,23 +1622,31 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 16.51,
-    "pb_ratio": 6.06,
+    "pe_ratio": 16.13,
+    "pb_ratio": 5.92,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 19.89,
     "face_value": null,
-    "fetched_at": "2026-05-26T06:32:24+00:00"
+    "fetched_at": "2026-05-27T06:45:36+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "transcript",
+      "page_count": 18,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/891de5bd-e344-4899-91a0-97a381cef1f7.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "investor_presentation",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d12cdf3c-1d93-4111-a4a3-667704adc000.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1646,7 +1654,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a6535c42-9f24-466c-8f57-d75cfd500f9a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1654,7 +1662,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/21883d66-8f05-493d-ba80-65b4a8ed5a73.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1662,7 +1670,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1e7b7476-b803-4cba-a107-3af0467f952e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1670,7 +1678,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9982dc40-b7ae-4e8f-820c-7735db864b86.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1678,7 +1686,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/26cd364f-533e-4cda-a76b-fc8d1f5e3bb9.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1686,7 +1694,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ede4f1dd-9b2c-488a-8b94-8bdeda3a99d7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-26T06:32:38+00:00",
+      "extracted_at": "2026-05-27T06:45:51+00:00",
       "has_text": false
     },
     {
@@ -1786,6 +1794,26 @@
         "document_id": 6
       }
     ],
+    "capex_inr_cr": [
+      {
+        "value_num": 10.0,
+        "unit": "INR crore",
+        "evidence": "kar: And capex guidance, sir?  Kailash Agarwal: Capex, there won't be any major capex, the smaller capex, which is a regular capex, INR10  crores, INR20 crores required for regular things dies and molds and something like th",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3081
+      },
+      {
+        "value_num": 16000.0,
+        "unit": "INR crore",
+        "evidence": "plit  our order book.  Archit Agrawal: Okay. And what is the time line for this capex of INR16,000 crores?  Jitendra Agarwal: So time line is the whole program has been extended till 2",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3081
+      }
+    ],
     "grid_tech_mentioned": [
       {
         "value_text": "GIS",
@@ -1867,6 +1895,24 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 1422
+      },
+      {
+        "value_num": 25000.0,
+        "unit": "INR crore",
+        "evidence": "ing me the opportunity. So my question is about the order book. So the  current order book is INR25,000 crores. Can you give the split how much is for capex and how  much is for opex?  Jite",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3081
+      },
+      {
+        "value_num": 25000.0,
+        "unit": "INR crore",
+        "evidence": "he benefit of that also.  Sahil Garg: So what you are saying is that we have an order book of close to INR25,000 crores odd, and all  of them are on the fixed contract basis. And obviously, we canno",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3081
       }
     ],
     "order_book_total_inr_cr": [
@@ -1908,9 +1954,15 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": null,
-      "evidence": "insufficient data",
-      "inputs": {}
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=2",
+      "inputs": {
+        "mva": 0,
+        "gva": 0,
+        "mt": 0,
+        "ckm": 0,
+        "capex": 2
+      }
     },
     {
       "factor": "competitive_position",
@@ -1948,11 +2000,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 2,
-      "evidence": "order_wins=0, capex_mentions=0",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=2",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 0
+        "capex_mentions": 2
       }
     },
     {
