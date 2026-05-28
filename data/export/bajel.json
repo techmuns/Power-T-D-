@@ -12,58 +12,65 @@
       {
         "period_end": "2024-03-31",
         "consolidated": 1,
-        "revenue": 489.16,
-        "ebitda": 7.85,
-        "pat": 7.07
+        "revenue": 489.0,
+        "ebitda": 8.0,
+        "pat": 7.0
       },
       {
         "period_end": "2024-06-30",
         "consolidated": 1,
-        "revenue": 512.01,
-        "ebitda": 7.1,
-        "pat": 5.52
+        "revenue": 512.0,
+        "ebitda": 7.0,
+        "pat": 6.0
       },
       {
         "period_end": "2024-09-30",
         "consolidated": 1,
-        "revenue": 662.41,
-        "ebitda": 16.8,
-        "pat": 3.66
+        "revenue": 662.0,
+        "ebitda": 17.0,
+        "pat": 4.0
       },
       {
         "period_end": "2024-12-31",
         "consolidated": 1,
-        "revenue": 622.39,
-        "ebitda": 14.64,
-        "pat": 1.46
+        "revenue": 622.0,
+        "ebitda": 15.0,
+        "pat": 1.0
       },
       {
         "period_end": "2025-03-31",
         "consolidated": 1,
-        "revenue": 801.42,
-        "ebitda": 20.74,
-        "pat": 4.82
+        "revenue": 801.0,
+        "ebitda": 21.0,
+        "pat": 5.0
       },
       {
         "period_end": "2025-06-30",
         "consolidated": 1,
-        "revenue": 607.64,
-        "ebitda": 16.19,
-        "pat": 2.96
+        "revenue": 608.0,
+        "ebitda": 16.0,
+        "pat": 3.0
       },
       {
         "period_end": "2025-09-30",
         "consolidated": 1,
-        "revenue": 613.83,
-        "ebitda": 20.49,
-        "pat": 3.6
+        "revenue": 614.0,
+        "ebitda": 20.0,
+        "pat": 4.0
       },
       {
         "period_end": "2025-12-31",
         "consolidated": 1,
-        "revenue": 562.34,
-        "ebitda": 24.77,
-        "pat": -0.42
+        "revenue": 562.0,
+        "ebitda": 25.0,
+        "pat": 0.0
+      },
+      {
+        "period_end": "2026-03-31",
+        "consolidated": 1,
+        "revenue": 1008.0,
+        "ebitda": 31.0,
+        "pat": 14.0
       }
     ]
   },
@@ -109,6 +116,20 @@
       "investments": 81.0,
       "other_assets": 1800.0,
       "total_assets": 1994.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "equity_capital": 23.0,
+      "reserves": 724.0,
+      "borrowings": 367.0,
+      "other_liab": 1424.0,
+      "total_liab": 2538.0,
+      "fixed_assets": 108.0,
+      "cwip": 7.0,
+      "investments": 66.0,
+      "other_assets": 2357.0,
+      "total_assets": 2538.0
     }
   ],
   "cash_flow": [
@@ -127,6 +148,10 @@
       "cfi": -128.0,
       "cff": 68.0,
       "net_cash_flow": 9.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1
     }
   ],
   "ratios": [
@@ -148,6 +173,16 @@
       "cash_conv_cycle": 15.0,
       "working_cap_days": -12.0,
       "roce_pct": 12.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "debtor_days": 214.0,
+      "inventory_days": 26.0,
+      "days_payable": 166.0,
+      "cash_conv_cycle": 74.0,
+      "working_cap_days": 23.0,
+      "roce_pct": 10.0
     }
   ],
   "derived": [
@@ -167,7 +202,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 1.6047918881347614,
+      "value": 1.6359918200409,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -178,7 +213,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 1.4453348597595879,
+      "value": 1.4314928425357873,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -200,7 +235,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 1.3866916661783948,
+      "value": 1.3671875,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -211,7 +246,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 1.0781039432823576,
+      "value": 1.171875,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -222,7 +257,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 2.53619359611117,
+      "value": 2.56797583081571,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -233,7 +268,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 0.552527890581362,
+      "value": 0.6042296072507553,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -244,7 +279,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 2.3522228827583995,
+      "value": 2.4115755627009645,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -255,7 +290,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 0.23457960442809173,
+      "value": 0.1607717041800643,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -266,7 +301,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "asset_turnover",
-      "value": 1.2521590361445782,
+      "value": 1.251566265060241,
       "unit": "x",
       "formula": "ttm_revenue / total_assets",
       "bucket_rank": 1,
@@ -286,7 +321,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "cfo_to_ebitda_pct",
-      "value": 116.39676113360325,
+      "value": 114.99999999999999,
       "unit": "%",
       "formula": "cfo / ttm_ebitda * 100",
       "bucket_rank": 2,
@@ -308,7 +343,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_growth_yoy_pct",
-      "value": 164.20382165605093,
+      "value": 162.5,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
       "bucket_rank": 1,
@@ -319,7 +354,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 2.5879064660228095,
+      "value": 2.6217228464419478,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -341,7 +376,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 0.6014324573881361,
+      "value": 0.6242197253433208,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -363,7 +398,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "pat_growth_yoy_pct",
-      "value": -31.824611032531823,
+      "value": -28.57142857142857,
       "unit": "%",
       "formula": "pat/pat_yr_ago - 1",
       "bucket_rank": 5,
@@ -374,7 +409,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "revenue_growth_yoy_pct",
-      "value": 63.83596369286122,
+      "value": 63.8036809815951,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
       "bucket_rank": 2,
@@ -385,7 +420,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "ttm_ebitda_inr_cr",
-      "value": 59.28,
+      "value": 60.0,
       "unit": "INR crore",
       "formula": "sum(quarter.ebitda, 4q)",
       "bucket_rank": 5,
@@ -396,7 +431,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "ttm_revenue_inr_cr",
-      "value": 2598.23,
+      "value": 2597.0,
       "unit": "INR crore",
       "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 4,
@@ -407,7 +442,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_growth_yoy_pct",
-      "value": 128.02816901408454,
+      "value": 128.57142857142856,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
       "bucket_rank": 1,
@@ -418,7 +453,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 2.6644065565137254,
+      "value": 2.631578947368421,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -429,7 +464,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 0.4871305378184451,
+      "value": 0.4934210526315789,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -440,7 +475,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "pat_growth_yoy_pct",
-      "value": -46.37681159420289,
+      "value": -50.0,
       "unit": "%",
       "formula": "pat/pat_yr_ago - 1",
       "bucket_rank": 5,
@@ -451,7 +486,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "revenue_growth_yoy_pct",
-      "value": 18.677369582625335,
+      "value": 18.75,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
       "bucket_rank": 4,
@@ -462,7 +497,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "asset_turnover",
-      "value": 1.3266198595787362,
+      "value": 1.3264794383149447,
       "unit": "x",
       "formula": "ttm_revenue / total_assets",
       "bucket_rank": 1,
@@ -493,7 +528,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_growth_yoy_pct",
-      "value": 21.9642857142857,
+      "value": 17.647058823529417,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
       "bucket_rank": 5,
@@ -504,7 +539,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 3.338057768437515,
+      "value": 3.257328990228013,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -515,7 +550,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": 0.586481599139827,
+      "value": 0.6514657980456027,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
@@ -537,7 +572,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "pat_growth_yoy_pct",
-      "value": -1.6393442622950838,
+      "value": 0.0,
       "unit": "%",
       "formula": "pat/pat_yr_ago - 1",
       "bucket_rank": 5,
@@ -548,7 +583,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "revenue_growth_yoy_pct",
-      "value": -7.333826482088124,
+      "value": -7.250755287009058,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
       "bucket_rank": 5,
@@ -559,7 +594,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "ttm_ebitda_inr_cr",
-      "value": 72.05999999999999,
+      "value": 72.0,
       "unit": "INR crore",
       "formula": "sum(quarter.ebitda, 4q)",
       "bucket_rank": 3,
@@ -570,7 +605,7 @@
       "period_type": "annual",
       "consolidated": 1,
       "metric": "ttm_revenue_inr_cr",
-      "value": 2645.2799999999997,
+      "value": 2645.0,
       "unit": "INR crore",
       "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 3,
@@ -581,7 +616,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_growth_yoy_pct",
-      "value": 69.19398907103825,
+      "value": 66.66666666666667,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
       "bucket_rank": 1,
@@ -592,7 +627,7 @@
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_margin_pct",
-      "value": 4.404808478856208,
+      "value": 4.448398576512456,
       "unit": "%",
       "formula": "ebitda/revenue*100",
       "bucket_rank": 5,
@@ -602,32 +637,129 @@
       "period_end": "2025-12-31",
       "period_type": "quarterly",
       "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": -9.646302250803862,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 5,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "asset_turnover",
+      "value": 1.1000788022064618,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 2.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.49129852744310576,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 4,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 47.61904761904763,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 3.075396825396825,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 5,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
       "metric": "net_margin_pct",
-      "value": -0.07468791122808265,
+      "value": 1.3888888888888888,
       "unit": "%",
       "formula": "pat/revenue*100",
       "bucket_rank": 5,
       "bucket_n": 5
     },
     {
-      "period_end": "2025-12-31",
-      "period_type": "quarterly",
+      "period_end": "2026-03-31",
+      "period_type": "annual",
       "consolidated": 1,
-      "metric": "pat_growth_yoy_pct",
-      "value": -128.76712328767124,
-      "unit": "%",
-      "formula": "pat/pat_yr_ago - 1",
+      "metric": "net_worth_inr_cr",
+      "value": 747.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
       "bucket_rank": 5,
       "bucket_n": 5
     },
     {
-      "period_end": "2025-12-31",
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 179.99999999999997,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "revenue_growth_yoy_pct",
-      "value": -9.648291264319797,
+      "value": 25.842696629213478,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 92.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)",
+      "bucket_rank": 5,
+      "bucket_n": 5
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 2792.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 5,
       "bucket_n": 5
     }
@@ -636,7 +768,7 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 11.05,
+    "pe_ratio": 11.2,
     "pb_ratio": 0.21,
     "dividend_yield": null,
     "week52_high": null,
@@ -644,7 +776,7 @@
     "book_value": null,
     "eps": 1.72,
     "face_value": null,
-    "fetched_at": "2026-05-27T06:45:36+00:00"
+    "fetched_at": "2026-05-28T06:37:40+00:00"
   },
   "documents": [
     {
@@ -652,15 +784,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a8df518f-35db-44c0-9b21-85dbb4d3aab3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "results",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9205930c-04a6-4105-ac9d-bc4cbe086fb7.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -668,7 +792,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b9a64e79-83d2-4fc6-b8ec-5b65a3ca1440.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9205930c-04a6-4105-ac9d-bc4cbe086fb7.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -676,7 +808,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9906c7ca-451e-419a-9b55-b333084f453a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -684,7 +816,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9f715ba2-8b5e-496c-9712-fe5bf9c93706.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -692,7 +824,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf7b3671-4131-4469-b5ca-8847a375d581.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -700,7 +832,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/053e9e04-3bd7-472f-8b39-61bcdd949a73.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -708,7 +840,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dd72e3a4-64ea-4d37-8454-362bcff19cfd.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-27T06:45:51+00:00",
+      "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
     },
     {
@@ -855,9 +987,9 @@
     {
       "factor": "balance_sheet",
       "score": 4,
-      "evidence": "debt/equity = 0.16",
+      "evidence": "debt/equity = 0.49",
       "inputs": {
-        "debt_to_equity": 0.16005665722379603
+        "debt_to_equity": 0.49129852744310576
       }
     },
     {
@@ -869,10 +1001,10 @@
     {
       "factor": "competitive_position",
       "score": 1,
-      "evidence": "revenue rank 3/3, ebitda-margin rank 5/5",
+      "evidence": "revenue rank 5/5, ebitda-margin rank 5/5",
       "inputs": {
-        "revenue_rank": 3,
-        "revenue_n": 3,
+        "revenue_rank": 5,
+        "revenue_n": 5,
         "ebitda_margin_rank": 5,
         "ebitda_margin_n": 5
       }
@@ -880,10 +1012,10 @@
     {
       "factor": "margin_sustainability",
       "score": 1,
-      "evidence": "ebitda_margin=4.4% (peer rank 5/5), yoy_growth=69%",
+      "evidence": "ebitda_margin=3.1% (peer rank 5/5), yoy_growth=48%",
       "inputs": {
-        "ebitda_margin_pct": 4.404808478856208,
-        "ebitda_growth_yoy_pct": 69.19398907103825,
+        "ebitda_margin_pct": 3.075396825396825,
+        "ebitda_growth_yoy_pct": 47.61904761904763,
         "peer_rank": 5,
         "peer_n": 5
       }
@@ -905,12 +1037,12 @@
     },
     {
       "factor": "valuation_comfort",
-      "score": 3,
-      "evidence": "proxy (no market-cap feed yet): rev_growth=-9.648291264319797, ebitda_margin=4.404808478856208, debt/eq=0.16005665722379603",
+      "score": 4,
+      "evidence": "proxy (no market-cap feed yet): rev_growth=25.842696629213478, ebitda_margin=3.075396825396825, debt/eq=0.49129852744310576",
       "inputs": {
-        "rev_growth_yoy_pct": -9.648291264319797,
-        "ebitda_margin_pct": 4.404808478856208,
-        "debt_to_equity": 0.16005665722379603
+        "rev_growth_yoy_pct": 25.842696629213478,
+        "ebitda_margin_pct": 3.075396825396825,
+        "debt_to_equity": 0.49129852744310576
       }
     },
     {
@@ -922,11 +1054,11 @@
     {
       "factor": "working_capital",
       "score": 5,
-      "evidence": "wc_days=-12.0, debtor_days=136.0, cfo/ebitda=116%",
+      "evidence": "wc_days=23.0, debtor_days=214.0, cfo/ebitda=115%",
       "inputs": {
-        "working_cap_days": -12.0,
-        "debtor_days": 136.0,
-        "cfo_to_ebitda_pct": 116.39676113360325
+        "working_cap_days": 23.0,
+        "debtor_days": 214.0,
+        "cfo_to_ebitda_pct": 114.99999999999999
       }
     }
   ],

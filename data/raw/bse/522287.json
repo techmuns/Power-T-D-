@@ -4075,32 +4075,5 @@
     "DissemDT": "2025-05-28T14:22:51.03",
     "TimeDiff": "00:00:01",
     "Fld_Attachsize": 345117
-  },
-  {
-    "NEWSID": "7c75d2bd-4197-461f-9293-4dec18d9413a",
-    "SCRIP_CD": 522287,
-    "XML_NAME": "ANN_522287_7C75D2BD-4197-461F-9293-4DEC18D9413A",
-    "NEWSSUB": "Disclosure Under Regulation 30 Of Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015",
-    "DT_TM": "2025-05-27T11:48:24.227",
-    "NEWS_DT": "2025-05-27T11:48:24.227",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "fe1da866-460c-45b2-828d-7ad682f5bb81.pdf",
-    "MORE": "",
-    "HEADLINE": "Disclosure under Regulation 30 of Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/kalpataru-projects-international-ltd/kpil/522287/",
-    "SLONGNAME": "Kalpataru Projects International Ltd",
-    "AGENDA_ID": 1,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-27T11:48:24",
-    "DissemDT": "2025-05-27T11:48:24.227",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 341749
   }
 ]

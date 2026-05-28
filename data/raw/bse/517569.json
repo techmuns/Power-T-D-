@@ -3184,32 +3184,5 @@
     "DissemDT": "2025-06-06T17:03:01.057",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 1317451
-  },
-  {
-    "NEWSID": "17080bca-0a99-43b0-b747-3edd8b3caed7",
-    "SCRIP_CD": 517569,
-    "XML_NAME": "ANN_517569_17080BCA-0A99-43B0-B747-3EDD8B3CAED7",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Investor Presentation",
-    "DT_TM": "2025-05-27T17:46:42.84",
-    "NEWS_DT": "2025-05-27T17:46:42.84",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "f2fafdee-976d-4cbd-9741-63c37957c854.pdf",
-    "MORE": "",
-    "HEADLINE": "KEI INDUSTRIES LIMITED CORPORATE PRESENTATION MARCH 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/kei-industries-ltd/kei/517569/",
-    "SLONGNAME": "KEI Industries Ltd",
-    "AGENDA_ID": 120,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-27T17:46:42",
-    "DissemDT": "2025-05-27T17:46:42.84",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 4095724
   }
 ]

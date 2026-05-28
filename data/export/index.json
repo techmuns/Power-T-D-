@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T06:47:10+00:00",
+  "generated_at": "2026-05-28T06:39:19+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -54,7 +54,7 @@
       "slug": "genus",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 21,
+      "score_total": 24,
       "scored_factors": 8
     },
     {
@@ -190,7 +190,7 @@
       "slug": "kec",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
-      "score_total": 18,
+      "score_total": 20,
       "scored_factors": 9
     },
     {
@@ -206,7 +206,7 @@
       "slug": "bajel",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 16,
+      "score_total": 17,
       "scored_factors": 6
     },
     {
@@ -214,7 +214,7 @@
       "slug": "techno_electric",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 19,
+      "score_total": 20,
       "scored_factors": 6
     },
     {
@@ -222,7 +222,7 @@
       "slug": "transrail",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 23,
+      "score_total": 22,
       "scored_factors": 6
     }
   ],
