@@ -4102,32 +4102,5 @@
     "DissemDT": "2025-05-30T20:23:16.473",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 1060872
-  },
-  {
-    "NEWSID": "c06f3c7d-a8f8-4f83-9481-c4fc3e0f76b5",
-    "SCRIP_CD": 500093,
-    "XML_NAME": "ANN_500093_C06F3C7D-A8F8-4F83-9481-C4FC3E0F76B5",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
-    "DT_TM": "2025-05-28T16:13:43.603",
-    "NEWS_DT": "2025-05-28T16:13:43.603",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "52c59dd6-4fad-4e9d-923d-10c8b567c528.pdf",
-    "MORE": "",
-    "HEADLINE": "Please find enclosed the disclosure regarding allotment of 6,000 equity shares pursuant to the Company''s ESOP Plan 2021 on 28th May 2025.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/",
-    "SLONGNAME": "CG Power and Industrial Solutions Ltd",
-    "AGENDA_ID": 115,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-28T16:13:43",
-    "DissemDT": "2025-05-28T16:13:43.603",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 384165
   }
 ]

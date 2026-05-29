@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T06:39:19+00:00",
+  "generated_at": "2026-05-29T06:39:55+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -30,7 +30,7 @@
       "slug": "quality_power",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 100,
-      "score_total": 19,
+      "score_total": 21,
       "scored_factors": 8
     },
     {
@@ -74,6 +74,14 @@
       "scored_factors": 1
     },
     {
+      "short": "Apar",
+      "slug": "apar",
+      "bucket": "towers_conductors_cables",
+      "coverage_pct": 100,
+      "score_total": 19,
+      "scored_factors": 7
+    },
+    {
       "short": "Polycab",
       "slug": "polycab",
       "bucket": "towers_conductors_cables",
@@ -86,16 +94,8 @@
       "slug": "skipper",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 26,
+      "score_total": 27,
       "scored_factors": 10
-    },
-    {
-      "short": "Apar",
-      "slug": "apar",
-      "bucket": "towers_conductors_cables",
-      "coverage_pct": 94,
-      "score_total": 18,
-      "scored_factors": 6
     },
     {
       "short": "Diamond Power",
@@ -110,7 +110,7 @@
       "slug": "kei",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 26,
+      "score_total": 27,
       "scored_factors": 9
     },
     {
@@ -228,6 +228,6 @@
   ],
   "totals": {
     "companies": 28,
-    "avg_coverage": 91.5
+    "avg_coverage": 91.7
   }
 }

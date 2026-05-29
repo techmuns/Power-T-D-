@@ -3940,32 +3940,5 @@
     "DissemDT": "2025-05-29T14:41:18.253",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 983843
-  },
-  {
-    "NEWSID": "e6e2c6d5-1456-49bd-a441-7e2e3d56d62d",
-    "SCRIP_CD": 542652,
-    "XML_NAME": "ANN_542652_E6E2C6D5-1456-49BD-A441-7E2E3D56D62D",
-    "NEWSSUB": "Compliances-Reg.24(A)-Annual Secretarial Compliance",
-    "DT_TM": "2025-05-28T18:14:50.647",
-    "NEWS_DT": "2025-05-28T18:14:50.647",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "5ce63767-faca-40c4-926d-ad2912999f3e.pdf",
-    "MORE": "",
-    "HEADLINE": "Submission of Annual Secretarial Compliance Report for the Financial Year ended 31 March 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/polycab-india-ltd/polycab/542652/",
-    "SLONGNAME": "Polycab India Ltd",
-    "AGENDA_ID": 210,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-28T18:14:50",
-    "DissemDT": "2025-05-28T18:14:50.647",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 2207822
   }
 ]

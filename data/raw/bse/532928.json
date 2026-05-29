@@ -2266,32 +2266,5 @@
     "DissemDT": "2025-06-13T12:07:52.11",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 561775
-  },
-  {
-    "NEWSID": "13154a93-61ff-45ca-b128-b1cd4150bd02",
-    "SCRIP_CD": 532928,
-    "XML_NAME": "ANN_532928_13154A93-61FF-45CA-B128-B1CD4150BD02",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-    "DT_TM": "2025-05-28T17:11:26.923",
-    "NEWS_DT": "2025-05-28T17:11:26.923",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "fa0c6187-9742-4550-8cb2-0bfa372c5428.pdf",
-    "MORE": "",
-    "HEADLINE": "We send herewith Investor Meet Schedule to be held on 2nd June, 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/transformers-and-rectifiers-(india)-ltd/taril/532928/",
-    "SLONGNAME": "Transformers and Rectifiers (India) Ltd",
-    "AGENDA_ID": 80,
-    "TotalPageCnt": 2,
-    "News_submission_dt": "2025-05-28T17:11:26",
-    "DissemDT": "2025-05-28T17:11:26.923",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 228657
   }
 ]

@@ -3265,32 +3265,5 @@
     "DissemDT": "2025-05-30T16:23:16.323",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 1239028
-  },
-  {
-    "NEWSID": "4ca1de3c-8c8c-4c46-b109-8903c87ceb5e",
-    "SCRIP_CD": 539254,
-    "XML_NAME": "ANN_539254_4CA1DE3C-8C8C-4C46-B109-8903C87CEB5E",
-    "NEWSSUB": "Board Meeting Intimation for To Consider And Approve The Proposal Of Raising Of Funds.",
-    "DT_TM": "2025-05-28T18:58:16.183",
-    "NEWS_DT": "2025-05-28T18:58:16.183",
-    "CRITICALNEWS": 1,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "73521ba4-f824-4633-8846-7c47595adc87.pdf",
-    "MORE": "",
-    "HEADLINE": "Adani Energy Solutions Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 31/05/2025 ,inter alia, to consider and approve proposal of raising funds.",
-    "CATEGORYNAME": "Board Meeting",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/adani-energy-solutions-ltd/adaniensol/539254/",
-    "SLONGNAME": "Adani Energy Solutions Ltd",
-    "AGENDA_ID": 9,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-28T18:58:15",
-    "DissemDT": "2025-05-28T18:58:16.183",
-    "TimeDiff": "00:00:01",
-    "Fld_Attachsize": 148788
   }
 ]

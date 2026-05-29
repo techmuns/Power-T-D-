@@ -99,6 +99,13 @@
         "revenue": 1029.0,
         "ebitda": 173.0,
         "pat": 97.0
+      },
+      {
+        "period_end": "2026-03-31",
+        "consolidated": 0,
+        "revenue": 590.0,
+        "ebitda": 45.0,
+        "pat": 22.0
       }
     ]
   },
@@ -284,6 +291,20 @@
       "investments": 0.0,
       "other_assets": 1542.0,
       "total_assets": 2065.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0,
+      "equity_capital": 48.0,
+      "reserves": 727.0,
+      "borrowings": 548.0,
+      "other_liab": 1021.0,
+      "total_liab": 2344.0,
+      "fixed_assets": 462.0,
+      "cwip": 102.0,
+      "investments": 0.0,
+      "other_assets": 1780.0,
+      "total_assets": 2344.0
     }
   ],
   "cash_flow": [
@@ -382,6 +403,10 @@
       "cfi": -66.0,
       "cff": -30.0,
       "net_cash_flow": 211.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0
     }
   ],
   "ratios": [
@@ -504,6 +529,16 @@
       "cash_conv_cycle": 56.0,
       "working_cap_days": 42.0,
       "roce_pct": 41.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 0,
+      "debtor_days": 103.0,
+      "inventory_days": 84.0,
+      "days_payable": 126.0,
+      "cash_conv_cycle": 61.0,
+      "working_cap_days": 44.0,
+      "roce_pct": 30.0
     }
   ],
   "derived": [
@@ -1523,29 +1558,168 @@
       "value": 20.070011668611443,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "asset_turnover",
+      "value": 1.2333617747440273,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "capex_proxy_inr_cr",
+      "value": 41.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "debt_to_equity",
+      "value": 0.7070967741935484,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": -48.275862068965516,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "ebitda_margin_pct",
+      "value": 7.627118644067797,
+      "unit": "%",
+      "formula": "ebitda/revenue*100"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "net_margin_pct",
+      "value": 3.728813559322034,
+      "unit": "%",
+      "formula": "pat/revenue*100"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "net_worth_inr_cr",
+      "value": 775.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "pat_growth_yoy_pct",
+      "value": -60.0,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "quarterly",
+      "consolidated": 0,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 0.5110732538330387,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 371.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 0,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 2891.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)"
     }
   ],
   "market": {
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 134.5,
-    "pb_ratio": 82.5,
+    "pe_ratio": 147.32,
+    "pb_ratio": 78.38,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
-    "eps": 10.25,
+    "eps": 8.89,
     "face_value": null,
-    "fetched_at": "2026-05-28T06:37:40+00:00"
+    "fetched_at": "2026-05-29T06:37:47+00:00"
   },
   "documents": [
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": 23,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9078fd0d-210b-4887-b6b1-26827b1a7acb.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 3,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f2b680ac-b7cd-43a0-b02b-66091d7034dc.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 10,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fc2dd7b7-6500-4de7-8cae-12d7759fc4ed.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 10,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e1db595-47e5-4c04-a003-d033551daa1c.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 3,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5b0c2833-51b5-458d-ba79-54b9aed39878.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
     {
       "doc_kind": "press_release",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3a4c8cc9-acfe-4a91-b66d-bb9cbdd490ce.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
@@ -1553,7 +1727,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e5f90be8-cb41-4104-86b7-b5e2f84a9f9c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
@@ -1561,7 +1735,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cede6b8b-6699-4f18-a0da-e0fa438f86e4.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
@@ -1646,6 +1820,44 @@
     }
   ],
   "features": {
+    "capacity_gw": [
+      {
+        "value_num": 283.0,
+        "unit": "GW",
+        "evidence": "Per Capita Electricity Consumption: ~1.5MWh \u2192 2MWh (2030)  \u25aa Non fossil Fuel : 283GW \u2192 500 GW | BESS1: ~0.8GWh -> 208 GWh (2030) \u25aa  Installed Data Center Capacity:",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
+      },
+      {
+        "value_num": 500.0,
+        "unit": "GW",
+        "evidence": "ita Electricity Consumption: ~1.5MWh \u2192 2MWh (2030)  \u25aa Non fossil Fuel : 283GW \u2192 500 GW | BESS1: ~0.8GWh -> 208 GWh (2030) \u25aa  Installed Data Center Capacity: ~1.5GW \u2192",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
+      },
+      {
+        "value_num": 1.5,
+        "unit": "GW",
+        "evidence": "\u2192 500 GW | BESS1: ~0.8GWh -> 208 GWh (2030) \u25aa  Installed Data Center Capacity: ~1.5GW \u2192 8GW (2030) \u25aa  E commerce users: 300Mn \u2192 450 Mn (2030)  Manufacturing \u25aa  EV Pe",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
+      },
+      {
+        "value_num": 8.0,
+        "unit": "GW",
+        "evidence": "| BESS1: ~0.8GWh -> 208 GWh (2030) \u25aa  Installed Data Center Capacity: ~1.5GW \u2192 8GW (2030) \u25aa  E commerce users: 300Mn \u2192 450 Mn (2030)  Manufacturing \u25aa  EV Penetrat",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
+      }
+    ],
     "capacity_smart_meter_grid": [
       {
         "value_text": "grid automation + smart meter integration capability",
@@ -1666,6 +1878,28 @@
         "document_id": 23
       }
     ],
+    "customer_mention": [
+      {
+        "value_text": "Siemens",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Siemens",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3490
+      },
+      {
+        "value_text": "Siemens",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "Siemens",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3497
+      }
+    ],
     "customer_mention.PGCIL": [
       {
         "value_text": "PGCIL grid automation",
@@ -1674,6 +1908,18 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 23
+      }
+    ],
+    "grid_tech_mentioned": [
+      {
+        "value_text": "GIS",
+        "value_num": 3.0,
+        "unit": "count",
+        "evidence": "GIS",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
       }
     ],
     "order_book_grid_automation": [
@@ -1704,6 +1950,18 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 23
+      }
+    ],
+    "voltage_class_mentioned": [
+      {
+        "value_text": "33kV",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "33kV",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3487
       }
     ]
   },

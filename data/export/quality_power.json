@@ -948,31 +948,55 @@
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 196.96,
+    "pe_ratio": 217.17,
     "pb_ratio": null,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
-    "eps": 5.0,
+    "eps": 4.37,
     "face_value": null,
-    "fetched_at": "2026-05-28T06:37:40+00:00"
+    "fetched_at": "2026-05-29T06:37:47+00:00"
   },
   "documents": [
     {
+      "doc_kind": "results",
+      "page_count": 4,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4fe35cf4-fe1f-4eb4-9a58-c57fa436d39b.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
       "doc_kind": "investor_presentation",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bfc426bb-5af9-48c4-a166-d3b08a9e2012.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
-      "has_text": false
+      "page_count": 24,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ef3e3a38-456b-4b09-bc3e-ed1e236506af.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
     },
     {
       "doc_kind": "press_release",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/94655cd9-95b7-42cc-9de3-3cfd85314f93.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": 20,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/80b14269-fb3a-43e7-b630-d50043e5adfc.pdf",
+      "extract_status": "ok",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": true
+    },
+    {
+      "doc_kind": "investor_presentation",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bfc426bb-5af9-48c4-a166-d3b08a9e2012.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
@@ -980,15 +1004,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3a5fad5c-0e46-43bb-8ff1-32aa853871b3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "results",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2283a2e8-b5ec-4a5f-9406-d7e4baecf863.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
@@ -996,13 +1012,21 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ba28969c-c571-4425-9a3d-77357bf9e97b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-05-28T06:37:53+00:00",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
       "has_text": false
     },
     {
       "doc_kind": "transcript",
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e78ce38a-f777-476b-9869-beb6c1cf4fdc.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-05-29T06:38:00+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2283a2e8-b5ec-4a5f-9406-d7e4baecf863.pdf",
       "extract_status": "failed",
       "extracted_at": "2026-05-28T06:37:53+00:00",
       "has_text": false
@@ -1093,6 +1117,15 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 67
+      },
+      {
+        "value_num": 55.1,
+        "unit": "INR crore",
+        "evidence": "1& ROE (%)42.9%54.4%25.2%9.6%46.7%53.5%33.1%16.0%FY23 FY24 FY25 FY26ROCEROE*Net capex addition in FY26 \u2013 INR 55.1 cr (Op Gross Block- INR 157.4 cr PY)has pulled down ROCE, ROE and FA turnover  Ord",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3495
       }
     ],
     "customer_focus_text": [
@@ -1103,6 +1136,18 @@
         "source_tag": "fact_company",
         "confidence": 0.9,
         "document_id": 67
+      }
+    ],
+    "customer_mention": [
+      {
+        "value_text": "GE",
+        "value_num": 1.0,
+        "unit": "count",
+        "evidence": "GE",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3495
       }
     ],
     "customer_mention.global_OEM": [
@@ -1134,6 +1179,24 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 67
+      },
+      {
+        "value_num": 89.0,
+        "unit": "%",
+        "evidence": "ical Presence Geographical Presence \u2022Catering to7 countries\u2022Serving 35customers\u202289%export revenue CapacityCapacity2,75,000 sq ft across manufacturing units 4,718 SKUstoo",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3495
+      },
+      {
+        "value_num": 90.0,
+        "unit": "%",
+        "evidence": "+ team membersPeople2,00,000 sq. ft. in Visakhapatnam SEZManufacturing Facility~90% exportsOperationsMetalic Bellows and Exhaust manifold systems & Assemblies Expertise13+",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3495
       }
     ],
     "export_share_text": [
@@ -1179,6 +1242,24 @@
         "source_tag": "fact_company",
         "confidence": 0.6,
         "document_id": 67
+      },
+      {
+        "value_num": 314.0,
+        "unit": "INR crore",
+        "evidence": "ing capabilities,  infrastructure, and talent to support long-term growth.  Our order book stands at approximately Rs. 314 crore as on May 26th, 2026 with customer  engagement levels remaining healthy across",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3491
+      },
+      {
+        "value_num": 314.0,
+        "unit": "INR crore",
+        "evidence": "capabilities,infrastructure, and talent to support long-term growth.Our current order book stands at approximately Rs. 314 crore, with customer engagementlevels remaining healthy across key segments. While we",
+        "extractor": "heuristic",
+        "source_tag": "fact_company",
+        "confidence": 0.6,
+        "document_id": 3495
       }
     ],
     "voltage_class.qpe_capability": [
@@ -1209,14 +1290,14 @@
     },
     {
       "factor": "capacity_readiness",
-      "score": 1,
-      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=1",
+      "score": 2,
+      "evidence": "capacity_mentions: MVA=0, GVA=0, MT=0, ckm=0, capex_amounts=2",
       "inputs": {
         "mva": 0,
         "gva": 0,
         "mt": 0,
         "ckm": 0,
-        "capex": 1
+        "capex": 2
       }
     },
     {
@@ -1244,9 +1325,9 @@
     {
       "factor": "order_book_quality",
       "score": 1,
-      "evidence": "order_book\u2248\u20b965cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
+      "evidence": "order_book\u2248\u20b9314cr, b2b=None, wins_mentioned=0, PGCIL=0, NTPC=0",
       "inputs": {
-        "order_book_inr_cr": 65.0,
+        "order_book_inr_cr": 314.0,
         "book_to_bill": null,
         "order_wins_mentioned": 0,
         "pgcil_mentions": 0,
@@ -1255,11 +1336,11 @@
     },
     {
       "factor": "tam_relevance",
-      "score": 3,
-      "evidence": "order_wins=0, capex_mentions=1",
+      "score": 4,
+      "evidence": "order_wins=0, capex_mentions=2",
       "inputs": {
         "order_wins": 0,
-        "capex_mentions": 1
+        "capex_mentions": 2
       }
     },
     {
