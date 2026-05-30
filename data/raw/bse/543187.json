@@ -2725,32 +2725,5 @@
     "DissemDT": "2025-06-12T18:22:53.383",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 331519
-  },
-  {
-    "NEWSID": "fe436d55-e64e-4c2b-b31e-92bab6be2af0",
-    "SCRIP_CD": 543187,
-    "XML_NAME": "ANN_543187_FE436D55-E64E-4C2B-B31E-92BAB6BE2AF0",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-    "DT_TM": "2025-05-29T11:43:55.433",
-    "NEWS_DT": "2025-05-29T11:43:55.433",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "4cb0ac66-1f8b-4b6a-aa92-0081dca2b8e5.pdf",
-    "MORE": "",
-    "HEADLINE": "Press Release titled Hitachi India appoints N Venu as its Managing Director",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/hitachi-energy-india-ltd/powerindia/543187/",
-    "SLONGNAME": "Hitachi Energy India Ltd",
-    "AGENDA_ID": 35,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-29T11:43:55",
-    "DissemDT": "2025-05-29T11:43:55.433",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 304989
   }
 ]

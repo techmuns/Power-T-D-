@@ -1483,32 +1483,5 @@
     "DissemDT": "2025-06-27T16:35:07.08",
     "TimeDiff": "00:00:01",
     "Fld_Attachsize": 548202
-  },
-  {
-    "NEWSID": "d91c9546-fcec-472b-a175-09f39abec47b",
-    "SCRIP_CD": 532757,
-    "XML_NAME": "ANN_532757_D91C9546-FCEC-472B-A175-09F39ABEC47B",
-    "NEWSSUB": "Disclosures under Reg. 29(2) of SEBI (SAST) Regulations, 2011",
-    "DT_TM": "2025-05-29T14:54:14.073",
-    "NEWS_DT": "2025-05-29T14:54:14.073",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "D91C9546_FCEC_472B_A175_09F39ABEC47B_145411.pdf",
-    "MORE": "",
-    "HEADLINE": "The Exchange has received the disclosure under Regulation 29(2) of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, 2011 for Taral K Patel",
-    "CATEGORYNAME": "Insider Trading / SAST",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/voltamp-transformers-ltd/voltamp/532757/",
-    "SLONGNAME": "Voltamp Transformers Ltd",
-    "AGENDA_ID": 57,
-    "TotalPageCnt": 2,
-    "News_submission_dt": null,
-    "DissemDT": "2025-05-29T14:54:14.073",
-    "TimeDiff": null,
-    "Fld_Attachsize": 80957
   }
 ]
