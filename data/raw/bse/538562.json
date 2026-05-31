@@ -3076,32 +3076,5 @@
     "DissemDT": "2025-06-03T15:18:48.057",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 3587254
-  },
-  {
-    "NEWSID": "018bc231-a2c2-49e7-920c-f943b79ea0ab",
-    "SCRIP_CD": 538562,
-    "XML_NAME": "ANN_538562_018BC231-A2C2-49E7-920C-F943B79EA0AB",
-    "NEWSSUB": "Compliances-Reg.24(A)-Annual Secretarial Compliance",
-    "DT_TM": "2025-05-30T11:52:07.283",
-    "NEWS_DT": "2025-05-30T11:52:07.283",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "0bc34dda-a162-40b1-b76f-974854a4a89c.pdf",
-    "MORE": "",
-    "HEADLINE": "We are enclosing annual secretarial Compliance report for the financial year 2024-25",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/skipper-ltd/skipper/538562/",
-    "SLONGNAME": "Skipper Ltd",
-    "AGENDA_ID": 210,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-30T11:52:07",
-    "DissemDT": "2025-05-30T11:52:07.283",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 3012744
   }
 ]

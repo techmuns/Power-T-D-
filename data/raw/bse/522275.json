@@ -2725,32 +2725,5 @@
     "DissemDT": "2025-06-01T17:26:31.05",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 274135
-  },
-  {
-    "NEWSID": "27cce7d7-74fe-4480-99d7-923a7a002657",
-    "SCRIP_CD": 522275,
-    "XML_NAME": "ANN_522275_27CCE7D7-74FE-4480-99D7-923A7A002657",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-    "DT_TM": "2025-05-30T18:06:32.84",
-    "NEWS_DT": "2025-05-30T18:06:32.84",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "8b95719a-dd1f-4f6f-913c-19ef978f75ee.pdf",
-    "MORE": "",
-    "HEADLINE": "Transcript- GE Vernova T&D India Limited Earnings Call for Investors held on May 23, 2025",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/ge-vernova-td-india-ltd/gvtd/522275/",
-    "SLONGNAME": "GE Vernova T&D India Ltd",
-    "AGENDA_ID": 157,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-30T18:06:32",
-    "DissemDT": "2025-05-30T18:06:32.84",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 485836
   }
 ]

@@ -4102,32 +4102,5 @@
     "DissemDT": "2025-06-02T18:44:02.237",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 491915
-  },
-  {
-    "NEWSID": "c7c81831-459a-443d-81d0-828cf2ca22ff",
-    "SCRIP_CD": 500093,
-    "XML_NAME": "ANN_500093_C7C81831-459A-443D-81D0-828CF2CA22FF",
-    "NEWSSUB": "Compliances-Reg.24(A)-Annual Secretarial Compliance",
-    "DT_TM": "2025-05-30T20:23:16.473",
-    "NEWS_DT": "2025-05-30T20:23:16.473",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "57fb9659-70ed-4cd5-bcac-823f6490c902.pdf",
-    "MORE": "",
-    "HEADLINE": "Please find enclosed the Annual Secretarial Compliance Report for the year ended 31st March 2025.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/",
-    "SLONGNAME": "CG Power and Industrial Solutions Ltd",
-    "AGENDA_ID": 210,
-    "TotalPageCnt": 4,
-    "News_submission_dt": "2025-05-30T20:23:16",
-    "DissemDT": "2025-05-30T20:23:16.473",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 1060872
   }
 ]
