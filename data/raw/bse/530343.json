@@ -2860,32 +2860,5 @@
     "DissemDT": "2025-06-02T15:03:25.57",
     "TimeDiff": null,
     "Fld_Attachsize": 365493
-  },
-  {
-    "NEWSID": "cf00b8e2-eb90-4aa2-8494-736412ce7811",
-    "SCRIP_CD": 530343,
-    "XML_NAME": "ANN_530343_CF00B8E2-EB90-4AA2-8494-736412CE7811",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-    "DT_TM": "2025-05-31T17:18:44.57",
-    "NEWS_DT": "2025-05-31T17:18:44.57",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "2fc06dd7-8fce-409c-96f8-4e5daeb73b7a.pdf",
-    "MORE": "",
-    "HEADLINE": "Press Release on the Audited Financial Results for the quarter and year ended March 31, 2025.",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/genus-power-infrastructures-ltd/genuspower/530343/",
-    "SLONGNAME": "Genus Power Infrastructures Ltd-$",
-    "AGENDA_ID": 35,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-31T17:18:44",
-    "DissemDT": "2025-05-31T17:18:44.57",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 1311943
   }
 ]

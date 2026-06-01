@@ -2887,32 +2887,5 @@
     "DissemDT": "2025-06-04T16:47:32.477",
     "TimeDiff": "00:00:00",
     "Fld_Attachsize": 18966372
-  },
-  {
-    "NEWSID": "43a4d1f3-3011-47c5-899a-c0eca0c592c3",
-    "SCRIP_CD": 522163,
-    "XML_NAME": "ANN_522163_43A4D1F3-3011-47C5-899A-C0ECA0C592C3",
-    "NEWSSUB": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-    "DT_TM": "2025-05-31T11:57:31.303",
-    "NEWS_DT": "2025-05-31T11:57:31.303",
-    "CRITICALNEWS": 0,
-    "ANNOUNCEMENT_TYPE": "A",
-    "QUARTER_ID": null,
-    "FILESTATUS": "N    ",
-    "ATTACHMENTNAME": "9bf37f99-e032-4395-a9ec-4990962e9457.pdf",
-    "MORE": "",
-    "HEADLINE": "Diamond Power Infrastructure Limited has informed the exchange regarding the newspaper publication",
-    "CATEGORYNAME": "Company Update",
-    "OLD": 1,
-    "RN": 1,
-    "PDFFLAG": 1,
-    "NSURL": "https://www.bseindia.com/stock-share-price/diamond-power-infrastructure-ltd/diacabs/522163/",
-    "SLONGNAME": "Diamond Power Infrastructure Ltd-$",
-    "AGENDA_ID": 144,
-    "TotalPageCnt": 3,
-    "News_submission_dt": "2025-05-31T11:57:31",
-    "DissemDT": "2025-05-31T11:57:31.303",
-    "TimeDiff": "00:00:00",
-    "Fld_Attachsize": 13123303
   }
 ]
