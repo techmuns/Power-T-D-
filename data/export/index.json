@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T07:30:28+00:00",
+  "generated_at": "2026-06-02T07:04:47+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -54,7 +54,7 @@
       "slug": "genus",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 24,
+      "score_total": 25,
       "scored_factors": 8
     },
     {
@@ -62,7 +62,7 @@
       "slug": "hpl",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 14,
+      "score_total": 13,
       "scored_factors": 6
     },
     {

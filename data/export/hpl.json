@@ -291,6 +291,20 @@
       "investments": 10.0,
       "other_assets": 1620.0,
       "total_assets": 2264.0
+    },
+    {
+      "period_end": "2026-03-31",
+      "consolidated": 1,
+      "equity_capital": 64.0,
+      "reserves": 936.0,
+      "borrowings": 755.0,
+      "other_liab": 643.0,
+      "total_liab": 2398.0,
+      "fixed_assets": 614.0,
+      "cwip": 41.0,
+      "investments": 10.0,
+      "other_assets": 1733.0,
+      "total_assets": 2398.0
     }
   ],
   "cash_flow": [
@@ -518,7 +532,13 @@
     },
     {
       "period_end": "2026-03-31",
-      "consolidated": 1
+      "consolidated": 1,
+      "debtor_days": 154.0,
+      "inventory_days": 236.0,
+      "days_payable": 169.0,
+      "cash_conv_cycle": 221.0,
+      "working_cap_days": 75.0,
+      "roce_pct": 13.0
     }
   ],
   "derived": [
@@ -1743,6 +1763,37 @@
     },
     {
       "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "asset_turnover",
+      "value": 0.7552126772310258,
+      "unit": "x",
+      "formula": "ttm_revenue / total_assets",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "capex_proxy_inr_cr",
+      "value": 22.0,
+      "unit": "INR crore",
+      "formula": "delta(fixed_assets + cwip)"
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "debt_to_equity",
+      "value": 0.755,
+      "unit": "ratio",
+      "formula": "borrowings / net_worth",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "ebitda_growth_yoy_pct",
@@ -1776,6 +1827,17 @@
     },
     {
       "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "net_worth_inr_cr",
+      "value": 1000.0,
+      "unit": "INR crore",
+      "formula": "equity_capital + reserves",
+      "bucket_rank": 2,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
       "period_type": "quarterly",
       "consolidated": 1,
       "metric": "pat_growth_yoy_pct",
@@ -1795,21 +1857,43 @@
       "formula": "rev/rev_yr_ago - 1",
       "bucket_rank": 2,
       "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_ebitda_inr_cr",
+      "value": 282.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.ebitda, 4q)",
+      "bucket_rank": 2,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-03-31",
+      "period_type": "annual",
+      "consolidated": 1,
+      "metric": "ttm_revenue_inr_cr",
+      "value": 1811.0,
+      "unit": "INR crore",
+      "formula": "sum(quarter.revenue, 4q)",
+      "bucket_rank": 2,
+      "bucket_n": 2
     }
   ],
   "market": {
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 26.83,
-    "pb_ratio": 2.61,
+    "pe_ratio": 26.1,
+    "pb_ratio": 2.53,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
     "eps": 12.92,
     "face_value": null,
-    "fetched_at": "2026-06-01T07:28:54+00:00"
+    "fetched_at": "2026-06-02T07:02:47+00:00"
   },
   "documents": [
     {
@@ -1817,7 +1901,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dd7938ad-5890-45de-ae73-a304f5cf1ba3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1825,7 +1909,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/71739606-2955-4efe-880c-dba282077b42.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1833,7 +1917,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dcaae7e4-9d19-4e56-84a3-525bdb954f55.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1841,7 +1925,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c2c02b7c-98c5-4f1b-b8d7-749ba8c24fa3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1849,7 +1933,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/51a3628c-d3d4-421d-a99f-6b269c04ce29.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1857,7 +1941,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3d16a9d9-d2ca-4d68-9e47-d330cb1123e1.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1865,7 +1949,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/80fc82c5-0679-4fb7-b1a1-0dbc3189392a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -1873,7 +1957,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b178fd86-747f-492a-b402-a5071597e63c.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-01T07:29:09+00:00",
+      "extracted_at": "2026-06-02T07:03:02+00:00",
       "has_text": false
     },
     {
@@ -2017,9 +2101,9 @@
     {
       "factor": "balance_sheet",
       "score": 3,
-      "evidence": "debt/equity = 0.78",
+      "evidence": "debt/equity = 0.76",
       "inputs": {
-        "debt_to_equity": 0.7769633507853403
+        "debt_to_equity": 0.755
       }
     },
     {
@@ -2030,11 +2114,11 @@
     },
     {
       "factor": "competitive_position",
-      "score": 2,
-      "evidence": "revenue rank 1/1, ebitda-margin rank 2/2",
+      "score": 1,
+      "evidence": "revenue rank 2/2, ebitda-margin rank 2/2",
       "inputs": {
-        "revenue_rank": 1,
-        "revenue_n": 1,
+        "revenue_rank": 2,
+        "revenue_n": 2,
         "ebitda_margin_rank": 2,
         "ebitda_margin_n": 2
       }
@@ -2068,11 +2152,11 @@
     {
       "factor": "valuation_comfort",
       "score": 3,
-      "evidence": "proxy (no market-cap feed yet): rev_growth=5.476673427991896, ebitda_margin=16.538461538461537, debt/eq=0.7769633507853403",
+      "evidence": "proxy (no market-cap feed yet): rev_growth=5.476673427991896, ebitda_margin=16.538461538461537, debt/eq=0.755",
       "inputs": {
         "rev_growth_yoy_pct": 5.476673427991896,
         "ebitda_margin_pct": 16.538461538461537,
-        "debt_to_equity": 0.7769633507853403
+        "debt_to_equity": 0.755
       }
     },
     {
@@ -2084,10 +2168,10 @@
     {
       "factor": "working_capital",
       "score": 3,
-      "evidence": "wc_days=None, debtor_days=None, cfo/ebitda=54%",
+      "evidence": "wc_days=75.0, debtor_days=154.0, cfo/ebitda=54%",
       "inputs": {
-        "working_cap_days": null,
-        "debtor_days": null,
+        "working_cap_days": 75.0,
+        "debtor_days": 154.0,
         "cfo_to_ebitda_pct": 54.11764705882353
       }
     }
