@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T07:21:53+00:00",
+  "generated_at": "2026-06-04T07:01:42+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -102,7 +102,7 @@
       "slug": "diamond_power",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 22,
+      "score_total": 20,
       "scored_factors": 6
     },
     {
@@ -206,7 +206,7 @@
       "slug": "bajel",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 17,
+      "score_total": 15,
       "scored_factors": 6
     },
     {
