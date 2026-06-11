@@ -26,15 +26,15 @@
     "book_value": null,
     "eps": 4.22,
     "face_value": null,
-    "fetched_at": "2026-06-10T06:47:11+00:00"
+    "fetched_at": "2026-06-11T07:13:19+00:00"
   },
   "documents": [
     {
       "doc_kind": "results",
       "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a9e451f6-5408-4a24-8806-8e28e27d241a.pdf",
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf885dd0-8f43-487c-9fff-5eea58ed4096.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-10T06:47:24+00:00",
+      "extracted_at": "2026-06-11T07:13:33+00:00",
       "has_text": false
     },
     {
@@ -42,7 +42,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b0388872-fdd0-4769-ab4c-4fd80694db51.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-10T06:47:24+00:00",
+      "extracted_at": "2026-06-11T07:13:33+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "results",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a9e451f6-5408-4a24-8806-8e28e27d241a.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-06-11T07:13:33+00:00",
       "has_text": false
     },
     {
@@ -50,15 +58,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5d318b56-5023-4796-88ee-70f4978bddb8.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-10T06:47:24+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "results",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf885dd0-8f43-487c-9fff-5eea58ed4096.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-06-10T06:47:24+00:00",
+      "extracted_at": "2026-06-11T07:13:33+00:00",
       "has_text": false
     },
     {
@@ -66,7 +66,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ae9f5f2e-68e2-49a7-8e4c-8a9a34a741e9.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-06-10T06:47:24+00:00",
+      "extracted_at": "2026-06-11T07:13:33+00:00",
       "has_text": false
     },
     {
