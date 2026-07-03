@@ -372,10 +372,8 @@
       "period_end": "2026-03-31",
       "consolidated": 1,
       "debtor_days": 60.0,
-      "inventory_days": 9.0,
-      "days_payable": 282.0,
-      "cash_conv_cycle": -213.0,
-      "working_cap_days": -93.0,
+      "cash_conv_cycle": 60.0,
+      "working_cap_days": -181.0,
       "roce_pct": 8.0
     }
   ],
@@ -1466,7 +1464,7 @@
     "book_value": null,
     "eps": null,
     "face_value": null,
-    "fetched_at": "2026-07-02T06:14:09+00:00"
+    "fetched_at": "2026-07-03T06:07:47+00:00"
   },
   "documents": [
     {
@@ -1612,9 +1610,9 @@
     {
       "factor": "working_capital",
       "score": 5,
-      "evidence": "wc_days=-93.0, debtor_days=60.0, cfo/ebitda=110%",
+      "evidence": "wc_days=-181.0, debtor_days=60.0, cfo/ebitda=110%",
       "inputs": {
-        "working_cap_days": -93.0,
+        "working_cap_days": -181.0,
         "debtor_days": 60.0,
         "cfo_to_ebitda_pct": 110.28739386022208
       }
