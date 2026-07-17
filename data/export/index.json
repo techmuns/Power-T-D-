@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T05:25:22+00:00",
+  "generated_at": "2026-07-17T05:30:06+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -38,7 +38,7 @@
       "slug": "bhel",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 94,
-      "score_total": 26,
+      "score_total": 23,
       "scored_factors": 7
     },
     {
@@ -86,7 +86,7 @@
       "slug": "polycab",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 31,
+      "score_total": 28,
       "scored_factors": 7
     },
     {
