@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T05:34:57+00:00",
+  "generated_at": "2026-07-22T05:34:07+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -166,7 +166,7 @@
       "slug": "adani_energy",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 100,
-      "score_total": 20,
+      "score_total": 24,
       "scored_factors": 8
     },
     {
