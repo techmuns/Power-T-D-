@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T05:35:06+00:00",
+  "generated_at": "2026-07-25T05:29:04+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -86,7 +86,7 @@
       "slug": "polycab",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 28,
+      "score_total": 31,
       "scored_factors": 7
     },
     {
@@ -126,7 +126,7 @@
       "slug": "taril",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 100,
-      "score_total": 21,
+      "score_total": 24,
       "scored_factors": 8
     },
     {
@@ -134,7 +134,7 @@
       "slug": "cg_power",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 94,
-      "score_total": 18,
+      "score_total": 17,
       "scored_factors": 6
     },
     {
