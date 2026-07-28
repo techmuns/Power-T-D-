@@ -1,4 +1,4 @@
-name = "power-t-d"
+name = "powertnd"
 compatibility_date = "2025-09-01"
 
 # Static-assets-only Worker. `wrangler deploy` treats this as a static
