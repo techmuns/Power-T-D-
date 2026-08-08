@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T04:37:17+00:00",
+  "generated_at": "2026-08-08T03:50:31+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -206,7 +206,7 @@
       "slug": "bajel",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 15,
+      "score_total": 14,
       "scored_factors": 6
     },
     {
@@ -222,7 +222,7 @@
       "slug": "transrail",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 20,
+      "score_total": 23,
       "scored_factors": 6
     }
   ],
