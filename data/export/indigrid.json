@@ -99,6 +99,13 @@
         "revenue": 2240.0,
         "ebitda": 889.0,
         "pat": 185.0
+      },
+      {
+        "period_end": "2026-06-30",
+        "consolidated": 1,
+        "revenue": 1087.0,
+        "ebitda": 870.0,
+        "pat": 246.0
       }
     ]
   },
@@ -1450,6 +1457,61 @@
       "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 3,
       "bucket_n": 3
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 25.0,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 80.03679852805887,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 22.63109475620975,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 2,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 227.99999999999997,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 3
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 29.404761904761912,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 2,
+      "bucket_n": 3
     }
   ],
   "market": {
@@ -1464,7 +1526,7 @@
     "book_value": null,
     "eps": null,
     "face_value": null,
-    "fetched_at": "2026-08-12T04:21:09+00:00"
+    "fetched_at": "2026-08-13T04:23:58+00:00"
   },
   "documents": [
     {
@@ -1568,10 +1630,10 @@
     {
       "factor": "margin_sustainability",
       "score": 3,
-      "evidence": "ebitda_margin=39.7% (peer rank 2/3), yoy_growth=25%",
+      "evidence": "ebitda_margin=80.0% (peer rank 2/3), yoy_growth=25%",
       "inputs": {
-        "ebitda_margin_pct": 39.6875,
-        "ebitda_growth_yoy_pct": 25.211267605633815,
+        "ebitda_margin_pct": 80.03679852805887,
+        "ebitda_growth_yoy_pct": 25.0,
         "peer_rank": 2,
         "peer_n": 3
       }
@@ -1594,10 +1656,10 @@
     {
       "factor": "valuation_comfort",
       "score": 4,
-      "evidence": "proxy (no market-cap feed yet): rev_growth=156.29290617848972, ebitda_margin=39.6875, debt/eq=3.517042647785279",
+      "evidence": "proxy (no market-cap feed yet): rev_growth=29.404761904761912, ebitda_margin=80.03679852805887, debt/eq=3.517042647785279",
       "inputs": {
-        "rev_growth_yoy_pct": 156.29290617848972,
-        "ebitda_margin_pct": 39.6875,
+        "rev_growth_yoy_pct": 29.404761904761912,
+        "ebitda_margin_pct": 80.03679852805887,
         "debt_to_equity": 3.517042647785279
       }
     },
