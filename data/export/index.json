@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T04:26:22+00:00",
+  "generated_at": "2026-08-14T04:23:07+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -14,7 +14,7 @@
       "slug": "cesc",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 23,
+      "score_total": 17,
       "scored_factors": 8
     },
     {
@@ -22,7 +22,7 @@
       "slug": "torrent_power",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 22,
+      "score_total": 25,
       "scored_factors": 9
     },
     {
@@ -62,7 +62,7 @@
       "slug": "hpl",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 18,
+      "score_total": 15,
       "scored_factors": 6
     },
     {
@@ -78,7 +78,7 @@
       "slug": "apar",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 21,
+      "score_total": 23,
       "scored_factors": 7
     },
     {
@@ -102,7 +102,7 @@
       "slug": "diamond_power",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 20,
+      "score_total": 18,
       "scored_factors": 6
     },
     {

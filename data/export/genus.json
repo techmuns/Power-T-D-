@@ -99,6 +99,13 @@
         "revenue": 1537.0,
         "ebitda": 267.0,
         "pat": 172.0
+      },
+      {
+        "period_end": "2026-06-30",
+        "consolidated": 1,
+        "revenue": 1365.0,
+        "ebitda": 260.0,
+        "pat": 197.0
       }
     ]
   },
@@ -1616,21 +1623,76 @@
       "formula": "sum(quarter.revenue, 4q)",
       "bucket_rank": 1,
       "bucket_n": 2
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_growth_yoy_pct",
+      "value": 30.6532663316583,
+      "unit": "%",
+      "formula": "ebitda/ebitda_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "ebitda_margin_pct",
+      "value": 19.047619047619047,
+      "unit": "%",
+      "formula": "ebitda/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "net_margin_pct",
+      "value": 14.43223443223443,
+      "unit": "%",
+      "formula": "pat/revenue*100",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "pat_growth_yoy_pct",
+      "value": 43.795620437956195,
+      "unit": "%",
+      "formula": "pat/pat_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_type": "quarterly",
+      "consolidated": 1,
+      "metric": "revenue_growth_yoy_pct",
+      "value": 44.904458598726116,
+      "unit": "%",
+      "formula": "rev/rev_yr_ago - 1",
+      "bucket_rank": 1,
+      "bucket_n": 2
     }
   ],
   "market": {
     "price": null,
     "pct_change": null,
     "market_cap_cr": null,
-    "pe_ratio": 15.44,
-    "pb_ratio": 5.67,
+    "pe_ratio": 14.94,
+    "pb_ratio": 5.79,
     "dividend_yield": null,
     "week52_high": null,
     "week52_low": null,
     "book_value": null,
-    "eps": 19.88,
+    "eps": 21.01,
     "face_value": null,
-    "fetched_at": "2026-08-13T04:23:58+00:00"
+    "fetched_at": "2026-08-14T04:21:24+00:00"
   },
   "documents": [
     {
@@ -1638,15 +1700,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d12cdf3c-1d93-4111-a4a3-667704adc000.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "transcript",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/21883d66-8f05-493d-ba80-65b4a8ed5a73.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1654,7 +1708,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a6535c42-9f24-466c-8f57-d75cfd500f9a.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "transcript",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/21883d66-8f05-493d-ba80-65b4a8ed5a73.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1662,7 +1724,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1e7b7476-b803-4cba-a107-3af0467f952e.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1670,7 +1732,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9982dc40-b7ae-4e8f-820c-7735db864b86.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1678,7 +1740,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/26cd364f-533e-4cda-a76b-fc8d1f5e3bb9.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1686,7 +1748,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ede4f1dd-9b2c-488a-8b94-8bdeda3a99d7.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1694,7 +1756,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/702f3c77-2073-4363-b23a-5348c091a4c3.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-08-13T04:24:13+00:00",
+      "extracted_at": "2026-08-14T04:21:40+00:00",
       "has_text": false
     },
     {
@@ -1978,10 +2040,10 @@
     {
       "factor": "margin_sustainability",
       "score": 5,
-      "evidence": "ebitda_margin=17.4% (peer rank 1/2), yoy_growth=36%",
+      "evidence": "ebitda_margin=19.0% (peer rank 1/2), yoy_growth=31%",
       "inputs": {
-        "ebitda_margin_pct": 17.371502927781393,
-        "ebitda_growth_yoy_pct": 36.224489795918366,
+        "ebitda_margin_pct": 19.047619047619047,
+        "ebitda_growth_yoy_pct": 30.6532663316583,
         "peer_rank": 1,
         "peer_n": 2
       }
@@ -2010,10 +2072,10 @@
     {
       "factor": "valuation_comfort",
       "score": 4,
-      "evidence": "proxy (no market-cap feed yet): rev_growth=64.03415154749199, ebitda_margin=17.371502927781393, debt/eq=1.0378719567177637",
+      "evidence": "proxy (no market-cap feed yet): rev_growth=44.904458598726116, ebitda_margin=19.047619047619047, debt/eq=1.0378719567177637",
       "inputs": {
-        "rev_growth_yoy_pct": 64.03415154749199,
-        "ebitda_margin_pct": 17.371502927781393,
+        "rev_growth_yoy_pct": 44.904458598726116,
+        "ebitda_margin_pct": 19.047619047619047,
         "debt_to_equity": 1.0378719567177637
       }
     },
