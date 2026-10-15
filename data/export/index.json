@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T07:55:20+00:00",
+  "generated_at": "2026-10-15T07:41:01+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -38,7 +38,7 @@
       "slug": "bhel",
       "bucket": "hvdc_facts_oem",
       "coverage_pct": 94,
-      "score_total": 20,
+      "score_total": 21,
       "scored_factors": 7
     },
     {
