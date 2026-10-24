@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T07:50:59+00:00",
+  "generated_at": "2026-10-24T07:33:31+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -126,7 +126,7 @@
       "slug": "taril",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 100,
-      "score_total": 23,
+      "score_total": 25,
       "scored_factors": 8
     },
     {
@@ -134,7 +134,7 @@
       "slug": "cg_power",
       "bucket": "transformer_manufacturer",
       "coverage_pct": 94,
-      "score_total": 17,
+      "score_total": 18,
       "scored_factors": 6
     },
     {
