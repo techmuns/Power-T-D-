@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T08:53:17+00:00",
+  "generated_at": "2026-10-31T08:42:15+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -78,7 +78,7 @@
       "slug": "apar",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 21,
+      "score_total": 20,
       "scored_factors": 7
     },
     {
@@ -94,7 +94,7 @@
       "slug": "skipper",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 100,
-      "score_total": 25,
+      "score_total": 30,
       "scored_factors": 10
     },
     {
@@ -110,7 +110,7 @@
       "slug": "kei",
       "bucket": "towers_conductors_cables",
       "coverage_pct": 94,
-      "score_total": 24,
+      "score_total": 25,
       "scored_factors": 9
     },
     {
