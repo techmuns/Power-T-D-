@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T09:37:50+00:00",
+  "generated_at": "2026-11-05T09:47:33+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -14,7 +14,7 @@
       "slug": "cesc",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 17,
+      "score_total": 23,
       "scored_factors": 8
     },
     {
@@ -22,7 +22,7 @@
       "slug": "torrent_power",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 25,
+      "score_total": 22,
       "scored_factors": 9
     },
     {
