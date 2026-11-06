@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T09:47:33+00:00",
+  "generated_at": "2026-11-06T09:40:43+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -62,7 +62,7 @@
       "slug": "hpl",
       "bucket": "smart_meters_automation",
       "coverage_pct": 94,
-      "score_total": 15,
+      "score_total": 19,
       "scored_factors": 6
     },
     {
@@ -166,7 +166,7 @@
       "slug": "adani_energy",
       "bucket": "transmission_asset_owner",
       "coverage_pct": 100,
-      "score_total": 20,
+      "score_total": 21,
       "scored_factors": 8
     },
     {
@@ -190,7 +190,7 @@
       "slug": "kec",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
-      "score_total": 18,
+      "score_total": 17,
       "scored_factors": 9
     },
     {

@@ -1783,8 +1783,8 @@
       "value": 0.9220323958417278,
       "unit": "x",
       "formula": "ttm_revenue / total_assets",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1803,8 +1803,8 @@
       "value": 1.035133803973075,
       "unit": "ratio",
       "formula": "borrowings / net_worth",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1814,8 +1814,8 @@
       "value": -36.9767441860465,
       "unit": "%",
       "formula": "ebitda/ebitda_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1825,8 +1825,8 @@
       "value": 4.956108266276519,
       "unit": "%",
       "formula": "ebitda/revenue*100",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1836,8 +1836,8 @@
       "value": 0.548646671543526,
       "unit": "%",
       "formula": "pat/revenue*100",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1847,8 +1847,8 @@
       "value": 6091.0,
       "unit": "INR crore",
       "formula": "equity_capital + reserves",
-      "bucket_rank": 1,
-      "bucket_n": 2
+      "bucket_rank": 2,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1858,8 +1858,8 @@
       "value": -81.36645962732919,
       "unit": "%",
       "formula": "pat/pat_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1869,8 +1869,8 @@
       "value": -10.242941562705187,
       "unit": "%",
       "formula": "rev/rev_yr_ago - 1",
-      "bucket_rank": 2,
-      "bucket_n": 2
+      "bucket_rank": 3,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1880,8 +1880,8 @@
       "value": 1440.0,
       "unit": "INR crore",
       "formula": "sum(quarter.ebitda, 4q)",
-      "bucket_rank": 1,
-      "bucket_n": 2
+      "bucket_rank": 2,
+      "bucket_n": 3
     },
     {
       "period_end": "2026-09-30",
@@ -1891,8 +1891,8 @@
       "value": 22883.0,
       "unit": "INR crore",
       "formula": "sum(quarter.revenue, 4q)",
-      "bucket_rank": 1,
-      "bucket_n": 2
+      "bucket_rank": 2,
+      "bucket_n": 3
     }
   ],
   "market": {
@@ -1915,15 +1915,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/63aa5f08-302d-40b5-b2c0-54f0433b4f8b.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
-      "has_text": false
-    },
-    {
-      "doc_kind": "press_release",
-      "page_count": null,
-      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a94d8d29-fd2d-4452-977b-1ba6c2aaed68.pdf",
-      "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1931,7 +1923,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/afebfd0c-1c8e-46cd-ae1b-51e6db43f1e2.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1939,7 +1931,15 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/09b77783-9021-4063-bd8b-77e94407dd9f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
+      "has_text": false
+    },
+    {
+      "doc_kind": "press_release",
+      "page_count": null,
+      "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a94d8d29-fd2d-4452-977b-1ba6c2aaed68.pdf",
+      "extract_status": "failed",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1947,7 +1947,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de791f57-2384-45c3-be0a-149b6b37906d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1955,7 +1955,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc8257fe-c5b1-4ff3-a99c-17d05ab3c9f0.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1963,7 +1963,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/137746bd-62ee-43f5-bbe5-bf746936ac8d.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -1971,7 +1971,7 @@
       "page_count": null,
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/302c923f-96e9-4fa3-8683-74be39fa494f.pdf",
       "extract_status": "failed",
-      "extracted_at": "2026-11-05T09:45:50+00:00",
+      "extracted_at": "2026-11-06T09:38:48+00:00",
       "has_text": false
     },
     {
@@ -2481,24 +2481,24 @@
     },
     {
       "factor": "competitive_position",
-      "score": 3,
-      "evidence": "revenue rank 1/2, ebitda-margin rank 2/2",
+      "score": 2,
+      "evidence": "revenue rank 2/3, ebitda-margin rank 3/3",
       "inputs": {
-        "revenue_rank": 1,
-        "revenue_n": 2,
-        "ebitda_margin_rank": 2,
-        "ebitda_margin_n": 2
+        "revenue_rank": 2,
+        "revenue_n": 3,
+        "ebitda_margin_rank": 3,
+        "ebitda_margin_n": 3
       }
     },
     {
       "factor": "margin_sustainability",
       "score": 1,
-      "evidence": "ebitda_margin=5.0% (peer rank 2/2), yoy_growth=-37%",
+      "evidence": "ebitda_margin=5.0% (peer rank 3/3), yoy_growth=-37%",
       "inputs": {
         "ebitda_margin_pct": 4.956108266276519,
         "ebitda_growth_yoy_pct": -36.9767441860465,
-        "peer_rank": 2,
-        "peer_n": 2
+        "peer_rank": 3,
+        "peer_n": 3
       }
     },
     {
