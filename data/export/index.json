@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-11T09:44:14+00:00",
+  "generated_at": "2026-11-12T10:05:16+00:00",
   "companies": [
     {
       "short": "Tata Power",
       "slug": "tata_power",
       "bucket": "distribution_discom",
       "coverage_pct": 100,
-      "score_total": 32,
+      "score_total": 33,
       "scored_factors": 10
     },
     {
@@ -14,7 +14,7 @@
       "slug": "cesc",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 23,
+      "score_total": 20,
       "scored_factors": 8
     },
     {
