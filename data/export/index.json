@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T10:05:16+00:00",
+  "generated_at": "2026-11-13T09:56:18+00:00",
   "companies": [
     {
       "short": "Tata Power",
@@ -22,7 +22,7 @@
       "slug": "torrent_power",
       "bucket": "distribution_discom",
       "coverage_pct": 88,
-      "score_total": 22,
+      "score_total": 21,
       "scored_factors": 9
     },
     {
@@ -198,7 +198,7 @@
       "slug": "kpil",
       "bucket": "transmission_epc",
       "coverage_pct": 100,
-      "score_total": 23,
+      "score_total": 22,
       "scored_factors": 7
     },
     {
@@ -214,7 +214,7 @@
       "slug": "techno_electric",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 22,
+      "score_total": 23,
       "scored_factors": 6
     },
     {
@@ -222,7 +222,7 @@
       "slug": "transrail",
       "bucket": "transmission_epc",
       "coverage_pct": 94,
-      "score_total": 24,
+      "score_total": 23,
       "scored_factors": 6
     }
   ],
